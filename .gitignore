@@ -2,4 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/TANA/.vs/TANA
+/TANA/.vs/TANA/v17/.suo
+/TANA/.vs/TANA/v17/DocumentLayout.json
+/.gitignore
