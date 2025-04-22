@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA\\TANA.csproj": {}
+    "C:\\Users\\Amjad\\source\\repos\\TANA\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA\\TANA.csproj": {
+    "C:\\Users\\Amjad\\source\\repos\\TANA\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA\\TANA.csproj",
-        "projectName": "TANA",
-        "projectPath": "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA\\TANA.csproj",
+        "projectUniqueName": "C:\\Users\\Amjad\\source\\repos\\TANA\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\Amjad\\source\\repos\\TANA\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Amjad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA\\obj\\",
+        "outputPath": "C:\\Users\\Amjad\\source\\repos\\TANA\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -61,9 +61,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
