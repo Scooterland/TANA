@@ -11,6 +11,9 @@
     <Folder Include="CQRS\Queries\" />
     <Folder Include="Interfaces\" />
     <Folder Include="DTOs\" />
+    <Folder Include="CQRS\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>

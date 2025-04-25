@@ -9,6 +9,9 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Configurations\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Data\" />
+    <Folder Include="Repositories\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 
