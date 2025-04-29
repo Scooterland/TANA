@@ -1,0 +1,19 @@
+﻿@using TANA.Application.Services;
+@using TANA.Domain.Interface;
+@using TANA.Domain.Entities;
+
+<h3>SendRejseplan</h3>
+
+@inject RejseplanService RejseplanService
+
+<button @onclick="SendRejseplanEmail">Send Rejseplan</button>
+
+@code {
+    private async Task SendRejseplanEmail()
+    {
+        string rejseplanContent = "<h1>Din rejseplan</h1><p>Her er din rejsebeskrivelse...</p>";
+        string customerEmail = "kunde@example.com"; // Denne værdi kommer typisk fra brugerdata
+
+        await RejseplanService.SendRejseplanEmailAsync(customerEmail, rejseplanContent);
+    }
+}

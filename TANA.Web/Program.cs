@@ -5,6 +5,7 @@ using TANA.Web.Components;
 using TANA.Domain.Interface;
 using TANA.Application.Services;
 using TANA.Persistence.Repositories;
+using TANA.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,10 @@ builder.Services.AddDbContext<DbContext>(options =>
 
 builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
 builder.Services.AddScoped<BrugerService>();
+
+builder.Services.AddScoped<IPdfService, PdfService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<RejseplanService>();
 
 await builder.Build().RunAsync();
 
