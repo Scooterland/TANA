@@ -11,16 +11,12 @@ namespace TANA.Persistence.Data
 {
     public class AppDbContext : DbContext
     {
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			optionsBuilder.UseSqlServer("Server=(local);DataBase=RejseplanDB;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True");
-		}
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
+        {
+        }
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
-		{
-			base.OnModelCreating(modelBuilder);
-		}
-		public DbSet<Kunde> Kunder { get; set; }
+        public DbSet<Kunde> Kunder { get; set; }
 		public DbSet<Rejse> Rejser {  get; set; }
 		public DbSet<Tur> Turer { get; set; }
 		public DbSet<RejseTur> RejseTurer { get; set; }

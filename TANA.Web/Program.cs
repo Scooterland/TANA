@@ -7,13 +7,15 @@ using TANA.Application.Services;
 using TANA.Persistence.Repositories;
 using TANA.Infrastructure.Services;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Server;
+using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddDbContext<DbContext>(options =>
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
@@ -22,9 +24,13 @@ builder.Services.AddScoped<BrugerService>();
 builder.Services.AddScoped<IPdfService, PdfService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<RejseplanService>();
+builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
 
 builder.Services.AddAuthorizationCore();  // Tilføj authorization core
-builder.Services.AddScoped<AuthenticationStateProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
+builder.Services.AddAuthorization();
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 
 await builder.Build().RunAsync();
 

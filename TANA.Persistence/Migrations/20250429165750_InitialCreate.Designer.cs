@@ -12,8 +12,8 @@ using TANA.Persistence.Data;
 namespace TANA.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250429081143_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20250429165750_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,50 @@ namespace TANA.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Adminer");
+                });
+
+            modelBuilder.Entity("TANA.Domain.Entities.Bruger", b =>
+                {
+                    b.Property<Guid>("BrugerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Navn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Rolle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BrugerId");
+
+                    b.ToTable("Brugere");
+                });
+
+            modelBuilder.Entity("TANA.Domain.Entities.EmailSettings", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmailSettings");
                 });
 
             modelBuilder.Entity("TANA.Domain.Entities.Faktura", b =>
