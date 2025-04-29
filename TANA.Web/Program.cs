@@ -6,6 +6,7 @@ using TANA.Domain.Interface;
 using TANA.Application.Services;
 using TANA.Persistence.Repositories;
 using TANA.Infrastructure.Services;
+using Microsoft.AspNetCore.Components.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,9 @@ builder.Services.AddScoped<BrugerService>();
 builder.Services.AddScoped<IPdfService, PdfService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<RejseplanService>();
+
+builder.Services.AddAuthorizationCore();  // Tilføj authorization core
+builder.Services.AddScoped<AuthenticationStateProvider>();
 
 await builder.Build().RunAsync();
 

@@ -2790,6 +2790,24 @@
         "runtime": {
           "bin/placeholder/TANA.Domain.dll": {}
         }
+      },
+      "TANA.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "DinkToPdf": "1.0.8",
+          "MailKit": "4.11.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
+          "TANA.Application": "1.0.0",
+          "TANA.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TANA.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TANA.Persistence.dll": {}
+        }
       }
     }
   },
@@ -8909,6 +8927,11 @@
       "type": "project",
       "path": "../TANA.Domain/TANA.Domain.csproj",
       "msbuildProject": "../TANA.Domain/TANA.Domain.csproj"
+    },
+    "TANA.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../TANA.Persistence/TANA.Persistence.csproj",
+      "msbuildProject": "../TANA.Persistence/TANA.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8920,7 +8943,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.4",
       "TANA.Application >= 1.0.0",
-      "TANA.Domain >= 1.0.0"
+      "TANA.Domain >= 1.0.0",
+      "TANA.Persistence >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8960,6 +8984,9 @@
             },
             "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Domain\\TANA.Domain.csproj": {
               "projectPath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Domain\\TANA.Domain.csproj"
+            },
+            "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\TANA.Persistence.csproj": {
+              "projectPath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\TANA.Persistence.csproj"
             }
           }
         }

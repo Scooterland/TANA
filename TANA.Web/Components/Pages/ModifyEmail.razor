@@ -1,0 +1,53 @@
+﻿@using TANA.Infrastructure.Services;
+@using TANA.Domain.Interface;
+@using TANA.Application.Services;
+@using Microsoft.AspNetCore.Components.Authorization
+
+<h3>ModifyEmail</h3>
+
+@page "/modify-email"
+@inject AuthenticationStateProvider AuthStateProvider
+@inject IEmailSettingsService EmailSettingsService
+
+<h3>Modificer e-mailadresse</h3>
+
+@if (!isAuthorized)
+{
+    <p>Du har ikke adgang til denne side.</p>
+}
+else
+{
+    <div>
+        <label for="email">Indtast ny e-mailadresse:</label>
+        <input type="email" id="email" @bind="emailAddress" />
+
+        <button @onclick="SaveEmailAddress">Gem e-mailadresse</button>
+    </div>
+}
+
+@code {
+    private string emailAddress = string.Empty;
+    private bool isAuthorized = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var state = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = state.User;
+
+        // Check if the user is either admin or employee
+        if (user.IsInRole("Admin") || user.IsInRole("Employee"))
+        {
+            isAuthorized = true;
+            emailAddress = await EmailSettingsService.GetEmailAddressAsync(); // Hent den nuværende e-mailadresse
+        }
+    }
+
+    private async Task SaveEmailAddress()
+    {
+        if (isAuthorized && !string.IsNullOrEmpty(emailAddress))
+        {
+            await EmailSettingsService.SetEmailAddressAsync(emailAddress);  // Gem den nye e-mailadresse
+            // Optionelt: Vis en succesmeddelelse
+        }
+    }
+}
