@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fM14i3xCfds=",
+  "dgSpecHash": "fDuNW+c4mHU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Persistence\\TANA.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\TANA.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rene3\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\rene3\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
