@@ -32,8 +32,6 @@ builder.Services.AddAuthorization();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
-await builder.Build().RunAsync();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
