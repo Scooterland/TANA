@@ -1,9 +1,18 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+# Ignore Visual Studio files
+.vs/
+.vscode/
 
-/TANA/.vs/TANA/v17/.suo
-/TANA/.vs/TANA/v17/DocumentLayout.json
-/.gitignore
-/TANA/.vs/TANA/FileContentIndex
-/.gitignore
+# Ignore build output
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+
+# Ignore others
+*.log
+*.tmp
+*.db
+*.sqlite
+.env
