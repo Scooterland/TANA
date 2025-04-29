@@ -57,7 +57,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 39,
+=======
+          "SelectedChildIndex": 33,
+>>>>>>> 10f1ec62d835f05ca7af78dbf8e9f5c26f642fc2
           "Children": [
             {
               "$type": "Bookmark",
@@ -182,6 +186,22 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+<<<<<<< HEAD
+=======
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "TANA.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\appsettings.json",
+              "RelativeToolTip": "TANA.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-25T21:24:19.405Z",
+              "EditorCaption": ""
+>>>>>>> 10f1ec62d835f05ca7af78dbf8e9f5c26f642fc2
             },
             {
               "$type": "Document",
@@ -193,6 +213,7 @@
               "RelativeToolTip": "TANA.Domain\\Entities\\Admin.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2025-04-29T08:00:00.159Z",
               "EditorCaption": ""
             },
@@ -234,6 +255,9 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T07:59:09.933Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2025-04-25T21:17:12.344Z"
+>>>>>>> 10f1ec62d835f05ca7af78dbf8e9f5c26f642fc2
             },
             {
               "$type": "Document",
@@ -245,8 +269,12 @@
               "RelativeToolTip": "TANA.Domain\\Entities\\Kunde.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAUwBAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2025-04-29T07:58:47.183Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2025-04-25T20:31:40.514Z"
+>>>>>>> 10f1ec62d835f05ca7af78dbf8e9f5c26f642fc2
             },
             {
               "$type": "Document",
@@ -258,6 +286,7 @@
               "RelativeToolTip": "TANA.Domain\\Entities\\IEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2025-04-29T07:55:23.437Z",
               "EditorCaption": ""
             },
@@ -325,6 +354,9 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T07:13:13.221Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2025-04-25T20:30:00.605Z"
+>>>>>>> 10f1ec62d835f05ca7af78dbf8e9f5c26f642fc2
             }
           ]
         },
