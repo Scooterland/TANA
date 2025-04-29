@@ -26,7 +26,6 @@ namespace TANA.Persistence.Data
 		public DbSet<RejseTur> RejseTurer { get; set; }
 		public DbSet<Faktura> Fakturarer {  get; set; }
 		public DbSet<Admin> Adminer { get; set; }
-
-
+        public DbSet<Bruger> Brugere { get; set; }
     }
 }

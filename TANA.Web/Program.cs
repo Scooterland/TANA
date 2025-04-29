@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using TANA.Persistence.Data;
 using TANA.Web.Components;
+using TANA.Domain.Interface;
+using TANA.Application.Services;
+using TANA.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +13,9 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddDbContext<DbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
+builder.Services.AddScoped<BrugerService>();
 
 await builder.Build().RunAsync();
 

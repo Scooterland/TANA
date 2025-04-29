@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TANA.Application\TANA.Application.csproj" />
+    <ProjectReference Include="..\TANA.Domain\TANA.Domain.csproj" />
   </ItemGroup>
 
 </Project>
