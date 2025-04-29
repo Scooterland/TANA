@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Application\\TANA.Application.csproj": {}
+    "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Application\\TANA.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Application\\TANA.Application.csproj": {
+    "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Application\\TANA.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Application\\TANA.Application.csproj",
+        "projectUniqueName": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Application\\TANA.Application.csproj",
         "projectName": "TANA.Application",
-        "projectPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Application\\TANA.Application.csproj",
+        "projectPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Application\\TANA.Application.csproj",
         "packagesPath": "C:\\Users\\rene3\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Domain\\TANA.Domain.csproj": {
-                "projectPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Domain\\TANA.Domain.csproj"
+              "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj": {
+                "projectPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj"
               }
             }
           }
@@ -96,12 +96,12 @@
         }
       }
     },
-    "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Domain\\TANA.Domain.csproj": {
+    "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Domain\\TANA.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj",
         "projectName": "TANA.Domain",
-        "projectPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Domain\\TANA.Domain.csproj",
+        "projectPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj",
         "packagesPath": "C:\\Users\\rene3\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Domain\\obj\\",
         "projectStyle": "PackageReference",

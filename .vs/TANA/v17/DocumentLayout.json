@@ -1,7 +1,59 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\rene3\\source\\repos\\TANA\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.persistence\\migrations\\20250429081143_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\migrations\\20250429081143_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\kunde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\kunde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\tur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\tur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\rejsetur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\rejsetur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\faktura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\faktura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rene3\\source\\repos\\MyHomeRevived\\Domain\\Guest\\Guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.persistence\\tana.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\tana.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3FAC56B-49BA-4644-874C-1E614425C9C1}|TANA.API\\TANA.API.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.api\\tana.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D3FAC56B-49BA-4644-874C-1E614425C9C1}|TANA.API\\TANA.API.csproj|solutionrelative:tana.api\\tana.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\tana.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\tana.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 32,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,6 +186,162 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250429081143_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\Migrations\\20250429081143_InitialMigration.cs",
+              "RelativeDocumentMoniker": "TANA.Persistence\\Migrations\\20250429081143_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\Migrations\\20250429081143_InitialMigration.cs",
+              "RelativeToolTip": "TANA.Persistence\\Migrations\\20250429081143_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:11:44.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Admin.cs",
+              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Admin.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Admin.cs",
+              "RelativeToolTip": "TANA.Domain\\Entities\\Admin.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:00:00.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Faktura.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Faktura.cs",
+              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Faktura.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Faktura.cs",
+              "RelativeToolTip": "TANA.Domain\\Entities\\Faktura.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T07:59:48.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RejseTur.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\RejseTur.cs",
+              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\RejseTur.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\RejseTur.cs",
+              "RelativeToolTip": "TANA.Domain\\Entities\\RejseTur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T07:59:35.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tur.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Tur.cs",
+              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Tur.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Tur.cs",
+              "RelativeToolTip": "TANA.Domain\\Entities\\Tur.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T07:59:09.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Kunde.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Kunde.cs",
+              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Kunde.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Kunde.cs",
+              "RelativeToolTip": "TANA.Domain\\Entities\\Kunde.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwBAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T07:58:47.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IEntity.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\IEntity.cs",
+              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\IEntity.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\IEntity.cs",
+              "RelativeToolTip": "TANA.Domain\\Entities\\IEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T07:55:23.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TANA.Web.csproj",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\TANA.Web.csproj",
+              "RelativeDocumentMoniker": "TANA.Web\\TANA.Web.csproj",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\TANA.Web.csproj",
+              "RelativeToolTip": "TANA.Web\\TANA.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-29T07:44:40.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TANA.Persistence\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "TANA.Persistence\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T07:43:19.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TANA.Persistence.csproj",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\TANA.Persistence.csproj",
+              "RelativeDocumentMoniker": "TANA.Persistence\\TANA.Persistence.csproj",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\TANA.Persistence.csproj",
+              "RelativeToolTip": "TANA.Persistence\\TANA.Persistence.csproj",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-29T07:25:28.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TANA.API.csproj",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.API\\TANA.API.csproj",
+              "RelativeDocumentMoniker": "TANA.API\\TANA.API.csproj",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.API\\TANA.API.csproj",
+              "RelativeToolTip": "TANA.API\\TANA.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-29T07:25:04.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bruger.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Bruger.cs",
+              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Bruger.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Bruger.cs",
+              "RelativeToolTip": "TANA.Domain\\Entities\\Bruger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T07:13:13.221Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -144,6 +352,40 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "8810b19f-ff58-4b6d-ba69-ea904f269863",
+        "Display": 0,
+        "X": -1,
+        "Y": 180,
+        "Width": 726,
+        "Height": 487,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Guest.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\MyHomeRevived\\Domain\\Guest\\Guest.cs",
+              "RelativeDocumentMoniker": "..\\MyHomeRevived\\Domain\\Guest\\Guest.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\MyHomeRevived\\Domain\\Guest\\Guest.cs",
+              "RelativeToolTip": "..\\MyHomeRevived\\Domain\\Guest\\Guest.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:00:26.305Z",
+              "EditorCaption": ""
             }
           ]
         }

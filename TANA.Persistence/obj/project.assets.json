@@ -4769,9 +4769,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Persistence\\TANA.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\TANA.Persistence.csproj",
       "projectName": "TANA.Persistence",
-      "projectPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Persistence\\TANA.Persistence.csproj",
+      "projectPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\TANA.Persistence.csproj",
       "packagesPath": "C:\\Users\\rene3\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Persistence\\obj\\",
       "projectStyle": "PackageReference",
@@ -4795,8 +4795,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Application\\TANA.Application.csproj": {
-              "projectPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA.Application\\TANA.Application.csproj"
+            "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Application\\TANA.Application.csproj": {
+              "projectPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Application\\TANA.Application.csproj"
             }
           }
         }
