@@ -31,15 +31,8 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var state = await AuthStateProvider.GetAuthenticationStateAsync();
-        var user = state.User;
-
-        // Check if the user is either admin or employee
-        if (user.IsInRole("Admin") || user.IsInRole("Employee"))
-        {
-            isAuthorized = true;
-            emailAddress = await EmailSettingsService.GetEmailAddressAsync(); // Hent den nuværende e-mailadresse
-        }
+        isAuthorized = true;
+        emailAddress = await EmailSettingsService.GetEmailAddressAsync();
     }
 
     private async Task SaveEmailAddress()
