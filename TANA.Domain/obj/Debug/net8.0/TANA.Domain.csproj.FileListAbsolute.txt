@@ -1,0 +1,15 @@
+C:\Users\rene3\source\repos\TANA\TANA.Domain\bin\Debug\net8.0\TANA.Domain.deps.json
+C:\Users\rene3\source\repos\TANA\TANA.Domain\bin\Debug\net8.0\TANA.Domain.runtimeconfig.json
+C:\Users\rene3\source\repos\TANA\TANA.Domain\bin\Debug\net8.0\TANA.Domain.dll
+C:\Users\rene3\source\repos\TANA\TANA.Domain\bin\Debug\net8.0\TANA.Domain.pdb
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.csproj.AssemblyReference.cache
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.AssemblyInfoInputs.cache
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.AssemblyInfo.cs
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.csproj.CoreCompileInputs.cache
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.sourcelink.json
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.dll
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\refint\TANA.Domain.dll
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.pdb
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\TANA.Domain.genruntimeconfig.cache
+C:\Users\rene3\source\repos\TANA\TANA.Domain\obj\Debug\net8.0\ref\TANA.Domain.dll
