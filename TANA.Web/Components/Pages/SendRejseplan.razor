@@ -34,49 +34,48 @@
 <button class="btn btn-primary" @onclick="GeneratePdf">Create Pdf</button>
 
 @code {
+    [Inject] NavigationManager Navigation { get; set; }
     [Inject] HttpClient Http { get; set; }
     [Inject] IJSRuntime JS { get; set; }  // Inject JSRuntime for at åbne PDF i et nyt vindue
 
     private string navn, email, destination, afrejse, hjemrejse, flyselskab;
+    private string apiBase;
+
+    protected override void OnInitialized()
+    {
+        var uri = new Uri(Navigation.BaseUri);
+        apiBase = $"{uri.Scheme}://{uri.Host}:5051";
+    }
 
     private async Task GeneratePdf()
     {
+        var data = new
+        {
+            Navn = navn,
+            Email = email,
+            Destination = destination,
+            Afrejse = afrejse,
+            Hjemrejse = hjemrejse,
+            Flyselskab = flyselskab
+        };
+
         try
         {
-            // Opretter et anonymt objekt til at sende data til API'et
-            var data = new
-            {
-                Navn = navn,
-                Email = email,
-                Destination = destination,
-                Afrejse = afrejse,
-                Hjemrejse = hjemrejse,
-                Flyselskab = flyselskab
-            };
+            var response = await Http.PostAsJsonAsync($"{apiBase}/api/pdf/rejseplan", data);
 
-            // Sender data til serveren
-            var response = await Http.PostAsJsonAsync("https://localhost:62778/api/pdf/rejseplan", data)
-    ;
-
-            // Hvis API'et returnerer en successtatus (200 OK)
             if (response.IsSuccessStatusCode)
             {
-                // Hent PDF'en fra serveren
-                var pdfUrl = "api/pdf/rejseplan/view";
-
-                // Åbn PDF'en i et nyt vindue
-                await JS.InvokeVoidAsync("open", "https://localhost:62778/api/pdf/rejseplan/view", "_blank");
+                await JS.InvokeVoidAsync("open", $"{apiBase}/api/pdf/rejseplan/view", "_blank");
             }
             else
             {
-                // Hvis der opstår en fejl
-                Console.WriteLine("Fejl ved PDF-oprettelse: " + response.StatusCode);
+                var error = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"PDF error: {error}");
             }
         }
         catch (Exception ex)
         {
-            // Hvis der opstår en exception, logges den
-            Console.WriteLine("Undtagelse: " + ex.Message);
+            Console.WriteLine($"Exception: {ex.Message}");
         }
     }
 }

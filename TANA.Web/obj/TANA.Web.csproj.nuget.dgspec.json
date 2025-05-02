@@ -116,9 +116,15 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Domain\\TANA.Domain.csproj",
         "projectName": "TANA.Domain",
+<<<<<<< HEAD
         "projectPath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Domain\\TANA.Domain.csproj",
         "packagesPath": "C:\\Users\\karin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Domain\\obj\\",
+=======
+        "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj",
+        "packagesPath": "C:\\Users\\tomne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\obj\\",
+>>>>>>> 0568bb6ecf4d0627aeb4c146575d22e8ec3f9365
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

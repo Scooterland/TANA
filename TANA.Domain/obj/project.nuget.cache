@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "NylGdc++qcg=",
+=======
+  "dgSpecHash": "pUNooYqXwIE=",
+>>>>>>> 0568bb6ecf4d0627aeb4c146575d22e8ec3f9365
   "success": true,
   "projectFilePath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Domain\\TANA.Domain.csproj",
   "expectedPackageFiles": [

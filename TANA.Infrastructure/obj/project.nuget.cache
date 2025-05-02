@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "XPyXJdIDvzU=",
+=======
+  "dgSpecHash": "p3vzeuoU6kw=",
+>>>>>>> 0568bb6ecf4d0627aeb4c146575d22e8ec3f9365
   "success": true,
   "projectFilePath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\TANA.Infrastructure.csproj",
   "expectedPackageFiles": [
