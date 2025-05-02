@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cnl2quKmqJk+vzAerEST0Elantm9j7DPGH9frc1e/K4=",
+  "Hash": "Q7L0a9tGl0hGCqX9lPDSr00BYTIy803xpjkHDCkwtFo=",
   "Source": "TANA.Web",
   "BasePath": "_content/TANA.Web",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "TANA.Web\\wwwroot",
       "Source": "TANA.Web",
-      "ContentRoot": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
       "BasePath": "_content/TANA.Web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
       "SourceId": "TANA.Web",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/TANA.Web",
       "RelativePath": "TANA.Web#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css"
+      "OriginalItemSpec": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css"
     },
     {
-      "Identity": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
       "SourceId": "TANA.Web",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/TANA.Web",
       "RelativePath": "TANA.Web#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\app.css",
       "SourceId": "TANA.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
       "BasePath": "_content/TANA.Web",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "TANA.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
       "BasePath": "_content/TANA.Web",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "TANA.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
       "BasePath": "_content/TANA.Web",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\favicon.png",
       "SourceId": "TANA.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
       "BasePath": "_content/TANA.Web",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -146,7 +146,7 @@
   "Endpoints": [
     {
       "Route": "app.css",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -167,7 +167,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 08:01:14 GMT"
+          "Value": "Fri, 02 May 2025 08:08:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -183,7 +183,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -204,7 +204,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 08:01:14 GMT"
+          "Value": "Fri, 02 May 2025 08:08:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -228,7 +228,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -249,7 +249,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 08:01:14 GMT"
+          "Value": "Fri, 02 May 2025 08:08:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -273,7 +273,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -294,7 +294,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 08:01:14 GMT"
+          "Value": "Fri, 02 May 2025 08:08:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -310,7 +310,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -331,7 +331,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 08:01:14 GMT"
+          "Value": "Fri, 02 May 2025 08:08:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -355,7 +355,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -376,7 +376,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 08:01:14 GMT"
+          "Value": "Fri, 02 May 2025 08:08:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -392,7 +392,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -413,7 +413,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 08:01:14 GMT"
+          "Value": "Fri, 02 May 2025 08:08:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -437,7 +437,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -458,7 +458,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 08:01:14 GMT"
+          "Value": "Fri, 02 May 2025 08:08:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -474,7 +474,7 @@
     },
     {
       "Route": "TANA.Web.bundle.scp.css",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -495,7 +495,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 09:26:29 GMT"
+          "Value": "Fri, 02 May 2025 08:15:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -511,7 +511,7 @@
     },
     {
       "Route": "TANA.Web.lo8fvon7b0.bundle.scp.css",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -532,7 +532,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 09:26:29 GMT"
+          "Value": "Fri, 02 May 2025 08:15:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -556,7 +556,7 @@
     },
     {
       "Route": "TANA.Web.lo8fvon7b0.styles.css",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -577,7 +577,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 09:26:29 GMT"
+          "Value": "Fri, 02 May 2025 08:15:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -601,7 +601,7 @@
     },
     {
       "Route": "TANA.Web.styles.css",
-      "AssetFile": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -622,7 +622,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 09:26:29 GMT"
+          "Value": "Fri, 02 May 2025 08:15:17 GMT"
         },
         {
           "Name": "Cache-Control",
