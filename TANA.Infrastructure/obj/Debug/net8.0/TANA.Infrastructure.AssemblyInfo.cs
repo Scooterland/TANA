@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bccaa45b7b8876367c4a9140a677819ac097330")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e060777850ebc86d2b3be658a0bc409da95058f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

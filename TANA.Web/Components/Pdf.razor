@@ -1,0 +1,27 @@
+﻿@page "/Pdf"
+@rendermode InteractiveServer
+@using System.IO;
+@using QuestPDF.Fluent;
+@using QuestPDF.Drawing;
+@using QuestPDF.Infrastructure;
+
+
+<PageTitle>Pdf</PageTitle>
+
+<h1>Pdf</h1>
+
+
+<button class="btn btn-primary" @onclick="GeneratePdf">Create Pdf</button>
+
+@code {
+
+    private void GeneratePdf()
+    {
+        QuestPDF.Settings.License = LicenseType.Community;
+
+        var model = InvoiceDocumentDataSource.GetInvoiceDetails();
+        var document = new InvoiceDocument(model);
+        document.GeneratePdfAndShow();
+
+    }
+}

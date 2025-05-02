@@ -8,10 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<DbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-await builder.Build().RunAsync();
 
 var app = builder.Build();
 
