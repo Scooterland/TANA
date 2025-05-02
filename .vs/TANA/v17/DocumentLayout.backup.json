@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\pages\\modifyemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\modifyemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 37,
+          "SelectedChildIndex": 39,
           "Children": [
             {
               "$type": "Bookmark",
@@ -218,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EmailSettingsService.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailSettingsService.cs",
               "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\EmailSettingsService.cs",
@@ -231,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IKundeRepository.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IKundeRepository.cs",
               "RelativeDocumentMoniker": "Tana.Domain\\Interface\\IKundeRepository.cs",
@@ -240,19 +240,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T09:38:08.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\App.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\App.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T16:42:35.56Z",
               "EditorCaption": ""
             },
             {
@@ -270,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BrugerRepository.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\BrugerRepository.cs",
               "RelativeDocumentMoniker": "TANA.Persistence\\Repositories\\BrugerRepository.cs",
@@ -283,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ModifyEmail.razor",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\ModifyEmail.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\ModifyEmail.razor",
@@ -313,7 +300,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
+              "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
+              "RelativeToolTip": "TANA.Web\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:26:22.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\App.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\App.razor",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\App.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T16:42:35.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Layout\\NavMenu.razor",
@@ -322,19 +335,6 @@
               "ViewState": "AgIAAAcAAAAAAAAAAIBJwB0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-29T17:38:05.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
-              "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
-              "RelativeToolTip": "TANA.Web\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAIBJwCAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:26:22.147Z",
               "EditorCaption": ""
             },
             {
