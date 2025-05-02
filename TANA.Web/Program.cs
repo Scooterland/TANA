@@ -11,8 +11,6 @@ builder.Services.AddRazorComponents()
 builder.Services.AddDbContext<DbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-await builder.Build().RunAsync();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
