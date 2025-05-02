@@ -82,6 +82,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.4.2, )"
             }
           },
           "imports": [
@@ -178,6 +186,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.4.2, )"
             }
           },
           "imports": [
@@ -281,6 +297,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.4.2, )"
             }
           },
           "imports": [
