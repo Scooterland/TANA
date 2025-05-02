@@ -6,7 +6,10 @@
 @using QuestPDF.Fluent;
 @using QuestPDF.Drawing;
 @using QuestPDF.Infrastructure;
-@using System.Net.Http.Json
+@using System.Net.Http.Json;
+@using TANA.Application.Models;
+@using TANA.Infrastructure.Services;
+@inject HttpClient Http
 
 
 <PageTitle>SendRejseplan</PageTitle>
@@ -34,49 +37,46 @@
 <button class="btn btn-primary" @onclick="GeneratePdf">Create Pdf</button>
 
 @code {
-    [Inject] HttpClient Http { get; set; }
     [Inject] IJSRuntime JS { get; set; }  // Inject JSRuntime for at åbne PDF i et nyt vindue
 
-    private string navn, email, destination, afrejse, hjemrejse, flyselskab;
+        private string navn, email, destination, afrejse, hjemrejse, flyselskab;
 
-    private async Task GeneratePdf()
-    {
-        try
+        private async Task GeneratePdf()
         {
-            // Opretter et anonymt objekt til at sende data til API'et
-            var data = new
+            try
             {
-                Navn = navn,
-                Email = email,
-                Destination = destination,
-                Afrejse = afrejse,
-                Hjemrejse = hjemrejse,
-                Flyselskab = flyselskab
-            };
+                QuestPDF.Settings.License = LicenseType.Community;
+
+                var model = new InvoiceModel
+                {
+                    Comments = $"Rejsedestination: {destination}\nAfrejse: {afrejse}\nHjemrejse: {hjemrejse}\nFlyselskab: {flyselskab}",
+                    CustomerAddress = new Address
+                    {
+                        CompanyName = navn,
+                        Email = email
+                    },
+                    Items = new List<OrderItem>() // evt. tom for nu
+                };
 
             // Sender data til serveren
-            var response = await Http.PostAsJsonAsync("https://localhost:62778/api/pdf/rejseplan", data)
-    ;
+            var response = await Http.PostAsJsonAsync("https://localhost:62778/api/pdf/rejseplan", model);
 
-            // Hvis API'et returnerer en successtatus (200 OK)
-            if (response.IsSuccessStatusCode)
-            {
-                // Hent PDF'en fra serveren
-                var pdfUrl = "api/pdf/rejseplan/view";
+                var document = new InvoiceDocument(model);
+                var pdfBytes = document.GeneratePdf();
+
+                // Konverter til base64 string
+                var base64 = Convert.ToBase64String(pdfBytes);
+                var pdfDataUrl = $"data:application/pdf;base64,{base64}";
+
+                // Åbn i nyt vindue
+                await JS.InvokeVoidAsync("open", pdfDataUrl, "_blank");
 
                 // Åbn PDF'en i et nyt vindue
                 await JS.InvokeVoidAsync("open", "https://localhost:62778/api/pdf/rejseplan/view", "_blank");
             }
-            else
+            catch (Exception ex)
             {
-                // Hvis der opstår en fejl
-                Console.WriteLine("Fejl ved PDF-oprettelse: " + response.StatusCode);
+                Console.WriteLine("Fejl ved PDF-generering: " + ex.Message);
             }
         }
-        catch (Exception ex)
-        {
-            // Hvis der opstår en exception, logges den
-            Console.WriteLine("Undtagelse: " + ex.Message);
-        }
-    }
 }

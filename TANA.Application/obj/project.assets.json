@@ -5441,23 +5441,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tomne\\.nuget\\packages\\": {},
+    "C:\\Users\\karin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Application\\TANA.Application.csproj",
+      "projectUniqueName": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Application\\TANA.Application.csproj",
       "projectName": "TANA.Application",
-      "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Application\\TANA.Application.csproj",
-      "packagesPath": "C:\\Users\\tomne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Application\\obj\\",
+      "projectPath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Application\\TANA.Application.csproj",
+      "packagesPath": "C:\\Users\\karin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\tomne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\karin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5472,8 +5472,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj": {
-              "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj"
+            "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Domain\\TANA.Domain.csproj": {
+              "projectPath": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Domain\\TANA.Domain.csproj"
             }
           }
         }
@@ -5547,7 +5547,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
