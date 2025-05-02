@@ -5502,7 +5502,7 @@
       "projectName": "TANA.Infrastructure",
       "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Infrastructure\\TANA.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\tomne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
