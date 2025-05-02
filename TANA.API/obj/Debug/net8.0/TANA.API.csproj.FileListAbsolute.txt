@@ -22,3 +22,46 @@ C:\Users\rene3\source\repos\TANA\TANA.API\obj\Debug\net8.0\refint\TANA.API.dll
 C:\Users\rene3\source\repos\TANA\TANA.API\obj\Debug\net8.0\TANA.API.pdb
 C:\Users\rene3\source\repos\TANA\TANA.API\obj\Debug\net8.0\TANA.API.genruntimeconfig.cache
 C:\Users\rene3\source\repos\TANA\TANA.API\obj\Debug\net8.0\ref\TANA.API.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-BoldItalic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-ExtraBold.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-ExtraLight.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-Italic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-Light.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-LightItalic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-Medium.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-MediumItalic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-Regular.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-SemiBold.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-Thin.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\Lato-ThinItalic.ttf
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\LatoFont\OFL.txt
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.API.deps.json
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.API.runtimeconfig.json
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.API.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.API.pdb
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.Application.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.Domain.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.Infrastructure.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.Persistence.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.Application.pdb
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.Domain.pdb
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.Infrastructure.pdb
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\bin\Debug\net8.0\TANA.Persistence.pdb
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.csproj.AssemblyReference.cache
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.AssemblyInfoInputs.cache
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.AssemblyInfo.cs
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.csproj.CoreCompileInputs.cache
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.sourcelink.json
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.csproj.Up2Date
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\refint\TANA.API.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.pdb
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\TANA.API.genruntimeconfig.cache
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API\obj\Debug\net8.0\ref\TANA.API.dll

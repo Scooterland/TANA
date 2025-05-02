@@ -28,6 +28,11 @@
     <ProjectReference Include="..\TANA.Domain\TANA.Domain.csproj" />
     <ProjectReference Include="..\TANA.Infrastructure\TANA.Infrastructure.csproj" />
     <ProjectReference Include="..\TANA.Persistence\TANA.Persistence.csproj" />
+    <ProjectReference Include="..\TANA.Web\TANA.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTO\" />
   </ItemGroup>
 
 </Project>

@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TANA.API\TANA.API.csproj" />
     <ProjectReference Include="..\TANA.Application\TANA.Application.csproj" />
     <ProjectReference Include="..\TANA.Domain\TANA.Domain.csproj" />
     <ProjectReference Include="..\TANA.Infrastructure\TANA.Infrastructure.csproj" />

@@ -1,0 +1,81 @@
+﻿<h3>SendRejseplan</h3>
+
+@page "/SendRejseplan"
+@rendermode InteractiveServer
+@using System.IO;
+@using QuestPDF.Fluent;
+@using QuestPDF.Drawing;
+@using QuestPDF.Infrastructure;
+@using System.Net.Http.Json
+
+
+<PageTitle>SendRejseplan</PageTitle>
+
+<div class="form-group">
+    <label>Navn:</label>
+    <input class="form-control" @bind="navn" />
+
+    <label>Email:</label>
+    <input class="form-control" @bind="email" />
+
+    <label>Rejsedestination:</label>
+    <input class="form-control" @bind="destination" />
+
+    <label>Afrejse (tidspunkt):</label>
+    <input class="form-control" @bind="afrejse" />
+
+    <label>Hjemrejse (tidspunkt):</label>
+    <input class="form-control" @bind="hjemrejse" />
+
+    <label>Flyselskab:</label>
+    <input class="form-control" @bind="flyselskab" />
+</div>
+
+<button class="btn btn-primary" @onclick="GeneratePdf">Create Pdf</button>
+
+@code {
+    [Inject] HttpClient Http { get; set; }
+    [Inject] IJSRuntime JS { get; set; }  // Inject JSRuntime for at åbne PDF i et nyt vindue
+
+    private string navn, email, destination, afrejse, hjemrejse, flyselskab;
+
+    private async Task GeneratePdf()
+    {
+        try
+        {
+            // Opretter et anonymt objekt til at sende data til API'et
+            var data = new
+            {
+                Navn = navn,
+                Email = email,
+                Destination = destination,
+                Afrejse = afrejse,
+                Hjemrejse = hjemrejse,
+                Flyselskab = flyselskab
+            };
+
+            // Sender data til serveren
+            var response = await Http.PostAsJsonAsync("api/pdf/rejseplan", data);
+
+            // Hvis API'et returnerer en successtatus (200 OK)
+            if (response.IsSuccessStatusCode)
+            {
+                // Hent PDF'en fra serveren
+                var pdfUrl = "api/pdf/rejseplan/view";
+
+                // Åbn PDF'en i et nyt vindue
+                await JS.InvokeVoidAsync("open", pdfUrl, "_blank");
+            }
+            else
+            {
+                // Hvis der opstår en fejl
+                Console.WriteLine("Fejl ved PDF-oprettelse: " + response.StatusCode);
+            }
+        }
+        catch (Exception ex)
+        {
+            // Hvis der opstår en exception, logges den
+            Console.WriteLine("Undtagelse: " + ex.Message);
+        }
+    }
+}
