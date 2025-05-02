@@ -55,7 +55,8 @@
             };
 
             // Sender data til serveren
-            var response = await Http.PostAsJsonAsync("api/pdf/rejseplan", data);
+            var response = await Http.PostAsJsonAsync("https://localhost:62778/api/pdf/rejseplan", data)
+    ;
 
             // Hvis API'et returnerer en successtatus (200 OK)
             if (response.IsSuccessStatusCode)
@@ -64,7 +65,7 @@
                 var pdfUrl = "api/pdf/rejseplan/view";
 
                 // Åbn PDF'en i et nyt vindue
-                await JS.InvokeVoidAsync("open", pdfUrl, "_blank");
+                await JS.InvokeVoidAsync("open", "https://localhost:62778/api/pdf/rejseplan/view", "_blank");
             }
             else
             {
