@@ -21,9 +21,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
 builder.Services.AddScoped<BrugerService>();
 
-builder.Services.AddScoped<IPdfService, PdfService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<RejseplanService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
 
 builder.Services.AddAuthorizationCore();  // Tilføj authorization core

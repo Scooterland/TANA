@@ -252,7 +252,8 @@
               "RelativeToolTip": "TANA.Web\\Components\\App.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T16:42:35.56Z"
+              "WhenOpened": "2025-04-29T16:42:35.56Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -264,7 +265,8 @@
               "RelativeToolTip": "TANA.Persistence\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T12:01:26.849Z"
+              "WhenOpened": "2025-04-29T12:01:26.849Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -306,7 +308,8 @@
               "RelativeToolTip": "TANA.Web\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-29T17:08:39.771Z"
+              "WhenOpened": "2025-04-29T17:08:39.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -316,9 +319,10 @@
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Layout\\NavMenu.razor",
               "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB0AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAIBJwB0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T17:38:05.305Z"
+              "WhenOpened": "2025-04-29T17:38:05.305Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -328,9 +332,10 @@
               "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
               "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
               "RelativeToolTip": "TANA.Web\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBJwCAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:26:22.147Z"
+              "WhenOpened": "2025-04-29T11:26:22.147Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -342,7 +347,8 @@
               "RelativeToolTip": "Tana.Domain\\Interface\\IEmailSettingsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:56:22.568Z"
+              "WhenOpened": "2025-04-29T11:56:22.568Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -354,7 +360,8 @@
               "RelativeToolTip": "Tana.Domain\\Entities\\EmailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:55:44.759Z"
+              "WhenOpened": "2025-04-29T11:55:44.759Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -366,7 +373,8 @@
               "RelativeToolTip": "TANA.Infrastructure\\Services\\EmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:21:36.078Z"
+              "WhenOpened": "2025-04-29T11:21:36.078Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -378,7 +386,8 @@
               "RelativeToolTip": "Tana.Domain\\Interface\\IEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:20:14.743Z"
+              "WhenOpened": "2025-04-29T11:20:14.743Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -390,7 +399,8 @@
               "RelativeToolTip": "Tana.Domain\\Entities\\Admin.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwBAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:25:56.21Z"
+              "WhenOpened": "2025-04-29T09:25:56.21Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -402,7 +412,8 @@
               "RelativeToolTip": "Tana.Domain\\Entities\\Kunde.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:25:18.917Z"
+              "WhenOpened": "2025-04-29T09:25:18.917Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -414,7 +425,8 @@
               "RelativeToolTip": "Tana.Application\\Services\\KundeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:43:37.234Z"
+              "WhenOpened": "2025-04-29T09:43:37.234Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -426,7 +438,8 @@
               "RelativeToolTip": "Tana.Application\\Services\\BrugerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:38:58.482Z"
+              "WhenOpened": "2025-04-29T09:38:58.482Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -438,7 +451,8 @@
               "RelativeToolTip": "Tana.Domain\\Interface\\IBrugerRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:36:59.955Z"
+              "WhenOpened": "2025-04-29T09:36:59.955Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -450,7 +464,8 @@
               "RelativeToolTip": "Tana.Domain\\Entities\\Bruger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T20:30:00.605Z"
+              "WhenOpened": "2025-04-25T20:30:00.605Z",
+              "EditorCaption": ""
             }
           ]
         },
