@@ -7,14 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CQRS\Commands\" />
-    <Folder Include="CQRS\Commands\" />
-    <Folder Include="CQRS\Queries\" />
-    <Folder Include="CQRS\Queries\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Interfaces\" />
+    <Compile Remove="CQRS\**" />
+    <Compile Remove="DTOs\**" />
+    <Compile Remove="Interfaces\**" />
+    <EmbeddedResource Remove="CQRS\**" />
+    <EmbeddedResource Remove="DTOs\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <None Remove="CQRS\**" />
+    <None Remove="DTOs\**" />
+    <None Remove="Interfaces\**" />
   </ItemGroup>
 
   <ItemGroup>

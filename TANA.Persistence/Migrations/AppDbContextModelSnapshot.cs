@@ -165,7 +165,6 @@ namespace TANA.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Kommentar")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("KundeId")

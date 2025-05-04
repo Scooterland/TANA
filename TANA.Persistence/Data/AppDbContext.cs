@@ -24,5 +24,7 @@ namespace TANA.Persistence.Data
 		public DbSet<Admin> Adminer { get; set; }
         public DbSet<Bruger> Brugere { get; set; }
         public DbSet<EmailSettings> EmailSettings { get; set; }
+
+
     }
 }
