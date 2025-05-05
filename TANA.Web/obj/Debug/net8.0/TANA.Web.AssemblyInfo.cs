@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("7dd68f0d-2046-459d-8cdf-a7fb06ef0eba")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0568bb6ecf4d0627aeb4c146575d22e8ec3f9365")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7ba6dc0037844796f4188ff669f5c96ad5304e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

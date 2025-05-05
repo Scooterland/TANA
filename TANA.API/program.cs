@@ -10,6 +10,12 @@ using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ✅ Disable HTTPS in Docker: use HTTP on port 80
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(80);
+});
+
 QuestPDF.Settings.License = LicenseType.Community;
 
 builder.Services.AddControllers();
@@ -34,7 +40,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection(); // ❌ Disabled in Docker
 app.UseCors();
 app.UseAuthorization();
 app.MapControllers();

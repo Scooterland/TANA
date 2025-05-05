@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0568bb6ecf4d0627aeb4c146575d22e8ec3f9365")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7ba6dc0037844796f4188ff669f5c96ad5304e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -44,7 +44,7 @@
     protected override void OnInitialized()
     {
         var uri = new Uri(Navigation.BaseUri);
-        apiBase = $"{uri.Scheme}://{uri.Host}:5051";
+        apiBase = "http://tana-api";
     }
 
     private async Task GeneratePdf()
