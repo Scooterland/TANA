@@ -5,18 +5,35 @@
 
 <h3>Eksisterende Rejseplaner</h3>
 
-<ul>
-    @foreach (var plan in travelPlans)
-    {
-        <li>@plan.Title</li>
-    }
-</ul>
+@foreach (var plan in travelPlans)
+{
+    <div>
+        <h4>@plan.Navn</h4>
+        <ul>
+            @foreach (var tur in plan.Ture)
+            {
+                <li>@tur.Navn</li>
+            }
+        </ul>
+    </div>
+}
+
+<button @onclick="CreatePlan">Opret Rejseplan</button>
 
 @code {
-    List<TravelPlanDto> travelPlans = new();
+    private List<RejsePlanDto> travelPlans = new();
 
     protected override async Task OnInitializedAsync()
     {
-        travelPlans = await TravelPlanService.GetAllTravelPlansAsync();
+        // Hent eksisterende rejseplaner
+        travelPlans = await TravelPlanService.GetAllRejseplanerAsync(); // Assuming this method exists
+    }
+
+    private async Task CreatePlan()
+    {
+        // Opret en ny rejseplan
+        var turIds = new List<int> { 1, 2, 3 };
+        int kundeId = 1;
+        var planId = await TravelPlanService.CreateTravelPlanAsync("Min Rejse", turIds, kundeId);
     }
 }

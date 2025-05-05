@@ -3,7 +3,7 @@
 <h3>StandardTure</h3>
 
 @page "/standardture"
-@inject ITripService TripService
+@inject ITurService TurService
 
 <h3>Opret Standardtur</h3>
 <input @bind="title" placeholder="Titel" />
@@ -15,6 +15,6 @@
 
     private async Task CreateTrip()
     {
-        await TripService.CreateTripAsync(title, description);
+        await TurService.CreateTurAsync(title, description);
     }
 }

@@ -7,10 +7,10 @@ using TANA.Application.DTOs;
 
 namespace TANA.Application.Interfaces
 {
-    public interface ITripService
+    public interface ITurService
     {
-        Task<List<TripDto>> GetAllTripsAsync();
-        Task<TripDto?> GetTripByIdAsync(Guid id);
-        Task CreateTripAsync(string title, string description);
+        Task<List<TurDto>> GetAllTurAsync();
+        Task<TurDto?> GetTurByIdAsync(Guid id);
+        Task CreateTurAsync(string title, string description);
     }
 }
