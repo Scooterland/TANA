@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[4.11.0, )"
             },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -160,6 +164,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.11.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
             },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
@@ -274,6 +282,10 @@
               "target": "Package",
               "version": "[4.11.0, )"
             },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -383,6 +395,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.11.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
             },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
@@ -499,6 +515,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.11.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
             },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",

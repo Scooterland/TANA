@@ -1,0 +1,20 @@
+﻿@using TANA.Application.Interfaces;
+
+<h3>StandardTure</h3>
+
+@page "/standardture"
+@inject ITripService TripService
+
+<h3>Opret Standardtur</h3>
+<input @bind="title" placeholder="Titel" />
+<input @bind="description" placeholder="Beskrivelse" />
+<button @onclick="CreateTrip">Opret</button>
+
+@code {
+    string title, description;
+
+    private async Task CreateTrip()
+    {
+        await TripService.CreateTripAsync(title, description);
+    }
+}

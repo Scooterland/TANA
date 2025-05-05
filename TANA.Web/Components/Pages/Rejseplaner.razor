@@ -1,0 +1,22 @@
+﻿@using TANA.Application.Interfaces;
+@using TANA.Application.DTOs;
+@page "/rejseplaner"
+@inject ITravelPlanService TravelPlanService
+
+<h3>Eksisterende Rejseplaner</h3>
+
+<ul>
+    @foreach (var plan in travelPlans)
+    {
+        <li>@plan.Title</li>
+    }
+</ul>
+
+@code {
+    List<TravelPlanDto> travelPlans = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        travelPlans = await TravelPlanService.GetAllTravelPlansAsync();
+    }
+}
