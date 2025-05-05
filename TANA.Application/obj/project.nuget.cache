@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SOPlBfPHxtU=",
+  "dgSpecHash": "iO6WYnew6cA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Application\\TANA.Application.csproj",
+  "projectFilePath": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Application\\TANA.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomne\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\tomne\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

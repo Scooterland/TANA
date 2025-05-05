@@ -5613,9 +5613,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\TANA.Web.csproj",
+      "projectUniqueName": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\TANA.Web.csproj",
       "projectName": "TANA.Web",
-      "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\TANA.Web.csproj",
+      "projectPath": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\TANA.Web.csproj",
       "packagesPath": "C:\\Users\\tomne\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\obj\\",
       "projectStyle": "PackageReference",
@@ -5638,17 +5638,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Application\\TANA.Application.csproj": {
-              "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Application\\TANA.Application.csproj"
+            "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Application\\TANA.Application.csproj": {
+              "projectPath": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Application\\TANA.Application.csproj"
             },
-            "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj": {
-              "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj"
+            "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj": {
+              "projectPath": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj"
             },
-            "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Infrastructure\\TANA.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Infrastructure\\TANA.Infrastructure.csproj"
+            "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\TANA.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\TANA.Infrastructure.csproj"
             },
-            "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Persistence\\TANA.Persistence.csproj": {
-              "projectPath": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Persistence\\TANA.Persistence.csproj"
+            "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Persistence\\TANA.Persistence.csproj": {
+              "projectPath": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Persistence\\TANA.Persistence.csproj"
             }
           }
         }

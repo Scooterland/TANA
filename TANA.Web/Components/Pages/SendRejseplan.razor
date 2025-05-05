@@ -65,7 +65,7 @@
 
             if (response.IsSuccessStatusCode)
             {
-                await JS.InvokeVoidAsync("open", $"{apiBase}/api/pdf/rejseplan/view", "_blank");
+                await JS.InvokeVoidAsync("open", "http://localhost:5003/api/pdf/rejseplan/view", "_blank");
             }
             else
             {
