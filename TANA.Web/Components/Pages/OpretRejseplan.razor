@@ -1,0 +1,49 @@
+﻿@using TANA.Application.Interfaces;
+
+@page "/opret-rejseplan"
+@inject ITripService TripService
+@inject ITravelPlanService TravelPlanService
+
+<h3>Opret Rejseplan</h3>
+
+@foreach (var trip in availableTrips)
+{
+    <div>
+        <input type="checkbox" @bind="@trip.IsSelected" />
+        <span>@trip.Title</span>
+    </div>
+}
+
+<button @onclick="CreateTravelPlan">Opret Rejseplan</button>
+
+@code {
+    List<TripViewModel> availableTrips = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var trips = await TripService.GetAllTripsAsync();
+        availableTrips = trips.Select(t => new TripViewModel
+            {
+                Id = t.Id,
+                Title = t.Title,
+                IsSelected = false
+            }).ToList();
+    }
+
+    private async Task CreateTravelPlan()
+    {
+        var selectedTripIds = availableTrips
+            .Where(t => t.IsSelected)
+            .Select(t => t.Id)
+            .ToList();
+
+        await TravelPlanService.CreateTravelPlanAsync("Ny rejseplan", selectedTripIds);
+    }
+
+    class TripViewModel
+    {
+        public Guid Id { get; set; }
+        public string Title { get; set; }
+        public bool IsSelected { get; set; }
+    }
+}

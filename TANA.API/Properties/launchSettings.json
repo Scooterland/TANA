@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "TANA.API": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:62778;http://localhost:62779"
+    }
+  }
+}

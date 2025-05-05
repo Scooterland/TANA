@@ -48,12 +48,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2RpZnlFbWFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/OpretRejseplan.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPcHJldFJlanNlcGxhbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pdf.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQZGYucmF6b3I=
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/Rejseplaner.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWpzZXBsYW5lci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/SendRejseplan.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZW5kUmVqc2VwbGFuLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/StandardTure.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdGFuZGFyZFR1cmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Routes.razor]

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="QuestPDF" Version="2025.4.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TANA.Application\TANA.Application.csproj" />
+    <ProjectReference Include="..\TANA.Domain\TANA.Domain.csproj" />
+    <ProjectReference Include="..\TANA.Infrastructure\TANA.Infrastructure.csproj" />
+    <ProjectReference Include="..\TANA.Persistence\TANA.Persistence.csproj" />
+    <ProjectReference Include="..\TANA.Web\TANA.Web.csproj" />
+  </ItemGroup>
+
+</Project>
