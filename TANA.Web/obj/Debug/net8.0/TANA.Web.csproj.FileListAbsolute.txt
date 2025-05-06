@@ -423,7 +423,6 @@ C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TANA.Web.props
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TANA.Web.props
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\TANA.Web.csproj.Up2Date
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\TANA.Web.genruntimeconfig.cache
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\ref\TANA.Web.dll
@@ -674,3 +673,4 @@ C:\Users\tomne\Source\Repos\TANA1\TANA.Web\obj\Debug\net8.0\refint\TANA.Web.dll
 C:\Users\tomne\Source\Repos\TANA1\TANA.Web\obj\Debug\net8.0\TANA.Web.pdb
 C:\Users\tomne\Source\Repos\TANA1\TANA.Web\obj\Debug\net8.0\TANA.Web.genruntimeconfig.cache
 C:\Users\tomne\Source\Repos\TANA1\TANA.Web\obj\Debug\net8.0\ref\TANA.Web.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -37,6 +37,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
 builder.Services.AddScoped<ITurRepository, TurRepository>();
 builder.Services.AddScoped<IRejseRepository, RejseRepository>();
+builder.Services.AddScoped<ITurService, TurService>();
 
 builder.Services.AddHttpClient();
 
