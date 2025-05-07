@@ -9,6 +9,7 @@ using TANA.Infrastructure.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Hosting;
+using PdfSharp.Charting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,13 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
 builder.Services.AddScoped<BrugerService>();
+
+builder.Services.AddScoped<ITurRepository, TurRepository>();
+builder.Services.AddScoped<TurService>();
+
+builder.Services.AddScoped<IRejseturRepository, RejseturRepository>();
+builder.Services.AddScoped<RejseturService>();
+
 
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
