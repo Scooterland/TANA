@@ -26,12 +26,13 @@ namespace TANA.Application.Services
             {
                 Id = t.Id,
                 Navn = t.Navn,
+                Description = t.Description,
                 Pris = t.Pris,
                 Dage = t.Dage
             }).ToList();
         }
 
-        public async Task<TurDto?> GetTurByIdAsync(Guid id)
+        public async Task<TurDto?> GetTurByIdAsync(int id)
         {
             var allTure = await _turRepository.GetAllAsync();
             var tur = allTure.FirstOrDefault(t => t.Id == id.GetHashCode()); // Guid -> int conversion
@@ -42,19 +43,21 @@ namespace TANA.Application.Services
             {
                 Id = tur.Id,
                 Navn = tur.Navn,
+                Description = tur.Description,
                 Pris = tur.Pris,
                 Dage = tur.Dage
             };
         }
 
-        public async Task CreateTurAsync(string title, string description)
+        public async Task CreateTurAsync(string title, string description, int pris, int dage)
         {
             // Hvis description skal bruges, bør det tilføjes til Tur entiteten
             var tur = new Tur
             {
                 Navn = title,
-                Pris = 0,   // Dummy værdi – du kan tilpasse
-                Dage = 1    // Dummy værdi
+                Pris = pris,   // Dummy værdi – du kan tilpasse
+                Dage = dage,    // Dummy værdi
+                Description = description
             };
 
             await _turRepository.AddAsync(tur);

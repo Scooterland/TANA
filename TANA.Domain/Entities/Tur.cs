@@ -16,6 +16,7 @@ namespace TANA.Domain.Entities
 		public string Navn { get; set; }
 		public double Pris {  get; set; }
 		public int Dage { get; set; }
+		public string Description { get; set; }
 
 	}
 }

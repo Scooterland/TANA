@@ -7,6 +7,7 @@ using TANA.Application.DTOs;
 using TANA.Application.Interfaces;
 using TANA.Domain.Entities;
 using TANA.Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace TANA.Infrastructure.Services
 {
@@ -24,7 +25,7 @@ namespace TANA.Infrastructure.Services
         public async Task<int> CreateTravelPlanAsync(string navn, List<int> turIds, int kundeId)
         {
             // Hent de relevante ture
-            var ture = await _turRepo.GetByIdsAsync(turIds);
+            var ture = (await _turRepo.GetByIdsAsync(turIds)).ToList();
 
             if (ture == null || !ture.Any())
                 throw new Exception("Ingen ture fundet for de angivne IDs");
