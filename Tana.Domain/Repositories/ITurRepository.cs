@@ -7,10 +7,10 @@ using TANA.Domain.Entities;
 
 namespace TANA.Domain.Repositories
 {
-    public interface ITripRepository
+    public interface ITurRepository
     {
-        Task<List<Trip>> GetAllAsync();
-        Task<IEnumerable<Trip>> GetByIdAsync(IEnumerable<Guid> ids);
-        Task AddAsync(Trip trip);
+        Task<List<Tur>> GetAllAsync();
+        Task<IEnumerable<Tur>> GetByIdsAsync(IEnumerable<int> ids);
+        Task AddAsync(Tur tur);
     }
 }

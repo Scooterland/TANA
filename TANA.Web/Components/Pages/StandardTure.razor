@@ -1,20 +1,47 @@
-﻿@using TANA.Application.Interfaces;
-
-<h3>StandardTure</h3>
-
-@page "/standardture"
-@inject ITripService TripService
+﻿@page "/standardture"
+@using TANA.Application.Interfaces
+@using TANA.Application.DTOs;
+@inject ITurService TurService
 
 <h3>Opret Standardtur</h3>
+
 <input @bind="title" placeholder="Titel" />
 <input @bind="description" placeholder="Beskrivelse" />
-<button @onclick="CreateTrip">Opret</button>
+<input type="number" @bind="pris" placeholder="Pris" />
+<input type="number" @bind="dage" placeholder="Antal dage" />
+<button @onclick="CreateTur">Opret</button>
+
+@if (ture.Any())
+{
+    <h4>Eksisterende ture:</h4>
+    <ul>
+        @foreach (var t in ture)
+        {
+            <li>@t.Navn – @t.Pris kr. – @t.Dage dage</li>
+        }
+    </ul>
+}
 
 @code {
     string title, description;
+    int pris;
+    int dage;
 
-    private async Task CreateTrip()
+    List<TurDto> ture = new();
+
+    protected override async Task OnInitializedAsync()
     {
-        await TripService.CreateTripAsync(title, description);
+        await HentTureAsync();
+    }
+
+    private async Task CreateTur()
+    {
+        await TurService.CreateTurAsync(title, description, pris, dage);
+        await HentTureAsync(); // Opdater visning
+    }
+
+    private async Task HentTureAsync()
+    {
+        ture = await TurService.GetAllTurAsync();
     }
 }

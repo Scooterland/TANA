@@ -171,6 +171,10 @@ namespace TANA.Persistence.Migrations
                     b.Property<int>("KundeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Navn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Pris")
                         .HasColumnType("float");
 
@@ -239,6 +243,10 @@ namespace TANA.Persistence.Migrations
                     b.Property<int>("Dage")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Navn")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -282,7 +290,7 @@ namespace TANA.Persistence.Migrations
             modelBuilder.Entity("TANA.Domain.Entities.RejseTur", b =>
                 {
                     b.HasOne("TANA.Domain.Entities.Rejse", "Rejse")
-                        .WithMany()
+                        .WithMany("RejseTurer")
                         .HasForeignKey("RejseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -296,6 +304,11 @@ namespace TANA.Persistence.Migrations
                     b.Navigation("Rejse");
 
                     b.Navigation("Tur");
+                });
+
+            modelBuilder.Entity("TANA.Domain.Entities.Rejse", b =>
+                {
+                    b.Navigation("RejseTurer");
                 });
 #pragma warning restore 612, 618
         }

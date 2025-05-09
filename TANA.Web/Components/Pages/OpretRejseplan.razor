@@ -1,49 +1,52 @@
 ﻿@using TANA.Application.Interfaces;
 
 @page "/opret-rejseplan"
-@inject ITripService TripService
+@inject ITurService TurService
 @inject ITravelPlanService TravelPlanService
 
 <h3>Opret Rejseplan</h3>
 
-@foreach (var trip in availableTrips)
+@foreach (var tur in availableTurs)
 {
     <div>
-        <input type="checkbox" @bind="@trip.IsSelected" />
-        <span>@trip.Title</span>
+        <input type="checkbox" @bind="@tur.IsSelected" />
+        <span>@tur.Navn</span>
     </div>
 }
 
 <button @onclick="CreateTravelPlan">Opret Rejseplan</button>
 
 @code {
-    List<TripViewModel> availableTrips = new();
+    List<TurViewModel> availableTurs = new();
 
     protected override async Task OnInitializedAsync()
     {
-        var trips = await TripService.GetAllTripsAsync();
-        availableTrips = trips.Select(t => new TripViewModel
+        var turs = await TurService.GetAllTurAsync();
+        availableTurs = turs.Select(t => new TurViewModel
             {
                 Id = t.Id,
-                Title = t.Title,
+                Navn = t.Navn,
                 IsSelected = false
             }).ToList();
     }
+    
+    private int kundeId = 1; // Midlertidigt — skift dette senere til brugerens ID
 
     private async Task CreateTravelPlan()
     {
-        var selectedTripIds = availableTrips
+        var selectedTurIds = availableTurs
             .Where(t => t.IsSelected)
             .Select(t => t.Id)
             .ToList();
 
-        await TravelPlanService.CreateTravelPlanAsync("Ny rejseplan", selectedTripIds);
+        // Create the travel plan by passing the selected TurIds
+        await TravelPlanService.CreateTravelPlanAsync("Ny rejseplan", selectedTurIds, kundeId);
     }
 
-    class TripViewModel
+    class TurViewModel
     {
-        public Guid Id { get; set; }
-        public string Title { get; set; }
+        public int Id { get; set; }
+        public string Navn { get; set; }
         public bool IsSelected { get; set; }
     }
 }

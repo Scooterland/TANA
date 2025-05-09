@@ -1,22 +1,54 @@
-﻿@using TANA.Application.Interfaces;
-@using TANA.Application.DTOs;
+﻿@using TANA.Application.Interfaces
+@using TANA.Application.DTOs
 @page "/rejseplaner"
 @inject ITravelPlanService TravelPlanService
 
 <h3>Eksisterende Rejseplaner</h3>
 
-<ul>
+@if (travelPlans.Any())
+{
     @foreach (var plan in travelPlans)
     {
-        <li>@plan.Title</li>
+        <div style="border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem;">
+            <h4>@plan.Navn</h4>
+            <ul>
+                @foreach (var tur in plan.Ture)
+                {
+                    <li>@tur.Navn</li>
+                }
+            </ul>
+        </div>
     }
-</ul>
+}
+else
+{
+    <p>Ingen rejseplaner oprettet endnu.</p>
+}
+
+<button @onclick="CreatePlan">Opret Rejseplan</button>
 
 @code {
-    List<TravelPlanDto> travelPlans = new();
+    private List<RejsePlanDto> travelPlans = new();
 
     protected override async Task OnInitializedAsync()
     {
-        travelPlans = await TravelPlanService.GetAllTravelPlansAsync();
+        await HentRejseplanerAsync();
+    }
+
+    private async Task CreatePlan()
+    {
+        // Opret en ny rejseplan med dummy tur-IDs og kunde-ID
+        var turIds = new List<int> { 1, 2, 3 };
+        int kundeId = 1;
+
+        await TravelPlanService.CreateTravelPlanAsync("Min Rejse", turIds, kundeId);
+
+        // Opdater listen efter oprettelse
+        await HentRejseplanerAsync();
+    }
+
+    private async Task HentRejseplanerAsync()
+    {
+        travelPlans = await TravelPlanService.GetAllRejseplanerAsync();
     }
 }

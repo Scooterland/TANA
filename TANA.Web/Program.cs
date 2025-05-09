@@ -9,7 +9,8 @@ using TANA.Infrastructure.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Hosting;
-using TANA.Application.CQRS.Handler;
+using TANA.Application.Interfaces;
+using TANA.Domain.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,8 +34,10 @@ builder.Services.AddAuthorization();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
-builder.Services.AddMediatR(cfg =>
-    cfg.RegisterServicesFromAssemblyContaining<CreateTravelPlanHandler>());
+builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
+builder.Services.AddScoped<ITurRepository, TurRepository>();
+builder.Services.AddScoped<IRejseRepository, RejseRepository>();
+builder.Services.AddScoped<ITurService, TurService>();
 
 builder.Services.AddHttpClient();
 

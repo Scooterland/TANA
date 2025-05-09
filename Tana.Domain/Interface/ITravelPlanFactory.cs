@@ -9,6 +9,6 @@ namespace TANA.Domain.Interface
 {
     public interface ITravelPlanFactory
     {
-        TravelPlan CreateSpecializedPlan(string name, IEnumerable<Trip> baseTrips);
+        Rejse CreateSpecializedPlan(string navn, IEnumerable<Tur> baseTure);
     }
 }
