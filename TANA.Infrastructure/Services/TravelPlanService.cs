@@ -22,7 +22,7 @@ namespace TANA.Infrastructure.Services
             _rejseRepo = rejseRepo;
         }
 
-        public async Task<int> CreateTravelPlanAsync(string navn, List<int> turIds, int kundeId)
+        public async Task<int> CreateTravelPlanAsync(string navn, List<int> turIds, int kundeId, string description, double pris, int dage)
         {
             // Hent de relevante ture
             var ture = (await _turRepo.GetByIdsAsync(turIds)).ToList();
@@ -35,10 +35,10 @@ namespace TANA.Infrastructure.Services
             {
                 Navn = navn,
                 StartsDato = DateOnly.FromDateTime(DateTime.Now),
-                SlutsDato = DateOnly.FromDateTime(DateTime.Now.AddDays(5)),
-                Dage = 5,
-                Pris = ture.Sum(t => t.Pris),
-                Kommentar = "En spændende rejseplan",
+                SlutsDato = DateOnly.FromDateTime(DateTime.Now.AddDays(dage)),
+                Dage = dage,
+                Pris = pris,
+                Kommentar = description,
                 KundeId = kundeId
             };
 
@@ -79,6 +79,16 @@ namespace TANA.Infrastructure.Services
                     Dage = rt.Dage
                 }).ToList()
             }).ToList();
+        }
+
+        public async Task DeleteTravelPlanAsync(int id)
+        {
+            var rejse = await _rejseRepo.GetByIdAsync(id);
+
+            if (rejse == null)
+                throw new Exception($"Rejseplan med ID {id} blev ikke fundet.");
+
+            await _rejseRepo.DeleteAsync(rejse);
         }
     }
 }

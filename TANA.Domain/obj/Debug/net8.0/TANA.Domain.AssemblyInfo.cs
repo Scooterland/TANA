@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7751faade3e29c893f41f3d45664801142b1a539")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0377bd389744dd473a8493be7de42dedb3979ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,7 +10,8 @@ namespace TANA.Application.Interfaces
 {
     public interface ITravelPlanService
     {
-        Task<int> CreateTravelPlanAsync(string navn, List<int> turIds, int kundeId);
+        Task<int> CreateTravelPlanAsync(string navn, List<int> turIds, int kundeId, string description, double pris, int dage);
         Task<List<RejsePlanDto>> GetAllRejseplanerAsync();
+        Task DeleteTravelPlanAsync(int id);
     }
 }

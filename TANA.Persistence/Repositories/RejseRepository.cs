@@ -35,5 +35,11 @@ namespace TANA.Persistence.Repositories
             _context.Rejser.Add(rejse);
             await _context.SaveChangesAsync();
         }
+
+        public async Task DeleteAsync(Rejse rejse)
+        {
+            _context.Rejser.Remove(rejse);
+            await _context.SaveChangesAsync();
+        }
     }
 }

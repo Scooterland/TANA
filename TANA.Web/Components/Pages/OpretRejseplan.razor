@@ -3,9 +3,23 @@
 @page "/opret-rejseplan"
 @inject ITurService TurService
 @inject ITravelPlanService TravelPlanService
+@rendermode InteractiveServer
 
 <h3>Opret Rejseplan</h3>
 
+<label for="navn">Navn:</label>
+<input type="text" id="navn" @bind="navn" placeholder="Rejseplan Navn" />
+
+<label for="description">Beskrivelse:</label>
+<input type="text" id="description" @bind="description" placeholder="Beskrivelse af rejseplan" />
+
+<label for="pris">Pris:</label>
+<input type="number" id="pris" @bind="pris" placeholder="Pris" />
+
+<label for="dage">Dage:</label>
+<input type="number" id="dage" @bind="dage" placeholder="Dage" />
+
+<h4>Vælg Ture:</h4>
 @foreach (var tur in availableTurs)
 {
     <div>
@@ -16,21 +30,61 @@
 
 <button @onclick="CreateTravelPlan">Opret Rejseplan</button>
 
-@code {
-    List<TurViewModel> availableTurs = new();
+<hr />
 
+<h3>Allerede oprettede rejseplaner</h3>
+@if (rejsePlaner.Any())
+{
+    <ul>
+        @foreach (var plan in rejsePlaner)
+        {
+            <li>
+                <strong>@plan.Navn</strong><br />
+                Beskrivelse: @plan.Description<br />
+                Pris: @plan.Pris kr<br />
+                Dage: @plan.Dage<br />
+                Ture: @string.Join(", ", plan.TurNavne)
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Ingen rejseplaner er blevet oprettet endnu.</p>
+}
+
+@code {
+    private string navn = "";
+    private string description = "";
+    private double pris;
+    private int dage;
+    private int kundeId = 2;
+
+    List<TurViewModel> availableTurs = new();
+    List<RejsePlanViewModel> rejsePlaner = new();
+
+    // Load the available tours on initialization
     protected override async Task OnInitializedAsync()
     {
         var turs = await TurService.GetAllTurAsync();
         availableTurs = turs.Select(t => new TurViewModel
-            {
-                Id = t.Id,
-                Navn = t.Navn,
-                IsSelected = false
-            }).ToList();
+        {
+            Id = t.Id,
+            Navn = t.Navn,
+            Pris = t.Pris,
+            Dage = t.Dage,
+            IsSelected = false
+        }).ToList();
+
+        await LoadRejsePlaner();
     }
-    
-    private int kundeId = 1; // Midlertidigt — skift dette senere til brugerens ID
+
+    // Update total price and days based on selected tours
+    private void UpdatePriceAndDays()
+    {
+        pris = availableTurs.Where(t => t.IsSelected).Sum(t => t.Pris);
+        dage = availableTurs.Where(t => t.IsSelected).Sum(t => t.Dage);
+    }
 
     private async Task CreateTravelPlan()
     {
@@ -39,14 +93,49 @@
             .Select(t => t.Id)
             .ToList();
 
-        // Create the travel plan by passing the selected TurIds
-        await TravelPlanService.CreateTravelPlanAsync("Ny rejseplan", selectedTurIds, kundeId);
+        await TravelPlanService.CreateTravelPlanAsync(
+            navn,                 // string: name of the travel plan
+            selectedTurIds,       // List<int>: selected tour IDs
+            kundeId,              // int: customer ID
+            description,          // string: description of the plan
+            pris,                 // double: total price (calculated based on selected tours)
+            dage                  // int: number of days (calculated based on selected tours)
+        );
+
+        await LoadRejsePlaner();
     }
 
+    private async Task LoadRejsePlaner()
+    {
+        var plans = await TravelPlanService.GetAllRejseplanerAsync(); // Husk: skal inkludere ture med navne
+        rejsePlaner = plans.Select(p => new RejsePlanViewModel
+            {
+                Id = p.Id,
+                Navn = p.Navn,
+                Description = p.Description,
+                Pris = p.Pris,
+                Dage = p.Dage,
+                TurNavne = p.Ture.Select(t => t.Navn).ToList()
+            }).ToList();
+    }
+
+    // ViewModel to represent the Tour data
     class TurViewModel
     {
         public int Id { get; set; }
         public string Navn { get; set; }
+        public double Pris { get; set; }
+        public int Dage { get; set; }
         public bool IsSelected { get; set; }
+    }
+
+    class RejsePlanViewModel
+    {
+        public int Id { get; set; }
+        public string Navn { get; set; }
+        public string Description { get; set; }
+        public double Pris { get; set; }
+        public int Dage { get; set; }
+        public List<string> TurNavne { get; set; } = new();
     }
 }
