@@ -24,7 +24,7 @@ namespace TANA.Persistence.Repositories
             return await _context.Turer.ToListAsync();
         }
 
-        public async Task<IEnumerable<Tur>> GetByIdsAsync(IEnumerable<int> ids)
+        public async Task<List<Tur>> GetByIdsAsync(IEnumerable<int> ids)
         {
             return await _context.Turer
                 .Where(t => ids.Contains(t.Id))

@@ -8,7 +8,7 @@ using TANA.Application.Interfaces;
 using TANA.Domain.Entities;
 using TANA.Domain.Repositories;
 
-namespace TANA.Application.Services
+namespace TANA.Infrastructure.Services
 {
     public class TurService : ITurService
     {
@@ -22,6 +22,7 @@ namespace TANA.Application.Services
         public async Task<List<TurDto>> GetAllTurAsync()
         {
             var ture = await _turRepository.GetAllAsync();
+
             return ture.Select(t => new TurDto
             {
                 Id = t.Id,
@@ -32,35 +33,31 @@ namespace TANA.Application.Services
             }).ToList();
         }
 
-        public async Task<TurDto?> GetTurByIdAsync(int id)
+        public async Task<List<TurDto>> GetTurByIdsAsync(IEnumerable<int> ids)
         {
-            var allTure = await _turRepository.GetAllAsync();
-            var tur = allTure.FirstOrDefault(t => t.Id == id.GetHashCode()); // Guid -> int conversion
-            if (tur == null)
-                return null;
+            var ture = await _turRepository.GetByIdsAsync(ids);
 
-            return new TurDto
+            return ture.Select(t => new TurDto
             {
-                Id = tur.Id,
-                Navn = tur.Navn,
-                Description = tur.Description,
-                Pris = tur.Pris,
-                Dage = tur.Dage
-            };
+                Id = t.Id,
+                Navn = t.Navn,
+                Description = t.Description,
+                Pris = t.Pris,
+                Dage = t.Dage
+            }).ToList();
         }
 
-        public async Task CreateTurAsync(string title, string description, int pris, int dage)
+        public async Task CreateTurAsync(string navn, string description, int pris, int dage)
         {
-            // Hvis description skal bruges, bør det tilføjes til Tur entiteten
             var tur = new Tur
             {
-                Navn = title,
-                Pris = pris,   // Dummy værdi – du kan tilpasse
-                Dage = dage,    // Dummy værdi
-                Description = description
+                Navn = navn,
+                Description = description,
+                Pris = pris,
+                Dage = dage
             };
 
-            await _turRepository.AddAsync(tur);
+            await _turRepository.AddAsync(tur); // <- denne skal kaldes!
         }
     }
 }
