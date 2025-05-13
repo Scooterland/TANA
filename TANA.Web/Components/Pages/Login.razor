@@ -48,7 +48,6 @@
         {
             var sessionAuth = (SessionAuthenticationStateProvider)AuthenticationStateProvider;
 
-            // 🟢 انتظر العملية كاملة
             await sessionAuth.MarkUserAsAuthenticated(bruger);
 
             NavigationManager.NavigateTo(bruger.Rolle == "Admin" ? "/rejser" : "/modify-email");
