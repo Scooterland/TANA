@@ -41,7 +41,6 @@ namespace TANA.Infrastructure.Services
         {
             try
             {
-                // البحث في جميع المجلدات الفرعية
                 var files = Directory.GetFiles(_templatePath, "*.pdf", SearchOption.AllDirectories);
 
                 var filePath = files.FirstOrDefault(f => Path.GetFileName(f) == fileName);
