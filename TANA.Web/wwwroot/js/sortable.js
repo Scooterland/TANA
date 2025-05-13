@@ -1,9 +1,7 @@
-﻿// wwwroot/js/sortable.js
 window.initializeSortable = (id) => {
     const el = document.getElementById(id);
-    if (!el) return;               // العنصر غير موجود بعد → اخرج بدون خطأ
+    if (!el) return;             
 
-    // إذا كان قد تمّ تهيئته من قبل فلا داعى لإعادة تهيئته
     if (el.__sortableInstance) return;
 
     el.__sortableInstance = new Sortable(el, {
