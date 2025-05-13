@@ -24,7 +24,16 @@ namespace TANA.Persistence.Data
 		public DbSet<Admin> Adminer { get; set; }
         public DbSet<Bruger> Brugere { get; set; }
         public DbSet<EmailSettings> EmailSettings { get; set; }
+        public DbSet<TemplateEntity> Templates { get; set; }
+        public DbSet<TemplateItemEntity> TemplateItems { get; set; }
 
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TemplateEntity>()
+                        .HasMany(t => t.Items)
+                        .WithOne(i => i.Template)
+                        .HasForeignKey(i => i.TemplateEntityId)
+                        .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }

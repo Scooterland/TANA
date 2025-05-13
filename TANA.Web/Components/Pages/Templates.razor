@@ -1,0 +1,384 @@
+﻿@page "/templates"
+@using TANA.Domain.Entities
+@using TANA.Domain.Interface
+@using TANA.Infrastructure.Services
+@inject TemplateLibraryService TemplateLibraryService
+@inject ITemplateRepository TemplateRepo
+@inject IJSRuntime JS
+@inject NavigationManager Navigation
+@inject PdfGenerationService PdfService
+@rendermode InteractiveServer
+
+
+
+<h3>Templates Library</h3>
+
+<button class="btn btn-secondary mb-3" @onclick="ToggleTemplates">
+    @(showTemplates ? "Hide Templates" : "Show Templates")
+</button>
+
+<!-- قسم الرفع -->
+<div class="mb-4 p-3 border rounded">
+    <h4>Upload New Template</h4>
+    <InputFile OnChange="HandleFileSelected" />
+    <button class="btn btn-primary mt-2" @onclick="SaveFile" disabled="@( !isFileSelected )">
+        Save Template
+    </button>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <p class="mt-2">@message</p>
+    }
+</div>
+
+
+<!-- جدول القوالب يظهر فقط عندما يكون showTemplates = true -->
+@if (showTemplates && templates != null)
+{
+    <div class="mt-4">
+        <h5>Template Actions</h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Template Name</th>
+                    <th>Created Date</th>
+                    <th>Last Modified</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var template in templates)
+                {
+                    <tr>
+                        <td>@template.Id</td>
+                        <td>@template.TemplateName</td>
+                        <td>@template.CreatedDate</td>
+                        <td>@template.LastModifiedDate</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm me-2"
+                                    @onclick="() => ExportToPdf(template.Id)">
+                                Export PDF
+                            </button>
+
+                            <button class="btn btn-success btn-sm me-2"
+                                    @onclick="() => EditTemplate(template.Id)">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm me-2"
+                                    @onclick="() => DeleteTemplate(template.Id)">
+                                Delete
+                            </button>
+
+                            <button class="btn btn-secondary btn-sm"
+                                    @onclick="() => ShowPreview(template.Id, template.TemplateName)">
+                                Preview
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+
+@if (!string.IsNullOrEmpty(previewHtml))
+{
+    <div class="mt-4">
+        <h5>Preview:</h5>
+        <iframe srcdoc="@previewHtml" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
+    </div>
+}
+
+else if (showTemplates && templates != null)
+{
+    <div class="mt-4">
+        <h5>Template Details</h5>
+        @foreach (var template in templates)
+        {
+            <div class="border p-3 mb-2">
+                <h5>@template.TemplateName</h5>
+                <p>Created Date: @template.CreatedDate</p>
+                <p>Last Modified: @template.LastModifiedDate</p>
+
+                @if (template.Items.Any(i => i.Content == "Day Sections"))
+                {
+                    <h6>Day Sections:</h6>
+                    <ul>
+                        @foreach (var item in template.Items.Where(i => i.Content == "Day Sections"))
+                        {
+                            <li>
+                                <strong>Title:</strong> @item.Title <br />
+                                <strong>Activity:</strong> @item.Activity <br />
+                                <strong>Meals:</strong> @item.Meals <br />
+                                <strong>Accommodation:</strong> @item.Accommodation <br />
+                                <strong>Note:</strong> @item.Note <br />
+                            </li>
+                        }
+                    </ul>
+                }
+                @if (!string.IsNullOrEmpty(template.ImageUrl))
+                {
+                    <div class="mt-2">
+                        <img src="@template.ImageUrl" style="max-width: 200px; height: auto; border: 1px solid #ddd;" />
+                    </div>
+                }
+            </div>
+        }
+    </div>
+}
+
+
+@code {
+    private List<TemplateEntity>? templates;
+    private IBrowserFile? selectedFile;
+    private bool isFileSelected;
+    private string? message;
+    private bool showTemplates = false;
+    private string? previewFile;
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTemplatesAsync();
+    }
+
+    private async Task LoadTemplatesAsync()
+    {
+        try
+        {
+            templates = await TemplateRepo.GetAllTemplatesAsync();
+
+            // تحديث البيانات لتشمل الحقول الجديدة مباشرة
+            foreach (var template in templates)
+            {
+                foreach (var item in template.Items)
+                {
+                    item.Title = item.Title ?? "No Title";
+                    item.Activity = item.Activity ?? "No Activity";
+                    item.Meals = item.Meals ?? "No Meals";
+                    item.Accommodation = item.Accommodation ?? "No Accommodation";
+                    item.Note = item.Note ?? "No Note";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading templates: {ex.Message}");
+        }
+    }
+
+
+
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        selectedFile = e.File;
+        if (selectedFile != null && selectedFile.Name.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+        {
+            isFileSelected = true;
+            message = $"Selected: {selectedFile.Name}";
+        }
+        else
+        {
+            isFileSelected = false;
+            message = "Please select a PDF file.";
+        }
+    }
+
+    private async Task SaveFile()
+    {
+        if (selectedFile == null) return;
+
+        try
+        {
+            // 1. الحصول على اسم الملف
+            string sanitizedFileName = selectedFile.Name.Replace(" ", "_");
+            string templateName = Path.GetFileNameWithoutExtension(sanitizedFileName);
+            string fileName = $"{templateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
+
+            // 2. حفظ الملف فعليّاً في wwwroot/TemplateLibrary
+            using var fs = selectedFile.OpenReadStream(10 * 1024 * 1024);
+            await TemplateLibraryService.SaveTemplateFileAsync(fs, templateName, fileName);
+
+            // 3. إنشاء سجل جديد في قاعدة البيانات
+            var newTemplate = new TemplateEntity
+                {
+                    TemplateName = templateName,
+                    CreatedDate = DateTime.UtcNow,
+                    LastModifiedDate = DateTime.UtcNow,
+                    Items = new List<TemplateItemEntity>()  // إذا لم توجد تفاصيل للعناصر الآن
+                };
+
+            await TemplateRepo.SaveTemplateAsync(newTemplate);
+
+            // 4. رسالة للمستخدم وإعادة تحميل القائمة
+            message = "Uploaded & saved to database!";
+            isFileSelected = false;
+            selectedFile = null;
+
+            await LoadTemplatesAsync();
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in SaveFile: {ex.Message}");
+            message = "Error uploading file.";
+        }
+    }
+
+
+    private async Task ExportToPdf(int templateId)
+    {
+        try
+        {
+            var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
+
+            if (templateEntity != null)
+            {
+                string htmlContent = PdfService.GenerateHtmlFromTemplate(
+                 templateEntity.TemplateName,
+                 templateEntity.Items.Select(i => new TemplateItem
+                     {
+                         Id = i.Id.ToString(),
+                         Content = i.Content,
+                         Order = i.Order,
+                         Title = i.Title,
+                         Activity = i.Activity,
+                         Meals = i.Meals,
+                         Accommodation = i.Accommodation,
+                         Note = i.Note,
+                         IsSelected = true
+                     }).ToList(),
+                 templateEntity.Id,
+                 templateEntity.CreatedDate,
+                 templateEntity.LastModifiedDate,
+                 templateEntity.PrimaryColor,
+                 templateEntity.HeaderBgColor,
+                 templateEntity.FooterBgColor,
+                 templateEntity.FontFamily,
+                 templateEntity.ImageUrl
+             );
+
+                byte[] pdfBytes = PdfService.GeneratePdf(htmlContent);
+
+                if (pdfBytes.Length == 0)
+                {
+                    await JS.InvokeVoidAsync("alert", "Error generating the PDF.");
+                    return;
+                }
+
+                // تنظيف اسم القالب من المسافات
+                string sanitizedTemplateName = templateEntity.TemplateName.Replace(" ", "_");
+
+                // تحديد مسار الحفظ
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "TemplateLibrary", sanitizedTemplateName);
+
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                // اسم الملف مع التاريخ
+                string fileName = $"{sanitizedTemplateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
+
+                // استدعاء `SaveTemplateFileAsync` مع جميع المعاملات الثلاثة
+                await TemplateLibraryService.SaveTemplateFileAsync(
+                    new MemoryStream(pdfBytes),
+                    sanitizedTemplateName,
+                    fileName
+                );
+
+                Console.WriteLine($"PDF saved at: {Path.Combine(directoryPath, fileName)}");
+
+                await JS.InvokeVoidAsync("alert", $"PDF exported successfully as {fileName}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error exporting to PDF: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Error exporting the template to PDF.");
+        }
+    }
+
+
+
+
+
+
+    private void EditTemplate(int id) =>
+        Navigation.NavigateTo($"/template-builder/{id}");
+
+
+    private async Task DeleteTemplate(int id)
+    {
+        bool confirmed = await JS.InvokeAsync<bool>("confirm", "Are you sure you want to delete this template?");
+        if (confirmed)
+        {
+            await TemplateRepo.DeleteTemplateAsync(id);
+
+            // إزالة القالب من القائمة بدون إعادة التحميل
+            templates = templates?.Where(t => t.Id != id).ToList();
+
+            // إعادة تعيين المعاينة إذا كانت القالب المحذوف هو الذي يُعرض
+            if (!string.IsNullOrEmpty(previewHtml))
+            {
+                previewHtml = null;
+            }
+
+            StateHasChanged();
+        }
+    }
+
+
+    private async Task ToggleTemplates()
+    {
+        showTemplates = !showTemplates;
+
+        if (showTemplates)
+        {
+            await LoadTemplatesAsync();
+        }
+
+        // لا تقم بإعادة تعيين `previewFile`
+        StateHasChanged();
+    }
+
+    private string? previewHtml;
+
+    private async Task ShowPreview(int templateId, string templateName)
+    {
+        var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
+        if (templateEntity != null)
+        {
+            previewHtml = PdfService.GenerateHtmlFromTemplate(
+                templateEntity.TemplateName,
+                templateEntity.Items.Select(i => new TemplateItem
+                    {
+                        Id = i.Id.ToString(),
+                        Content = i.Content,
+                        Order = i.Order,
+                        Title = i.Title,
+                        Activity = i.Activity,
+                        Meals = i.Meals,
+                        Accommodation = i.Accommodation,
+                        Note = i.Note,
+                        IsSelected = true
+                    }).ToList(),
+                templateEntity.Id,
+                templateEntity.CreatedDate,
+                templateEntity.LastModifiedDate,
+                templateEntity.PrimaryColor,
+                templateEntity.HeaderBgColor,
+                templateEntity.FooterBgColor,
+                templateEntity.FontFamily,
+                templateEntity.ImageUrl);
+
+            StateHasChanged();
+        }
+    }
+
+
+}

@@ -1,12 +1,14 @@
-html, body {
+﻿/* ========== GENERAL STYLES ========== */
+/*html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a, .btn-link {
     color: #006bb7;
-}
+}*/
 
-.btn-primary {
+/* ========== BUTTON STYLES ========== */
+/*.btn-primary {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
@@ -42,10 +44,78 @@ h1:focus {
     color: white;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
+
+.sortable-ghost {
+    opacity: 0.4;
+}
+
+.sortable-chosen {
+    background: #ffeeb0;
+}*/
+
+
+/* ========== MODAL / POPUP STYLES ========== */
+/*.popup-content-a4 {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}*/
+
+/* Image Preview */
+/*.page-body .image-preview {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .page-body .image-preview img {
+        max-width: 100%;
+        max-height: 150px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
     }
 
-.darker-border-checkbox.form-check-input {
-    border-color: #929292;
+.section {
+    background-color: #fafafa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+    .section:hover {
+        background-color: #f0f0f0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h3 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }*/
+
+:root {
+    --primary-color: #f19d19;
+    --header-bg-color: #f19d19;
+    --footer-bg-color: #f19d19;
+    --font-family: 'Arial', sans-serif;
+}
+
+.page-header {
+    background-color: var(--header-bg-color) !important;
+}
+
+.page-footer {
+    background-color: var(--footer-bg-color) !important;
+}
+
+.day-section h3, .page-body h3, .page-body h2 {
+    color: var(--primary-color) !important;
+}
+
+body, .page-body {
+    font-family: var(--font-family), sans-serif !important;
 }
