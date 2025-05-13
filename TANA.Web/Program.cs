@@ -56,7 +56,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddHttpClient("TanaApi", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5000/"); // تأكد من المنفذ الصحيح للـ API
+    client.BaseAddress = new Uri("http://localhost:5000/"); 
 });
 
 var app = builder.Build();
