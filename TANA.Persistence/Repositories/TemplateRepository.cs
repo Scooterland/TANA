@@ -51,7 +51,6 @@ namespace TANA.Persistence.Repositories
                 existingTemplate.HeaderBgColor = template.HeaderBgColor;
                 existingTemplate.FooterBgColor = template.FooterBgColor;
 
-                // تحديث Day Sections
                 _context.TemplateItems.RemoveRange(existingTemplate.Items);
 
                 foreach (var item in template.Items)
@@ -91,12 +90,10 @@ namespace TANA.Persistence.Repositories
             var template = await _context.Templates.Include(t => t.Items).FirstOrDefaultAsync(t => t.Id == id);
             if (template != null)
             {
-                // 1. حذف العناصر المرتبطة من قاعدة البيانات
                 _context.TemplateItems.RemoveRange(template.Items);
                 _context.Templates.Remove(template);
                 await _context.SaveChangesAsync();
 
-                // 2. حذف الملفات المرتبطة
                 DeleteTemplateFile(template.TemplateName);
             }
         }
