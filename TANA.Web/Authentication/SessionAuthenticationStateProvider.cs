@@ -34,7 +34,7 @@ namespace TANA.Web.Authentication
                     new Claim(ClaimTypes.Role, user.Rolle)
                 }, "apiauth");
 
-                return new AuthenticationState(new ClaimsPrincipal(identity)); // ✅ هذا هو السطر المفقود
+                return new AuthenticationState(new ClaimsPrincipal(identity)); 
             }
             catch
             {
@@ -55,7 +55,6 @@ namespace TANA.Web.Authentication
 
             await _sessionStorage.SetAsync(SessionKey, user);
 
-            // 👇 هذا السطر هو المفتاح
             NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
             Console.WriteLine($"[Auth] GetAuthenticationStateAsync: {user?.Email ?? "null"}");
 
