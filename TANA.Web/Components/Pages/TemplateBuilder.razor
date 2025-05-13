@@ -14,12 +14,7 @@
 
 <h3>Template Builder</h3>
 
-<!-- زر إنشاء قالب جديد بالحجم A4 -->
 <button class="btn btn-primary mb-3" @onclick="ShowPopup">New Template (A4)</button>
-
-<!-- أدوات إضافة/إدارة العناصر للقالب المحمّل حاليًا -->
-
-
 
 @if (isPopupVisible)
 {
@@ -84,11 +79,9 @@
             </div>
 
 
-            <!-- 2) القائمة القابلة للسحب -->
             @if (Template.Items?.Any() == true)
             {
                 <div class="template-preview mt-3">
-                    <h5>ترتيب الأقسام (اسحب لإعادة الترتيب)</h5>
 
                     <ul id="sortableItems" class="list-group">
                         @foreach (var itm in Template.Items.OrderBy(i => i.Order))
@@ -358,16 +351,16 @@
         var file = e.File;
         if (file != null)
         {
-            var format = "image/png"; // أو file.ContentType
-            var resizedImageFile = await file.RequestImageFileAsync(format, 1024, 1024); // حجم مناسب للعرض
+            var format = "image/png"; 
+            var resizedImageFile = await file.RequestImageFileAsync(format, 1024, 1024); 
 
-            using var stream = resizedImageFile.OpenReadStream(5 * 1024 * 1024); // 5MB كحد أقصى
+            using var stream = resizedImageFile.OpenReadStream(5 * 1024 * 1024); 
             using var ms = new MemoryStream();
             await stream.CopyToAsync(ms);
             var buffer = ms.ToArray();
 
             imageUrl = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
-            newTemplate.ImageUrl = imageUrl;  // حفظ الصورة في النموذج الجديد
+            newTemplate.ImageUrl = imageUrl;  
         }
     }
 
@@ -428,7 +421,7 @@
                 Id = newTemplate.Id,
                 TemplateName = newTemplate.TemplateName,
                 Summary = newTemplate.Summary,
-                ImageUrl = newTemplate.ImageUrl, // تأكد من هذه
+                ImageUrl = newTemplate.ImageUrl, 
                 CreatedDate = newTemplate.Id == 0 ? DateTime.UtcNow : Template.CreatedDate,
                 LastModifiedDate = DateTime.UtcNow,
                 Items = items,
@@ -505,7 +498,6 @@
 
     private void InitializeDaySections()
     {
-        // التأكد من عدم وجود عناصر Null
         for (int i = 0; i < numberOfDays; i++)
         {
             if (i >= daySections.Count)
@@ -872,7 +864,7 @@
             }
         }
 
-        StateHasChanged();          // أعِدّ الرسم مباشرة
+        StateHasChanged();          
     }
 
 
