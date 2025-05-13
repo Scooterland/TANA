@@ -17,7 +17,6 @@
     @(showTemplates ? "Hide Templates" : "Show Templates")
 </button>
 
-<!-- قسم الرفع -->
 <div class="mb-4 p-3 border rounded">
     <h4>Upload New Template</h4>
     <InputFile OnChange="HandleFileSelected" />
@@ -32,7 +31,6 @@
 </div>
 
 
-<!-- جدول القوالب يظهر فقط عندما يكون showTemplates = true -->
 @if (showTemplates && templates != null)
 {
     <div class="mt-4">
@@ -152,7 +150,6 @@ else if (showTemplates && templates != null)
         {
             templates = await TemplateRepo.GetAllTemplatesAsync();
 
-            // تحديث البيانات لتشمل الحقول الجديدة مباشرة
             foreach (var template in templates)
             {
                 foreach (var item in template.Items)
@@ -194,27 +191,23 @@ else if (showTemplates && templates != null)
 
         try
         {
-            // 1. الحصول على اسم الملف
             string sanitizedFileName = selectedFile.Name.Replace(" ", "_");
             string templateName = Path.GetFileNameWithoutExtension(sanitizedFileName);
             string fileName = $"{templateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
 
-            // 2. حفظ الملف فعليّاً في wwwroot/TemplateLibrary
             using var fs = selectedFile.OpenReadStream(10 * 1024 * 1024);
             await TemplateLibraryService.SaveTemplateFileAsync(fs, templateName, fileName);
 
-            // 3. إنشاء سجل جديد في قاعدة البيانات
             var newTemplate = new TemplateEntity
                 {
                     TemplateName = templateName,
                     CreatedDate = DateTime.UtcNow,
                     LastModifiedDate = DateTime.UtcNow,
-                    Items = new List<TemplateItemEntity>()  // إذا لم توجد تفاصيل للعناصر الآن
+                    Items = new List<TemplateItemEntity>() 
                 };
 
             await TemplateRepo.SaveTemplateAsync(newTemplate);
 
-            // 4. رسالة للمستخدم وإعادة تحميل القائمة
             message = "Uploaded & saved to database!";
             isFileSelected = false;
             selectedFile = null;
@@ -270,10 +263,8 @@ else if (showTemplates && templates != null)
                     return;
                 }
 
-                // تنظيف اسم القالب من المسافات
                 string sanitizedTemplateName = templateEntity.TemplateName.Replace(" ", "_");
 
-                // تحديد مسار الحفظ
                 string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "TemplateLibrary", sanitizedTemplateName);
 
                 if (!Directory.Exists(directoryPath))
@@ -281,10 +272,8 @@ else if (showTemplates && templates != null)
                     Directory.CreateDirectory(directoryPath);
                 }
 
-                // اسم الملف مع التاريخ
                 string fileName = $"{sanitizedTemplateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
 
-                // استدعاء `SaveTemplateFileAsync` مع جميع المعاملات الثلاثة
                 await TemplateLibraryService.SaveTemplateFileAsync(
                     new MemoryStream(pdfBytes),
                     sanitizedTemplateName,
@@ -319,10 +308,8 @@ else if (showTemplates && templates != null)
         {
             await TemplateRepo.DeleteTemplateAsync(id);
 
-            // إزالة القالب من القائمة بدون إعادة التحميل
             templates = templates?.Where(t => t.Id != id).ToList();
 
-            // إعادة تعيين المعاينة إذا كانت القالب المحذوف هو الذي يُعرض
             if (!string.IsNullOrEmpty(previewHtml))
             {
                 previewHtml = null;
@@ -342,7 +329,6 @@ else if (showTemplates && templates != null)
             await LoadTemplatesAsync();
         }
 
-        // لا تقم بإعادة تعيين `previewFile`
         StateHasChanged();
     }
 
