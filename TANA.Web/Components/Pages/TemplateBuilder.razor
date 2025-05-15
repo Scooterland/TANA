@@ -82,7 +82,7 @@
             @if (Template.Items?.Any() == true)
             {
                 <div class="template-preview mt-3">
-
+                    <h5>Sortering af sektioner (træk for at ændre rækkefølgen)</h5>
                     <ul id="sortableItems" class="list-group">
                         @foreach (var itm in Template.Items.OrderBy(i => i.Order))
                         {
