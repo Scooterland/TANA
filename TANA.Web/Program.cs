@@ -40,6 +40,7 @@ builder.Services.AddScoped<IRejseRepository, RejseRepository>();
 builder.Services.AddScoped<ITurService, TurService>();
 
 builder.Services.AddHttpClient();
+builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
