@@ -1,33 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using QuestPDF.Infrastructure;
+﻿using Microsoft.EntityFrameworkCore;
+using TANA.Application.Services;
+using TANA.Persistence.Repositories;
+using TANA.Persistence.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-QuestPDF.Settings.License = LicenseType.Community;
+// ✅ DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+
+// ✅ Controllers & Swagger
 builder.Services.AddControllers();
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// ✅ Swagger UI
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -35,7 +26,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
