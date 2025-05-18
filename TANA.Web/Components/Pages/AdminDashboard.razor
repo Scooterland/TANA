@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@page "/admin-dashboard"
+@attribute [Authorize(Roles = "Admin")]
+@inject NavigationManager Navigation
+
+<p>Omdirigerer...</p>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Navigation.NavigateTo("/");
+    }
+}

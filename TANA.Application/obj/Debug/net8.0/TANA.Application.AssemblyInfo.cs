@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+560a28206680e33e4a02f2d1cee5d4bc1308e855")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07929895fdfbf183428202de6dedc82281aefa12")]
+>>>>>>> Amjad-Nye-V2
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

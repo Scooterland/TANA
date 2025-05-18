@@ -13,7 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TANA.Infrastructure", "TANA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TANA.Web", "TANA.Web\TANA.Web.csproj", "{58C35CB0-06C5-425A-B985-FD56B26E5B02}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TANA.API.Web", "TANA.API.Web\TANA.API.Web.csproj", "{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TANA.API", "TANA.API\TANA.API.csproj", "{44A35EED-01A1-4BF5-9D50-2C38DD326130}"
+>>>>>>> Amjad-Nye-V2
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +45,17 @@ Global
 		{58C35CB0-06C5-425A-B985-FD56B26E5B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58C35CB0-06C5-425A-B985-FD56B26E5B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58C35CB0-06C5-425A-B985-FD56B26E5B02}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{44A35EED-01A1-4BF5-9D50-2C38DD326130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A35EED-01A1-4BF5-9D50-2C38DD326130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A35EED-01A1-4BF5-9D50-2C38DD326130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A35EED-01A1-4BF5-9D50-2C38DD326130}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> Amjad-Nye-V2
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

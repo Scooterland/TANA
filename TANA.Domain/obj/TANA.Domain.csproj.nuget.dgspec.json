@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj",
         "packagesPath": "C:\\Users\\rene3\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\obj\\",
+=======
+    "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj",
+        "projectName": "TANA.Domain",
+        "projectPath": "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA.Domain\\TANA.Domain.csproj",
+        "packagesPath": "C:\\Users\\Amjad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amjad\\source\\repos\\TANA\\TANA.Domain\\obj\\",
+>>>>>>> Amjad-Nye-V2
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\rene3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Amjad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Amjad-Nye-V2
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +63,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
+<<<<<<< HEAD
         "SdkAnalysisLevel": "9.0.300"
+=======
+        "SdkAnalysisLevel": "9.0.100"
+>>>>>>> Amjad-Nye-V2
       },
       "frameworks": {
         "net8.0": {
@@ -104,7 +126,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+>>>>>>> Amjad-Nye-V2
         }
       }
     }

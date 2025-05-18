@@ -1,4 +1,22 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthProvider
+
+@code {
+    private AuthenticationState? authState;
+    private string? userName;
+
+    protected override async Task OnInitializedAsync()
+    {
+        authState = await AuthProvider.GetAuthenticationStateAsync();
+
+        if (authState.User.Identity?.IsAuthenticated == true)
+        {
+            userName = authState.User.Identity.Name;
+        }
+    }
+}
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">TANA.Web</a>
     </div>
@@ -8,6 +26,7 @@
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
@@ -39,12 +58,18 @@
         </div>
 
         <div class="nav-item px-3">
+<<<<<<< HEAD
             <NavLink class="nav-link" href="opret-rejseplan">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Opret Rejseplan
+=======
+            <NavLink class="nav-link" href="rejser">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Rejser
+>>>>>>> Amjad-Nye-V2
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
+<<<<<<< HEAD
             <NavLink class="nav-link" href="rejseplaner">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Rejseplaner
             </NavLink>
@@ -55,6 +80,34 @@
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Standard ture
             </NavLink>
         </div>
+=======
+            <NavLink class="nav-link" href="login">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> login
+            </NavLink>
+        </div>
+
+        <AuthorizeView Roles="Admin">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/admin-dashboard">
+                    <span class="oi oi-dashboard" aria-hidden="true"></span> Admin Dashboard
+                </NavLink>
+            </div>
+        </AuthorizeView>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/template-builder">
+                <span class="oi oi-dashboard" aria-hidden="true"></span> Template Builder
+            </NavLink>
+        </div>
+
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/templates">
+                <span class="oi oi-list" aria-hidden="true"></span> View All Templates
+            </NavLink>
+        </div>
+
+
+>>>>>>> Amjad-Nye-V2
     </nav>
 </div>
-

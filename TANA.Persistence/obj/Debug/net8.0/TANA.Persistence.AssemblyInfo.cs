@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+560a28206680e33e4a02f2d1cee5d4bc1308e855")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+122c3d23e013d3bb46960e154357206818ecdbe7")]
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

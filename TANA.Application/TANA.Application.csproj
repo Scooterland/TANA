@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Remove="CQRS\**" />
+    <Compile Remove="DTOs\**" />
+    <Compile Remove="Interfaces\**" />
+    <EmbeddedResource Remove="CQRS\**" />
+    <EmbeddedResource Remove="DTOs\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <None Remove="CQRS\**" />
+    <None Remove="DTOs\**" />
+    <None Remove="Interfaces\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+>>>>>>> Amjad-Nye-V2
     <PackageReference Include="MailKit" Version="4.11.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />

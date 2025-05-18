@@ -165,7 +165,6 @@ namespace TANA.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Kommentar")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("KundeId")
@@ -265,6 +264,102 @@ namespace TANA.Persistence.Migrations
                     b.ToTable("Turer");
                 });
 
+            modelBuilder.Entity("TemplateEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FontFamily")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FooterBgColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HeaderBgColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Layout")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimaryColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Summary")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TemplateName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Templates");
+                });
+
+            modelBuilder.Entity("TemplateItemEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Accommodation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Activity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Meals")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TemplateEntityId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TemplateEntityId");
+
+                    b.ToTable("TemplateItems");
+                });
+
             modelBuilder.Entity("TANA.Domain.Entities.Faktura", b =>
                 {
                     b.HasOne("TANA.Domain.Entities.Rejse", "Rejse")
@@ -306,9 +401,26 @@ namespace TANA.Persistence.Migrations
                     b.Navigation("Tur");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("TANA.Domain.Entities.Rejse", b =>
                 {
                     b.Navigation("RejseTurer");
+=======
+            modelBuilder.Entity("TemplateItemEntity", b =>
+                {
+                    b.HasOne("TemplateEntity", "Template")
+                        .WithMany("Items")
+                        .HasForeignKey("TemplateEntityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Template");
+                });
+
+            modelBuilder.Entity("TemplateEntity", b =>
+                {
+                    b.Navigation("Items");
+>>>>>>> Amjad-Nye-V2
                 });
 #pragma warning restore 612, 618
         }

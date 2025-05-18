@@ -1,0 +1,12 @@
+﻿@page "/logout"
+@inject TANA.Web.Authentication.SessionAuthenticationStateProvider SessionProvider
+@inject NavigationManager Navigation
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await SessionProvider.MarkUserAsLoggedOut();
+        Navigation.NavigateTo("/", forceLoad: true);
+    }
+}
+

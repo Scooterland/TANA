@@ -12,6 +12,7 @@ namespace TANA.Domain.Entities
 		public int Id { get; set; }
 		[Timestamp]
 		public byte[] Version { get; set; }
+<<<<<<< HEAD
         public string Navn { get; set; }
         public DateOnly StartsDato { get; set; }
 		public DateOnly SlutsDato { get; set; }
@@ -23,4 +24,18 @@ namespace TANA.Domain.Entities
 		public Kunde Kunde { get; set; }
         public List<RejseTur> RejseTurer { get; set; } = new List<RejseTur>();
     }
+=======
+        [Required]                     
+        public DateOnly? StartsDato { get; set; }
+        [Required]                      
+        public DateOnly? SlutsDato { get; set; }
+		public int Dage { get; set; }
+        [Range(1, double.MaxValue, ErrorMessage = "Pris skal være større end 0.")]
+        public double Pris { get; set; }
+        public string? Kommentar { get; set; }
+
+        [Required] public int? KundeId { get; set; }
+        public Kunde? Kunde { get; set; }
+	}
+>>>>>>> Amjad-Nye-V2
 }

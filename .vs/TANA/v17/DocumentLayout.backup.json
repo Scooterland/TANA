@@ -5,13 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-<<<<<<< HEAD
-=======
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\interface\\ibrugerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\interface\\ibrugerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Karina-Nye
     },
     {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -174,7 +167,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-<<<<<<< HEAD
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\_Imports.razor",
@@ -187,32 +179,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-=======
-              "Title": "IBrugerService.cs",
-              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Interface\\IBrugerService.cs",
-              "RelativeDocumentMoniker": "TANA.Domain\\Interface\\IBrugerService.cs",
-              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Interface\\IBrugerService.cs",
-              "RelativeToolTip": "TANA.Domain\\Interface\\IBrugerService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:49:30.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\_Imports.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-10T12:29:14.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
->>>>>>> Karina-Nye
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\Home.razor",
@@ -224,11 +190,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 4,
-=======
-              "DocumentIndex": 5,
->>>>>>> Karina-Nye
               "Title": "TANA.Web.csproj",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\TANA.Web.csproj",
               "RelativeDocumentMoniker": "TANA.Web\\TANA.Web.csproj",
@@ -240,11 +202,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 2,
-=======
-              "DocumentIndex": 3,
->>>>>>> Karina-Nye
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "TANA.Persistence\\Data\\AppDbContext.cs",
