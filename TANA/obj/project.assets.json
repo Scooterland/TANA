@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA\\TANA.csproj",
+      "projectUniqueName": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA\\TANA.csproj",
       "projectName": "TANA",
-      "projectPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA\\TANA.csproj",
+      "projectPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA\\TANA.csproj",
       "packagesPath": "C:\\Users\\rene3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA\\obj\\",
+      "outputPath": "C:\\Users\\rene3\\Source\\Repos\\TANA\\TANA\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,7 +52,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -76,7 +76,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
