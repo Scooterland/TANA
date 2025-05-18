@@ -2,10 +2,11 @@
 @using TANA.Application.Interfaces
 @using TANA.Application.DTOs;
 @inject ITurService TurService
+@rendermode InteractiveServer
 
 <h3>Opret Standardtur</h3>
 
-<input @bind="title" placeholder="Titel" />
+<input @bind="navn" placeholder="Titel" />
 <input @bind="description" placeholder="Beskrivelse" />
 <input type="number" @bind="pris" placeholder="Pris" />
 <input type="number" @bind="dage" placeholder="Antal dage" />
@@ -23,7 +24,7 @@
 }
 
 @code {
-    string title, description;
+    string navn, description;
     int pris;
     int dage;
 
@@ -36,7 +37,7 @@
 
     private async Task CreateTur()
     {
-        await TurService.CreateTurAsync(title, description, pris, dage);
+        await TurService.CreateTurAsync(navn, description, pris, dage);
         await HentTureAsync(); // Opdater visning
     }
 

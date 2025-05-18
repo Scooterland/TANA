@@ -10,7 +10,7 @@ namespace TANA.Application.Interfaces
     public interface ITurService
     {
         Task<List<TurDto>> GetAllTurAsync();
-        Task<TurDto?> GetTurByIdAsync(int id);
-        Task CreateTurAsync(string title, string description, int pris, int dage);
+        Task<List<TurDto>> GetTurByIdsAsync(IEnumerable<int> ids);
+        Task CreateTurAsync(string navn, string description, int pris, int dage);
     }
 }

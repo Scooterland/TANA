@@ -12,5 +12,6 @@ namespace TANA.Domain.Repositories
         Task<List<Rejse>> GetAllAsync();
         Task<Rejse?> GetByIdAsync(int id);
         Task AddAsync(Rejse rejse);
+        Task DeleteAsync(Rejse rejse);
     }
 }

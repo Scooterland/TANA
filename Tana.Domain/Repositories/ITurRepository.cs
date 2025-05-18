@@ -10,7 +10,7 @@ namespace TANA.Domain.Repositories
     public interface ITurRepository
     {
         Task<List<Tur>> GetAllAsync();
-        Task<IEnumerable<Tur>> GetByIdsAsync(IEnumerable<int> ids);
+        Task<List<Tur>> GetByIdsAsync(IEnumerable<int> ids);
         Task AddAsync(Tur tur);
     }
 }
