@@ -1,4 +1,6 @@
-﻿<Router AppAssembly="typeof(Program).Assembly">
+﻿@using TANA.Web.Components.Layout
+
+<Router AppAssembly="typeof(Program).Assembly">
     <Found Context="routeData">
         <CascadingAuthenticationState>
             <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />

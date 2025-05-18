@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using System.Security.Claims;
 using TANA.Domain.Entities;
+using TANA.Domain.DTOs;
 
 namespace TANA.Web.Authentication
 {
@@ -21,37 +22,51 @@ namespace TANA.Web.Authentication
         {
             try
             {
-                var result = await _sessionStorage.GetAsync<Bruger>(SessionKey);
-                var bruger = result.Success ? result.Value : null;
+                var result = await _sessionStorage.GetAsync<AuthenticatedUser>(SessionKey);
+                var user = result.Success ? result.Value : null;
 
-                if (bruger == null)
+                if (user == null)
                     return new AuthenticationState(_anonymous);
 
                 var identity = new ClaimsIdentity(new[]
                 {
-                    new Claim(ClaimTypes.Name, bruger.Email),
-                    new Claim(ClaimTypes.Role, bruger.Rolle)
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim(ClaimTypes.Role, user.Rolle)
                 }, "apiauth");
 
-                var user = new ClaimsPrincipal(identity);
-                return new AuthenticationState(user);
+                return new AuthenticationState(new ClaimsPrincipal(identity)); 
             }
             catch
             {
                 return new AuthenticationState(_anonymous);
             }
+
         }
 
-        public async void MarkUserAsAuthenticated(Bruger bruger)
+
+        public async Task MarkUserAsAuthenticated(Bruger bruger)
         {
-            await _sessionStorage.SetAsync(SessionKey, bruger);
+            var user = new AuthenticatedUser
+            {
+                Id = bruger.BrugerId,
+                Email = bruger.Email,
+                Rolle = bruger.Rolle
+            };
+
+            await _sessionStorage.SetAsync(SessionKey, user);
+
             NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
+            Console.WriteLine($"[Auth] GetAuthenticationStateAsync: {user?.Email ?? "null"}");
+
         }
 
-        public async void MarkUserAsLoggedOut()
+        public async Task MarkUserAsLoggedOut()
         {
             await _sessionStorage.DeleteAsync(SessionKey);
             NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
         }
+
+
+     
     }
 }

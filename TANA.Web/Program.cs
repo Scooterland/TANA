@@ -9,8 +9,13 @@ using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
 using TANA.Web.Authentication;
 using TANA.Web.Components;
+using DinkToPdf;
+using DinkToPdf.Contracts;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // ✅ Razor components & Blazor Server
 builder.Services.AddRazorComponents()
@@ -19,14 +24,15 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
 // ✅ Authentication & Authorization
-builder.Services.AddAuthorizationCore(); // for [Authorize] and <AuthorizeView>
+builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<ProtectedSessionStorage>();
-builder.Services.AddScoped<AuthenticationStateProvider, SessionAuthenticationStateProvider>();
-
+builder.Services.AddScoped<AuthenticationStateProvider,
+                           SessionAuthenticationStateProvider>();
 // ✅ Application Services
 builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
 builder.Services.AddScoped<IKundeRepository, KundeRepository>();
 builder.Services.AddScoped<IRejseRepository, RejseRepository>();
+
 
 builder.Services.AddScoped<BrugerService>();
 builder.Services.AddScoped<KundeService>();
@@ -35,10 +41,23 @@ builder.Services.AddScoped<RejseplanService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IPdfService, PdfService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
+var context = new CustomAssemblyLoadContext();
+context.LoadUnmanagedLibrary(Path.Combine(Directory.GetCurrentDirectory(), "libwkhtmltox", "libwkhtmltox.dll"));
+builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+builder.Services.AddScoped<PdfGenerationService>();
+builder.Services.AddScoped<TemplateStateService>();
+builder.Services.AddScoped<ITemplateRepository, TemplateRepository>();
+builder.Services.AddScoped<TemplateLibraryService>();
+
 
 // ✅ Database Context
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddHttpClient("TanaApi", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5000/"); 
+});
 
 var app = builder.Build();
 

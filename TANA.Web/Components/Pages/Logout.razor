@@ -3,9 +3,10 @@
 @inject NavigationManager Navigation
 
 @code {
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        SessionProvider.MarkUserAsLoggedOut();
+        await SessionProvider.MarkUserAsLoggedOut();
         Navigation.NavigateTo("/", forceLoad: true);
     }
 }
+

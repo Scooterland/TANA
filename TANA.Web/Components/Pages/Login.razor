@@ -9,6 +9,8 @@
 
 <h3>Login</h3>
 
+
+
 @if (!string.IsNullOrEmpty(ErrorMessage))
 {
     <div class="alert alert-danger">@ErrorMessage</div>
@@ -36,27 +38,28 @@
     private string? ErrorMessage;
 
     private async Task HandleLogin()
-{
-    var allUsers = await BrugerService.GetAllAsync();
-    var bruger = allUsers.FirstOrDefault(u =>
-        u.Email == loginModel.Email &&
-        BCrypt.Verify(loginModel.Password, u.PasswordHash));
-
-    if (bruger is not null)
     {
-        var sessionAuth = (SessionAuthenticationStateProvider)AuthenticationStateProvider;
-            await InvokeAsync(() => sessionAuth.MarkUserAsAuthenticated(bruger));
+        var allUsers = await BrugerService.GetAllAsync();
+        var bruger = allUsers.FirstOrDefault(u =>
+            u.Email == loginModel.Email &&
+            BCrypt.Verify(loginModel.Password, u.PasswordHash));
 
-        if (bruger.Rolle == "Admin")
-                NavigationManager.NavigateTo("/rejser");
+        if (bruger is not null)
+        {
+            var sessionAuth = (SessionAuthenticationStateProvider)AuthenticationStateProvider;
+
+            await sessionAuth.MarkUserAsAuthenticated(bruger);
+
+            NavigationManager.NavigateTo(bruger.Rolle == "Admin" ? "/rejser" : "/modify-email");
+        }
         else
-            NavigationManager.NavigateTo("/modify-email");
+        {
+            ErrorMessage = "Forkert email eller adgangskode.";
+        }
     }
-    else
-    {
-        ErrorMessage = "Forkert email eller adgangskode.";
-    }
-}
+
+
+
 
 
     public class LoginModel
