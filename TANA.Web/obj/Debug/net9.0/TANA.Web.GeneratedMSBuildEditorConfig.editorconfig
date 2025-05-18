@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TANA.Web
 build_property.RootNamespace = TANA.Web
@@ -26,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/AdminDashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkRhc2hib2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/Component.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/Counter.razor]
@@ -52,8 +64,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2RpZnlFbWFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/OpretRejseplan.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPcHJldFJlanNlcGxhbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/RejseForm.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWpzZUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/Rejseplaner.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWpzZXBsYW5lci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/SendRejseplan.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZW5kUmVqc2VwbGFuLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/StandardTure.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdGFuZGFyZFR1cmUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Pages/TemplateBuilder.razor]
@@ -74,10 +102,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/rene3/source/repos/TANA/TANA.Web/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/rene3/source/repos/TANA/TANA.Web/Components/SendRejseplan.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZW5kUmVqc2VwbGFuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rene3/source/repos/TANA/TANA.Web/Components/_Imports.razor]

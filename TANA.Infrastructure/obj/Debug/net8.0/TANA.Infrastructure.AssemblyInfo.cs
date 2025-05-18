@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+560a28206680e33e4a02f2d1cee5d4bc1308e855")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07929895fdfbf183428202de6dedc82281aefa12")]
->>>>>>> Amjad-Nye-V2
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a755d8b28b7b491db7880f6c29b8b9264d66657b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

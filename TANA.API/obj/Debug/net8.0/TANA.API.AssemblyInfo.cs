@@ -14,15 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6c7bcaa296ed1d29fb0b5bdbd7d0c78d2845cf6")]
-=======
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e88f8affefa3164e850b942cdbff4aa1658c6e4e")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edb77124f0d3b5b30a9fd65b0255bbb3dd8ca78c")]
->>>>>>> 95408434c00bab2688c383df367afc56fa3d491b
->>>>>>> Karina-Nye
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a755d8b28b7b491db7880f6c29b8b9264d66657b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
