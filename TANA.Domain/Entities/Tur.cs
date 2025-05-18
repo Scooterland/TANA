@@ -14,8 +14,9 @@ namespace TANA.Domain.Entities
 		public byte[] Version { get; set; }
 
 		public string Navn { get; set; }
-		public double Pris {  get; set; }
+		public int Pris {  get; set; }
 		public int Dage { get; set; }
+		public string Description { get; set; }
 
 	}
 }

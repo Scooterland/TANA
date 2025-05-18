@@ -2,16 +2,49 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using TANA.Persistence.Data;
 using TANA.Web.Components;
+using TANA.Domain.Interface;
+using TANA.Application.Services;
+using TANA.Persistence.Repositories;
+using TANA.Infrastructure.Services;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Server;
+using Microsoft.AspNetCore.Hosting;
+using TANA.Application.Interfaces;
+using TANA.Domain.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddDbContext<DbContext>(options =>
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddControllers();
+
+builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
+builder.Services.AddScoped<BrugerService>();
+
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
+
+builder.Services.AddAuthorizationCore();  // Tilføj authorization core
+builder.Services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
+builder.Services.AddAuthorization();
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
+builder.Services.AddScoped<ITurRepository, TurRepository>();
+builder.Services.AddScoped<IRejseRepository, RejseRepository>();
+builder.Services.AddScoped<ITurService, TurService>();
+
+builder.Services.AddHttpClient();
+builder.Services.AddEndpointsApiExplorer();
+
 var app = builder.Build();
+
+app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

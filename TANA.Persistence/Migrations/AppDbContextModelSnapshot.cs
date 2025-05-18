@@ -41,6 +41,50 @@ namespace TANA.Persistence.Migrations
                     b.ToTable("Adminer");
                 });
 
+            modelBuilder.Entity("TANA.Domain.Entities.Bruger", b =>
+                {
+                    b.Property<Guid>("BrugerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Navn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Rolle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BrugerId");
+
+                    b.ToTable("Brugere");
+                });
+
+            modelBuilder.Entity("TANA.Domain.Entities.EmailSettings", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmailSettings");
+                });
+
             modelBuilder.Entity("TANA.Domain.Entities.Faktura", b =>
                 {
                     b.Property<int>("Id")
@@ -127,6 +171,10 @@ namespace TANA.Persistence.Migrations
                     b.Property<int>("KundeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Navn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Pris")
                         .HasColumnType("float");
 
@@ -195,12 +243,16 @@ namespace TANA.Persistence.Migrations
                     b.Property<int>("Dage")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Navn")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Pris")
-                        .HasColumnType("float");
+                    b.Property<int>("Pris")
+                        .HasColumnType("int");
 
                     b.Property<byte[]>("Version")
                         .IsConcurrencyToken()
@@ -238,7 +290,7 @@ namespace TANA.Persistence.Migrations
             modelBuilder.Entity("TANA.Domain.Entities.RejseTur", b =>
                 {
                     b.HasOne("TANA.Domain.Entities.Rejse", "Rejse")
-                        .WithMany()
+                        .WithMany("RejseTurer")
                         .HasForeignKey("RejseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -252,6 +304,11 @@ namespace TANA.Persistence.Migrations
                     b.Navigation("Rejse");
 
                     b.Navigation("Tur");
+                });
+
+            modelBuilder.Entity("TANA.Domain.Entities.Rejse", b =>
+                {
+                    b.Navigation("RejseTurer");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,48 @@
+﻿@page "/standardture"
+@using TANA.Application.Interfaces
+@using TANA.Application.DTOs;
+@inject ITurService TurService
+@rendermode InteractiveServer
+
+<h3>Opret Standardtur</h3>
+
+<input @bind="navn" placeholder="Titel" />
+<input @bind="description" placeholder="Beskrivelse" />
+<input type="number" @bind="pris" placeholder="Pris" />
+<input type="number" @bind="dage" placeholder="Antal dage" />
+<button @onclick="CreateTur">Opret</button>
+
+@if (ture.Any())
+{
+    <h4>Eksisterende ture:</h4>
+    <ul>
+        @foreach (var t in ture)
+        {
+            <li>@t.Navn – @t.Pris kr. – @t.Dage dage</li>
+        }
+    </ul>
+}
+
+@code {
+    string navn, description;
+    int pris;
+    int dage;
+
+    List<TurDto> ture = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await HentTureAsync();
+    }
+
+    private async Task CreateTur()
+    {
+        await TurService.CreateTurAsync(navn, description, pris, dage);
+        await HentTureAsync(); // Opdater visning
+    }
+
+    private async Task HentTureAsync()
+    {
+        ture = await TurService.GetAllTurAsync();
+    }
+}

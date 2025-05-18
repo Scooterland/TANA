@@ -501,14 +501,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "BCrypt.Net-Next": {
-              "target": "Package",
-              "version": "[4.0.3, )"
-            },
-            "DinkToPdf": {
-              "target": "Package",
-              "version": "[1.0.8, )"
-            },
             "MailKit": {
               "target": "Package",
               "version": "[4.11.0, )"

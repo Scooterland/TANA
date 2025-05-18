@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.11.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
       <PrivateAssets>all</PrivateAssets>
@@ -28,6 +25,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TANA.Application\TANA.Application.csproj" />
+    <ProjectReference Include="..\TANA.Domain\TANA.Domain.csproj" />
+    <ProjectReference Include="..\TANA.Persistence\TANA.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
