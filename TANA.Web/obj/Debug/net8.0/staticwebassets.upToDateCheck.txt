@@ -2,3 +2,10 @@ wwwroot\app.css
 wwwroot\bootstrap\bootstrap.min.css
 wwwroot\bootstrap\bootstrap.min.css.map
 wwwroot\favicon.png
+wwwroot\js\download.js
+wwwroot\js\sortable.js
+wwwroot\TemplateLibrary\10 dag Machame.pdf
+wwwroot\TemplateLibrary\12 dag Lemosho.pdf
+wwwroot\TemplateLibrary\9 dag Marangu.pdf
+wwwroot\TemplateLibrary\9 dag Zanzibar Paje.pdf
+wwwroot\TemplateLibrary\Template_Name_TEST\Template_Name_TEST_20250511_035027.pdf

@@ -1,13 +1,5 @@
-﻿using QuestPDF.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using QuestPDF.Fluent;
+﻿using QuestPDF.Fluent;
 using Microsoft.AspNetCore.Mvc;
-using PdfGenerator;
 using TANA.Application.DTOs;
 using TANA.Infrastructure.Services;
 

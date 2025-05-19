@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TANA.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -71,6 +71,28 @@ namespace TANA.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Templates",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TemplateName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Summary = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Layout = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FontFamily = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PrimaryColor = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    HeaderBgColor = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FooterBgColor = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Templates", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Turer",
                 columns: table => new
                 {
@@ -78,8 +100,9 @@ namespace TANA.Persistence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Version = table.Column<byte[]>(type: "rowversion", rowVersion: true, nullable: false),
                     Navn = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Pris = table.Column<double>(type: "float", nullable: false),
-                    Dage = table.Column<int>(type: "int", nullable: false)
+                    Pris = table.Column<int>(type: "int", nullable: false),
+                    Dage = table.Column<int>(type: "int", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -93,11 +116,12 @@ namespace TANA.Persistence.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Version = table.Column<byte[]>(type: "rowversion", rowVersion: true, nullable: false),
+                    Navn = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartsDato = table.Column<DateOnly>(type: "date", nullable: false),
                     SlutsDato = table.Column<DateOnly>(type: "date", nullable: false),
                     Dage = table.Column<int>(type: "int", nullable: false),
                     Pris = table.Column<double>(type: "float", nullable: false),
-                    Kommentar = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Kommentar = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     KundeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -107,6 +131,32 @@ namespace TANA.Persistence.Migrations
                         name: "FK_Rejser_Kunder_KundeId",
                         column: x => x.KundeId,
                         principalTable: "Kunder",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TemplateItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Order = table.Column<int>(type: "int", nullable: false),
+                    TemplateEntityId = table.Column<int>(type: "int", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Activity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Meals = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Accommodation = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Note = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TemplateItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TemplateItems_Templates_TemplateEntityId",
+                        column: x => x.TemplateEntityId,
+                        principalTable: "Templates",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -181,6 +231,11 @@ namespace TANA.Persistence.Migrations
                 name: "IX_RejseTurer_TurId",
                 table: "RejseTurer",
                 column: "TurId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TemplateItems_TemplateEntityId",
+                table: "TemplateItems",
+                column: "TemplateEntityId");
         }
 
         /// <inheritdoc />
@@ -202,10 +257,16 @@ namespace TANA.Persistence.Migrations
                 name: "RejseTurer");
 
             migrationBuilder.DropTable(
+                name: "TemplateItems");
+
+            migrationBuilder.DropTable(
                 name: "Rejser");
 
             migrationBuilder.DropTable(
                 name: "Turer");
+
+            migrationBuilder.DropTable(
+                name: "Templates");
 
             migrationBuilder.DropTable(
                 name: "Kunder");
