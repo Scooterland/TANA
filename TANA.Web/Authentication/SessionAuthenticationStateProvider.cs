@@ -11,7 +11,7 @@ namespace TANA.Web.Authentication
         private readonly ProtectedSessionStorage _sessionStorage;
         private const string SessionKey = "currentUser";
 
-        private ClaimsPrincipal _anonymous = new(new ClaimsIdentity());
+        private readonly ClaimsPrincipal _anonymous = new(new ClaimsIdentity());
 
         public SessionAuthenticationStateProvider(ProtectedSessionStorage sessionStorage)
         {
@@ -40,7 +40,6 @@ namespace TANA.Web.Authentication
             {
                 return new AuthenticationState(_anonymous);
             }
-
         }
 
 
@@ -65,8 +64,5 @@ namespace TANA.Web.Authentication
             await _sessionStorage.DeleteAsync(SessionKey);
             NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
         }
-
-
-     
     }
 }

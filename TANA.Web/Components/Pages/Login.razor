@@ -1,16 +1,14 @@
 ﻿@page "/login"
 @using System.ComponentModel.DataAnnotations
 @inject NavigationManager NavigationManager
-@inject TANA.Application.Services.BrugerService BrugerService
+@inject IBrugerService BrugerService
 @using BCrypt.Net
 @rendermode InteractiveServer
 @inject AuthenticationStateProvider AuthenticationStateProvider
-@using Org.BouncyCastle.Crypto.Generators
+@using TANA.Domain.Interface
 @using TANA.Web.Authentication
 
 <h3>Login</h3>
-
-
 
 @if (!string.IsNullOrEmpty(ErrorMessage))
 {
@@ -58,10 +56,6 @@
             ErrorMessage = "Forkert email eller adgangskode.";
         }
     }
-
-
-
-
 
     public class LoginModel
     {

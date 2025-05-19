@@ -9,6 +9,8 @@ using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
 using TANA.Web.Authentication;
 using TANA.Web.Components;
+using TANA.Application.Interfaces;
+using TANA.Domain.Repositories;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,12 +33,15 @@ builder.Services.AddScoped<AuthenticationStateProvider,
 builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
 builder.Services.AddScoped<IKundeRepository, KundeRepository>();
 builder.Services.AddScoped<IRejseRepository, RejseRepository>();
+builder.Services.AddScoped<ITurRepository, TurRepository>();
 
-builder.Services.AddScoped<BrugerService>();
+builder.Services.AddScoped<IBrugerService, BrugerService>();
+builder.Services.AddScoped<ITurService, TurService>();
 builder.Services.AddScoped<KundeService>();
 builder.Services.AddScoped<RejseService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
+builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
 var context = new CustomAssemblyLoadContext();
 context.LoadUnmanagedLibrary(Path.Combine(Directory.GetCurrentDirectory(), "libwkhtmltox", "libwkhtmltox.dll"));
 builder.Services.AddScoped<TemplateStateService>();

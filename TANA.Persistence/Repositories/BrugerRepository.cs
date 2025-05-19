@@ -16,10 +16,10 @@ namespace TANA.Persistence.Repositories
         public BrugerRepository(AppDbContext context) => _context = context;
 
         public async Task<IEnumerable<Bruger>> GetAllAsync() => await _context.Brugere.ToListAsync();
-        public async Task<Bruger?> GetByIdAsync(Guid id) => await _context.Brugere.FindAsync(id);
+        public async Task<Bruger?> GetByIdAsync(int id) => await _context.Brugere.FindAsync(id);
         public async Task AddAsync(Bruger bruger) { _context.Brugere.Add(bruger); await _context.SaveChangesAsync(); }
         public async Task UpdateAsync(Bruger bruger) { _context.Brugere.Update(bruger); await _context.SaveChangesAsync(); }
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(int id)
         {
             var bruger = await _context.Brugere.FindAsync(id);
             if (bruger is not null)
