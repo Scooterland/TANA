@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "TANA.API.Controllers.PdfController",
+    "Method": "Generate",
+    "RelativePath": "api/pdf/rejseplan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TANA.Application.DTOs.RejseplanModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TANA.API.Controllers.PdfController",
+    "Method": "ViewPdf",
+    "RelativePath": "api/pdf/rejseplan/view",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
