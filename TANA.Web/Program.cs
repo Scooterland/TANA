@@ -1,11 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.Authorization;
-<<<<<<< HEAD
-using Microsoft.AspNetCore.Components.Server;
-using Microsoft.AspNetCore.Hosting;
-using TANA.Application.Interfaces;
-using TANA.Domain.Repositories;
-=======
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.EntityFrameworkCore;
 using TANA.Application.Services;
@@ -15,11 +9,7 @@ using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
 using TANA.Web.Authentication;
 using TANA.Web.Components;
-using DinkToPdf;
-using DinkToPdf.Contracts;
 
-
->>>>>>> Amjad-Nye-V2
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,38 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 // ✅ Razor components & Blazor Server
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-<<<<<<< HEAD
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddControllers();
-
-builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
-builder.Services.AddScoped<BrugerService>();
-
-builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
-
-builder.Services.AddAuthorizationCore();  // Tilf�j authorization core
-builder.Services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
-builder.Services.AddAuthorization();
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-
-builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
-builder.Services.AddScoped<ITurRepository, TurRepository>();
-builder.Services.AddScoped<IRejseRepository, RejseRepository>();
-builder.Services.AddScoped<ITurService, TurService>();
-
-builder.Services.AddHttpClient();
-builder.Services.AddEndpointsApiExplorer();
-
-var app = builder.Build();
-
-app.MapControllers();
 
 // Configure the HTTP request pipeline.
-=======
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
@@ -72,18 +32,13 @@ builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
 builder.Services.AddScoped<IKundeRepository, KundeRepository>();
 builder.Services.AddScoped<IRejseRepository, RejseRepository>();
 
-
 builder.Services.AddScoped<BrugerService>();
 builder.Services.AddScoped<KundeService>();
 builder.Services.AddScoped<RejseService>();
-builder.Services.AddScoped<RejseplanService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<IPdfService, PdfService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
 var context = new CustomAssemblyLoadContext();
 context.LoadUnmanagedLibrary(Path.Combine(Directory.GetCurrentDirectory(), "libwkhtmltox", "libwkhtmltox.dll"));
-builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
-builder.Services.AddScoped<PdfGenerationService>();
 builder.Services.AddScoped<TemplateStateService>();
 builder.Services.AddScoped<ITemplateRepository, TemplateRepository>();
 builder.Services.AddScoped<TemplateLibraryService>();
@@ -101,7 +56,6 @@ builder.Services.AddHttpClient("TanaApi", client =>
 var app = builder.Build();
 
 // ✅ Middleware pipeline
->>>>>>> Amjad-Nye-V2
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);

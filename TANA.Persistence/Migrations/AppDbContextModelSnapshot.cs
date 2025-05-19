@@ -401,11 +401,6 @@ namespace TANA.Persistence.Migrations
                     b.Navigation("Tur");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("TANA.Domain.Entities.Rejse", b =>
-                {
-                    b.Navigation("RejseTurer");
-=======
             modelBuilder.Entity("TemplateItemEntity", b =>
                 {
                     b.HasOne("TemplateEntity", "Template")
@@ -420,7 +415,6 @@ namespace TANA.Persistence.Migrations
             modelBuilder.Entity("TemplateEntity", b =>
                 {
                     b.Navigation("Items");
->>>>>>> Amjad-Nye-V2
                 });
 #pragma warning restore 612, 618
         }

@@ -800,15 +800,15 @@
     }
 
 
-    private void GoToPDF()
+    private async Task GoToPDF()
     {
         if (Template.Id > 0)
         {
-            ExportToPdf(Template.Id);
+            await ExportToPdf(Template.Id);
         }
         else
         {
-            JS.InvokeVoidAsync("alert", "Please save the template before exporting to PDF.");
+            await JS.InvokeVoidAsync("alert", "Please save the template before exporting to PDF.");
         }
     }
 

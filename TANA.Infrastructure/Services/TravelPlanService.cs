@@ -8,6 +8,7 @@ using TANA.Application.Interfaces;
 using TANA.Domain.Entities;
 using TANA.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
+using TANA.Domain.Interface;
 
 namespace TANA.Infrastructure.Services
 {
@@ -88,7 +89,7 @@ namespace TANA.Infrastructure.Services
             if (rejse == null)
                 throw new Exception($"Rejseplan med ID {id} blev ikke fundet.");
 
-            await _rejseRepo.DeleteAsync(rejse);
+			await _rejseRepo.DeleteAsync(rejse.Id);
         }
     }
 }
