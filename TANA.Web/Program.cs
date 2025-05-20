@@ -9,12 +9,20 @@ using TANA.Infrastructure.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Hosting;
+using PdfSharp.Charting;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// ? Force app to bind to port 80 inside Docker
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(80);
+});
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -23,10 +31,17 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
 builder.Services.AddScoped<BrugerService>();
 
+builder.Services.AddScoped<ITurRepository, TurRepository>();
+builder.Services.AddScoped<TurService>();
+
+builder.Services.AddScoped<IRejseturRepository, RejseturRepository>();
+builder.Services.AddScoped<RejseturService>();
+
+
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
 
-builder.Services.AddAuthorizationCore();  // Tilføj authorization core
+builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
 builder.Services.AddAuthorization();
 builder.Services.AddRazorPages();
@@ -42,11 +57,11 @@ app.MapControllers();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// ? Remove HTTPS redirect for Docker
+// app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();

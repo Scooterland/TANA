@@ -1,0 +1,14 @@
+services:
+  tana-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5003:80"
+
+  tana-web:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5174:80"
+    depends_on:
+      - tana-api
