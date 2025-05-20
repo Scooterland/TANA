@@ -12,5 +12,6 @@ namespace TANA.Application.Interfaces
         Task<List<TurDto>> GetAllTurAsync();
         Task<List<TurDto>> GetTurByIdsAsync(IEnumerable<int> ids);
         Task CreateTurAsync(string navn, string description, int pris, int dage);
+        Task DeleteTurAsync(int id);
     }
 }

@@ -36,5 +36,15 @@ namespace TANA.Persistence.Repositories
             _context.Turer.Add(tur);
             await _context.SaveChangesAsync();
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var tur = await _context.Turer.FindAsync(id);
+            if (tur != null)
+            {
+                _context.Turer.Remove(tur);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

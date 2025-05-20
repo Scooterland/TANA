@@ -44,6 +44,8 @@
                 Pris: @plan.Pris kr<br />
                 Dage: @plan.Dage<br />
                 Ture: @string.Join(", ", plan.TurNavne)
+                <br />
+                <button @onclick="() => DeleteRejsePlan(plan.Id)">Slet</button>
             </li>
         }
     </ul>
@@ -117,6 +119,12 @@ else
                 Dage = p.Dage,
                 TurNavne = p.Ture.Select(t => t.Navn).ToList()
             }).ToList();
+    }
+
+    private async Task DeleteRejsePlan(int id)
+    {
+        await TravelPlanService.DeleteTravelPlanAsync(id);
+        await LoadRejsePlaner(); // Opdater listen
     }
 
     // ViewModel to represent the Tour data

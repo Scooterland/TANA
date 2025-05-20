@@ -12,5 +12,6 @@ namespace TANA.Domain.Repositories
         Task<List<Tur>> GetAllAsync();
         Task<List<Tur>> GetByIdsAsync(IEnumerable<int> ids);
         Task AddAsync(Tur tur);
+        Task DeleteAsync(int id);
     }
 }

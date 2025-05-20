@@ -19,6 +19,7 @@
         @foreach (var t in ture)
         {
             <li>@t.Navn – @t.Pris kr. – @t.Dage dage</li>
+            <button @onclick="() => DeleteTurAsync(t.Id)">Slet</button>
         }
     </ul>
 }
@@ -44,5 +45,11 @@
     private async Task HentTureAsync()
     {
         ture = await TurService.GetAllTurAsync();
+    }
+
+    private async Task DeleteTurAsync(int id)
+    {
+        await TurService.DeleteTurAsync(id); // ← korrekt service
+        await HentTureAsync(); // Opdater listen
     }
 }

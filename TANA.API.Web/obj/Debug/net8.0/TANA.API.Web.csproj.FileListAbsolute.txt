@@ -172,3 +172,8 @@ C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\obj\De
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\obj\Debug\net8.0\TANA.API.Web.genruntimeconfig.cache
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\obj\Debug\net8.0\ref\TANA.API.Web.dll
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\bin\Debug\net8.0\DinkToPdf.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\bin\Debug\net8.0\Microsoft.Azure.WebJobs.Host.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\bin\Debug\net8.0\Microsoft.Azure.WebJobs.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.API.Web\bin\Debug\net8.0\Newtonsoft.Json.dll

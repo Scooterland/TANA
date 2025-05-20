@@ -739,3 +739,8 @@ C:\Users\rene3\source\repos\TANA\TANA.Web\bin\Debug\net8.0\runtimes\win-x86\nati
 C:\Users\rene3\source\repos\TANA\TANA.Web\bin\Debug\net8.0\runtimes\win-x86\native\qpdf.dll
 C:\Users\rene3\source\repos\TANA\TANA.Web\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\bin\Debug\net8.0\DinkToPdf.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\bin\Debug\net8.0\Microsoft.Azure.WebJobs.Host.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\bin\Debug\net8.0\Microsoft.Azure.WebJobs.dll
+C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\bin\Debug\net8.0\Newtonsoft.Json.dll

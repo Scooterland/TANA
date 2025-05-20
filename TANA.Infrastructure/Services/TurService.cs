@@ -59,5 +59,10 @@ namespace TANA.Infrastructure.Services
 
             await _turRepository.AddAsync(tur); // <- denne skal kaldes!
         }
+
+        public async Task DeleteTurAsync(int id)
+        {
+            await _turRepository.DeleteAsync(id);
+        }
     }
 }

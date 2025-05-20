@@ -1,1 +1,1361 @@
-{"Version":1,"Hash":"wCawRaMsW0QH3xOdd1fevdPvaF+F4fHTRtrO1zUhyAk=","Source":"TANA.Web","BasePath":"_content/TANA.Web","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[{"Name":"TANA.Web\\wwwroot","Source":"TANA.Web","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","Pattern":"**"}],"Assets":[{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css","SourceId":"TANA.Web","SourceType":"Computed","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\","BasePath":"_content/TANA.Web","RelativePath":"TANA.Web#[.{fingerprint}]?.styles.css","AssetKind":"All","AssetMode":"CurrentProject","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"ScopedCss","AssetTraitValue":"ApplicationBundle","Fingerprint":"lo8fvon7b0","Integrity":"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css","FileLength":5899,"LastWriteTime":"2025-05-19T13:52:10+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css","SourceId":"TANA.Web","SourceType":"Computed","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\","BasePath":"_content/TANA.Web","RelativePath":"TANA.Web#[.{fingerprint}]!.bundle.scp.css","AssetKind":"All","AssetMode":"Reference","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"ScopedCss","AssetTraitValue":"ProjectBundle","Fingerprint":"lo8fvon7b0","Integrity":"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css","FileLength":5899,"LastWriteTime":"2025-05-19T13:52:10+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\app.css","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"app#[.{fingerprint}]?.css","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"k8yq17mj1j","Integrity":"LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\app.css","FileLength":4056,"LastWriteTime":"2025-05-19T13:52:22+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"bootstrap/bootstrap.min#[.{fingerprint}]?.css","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"6gzpyzhau4","Integrity":"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\bootstrap\\bootstrap.min.css","FileLength":162726,"LastWriteTime":"2025-05-19T13:48:49+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"bootstrap/bootstrap.min.css#[.{fingerprint}]?.map","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"8inm30yfxf","Integrity":"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\bootstrap\\bootstrap.min.css.map","FileLength":449111,"LastWriteTime":"2025-05-19T13:48:49+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\favicon.png","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"favicon#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"ifv42okdf2","Integrity":"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\favicon.png","FileLength":1148,"LastWriteTime":"2025-05-19T13:48:49+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\js\\download.js","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"js/download#[.{fingerprint}]?.js","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"ijwa14qjil","Integrity":"wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\js\\download.js","FileLength":293,"LastWriteTime":"2025-05-19T13:52:22+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\js\\sortable.js","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"js/sortable#[.{fingerprint}]?.js","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"cs5gvl3b4a","Integrity":"TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\js\\sortable.js","FileLength":806,"LastWriteTime":"2025-05-19T13:52:22+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\10 dag Machame.pdf","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"TemplateLibrary/10 dag Machame#[.{fingerprint}]?.pdf","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"rtttmx5ubw","Integrity":"wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\TemplateLibrary\\10 dag Machame.pdf","FileLength":477729,"LastWriteTime":"2025-05-19T13:52:22+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\12 dag Lemosho.pdf","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"TemplateLibrary/12 dag Lemosho#[.{fingerprint}]?.pdf","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"r7mr15qgwh","Integrity":"Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\TemplateLibrary\\12 dag Lemosho.pdf","FileLength":449430,"LastWriteTime":"2025-05-19T13:52:22+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Marangu.pdf","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"TemplateLibrary/9 dag Marangu#[.{fingerprint}]?.pdf","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"yqc5rylhd2","Integrity":"Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\TemplateLibrary\\9 dag Marangu.pdf","FileLength":474201,"LastWriteTime":"2025-05-19T13:52:22+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Zanzibar Paje.pdf","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"TemplateLibrary/9 dag Zanzibar Paje#[.{fingerprint}]?.pdf","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"is89p44te5","Integrity":"PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\TemplateLibrary\\9 dag Zanzibar Paje.pdf","FileLength":470107,"LastWriteTime":"2025-05-19T13:52:22+00:00"},{"Identity":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\Template_Name_TEST\\Template_Name_TEST_20250511_035027.pdf","SourceId":"TANA.Web","SourceType":"Discovered","ContentRoot":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\","BasePath":"_content/TANA.Web","RelativePath":"TemplateLibrary/Template_Name_TEST/Template_Name_TEST_20250511_035027#[.{fingerprint}]?.pdf","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"dqu0ngg9q1","Integrity":"a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot\\TemplateLibrary\\Template_Name_TEST\\Template_Name_TEST_20250511_035027.pdf","FileLength":18103,"LastWriteTime":"2025-05-19T13:52:22+00:00"}],"Endpoints":[{"Route":"app.css","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\app.css","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"4056"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\"LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co="}]},{"Route":"app.k8yq17mj1j.css","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\app.css","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"4056"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\"LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"k8yq17mj1j"},{"Name":"label","Value":"app.css"},{"Name":"integrity","Value":"sha256-LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co="}]},{"Route":"bootstrap/bootstrap.min.6gzpyzhau4.css","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"162726"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:48:49 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"6gzpyzhau4"},{"Name":"label","Value":"bootstrap/bootstrap.min.css"},{"Name":"integrity","Value":"sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="}]},{"Route":"bootstrap/bootstrap.min.css","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"162726"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:48:49 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="}]},{"Route":"bootstrap/bootstrap.min.css.8inm30yfxf.map","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"449111"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:48:49 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"8inm30yfxf"},{"Name":"label","Value":"bootstrap/bootstrap.min.css.map"},{"Name":"integrity","Value":"sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="}]},{"Route":"bootstrap/bootstrap.min.css.map","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"449111"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:48:49 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="}]},{"Route":"favicon.ifv42okdf2.png","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\favicon.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"1148"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:48:49 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"ifv42okdf2"},{"Name":"label","Value":"favicon.png"},{"Name":"integrity","Value":"sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="}]},{"Route":"favicon.png","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\favicon.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"1148"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:48:49 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="}]},{"Route":"js/download.ijwa14qjil.js","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\js\\download.js","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"293"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\"wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"ijwa14qjil"},{"Name":"label","Value":"js/download.js"},{"Name":"integrity","Value":"sha256-wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA="}]},{"Route":"js/download.js","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\js\\download.js","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"293"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\"wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA="}]},{"Route":"js/sortable.cs5gvl3b4a.js","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\js\\sortable.js","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"806"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\"TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"cs5gvl3b4a"},{"Name":"label","Value":"js/sortable.js"},{"Name":"integrity","Value":"sha256-TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI="}]},{"Route":"js/sortable.js","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\js\\sortable.js","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"806"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\"TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI="}]},{"Route":"TANA.Web.bundle.scp.css","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"5899"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:10 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8="}]},{"Route":"TANA.Web.lo8fvon7b0.bundle.scp.css","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"5899"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:10 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"lo8fvon7b0"},{"Name":"label","Value":"TANA.Web.bundle.scp.css"},{"Name":"integrity","Value":"sha256-Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8="}]},{"Route":"TANA.Web.lo8fvon7b0.styles.css","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"5899"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:10 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"lo8fvon7b0"},{"Name":"label","Value":"TANA.Web.styles.css"},{"Name":"integrity","Value":"sha256-Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8="}]},{"Route":"TANA.Web.styles.css","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"5899"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:10 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8="}]},{"Route":"TemplateLibrary/10 dag Machame.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\10 dag Machame.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"477729"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk="}]},{"Route":"TemplateLibrary/10 dag Machame.rtttmx5ubw.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\10 dag Machame.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"477729"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"rtttmx5ubw"},{"Name":"label","Value":"TemplateLibrary/10 dag Machame.pdf"},{"Name":"integrity","Value":"sha256-wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk="}]},{"Route":"TemplateLibrary/12 dag Lemosho.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\12 dag Lemosho.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"449430"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4="}]},{"Route":"TemplateLibrary/12 dag Lemosho.r7mr15qgwh.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\12 dag Lemosho.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"449430"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"r7mr15qgwh"},{"Name":"label","Value":"TemplateLibrary/12 dag Lemosho.pdf"},{"Name":"integrity","Value":"sha256-Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4="}]},{"Route":"TemplateLibrary/9 dag Marangu.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Marangu.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"474201"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU="}]},{"Route":"TemplateLibrary/9 dag Marangu.yqc5rylhd2.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Marangu.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"474201"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"yqc5rylhd2"},{"Name":"label","Value":"TemplateLibrary/9 dag Marangu.pdf"},{"Name":"integrity","Value":"sha256-Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU="}]},{"Route":"TemplateLibrary/9 dag Zanzibar Paje.is89p44te5.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Zanzibar Paje.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"470107"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"is89p44te5"},{"Name":"label","Value":"TemplateLibrary/9 dag Zanzibar Paje.pdf"},{"Name":"integrity","Value":"sha256-PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c="}]},{"Route":"TemplateLibrary/9 dag Zanzibar Paje.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Zanzibar Paje.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"470107"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c="}]},{"Route":"TemplateLibrary/Template_Name_TEST/Template_Name_TEST_20250511_035027.dqu0ngg9q1.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\Template_Name_TEST\\Template_Name_TEST_20250511_035027.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"18103"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"dqu0ngg9q1"},{"Name":"label","Value":"TemplateLibrary/Template_Name_TEST/Template_Name_TEST_20250511_035027.pdf"},{"Name":"integrity","Value":"sha256-a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74="}]},{"Route":"TemplateLibrary/Template_Name_TEST/Template_Name_TEST_20250511_035027.pdf","AssetFile":"C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\Template_Name_TEST\\Template_Name_TEST_20250511_035027.pdf","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"18103"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\"a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74=\""},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 13:52:22 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74="}]}]}
+{
+  "Version": 1,
+  "Hash": "Ig676nHLdWFPgqWNJN8jWnODgfcL+WvoSiqCCxLvhKk=",
+  "Source": "TANA.Web",
+  "BasePath": "_content/TANA.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TANA.Web\\wwwroot",
+      "Source": "TANA.Web",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
+      "SourceId": "TANA.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "TANA.Web#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "lo8fvon7b0",
+      "Integrity": "Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
+      "SourceId": "TANA.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "TANA.Web#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "lo8fvon7b0",
+      "Integrity": "Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\app.css",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k8yq17mj1j",
+      "Integrity": "LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\favicon.png",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\js\\download.js",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "js/download#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ijwa14qjil",
+      "Integrity": "wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\download.js"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\js\\sortable.js",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "js/sortable#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cs5gvl3b4a",
+      "Integrity": "TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\sortable.js"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\10 dag Machame.pdf",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "TemplateLibrary/10 dag Machame#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rtttmx5ubw",
+      "Integrity": "wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\TemplateLibrary\\10 dag Machame.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\12 dag Lemosho.pdf",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "TemplateLibrary/12 dag Lemosho#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r7mr15qgwh",
+      "Integrity": "Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\TemplateLibrary\\12 dag Lemosho.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Marangu.pdf",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "TemplateLibrary/9 dag Marangu#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yqc5rylhd2",
+      "Integrity": "Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\TemplateLibrary\\9 dag Marangu.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Zanzibar Paje.pdf",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "TemplateLibrary/9 dag Zanzibar Paje#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "is89p44te5",
+      "Integrity": "PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\TemplateLibrary\\9 dag Zanzibar Paje.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\Template_Name_TEST\\Template_Name_TEST_20250511_035027.pdf",
+      "SourceId": "TANA.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\",
+      "BasePath": "_content/TANA.Web",
+      "RelativePath": "TemplateLibrary/Template_Name_TEST/Template_Name_TEST_20250511_035027#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dqu0ngg9q1",
+      "Integrity": "a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\TemplateLibrary\\Template_Name_TEST\\Template_Name_TEST_20250511_035027.pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co="
+        }
+      ]
+    },
+    {
+      "Route": "app.k8yq17mj1j.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k8yq17mj1j"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LJPhFKdcEcTnbcTVOnex1tbCAiChqO1paqlBzOik0Co="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6gzpyzhau4"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "js/download.ijwa14qjil.js",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\js\\download.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "293"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ijwa14qjil"
+        },
+        {
+          "Name": "label",
+          "Value": "js/download.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA="
+        }
+      ]
+    },
+    {
+      "Route": "js/download.js",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\js\\download.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "293"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wqtXRnawoayXoNGYrm86smOusjQcj3hnhz69j38YBzA="
+        }
+      ]
+    },
+    {
+      "Route": "js/sortable.cs5gvl3b4a.js",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\js\\sortable.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "806"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cs5gvl3b4a"
+        },
+        {
+          "Name": "label",
+          "Value": "js/sortable.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI="
+        }
+      ]
+    },
+    {
+      "Route": "js/sortable.js",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\js\\sortable.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "806"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TGQLsy2+Extev/5HbYoccft1uqCApjZKjYkZwW/E3JI="
+        }
+      ]
+    },
+    {
+      "Route": "TANA.Web.bundle.scp.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8="
+        }
+      ]
+    },
+    {
+      "Route": "TANA.Web.lo8fvon7b0.bundle.scp.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TANA.Web.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lo8fvon7b0"
+        },
+        {
+          "Name": "label",
+          "Value": "TANA.Web.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8="
+        }
+      ]
+    },
+    {
+      "Route": "TANA.Web.lo8fvon7b0.styles.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lo8fvon7b0"
+        },
+        {
+          "Name": "label",
+          "Value": "TANA.Web.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8="
+        }
+      ]
+    },
+    {
+      "Route": "TANA.Web.styles.css",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TANA.Web.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 14:14:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sxeyfy8vPfKexD5DRZ6gDqbfh20W4roFmaSUPfhaJI8="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/10 dag Machame.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\10 dag Machame.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/10 dag Machame.rtttmx5ubw.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\10 dag Machame.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rtttmx5ubw"
+        },
+        {
+          "Name": "label",
+          "Value": "TemplateLibrary/10 dag Machame.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wfn1xeVvh7Xq2HoM5AMk4zoaV/JZgw2iJYbWw3pd1hk="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/12 dag Lemosho.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\12 dag Lemosho.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449430"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/12 dag Lemosho.r7mr15qgwh.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\12 dag Lemosho.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449430"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r7mr15qgwh"
+        },
+        {
+          "Name": "label",
+          "Value": "TemplateLibrary/12 dag Lemosho.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nx4itz0jWuorNBEKUFqPUnDxLLjCexjTBZxGoReX8H4="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/9 dag Marangu.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Marangu.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "474201"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/9 dag Marangu.yqc5rylhd2.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Marangu.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "474201"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yqc5rylhd2"
+        },
+        {
+          "Name": "label",
+          "Value": "TemplateLibrary/9 dag Marangu.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nt36eBVPZIiHY287iZ0gq2WasGTLrH6lYIAM5QoOagU="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/9 dag Zanzibar Paje.is89p44te5.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Zanzibar Paje.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "470107"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "is89p44te5"
+        },
+        {
+          "Name": "label",
+          "Value": "TemplateLibrary/9 dag Zanzibar Paje.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/9 dag Zanzibar Paje.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\9 dag Zanzibar Paje.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "470107"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PqJihtiUvVf/CUSaS11On3JpQRCfyCEgI+pfVl2Pk9c="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/Template_Name_TEST/Template_Name_TEST_20250511_035027.dqu0ngg9q1.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\Template_Name_TEST\\Template_Name_TEST_20250511_035027.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dqu0ngg9q1"
+        },
+        {
+          "Name": "label",
+          "Value": "TemplateLibrary/Template_Name_TEST/Template_Name_TEST_20250511_035027.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74="
+        }
+      ]
+    },
+    {
+      "Route": "TemplateLibrary/Template_Name_TEST/Template_Name_TEST_20250511_035027.pdf",
+      "AssetFile": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\wwwroot\\TemplateLibrary\\Template_Name_TEST\\Template_Name_TEST_20250511_035027.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 08:43:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-a21oh59ZXaXUsQJhuMff9kA9zNhzuduIudGUL/eAc74="
+        }
+      ]
+    }
+  ]
+}
