@@ -12,8 +12,8 @@ using TANA.Persistence.Data;
 namespace TANA.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250430113728_RemoveOnModelCreating")]
-    partial class RemoveOnModelCreating
+    [Migration("20250519135945_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -173,6 +173,10 @@ namespace TANA.Persistence.Migrations
                     b.Property<int>("KundeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Navn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Pris")
                         .HasColumnType("float");
 
@@ -241,12 +245,16 @@ namespace TANA.Persistence.Migrations
                     b.Property<int>("Dage")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Navn")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Pris")
-                        .HasColumnType("float");
+                    b.Property<int>("Pris")
+                        .HasColumnType("int");
 
                     b.Property<byte[]>("Version")
                         .IsConcurrencyToken()
@@ -257,6 +265,102 @@ namespace TANA.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Turer");
+                });
+
+            modelBuilder.Entity("TemplateEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FontFamily")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FooterBgColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HeaderBgColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Layout")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimaryColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Summary")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TemplateName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Templates");
+                });
+
+            modelBuilder.Entity("TemplateItemEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Accommodation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Activity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Meals")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TemplateEntityId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TemplateEntityId");
+
+                    b.ToTable("TemplateItems");
                 });
 
             modelBuilder.Entity("TANA.Domain.Entities.Faktura", b =>
@@ -284,7 +388,7 @@ namespace TANA.Persistence.Migrations
             modelBuilder.Entity("TANA.Domain.Entities.RejseTur", b =>
                 {
                     b.HasOne("TANA.Domain.Entities.Rejse", "Rejse")
-                        .WithMany()
+                        .WithMany("RejseTurer")
                         .HasForeignKey("RejseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -298,6 +402,27 @@ namespace TANA.Persistence.Migrations
                     b.Navigation("Rejse");
 
                     b.Navigation("Tur");
+                });
+
+            modelBuilder.Entity("TemplateItemEntity", b =>
+                {
+                    b.HasOne("TemplateEntity", "Template")
+                        .WithMany("Items")
+                        .HasForeignKey("TemplateEntityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Template");
+                });
+
+            modelBuilder.Entity("TANA.Domain.Entities.Rejse", b =>
+                {
+                    b.Navigation("RejseTurer");
+                });
+
+            modelBuilder.Entity("TemplateEntity", b =>
+                {
+                    b.Navigation("Items");
                 });
 #pragma warning restore 612, 618
         }
