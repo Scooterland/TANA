@@ -7,57 +7,151 @@
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\sendrejseplan.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.api.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|solutionrelative:tana.api.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.api.web\\controllers\\pdfcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|solutionrelative:tana.api.web\\controllers\\pdfcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.api.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|solutionrelative:tana.api.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\TANA.API.Web.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TANA.API.Web\\TANA.API.Web.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.api.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|solutionrelative:tana.api.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.api.web\\controllers\\turcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B97A95-FBBB-4053-9D91-3EE0CAB19570}|TANA.API.Web\\TANA.API.Web.csproj|solutionrelative:tana.api.web\\controllers\\turcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\entities\\rejsetur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\rejsetur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\interface\\itravelplanfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\interface\\itravelplanfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.persistence\\repositories\\turrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\repositories\\turrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\tana.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\tana.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.infrastructure\\services\\turservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\services\\turservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.infrastructure\\tana.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\tana.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\interfaces\\iturservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\interfaces\\iturservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\dtos\\rejseplanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\dtos\\rejseplanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\dtos\\turdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\dtos\\turdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\repositories\\iturrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\repositories\\iturrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\entities\\tur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\tur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\pages\\rejseplaner.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\rejseplaner.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.persistence\\repositories\\rejserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\repositories\\rejserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.infrastructure\\services\\travelplanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\services\\travelplanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\interfaces\\itravelplanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\interfaces\\itravelplanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\pages\\opretrejseplan.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\opretrejseplan.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\entities\\kunde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\kunde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\pages\\standardture.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\standardture.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\dtos\\rejseplandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\dtos\\rejseplandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.infrastructure\\services\\rejseplandocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\services\\rejseplandocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\pages\\modifyemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\modifyemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\dtos\\rejseplanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\dtos\\rejseplanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\entities\\rejse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\rejse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\cqrs\\queries\\gettravelplanoverviewquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\cqrs\\queries\\gettravelplanoverviewquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\pages\\modifyemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\modifyemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.infrastructure\\services\\emailsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\services\\emailsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\interface\\ikunderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\interface\\ikunderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.persistence\\repositories\\brugerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\repositories\\brugerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\interface\\iemailsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -80,10 +174,6 @@
       "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\entities\\kunde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\kunde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.application\\services\\kundeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\services\\kundeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -98,98 +188,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\karin\\onedrive\\desktop\\3. semester datamatiker\\tana\\tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{D3FAC56B-49BA-4644-874C-1E614425C9C1}|TANA.API\\TANA.API.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D3FAC56B-49BA-4644-874C-1E614425C9C1}|TANA.API\\TANA.API.csproj|solutionrelative:tana.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.persistence\\repositories\\brugerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\repositories\\brugerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.domain\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.web\\tana.web.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\tana.web.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.web\\datasource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\datasource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.infrastructure\\services\\emailsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\services\\emailsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.infrastructure\\services\\rejseplandocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\services\\rejseplandocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9E61AFB-D2CE-4709-B32E-C4914951A3A1}|TANA.Infrastructure\\TANA.Infrastructure.csproj|solutionrelative:tana.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.persistence\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A348CD0-2597-4A75-A0FB-DA88C068A836}|TANA.Persistence\\TANA.Persistence.csproj|solutionrelative:tana.persistence\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.web\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.web\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.application\\dtos\\rejseplanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\dtos\\rejseplanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|solutionrelative:tana.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\tomne\\source\\repos\\tana1\\tana.domain\\tana.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\tana.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.API.Web\\TANA.API.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TANA.API.Web\\TANA.API.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
->>>>>>> 0568bb6ecf4d0627aeb4c146575d22e8ec3f9365
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Repositories\\IRejseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tana.Domain\\Repositories\\IRejseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -199,11 +201,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 33,
-=======
-          "SelectedChildIndex": 40,
->>>>>>> 0568bb6ecf4d0627aeb4c146575d22e8ec3f9365
+          "SelectedChildIndex": 38,
           "Children": [
             {
               "$type": "Bookmark",
@@ -334,354 +332,333 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "TANA.Web\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Properties\\launchSettings.json",
-              "RelativeToolTip": "TANA.Web\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-05-20T07:07:33.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "TANA.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\appsettings.json",
+              "RelativeToolTip": "TANA.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-02T12:27:31.228Z",
+              "WhenOpened": "2025-05-16T09:23:39.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\Program.cs",
+              "RelativeDocumentMoniker": "TANA.API.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\Program.cs",
+              "RelativeToolTip": "TANA.API.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T09:20:56.474Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
+              "DocumentIndex": 3,
+              "Title": "PdfController.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\Controllers\\PdfController.cs",
+              "RelativeDocumentMoniker": "TANA.API.Web\\Controllers\\PdfController.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\Controllers\\PdfController.cs",
+              "RelativeToolTip": "TANA.API.Web\\Controllers\\PdfController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T09:08:13.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TANA.API.Web\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TANA.API.Web\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-16T09:03:24.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SendRejseplan.razor",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\SendRejseplan.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\SendRejseplan.razor",
               "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\SendRejseplan.razor",
               "RelativeToolTip": "TANA.Web\\Components\\Pages\\SendRejseplan.razor",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-02T08:17:42.276Z",
+              "WhenOpened": "2025-05-08T07:45:49.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
-              "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
-              "RelativeToolTip": "TANA.Web\\Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAlwCIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:26:22.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RejseplanDocument.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\RejseplanDocument.cs",
-              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\RejseplanDocument.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\RejseplanDocument.cs",
-              "RelativeToolTip": "TANA.Infrastructure\\Services\\RejseplanDocument.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T09:05:31.803Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TANA.Web\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TANA.Web\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-05T10:58:13.954Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "RejseplanModel.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\DTOs\\RejseplanModel.cs",
-              "RelativeDocumentMoniker": "Tana.Application\\DTOs\\RejseplanModel.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\DTOs\\RejseplanModel.cs",
-              "RelativeToolTip": "Tana.Application\\DTOs\\RejseplanModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T09:07:12.907Z",
-              "EditorCaption": ""
+              "Title": "TANA.API.Web.csproj.user",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\TANA.API.Web.csproj.user",
+              "RelativeDocumentMoniker": "TANA.API.Web\\TANA.API.Web.csproj.user",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\TANA.API.Web.csproj.user",
+              "RelativeToolTip": "TANA.API.Web\\TANA.API.Web.csproj.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2025-05-20T07:08:05.116Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TANA.Infrastructure.csproj",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\TANA.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "TANA.Infrastructure\\TANA.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\TANA.Infrastructure.csproj",
-              "RelativeToolTip": "TANA.Infrastructure\\TANA.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-02T08:25:29.167Z",
-=======
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "TANA.API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "TANA.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "TANA.API.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\appsettings.json",
+              "RelativeToolTip": "TANA.API.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-02T12:34:23.857Z",
->>>>>>> 0568bb6ecf4d0627aeb4c146575d22e8ec3f9365
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T09:03:20.229Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 4,
-              "Title": "TANA.Application.csproj",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Application\\TANA.Application.csproj",
-              "RelativeDocumentMoniker": "TANA.Application\\TANA.Application.csproj",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Application\\TANA.Application.csproj",
-              "RelativeToolTip": "TANA.Application\\TANA.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-02T08:25:17.576Z",
-=======
-              "DocumentIndex": 12,
-              "Title": "EmailSettingsService.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\Services\\EmailSettingsService.cs",
-              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\EmailSettingsService.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\Services\\EmailSettingsService.cs",
-              "RelativeToolTip": "TANA.Infrastructure\\Services\\EmailSettingsService.cs",
+              "DocumentIndex": 8,
+              "Title": "TurController.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\Controllers\\TurController.cs",
+              "RelativeDocumentMoniker": "TANA.API.Web\\Controllers\\TurController.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.API.Web\\Controllers\\TurController.cs",
+              "RelativeToolTip": "TANA.API.Web\\Controllers\\TurController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T09:02:16.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TurService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\TurService.cs",
+              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\TurService.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\TurService.cs",
+              "RelativeToolTip": "TANA.Infrastructure\\Services\\TurService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T09:25:18.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ITravelPlanFactory.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\ITravelPlanFactory.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Interface\\ITravelPlanFactory.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\ITravelPlanFactory.cs",
+              "RelativeToolTip": "Tana.Domain\\Interface\\ITravelPlanFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T10:55:25.964Z"
+              "WhenOpened": "2025-05-05T12:09:49.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RejseplanDocument.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\Services\\RejseplanDocument.cs",
-              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\RejseplanDocument.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\Services\\RejseplanDocument.cs",
-              "RelativeToolTip": "TANA.Infrastructure\\Services\\RejseplanDocument.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "RejseTur.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\RejseTur.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Entities\\RejseTur.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\RejseTur.cs",
+              "RelativeToolTip": "Tana.Domain\\Entities\\RejseTur.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T10:55:24.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\Class1.cs",
-              "RelativeDocumentMoniker": "TANA.Infrastructure\\Class1.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\Class1.cs",
-              "RelativeToolTip": "TANA.Infrastructure\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T10:55:23.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BrugerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Persistence\\Repositories\\BrugerRepository.cs",
-              "RelativeDocumentMoniker": "TANA.Persistence\\Repositories\\BrugerRepository.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Persistence\\Repositories\\BrugerRepository.cs",
-              "RelativeToolTip": "TANA.Persistence\\Repositories\\BrugerRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T10:54:47.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Components\\App.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Components\\App.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-02T10:11:31.676Z"
+              "WhenOpened": "2025-05-05T12:18:31.591Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\Routes.razor",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Components\\Routes.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-02T10:11:29.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Program.cs",
-              "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Program.cs",
-              "RelativeToolTip": "TANA.Web\\Program.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAqwDgAAAAAAAAAAAAAAA==",
+              "Title": "ITurService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\Interfaces\\ITurService.cs",
+              "RelativeDocumentMoniker": "Tana.Application\\Interfaces\\ITurService.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\Interfaces\\ITurService.cs",
+              "RelativeToolTip": "Tana.Application\\Interfaces\\ITurService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T21:17:12.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T09:42:45.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SendRejseplan.razor",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Components\\Pages\\SendRejseplan.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\SendRejseplan.razor",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Components\\Pages\\SendRejseplan.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\Pages\\SendRejseplan.razor",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-02T10:12:08.732Z",
->>>>>>> 0568bb6ecf4d0627aeb4c146575d22e8ec3f9365
-              "EditorCaption": ""
+              "DocumentIndex": 17,
+              "Title": "TurDto.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\DTOs\\TurDto.cs",
+              "RelativeDocumentMoniker": "Tana.Application\\DTOs\\TurDto.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\DTOs\\TurDto.cs",
+              "RelativeToolTip": "Tana.Application\\DTOs\\TurDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T09:43:48.475Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 3,
+              "DocumentIndex": 18,
+              "Title": "ITurRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Repositories\\ITurRepository.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Repositories\\ITurRepository.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Repositories\\ITurRepository.cs",
+              "RelativeToolTip": "Tana.Domain\\Repositories\\ITurRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T11:49:56.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Tur.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Tur.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Entities\\Tur.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Tur.cs",
+              "RelativeToolTip": "Tana.Domain\\Entities\\Tur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T08:55:24.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TurRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\TurRepository.cs",
+              "RelativeDocumentMoniker": "TANA.Persistence\\Repositories\\TurRepository.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\TurRepository.cs",
+              "RelativeToolTip": "TANA.Persistence\\Repositories\\TurRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T11:49:28.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "TANA.Persistence\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Data\\AppDbContext.cs",
               "RelativeToolTip": "TANA.Persistence\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T12:01:26.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T12:01:26.849Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "BrugerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\BrugerRepository.cs",
-              "RelativeDocumentMoniker": "TANA.Persistence\\Repositories\\BrugerRepository.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\BrugerRepository.cs",
-              "RelativeToolTip": "TANA.Persistence\\Repositories\\BrugerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
+              "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Program.cs",
+              "RelativeToolTip": "TANA.Web\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:47:18.111Z"
+              "WhenOpened": "2025-05-10T15:08:33.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ModifyEmail.razor",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\ModifyEmail.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\ModifyEmail.razor",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\ModifyEmail.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\Pages\\ModifyEmail.razor",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwCMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "Rejseplaner.razor",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\Rejseplaner.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\Rejseplaner.razor",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\Rejseplaner.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Pages\\Rejseplaner.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T11:49:11.228Z"
+              "WhenOpened": "2025-05-05T10:51:01.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAcAAAAAAAAAAIBJwCMAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "RejseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\RejseRepository.cs",
+              "RelativeDocumentMoniker": "TANA.Persistence\\Repositories\\RejseRepository.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\RejseRepository.cs",
+              "RelativeToolTip": "TANA.Persistence\\Repositories\\RejseRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwCoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T11:52:09.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IRejseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Repositories\\IRejseRepository.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Repositories\\IRejseRepository.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Repositories\\IRejseRepository.cs",
+              "RelativeToolTip": "Tana.Domain\\Repositories\\IRejseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T12:17:39.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TravelPlanService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\TravelPlanService.cs",
+              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\TravelPlanService.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\TravelPlanService.cs",
+              "RelativeToolTip": "TANA.Infrastructure\\Services\\TravelPlanService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwFsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T11:43:42.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ITravelPlanService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\Interfaces\\ITravelPlanService.cs",
+              "RelativeDocumentMoniker": "Tana.Application\\Interfaces\\ITravelPlanService.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\Interfaces\\ITravelPlanService.cs",
+              "RelativeToolTip": "Tana.Application\\Interfaces\\ITravelPlanService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T12:33:23.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "OpretRejseplan.razor",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\OpretRejseplan.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\OpretRejseplan.razor",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\OpretRejseplan.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Pages\\OpretRejseplan.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T17:38:05.305Z"
+              "WhenOpened": "2025-05-05T10:50:14.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IKundeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IKundeRepository.cs",
-              "RelativeDocumentMoniker": "Tana.Domain\\Interface\\IKundeRepository.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IKundeRepository.cs",
-              "RelativeToolTip": "Tana.Domain\\Interface\\IKundeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:38:08.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EmailSettingsService.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailSettingsService.cs",
-              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\EmailSettingsService.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailSettingsService.cs",
-              "RelativeToolTip": "TANA.Infrastructure\\Services\\EmailSettingsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:57:55.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\App.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\App.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T16:42:35.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IEmailSettingsService.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IEmailSettingsService.cs",
-              "RelativeDocumentMoniker": "Tana.Domain\\Interface\\IEmailSettingsService.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IEmailSettingsService.cs",
-              "RelativeToolTip": "Tana.Domain\\Interface\\IEmailSettingsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:56:22.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EmailSettings.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\EmailSettings.cs",
-              "RelativeDocumentMoniker": "Tana.Domain\\Entities\\EmailSettings.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\EmailSettings.cs",
-              "RelativeToolTip": "Tana.Domain\\Entities\\EmailSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:55:44.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailService.cs",
-              "RelativeToolTip": "TANA.Infrastructure\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:21:36.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IEmailService.cs",
-              "RelativeDocumentMoniker": "Tana.Domain\\Interface\\IEmailService.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IEmailService.cs",
-              "RelativeToolTip": "Tana.Domain\\Interface\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:20:14.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Admin.cs",
-              "RelativeDocumentMoniker": "Tana.Domain\\Entities\\Admin.cs",
-              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Admin.cs",
-              "RelativeToolTip": "Tana.Domain\\Entities\\Admin.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:25:56.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Kunde.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Kunde.cs",
               "RelativeDocumentMoniker": "Tana.Domain\\Entities\\Kunde.cs",
@@ -693,7 +670,211 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
+              "Title": "StandardTure.razor",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\StandardTure.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\StandardTure.razor",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\StandardTure.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Pages\\StandardTure.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T07:45:33.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RejsePlanDto.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\DTOs\\RejsePlanDto.cs",
+              "RelativeDocumentMoniker": "Tana.Application\\DTOs\\RejsePlanDto.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\DTOs\\RejsePlanDto.cs",
+              "RelativeToolTip": "Tana.Application\\DTOs\\RejsePlanDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T11:59:54.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RejseplanDocument.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\RejseplanDocument.cs",
+              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\RejseplanDocument.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\RejseplanDocument.cs",
+              "RelativeToolTip": "TANA.Infrastructure\\Services\\RejseplanDocument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T15:45:16.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RejseplanModel.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\DTOs\\RejseplanModel.cs",
+              "RelativeDocumentMoniker": "Tana.Application\\DTOs\\RejseplanModel.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\DTOs\\RejseplanModel.cs",
+              "RelativeToolTip": "Tana.Application\\DTOs\\RejseplanModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T15:44:10.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\App.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\App.razor",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\App.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T16:42:35.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Rejse.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Rejse.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Entities\\Rejse.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Rejse.cs",
+              "RelativeToolTip": "Tana.Domain\\Entities\\Rejse.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T10:47:57.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-10T15:10:08.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T17:38:05.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GetTravelPlanOverviewQuery.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\CQRS\\Queries\\GetTravelPlanOverviewQuery.cs",
+              "RelativeDocumentMoniker": "Tana.Application\\CQRS\\Queries\\GetTravelPlanOverviewQuery.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\CQRS\\Queries\\GetTravelPlanOverviewQuery.cs",
+              "RelativeToolTip": "Tana.Application\\CQRS\\Queries\\GetTravelPlanOverviewQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T11:59:49.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "BrugerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\BrugerRepository.cs",
+              "RelativeDocumentMoniker": "TANA.Persistence\\Repositories\\BrugerRepository.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Persistence\\Repositories\\BrugerRepository.cs",
+              "RelativeToolTip": "TANA.Persistence\\Repositories\\BrugerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:47:18.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ModifyEmail.razor",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\ModifyEmail.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\ModifyEmail.razor",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Web\\Components\\Pages\\ModifyEmail.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Pages\\ModifyEmail.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwCMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T11:49:11.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EmailSettingsService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailSettingsService.cs",
+              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\EmailSettingsService.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailSettingsService.cs",
+              "RelativeToolTip": "TANA.Infrastructure\\Services\\EmailSettingsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:57:55.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IEmailSettingsService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IEmailSettingsService.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Interface\\IEmailSettingsService.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IEmailSettingsService.cs",
+              "RelativeToolTip": "Tana.Domain\\Interface\\IEmailSettingsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:56:22.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Entities\\EmailSettings.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\EmailSettings.cs",
+              "RelativeToolTip": "Tana.Domain\\Entities\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:55:44.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\TANA.Infrastructure\\Services\\EmailService.cs",
+              "RelativeToolTip": "TANA.Infrastructure\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:21:36.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Interface\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IEmailService.cs",
+              "RelativeToolTip": "Tana.Domain\\Interface\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:20:14.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Admin.cs",
+              "RelativeDocumentMoniker": "Tana.Domain\\Entities\\Admin.cs",
+              "ToolTip": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Admin.cs",
+              "RelativeToolTip": "Tana.Domain\\Entities\\Admin.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:25:56.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
               "Title": "KundeService.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\Services\\KundeService.cs",
               "RelativeDocumentMoniker": "Tana.Application\\Services\\KundeService.cs",
@@ -705,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 44,
               "Title": "BrugerService.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Application\\Services\\BrugerService.cs",
               "RelativeDocumentMoniker": "Tana.Application\\Services\\BrugerService.cs",
@@ -717,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 45,
               "Title": "IBrugerRepository.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Interface\\IBrugerRepository.cs",
               "RelativeDocumentMoniker": "Tana.Domain\\Interface\\IBrugerRepository.cs",
@@ -729,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 46,
               "Title": "Bruger.cs",
               "DocumentMoniker": "C:\\Users\\karin\\OneDrive\\Desktop\\3. Semester datamatiker\\TANA\\Tana.Domain\\Entities\\Bruger.cs",
               "RelativeDocumentMoniker": "Tana.Domain\\Entities\\Bruger.cs",
@@ -738,183 +919,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-25T20:30:00.605Z"
-=======
-              "DocumentIndex": 11,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Infrastructure\\Services\\EmailService.cs",
-              "RelativeToolTip": "TANA.Infrastructure\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T10:55:26.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Bruger.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\Entities\\Bruger.cs",
-              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Bruger.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\Entities\\Bruger.cs",
-              "RelativeToolTip": "TANA.Domain\\Entities\\Bruger.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T20:30:00.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "TANA.Web\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Properties\\launchSettings.json",
-              "RelativeToolTip": "TANA.Web\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-02T11:25:25.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "TANA.Web\\appsettings.json",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\appsettings.json",
-              "RelativeToolTip": "TANA.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-02T11:29:06.316Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DataSource.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\DataSource.cs",
-              "RelativeDocumentMoniker": "TANA.Web\\DataSource.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\DataSource.cs",
-              "RelativeToolTip": "TANA.Web\\DataSource.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T10:55:54.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TANA.Web",
-              "DocumentMoniker": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\TANA.Web.csproj",
-              "RelativeDocumentMoniker": "TANA.Web\\TANA.Web.csproj",
-              "ToolTip": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Web\\TANA.Web.csproj",
-              "RelativeToolTip": "TANA.Web\\TANA.Web.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-02T10:56:03.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\Entities\\Admin.cs",
-              "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Admin.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\Entities\\Admin.cs",
-              "RelativeToolTip": "TANA.Domain\\Entities\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T10:56:13.879Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Persistence\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "TANA.Persistence\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Persistence\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "TANA.Persistence\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T20:31:40.514Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Persistence\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "TANA.Persistence\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Persistence\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "TANA.Persistence\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T08:03:41.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Application\\Class1.cs",
-              "RelativeDocumentMoniker": "TANA.Application\\Class1.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Application\\Class1.cs",
-              "RelativeToolTip": "TANA.Application\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T08:05:37.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RejseplanModel.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Application\\DTOs\\RejseplanModel.cs",
-              "RelativeDocumentMoniker": "TANA.Application\\DTOs\\RejseplanModel.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Application\\DTOs\\RejseplanModel.cs",
-              "RelativeToolTip": "TANA.Application\\DTOs\\RejseplanModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T09:28:58.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Web\\Components\\_Imports.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-02T10:11:33.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\Class1.cs",
-              "RelativeDocumentMoniker": "TANA.Domain\\Class1.cs",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.Domain\\Class1.cs",
-              "RelativeToolTip": "TANA.Domain\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T08:03:08.261Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "TANA.Domain.csproj",
-              "DocumentMoniker": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj",
-              "RelativeDocumentMoniker": "TANA.Domain\\TANA.Domain.csproj",
-              "ToolTip": "C:\\Users\\tomne\\Source\\Repos\\TANA1\\TANA.Domain\\TANA.Domain.csproj",
-              "RelativeToolTip": "TANA.Domain\\TANA.Domain.csproj",
-              "ViewState": "AgIAAAsAAAAAAAAAAABRwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-29T08:01:50.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TANA.API.csproj",
-              "DocumentMoniker": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.API.Web\\TANA.API.csproj",
-              "RelativeDocumentMoniker": "TANA.API.Web\\TANA.API.csproj",
-              "ToolTip": "C:\\Users\\tomne\\source\\repos\\TANA1\\TANA.API.Web\\TANA.API.csproj",
-              "RelativeToolTip": "TANA.API.Web\\TANA.API.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-02T11:38:33.092Z"
->>>>>>> 0568bb6ecf4d0627aeb4c146575d22e8ec3f9365
             }
           ]
         },
