@@ -72,12 +72,12 @@ namespace TANA.Infrastructure.Services
             {
                 Id = rejse.Id,
                 Navn = rejse.Navn,
+                Pris = rejse.Pris,
+                Dage = rejse.Dage,
                 Ture = rejse.RejseTurer.Select(rt => new TurDto
                 {
                     Id = rt.Tur.Id,
                     Navn = rt.Tur.Navn,
-                    Pris = rt.Pris,
-                    Dage = rt.Dage
                 }).ToList()
             }).ToList();
         }

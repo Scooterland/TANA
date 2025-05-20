@@ -23,10 +23,15 @@
 @foreach (var tur in availableTurs)
 {
     <div>
-        <input type="checkbox" @bind="@tur.IsSelected" />
+        <input type="checkbox"
+               checked="@tur.IsSelected"
+               @onchange="(e => OnTourSelectionChanged(e, tur))" />
         <span>@tur.Navn</span>
     </div>
 }
+
+<p><strong>Samlet pris:</strong> @pris kr.</p>
+<p><strong>Samlet antal dage:</strong> @dage</p>
 
 <button @onclick="CreateTravelPlan">Opret Rejseplan</button>
 
@@ -86,6 +91,12 @@ else
     {
         pris = availableTurs.Where(t => t.IsSelected).Sum(t => t.Pris);
         dage = availableTurs.Where(t => t.IsSelected).Sum(t => t.Dage);
+    }
+
+    private void OnTourSelectionChanged(ChangeEventArgs e, TurViewModel tur)
+    {
+        tur.IsSelected = (bool)e.Value;
+        UpdatePriceAndDays();
     }
 
     private async Task CreateTravelPlan()
