@@ -9,33 +9,33 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copy only required .csproj files
-COPY ["TANA.API/TANA.API.csproj", "TANA.API/"]
+COPY ["TANA.Web/TANA.Web.csproj", "TANA.Web/"]
 COPY ["TANA.Application/TANA.Application.csproj", "TANA.Application/"]
 COPY ["TANA.Domain/TANA.Domain.csproj", "TANA.Domain/"]
 COPY ["TANA.Infrastructure/TANA.Infrastructure.csproj", "TANA.Infrastructure/"]
 COPY ["TANA.Persistence/TANA.Persistence.csproj", "TANA.Persistence/"]
 
-# Restore dependencies
-RUN dotnet restore "TANA.API/TANA.API.csproj"
+# Restore
+RUN dotnet restore "TANA.Web/TANA.Web.csproj"
 
-# Copy only the necessary source folders (no TANA.Web!)
-COPY TANA.API/ TANA.API/
+# Copy source (no TANA.API!)
+COPY TANA.Web/ TANA.Web/
 COPY TANA.Application/ TANA.Application/
 COPY TANA.Domain/ TANA.Domain/
 COPY TANA.Infrastructure/ TANA.Infrastructure/
 COPY TANA.Persistence/ TANA.Persistence/
 
 # Build
-WORKDIR /src/TANA.API
-RUN dotnet build "TANA.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR /src/TANA.Web
+RUN dotnet build "TANA.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Publish
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "TANA.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "TANA.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # Final runtime image
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TANA.API.dll"]
+ENTRYPOINT ["dotnet", "TANA.Web.dll"]
