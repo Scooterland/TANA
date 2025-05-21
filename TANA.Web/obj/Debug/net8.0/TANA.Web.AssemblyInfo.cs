@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TANA.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f634d8e3c0d79316cb7b8035f1508019339c3abf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ac7a9d7bcb35c31d6853f37ba3ccee6b076f11e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TANA.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TANA.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
