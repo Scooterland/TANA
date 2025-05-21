@@ -4,26 +4,24 @@ WORKDIR /app
 
 # Copy csproj and restore dependencies
 COPY TANA.Web/*.csproj ./TANA.Web/
-COPY Tana.Application/*.csproj ./TANA.Application/
-COPY Tana.Domain/*.csproj ./TANA.Domain/
+COPY TANA.Application/*.csproj ./TANA.Application/
+COPY TANA.Domain/*.csproj ./TANA.Domain/
 COPY TANA.Infrastructure/*.csproj ./TANA.Infrastructure/
 COPY TANA.Persistence/*.csproj ./TANA.Persistence/
-COPY TANA.API/*.csproj ./TANA.API
 
 RUN dotnet restore ./TANA.Web/TANA.Web.csproj
 
-# Build
-RUN dotnet build ./TANA.API/TANA.API.csproj -c Release -o /build
-
-# Copy everything and publish
-RUN dotnet publish ./TANA.API/TANA.API.csproj -c Release -o /out
+# Copy all files and publish
+COPY . .
+WORKDIR /app/TANA.Web
+RUN dotnet publish -c Release -o /out
 
 # Stage 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /out .
 
-# Expose port 80 for Blazor server-side app
+# Expose port 80
 EXPOSE 80
 
 ENTRYPOINT ["dotnet", "TANA.Web.dll"]

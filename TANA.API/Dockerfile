@@ -4,8 +4,8 @@ WORKDIR /app
 
 # Copy csproj and restore dependencies
 COPY TANA.API/*.csproj ./TANA.API/
-COPY Tana.Application/*.csproj ./TANA.Application/
-COPY Tana.Domain/*.csproj ./TANA.Domain/
+COPY TANA.Application/*.csproj ./TANA.Application/
+COPY TANA.Domain/*.csproj ./TANA.Domain/
 COPY TANA.Infrastructure/*.csproj ./TANA.Infrastructure/
 COPY TANA.Persistence/*.csproj ./TANA.Persistence/
 COPY TANA.Web/*.csproj ./TANA.Web/
@@ -15,8 +15,8 @@ RUN dotnet restore ./TANA.API/TANA.API.csproj
 # Copy full source
 COPY TANA.API/ ./TANA.API/
 COPY TANA.Web/ ./TANA.Web/
-COPY Tana.Application/ ./TANA.Application/
-COPY Tana.Domain/ ./TANA.Domain/
+COPY TANA.Application/ ./TANA.Application/
+COPY TANA.Domain/ ./TANA.Domain/
 COPY TANA.Infrastructure/ ./TANA.Infrastructure/
 COPY TANA.Persistence/ ./TANA.Persistence/
 
