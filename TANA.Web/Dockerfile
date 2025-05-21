@@ -4,8 +4,8 @@ WORKDIR /app
 
 # Copy csproj and restore dependencies
 COPY TANA.Web/*.csproj ./TANA.Web/
-COPY TANA.Application/*.csproj ./TANA.Application/
-COPY TANA.Domain/*.csproj ./TANA.Domain/
+COPY Tana.Application/*.csproj ./TANA.Application/
+COPY Tana.Domain/*.csproj ./TANA.Domain/
 COPY TANA.Infrastructure/*.csproj ./TANA.Infrastructure/
 COPY TANA.Persistence/*.csproj ./TANA.Persistence/
 
