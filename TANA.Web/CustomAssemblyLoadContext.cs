@@ -2,30 +2,33 @@
 using System.Runtime.InteropServices;
 using System.Runtime.Loader;
 
-public class CustomAssemblyLoadContext : AssemblyLoadContext
+namespace TANA.Web
 {
-    public IntPtr LoadUnmanagedLibrary(string absolutePath)
+    public class CustomAssemblyLoadContext : AssemblyLoadContext
     {
-        return LoadUnmanagedDll(absolutePath);
-    }
+        public IntPtr LoadUnmanagedLibrary(string absolutePath)
+        {
+            return LoadUnmanagedDll(absolutePath);
+        }
 
-    protected override IntPtr LoadUnmanagedDll(string unmanagedDllPath)
-    {
-        return LoadUnmanagedDllFromPath(unmanagedDllPath);
-    }
+        protected override IntPtr LoadUnmanagedDll(string unmanagedDllPath)
+        {
+            return LoadUnmanagedDllFromPath(unmanagedDllPath);
+        }
 
-    protected override Assembly Load(AssemblyName assemblyName)
-    {
-        return null!;
-    }
+        protected override Assembly Load(AssemblyName assemblyName)
+        {
+            return null!;
+        }
 
-    public static string GetWkhtmltoxLibraryPath()
-    {
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            return "libwkhtmltox.dll";
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-            return "libwkhtmltox.so";
+        public static string GetWkhtmltoxLibraryPath()
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                return "libwkhtmltox.dll";
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                return "libwkhtmltox.so";
 
-        throw new PlatformNotSupportedException("Unsupported OS");
+            throw new PlatformNotSupportedException("Unsupported OS");
+        }
     }
 }

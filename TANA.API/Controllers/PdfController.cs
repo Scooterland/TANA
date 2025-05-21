@@ -10,7 +10,7 @@ using QuestPDF.Fluent;
 using TANA.Application.DTOs;
 using TANA.Infrastructure.Services;
 
-namespace TANA.API.Web.Controllers
+namespace TANA.API.Controllers
 {
     [ApiController]
     [Route("api/pdf/rejseplan")]

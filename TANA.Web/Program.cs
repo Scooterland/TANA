@@ -10,6 +10,7 @@ using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
 using TANA.Web.Authentication;
 using TANA.Web.Components;
+using TANA.Web;
 using TANA.Application.Interfaces;
 using TANA.Domain.Repositories;
 
@@ -51,7 +52,7 @@ var context = new CustomAssemblyLoadContext();
 
 var libPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
     ? Path.Combine(Directory.GetCurrentDirectory(), "libwkhtmltox", "libwkhtmltox.dll")
-    : "libwkhtmltox.so";
+    : "/usr/lib/libwkhtmltox.so";
 
 Console.WriteLine($"[Startup] Loading wkhtmltox from: {libPath}");
 context.LoadUnmanagedLibrary(libPath);
