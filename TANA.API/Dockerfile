@@ -8,13 +8,23 @@ COPY Tana.Application/*.csproj ./TANA.Application/
 COPY Tana.Domain/*.csproj ./TANA.Domain/
 COPY TANA.Infrastructure/*.csproj ./TANA.Infrastructure/
 COPY TANA.Persistence/*.csproj ./TANA.Persistence/
+COPY TANA.Web/*.csproj ./TANA.Web/
 
 RUN dotnet restore ./TANA.API/TANA.API.csproj
 
+# Copy full source
+COPY TANA.API/ ./TANA.API/
+COPY TANA.Web/ ./TANA.Web/
+COPY Tana.Application/ ./TANA.Application/
+COPY Tana.Domain/ ./TANA.Domain/
+COPY TANA.Infrastructure/ ./TANA.Infrastructure/
+COPY TANA.Persistence/ ./TANA.Persistence/
+
+# Build
+RUN dotnet build ./TANA.API/TANA.API.csproj -c Release -o /build
+
 # Copy everything and publish
-COPY . .
-WORKDIR /app/TANA.API
-RUN dotnet publish -c Release -o /out
+RUN dotnet publish ./TANA.API/TANA.API.csproj -c Release -o /out
 
 # Stage 2: Runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
