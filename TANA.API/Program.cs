@@ -1,11 +1,6 @@
 using System.Runtime.InteropServices;
-using TANA.Web;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Load wkhtmltox native library
-var context = new CustomAssemblyLoadContext();
-context.LoadUnmanagedLibrary(CustomAssemblyLoadContext.GetWkhtmltoxLibraryPath());
 
 
 // Add services

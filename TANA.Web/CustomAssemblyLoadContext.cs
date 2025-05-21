@@ -26,7 +26,7 @@ namespace TANA.Web
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 return "libwkhtmltox.dll";
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                return "libwkhtmltox.so";
+                return "/usr/lib/libwkhtmltox.so";
 
             throw new PlatformNotSupportedException("Unsupported OS");
         }
