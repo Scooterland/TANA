@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Runtime.Loader;
 
 public class CustomAssemblyLoadContext : AssemblyLoadContext
@@ -16,5 +17,15 @@ public class CustomAssemblyLoadContext : AssemblyLoadContext
     protected override Assembly Load(AssemblyName assemblyName)
     {
         return null!;
+    }
+
+    public static string GetWkhtmltoxLibraryPath()
+    {
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            return "libwkhtmltox.dll";
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            return "libwkhtmltox.so";
+
+        throw new PlatformNotSupportedException("Unsupported OS");
     }
 }
