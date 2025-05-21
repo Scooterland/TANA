@@ -47,7 +47,7 @@ namespace TANA.Web.Authentication
         {
             var user = new AuthenticatedUser
             {
-                Id = bruger.BrugerId,
+                Id = bruger.Id,
                 Email = bruger.Email,
                 Rolle = bruger.Rolle
             };

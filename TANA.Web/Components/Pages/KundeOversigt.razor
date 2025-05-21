@@ -1,0 +1,122 @@
+﻿@page "/kundeoversigt"
+﻿@using TANA.Application.Services
+@using TANA.Domain.Entities
+@using TANA.Domain.Interface
+
+@inject IKundeService KundeService
+@inject IRejseService RejseService
+
+@rendermode InteractiveServer
+
+<h3>KundeOversigt</h3>
+
+<div class="text-center bg-blue-100">
+    <input type="text" class="border-4 w-1/3 rounded m-6 p-6 h-8
+               border-blue-300" @bind="SøgText" />
+    <input type="button" value="Søg" @onclick="Søg" />
+</div>
+
+@if (!kundeList.Any())
+{
+    <p>Indlæser kunder...</p>
+}
+else
+{
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th>Navn </th>
+                <th>Email </th>
+                <th>Telefon </th>
+                <th>Adresse </th>
+                <th>Status </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var kunde in filteredKunder)
+            {
+                <tr>
+                    <td>@kunde.Navn </td>
+                    <td>@kunde.Email </td>
+                    <td>@kunde.TelefonNr </td>
+                    <td>@kunde.Adresse </td>
+                    <td>@kunde.Status </td>
+                    <td>
+                        <input type="button" value="Se historik" @onclick="() => SeHistorik(kunde.Id)" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (visPopup)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kunde historik</h5>
+                    <button type="button" class="btn-close"
+                            @onclick="LukPopup"></button>
+                </div>
+                <div class="modal-body">
+                    @if (!filteredRejseList.Any())
+                    {
+                        <h3>Ingen historik endnu! </h3>
+                    }
+                    <ul>
+
+                        @foreach (var rejse in filteredRejseList)
+                        {
+                            <tr>
+                                <td>@rejse.StartsDato </td>
+                                <td>@rejse.SlutsDato </td>
+                                <td>@rejse.Dage </td>
+                                <td>@rejse.Pris </td>
+                            </tr>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@code {
+    private List<Kunde> kundeList = new List<Kunde>();
+    private List<Kunde> filteredKunder = new List<Kunde>();
+
+    private List<Rejse> rejseList = new List<Rejse>();
+    private List<Rejse> filteredRejseList = new List<Rejse>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        kundeList = (await KundeService.GetAllAsync()).ToList();
+        filteredKunder = kundeList;
+        rejseList = (await RejseService.GetAllAsync()).ToList();
+    }
+
+    public string SøgText = "";
+
+    public void Søg()
+    {
+        filteredKunder = kundeList.Where(k => k.Navn.Contains(SøgText)).ToList();
+    }
+
+    private bool visPopup;
+
+    public void SeHistorik(int kundeId)
+    {
+        filteredRejseList = rejseList.Where(r => r.Kunde.Id == kundeId).ToList();
+        visPopup = true;
+    }
+
+    public void LukPopup()
+    {
+        visPopup = false;
+    }
+
+}

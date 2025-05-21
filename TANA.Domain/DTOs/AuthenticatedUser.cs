@@ -8,7 +8,7 @@ namespace TANA.Domain.DTOs
 {
     public class AuthenticatedUser
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Email { get; set; } = string.Empty;
         public string Rolle { get; set; } = string.Empty;
     }

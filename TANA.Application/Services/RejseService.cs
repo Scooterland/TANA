@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using TANA.Domain.Entities;
+﻿using TANA.Domain.Entities;
 using TANA.Domain.Interface;
 
 namespace TANA.Application.Services
 {
-    public class RejseService
+    public class RejseService : IRejseService
     {
         private readonly IRejseRepository _repo;
         public RejseService(IRejseRepository repo) => _repo = repo;

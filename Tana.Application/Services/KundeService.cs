@@ -8,7 +8,7 @@ using TANA.Domain.Entities;
 
 namespace TANA.Application.Services
 {
-    public class KundeService
+    public class KundeService : IKundeService
     {
         private readonly IKundeRepository _repo;
         public KundeService(IKundeRepository repo) => _repo = repo;

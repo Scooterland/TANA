@@ -1,3 +1,6 @@
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\karin\OneDrive\Desktop\3. Semester datamatiker\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json

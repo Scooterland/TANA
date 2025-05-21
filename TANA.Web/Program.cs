@@ -37,8 +37,8 @@ builder.Services.AddScoped<ITurRepository, TurRepository>();
 
 builder.Services.AddScoped<IBrugerService, BrugerService>();
 builder.Services.AddScoped<ITurService, TurService>();
-builder.Services.AddScoped<KundeService>();
-builder.Services.AddScoped<RejseService>();
+builder.Services.AddScoped<IKundeService, KundeService>();
+builder.Services.AddScoped<IRejseService, RejseService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
 builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();

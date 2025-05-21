@@ -1,13 +1,229 @@
-﻿@using Microsoft.AspNetCore.Authorization
-@page "/admin-dashboard"
+﻿@page "/admin-dashboard"
 @attribute [Authorize(Roles = "Admin")]
+
+@using Microsoft.AspNetCore.Authorization
+@using TANA.Domain.Interface
+
 @inject NavigationManager Navigation
+@inject IBrugerService BrugerService
 
 <p>Omdirigerer...</p>
 
+@if (!brugerList.Any())
+{
+    <p>Indlæser agenter...</p>
+}
+else
+{
+    <table class="table table-striped text-center">
+
+        <thead>
+            <tr>
+                <th>Id </th>
+                <th>Navn </th>
+                <th>Email </th>
+                <th>Rolle </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bruger in brugerList)
+            {
+                <tr>
+                    <td>@bruger.Id </td>
+                    <td>@bruger.Navn </td>
+                    <td>@bruger.Email </td>
+                    <td>@bruger.Rolle </td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => VisOpdaterBruger(bruger.Id)">Opdater Rejseagent</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => VisSletBruger(bruger.Id)">Slet Rejseagent</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@if (opretBrugerPopup)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Opret Rejseagent</h5>
+                    <button type="button" class="btn-close"
+                            @onclick="LukPopup"></button>
+                </div>
+                <div class="modal-body">
+                <EditForm Model="newBruger" OnValidSubmit="OpretBruger">
+                    <DataAnnotationsValidator />
+                    <div>
+                        <label>Navn:</label>
+                        <InputText @bind-Value="newBruger.Navn" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <InputText @bind-Value="newBruger.PasswordHash" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <InputText @bind-Value="newBruger.Email" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Rolle:</label>
+                        <InputText @bind-Value="newBruger.Rolle" class="form-control" />
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2 mb-2">Opret Rejseagent</button>
+                </EditForm>
+                </div>
+            </div>
+            </div>
+        </div>
+    <div class="modal-backdrop fade show"></div>
+    
+}
+@if (opdaterBrugerPopup)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Opdater bruger</h5>
+                    <button type="button" class="btn-close"
+                            @onclick="LukPopup"></button>
+                </div>
+                <div class="modal-body">
+                <EditForm Model="newBruger" OnValidSubmit="OpdaterBruger">
+                    <DataAnnotationsValidator />
+                    <div>
+                        <label>Navn:</label>
+                        <InputText @bind-Value="newBruger.Navn" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <InputText @bind-Value="newBruger.Email" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Rolle:</label>
+                        <InputText @bind-Value="newBruger.Rolle" class="form-control" />
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2 mb-2">Opret Rejseagent</button>
+                </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+@if (sletBrugerPopup)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Opdater bruger</h5>
+                    <button type="button" class="btn-close"
+                            @onclick="LukPopup"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>Er du sikker?</h2>
+                    <button class="btn btn-warning" @onclick="SletBruger">Ja </button>
+                    <button class="btn btn-primary" @onclick="LukPopup">Nej </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+@if (popupBesked)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Opdater bruger</h5>
+                    <button type="button" class="btn-close"
+                            @onclick="LukPopup"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>@besked</h2>
+                    <button class="btn btn-primary" @onclick="LukPopup">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+
 @code {
-    protected override void OnInitialized()
+    private List<Bruger> brugerList = new List<Bruger>();
+    private Bruger newBruger = new Bruger();
+    private Bruger valgtBruger = new Bruger();
+
+    private bool opretBrugerPopup = false;
+    private bool opdaterBrugerPopup = false;
+    private bool sletBrugerPopup = false;
+    private bool popupBesked = false;
+
+    private string besked = "";
+
+    protected override async Task OnInitializedAsync()
     {
         Navigation.NavigateTo("/");
+        brugerList = (await BrugerService.GetAllAsync()).ToList();
+    }
+
+    private void VisOpretBruger()
+    {
+        opretBrugerPopup = true;
+    }
+
+    private void VisOpdaterBruger(int id)
+    {
+        valgtBruger = brugerList.Single(b => b.Id == id);
+        opdaterBrugerPopup = true;
+    }
+
+    private void VisSletBruger(int id)
+    {
+        valgtBruger = brugerList.Single(b => b.Id == id);
+        sletBrugerPopup = true;
+    }
+
+
+    private async Task OpretBruger()
+    {
+        await BrugerService.AddAsync(newBruger);
+        newBruger = new Bruger();
+        VisPopupBesked("Rejseagent Oprettet!");
+    }
+
+    private async Task OpdaterBruger()
+    {
+        await BrugerService.UpdateAsync(valgtBruger);
+        VisPopupBesked("Rejseagent Opdateret!");
+    }
+
+    private async Task SletBruger()
+    {
+        await BrugerService.DeleteAsync(valgtBruger.Id);
+        VisPopupBesked("Rejseagent Slettet!");
+    }
+
+    private void VisPopupBesked(string besked)
+    {
+        this.besked = besked;
+        popupBesked = true;
+    }
+
+    private void LukPopup()
+    {
+        valgtBruger = new Bruger();
+        besked = "";
+        opretBrugerPopup = false;
+        opdaterBrugerPopup = false;
+        sletBrugerPopup = false;
     }
 }
