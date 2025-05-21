@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\TANA.Blazor.props" />
-</Project>

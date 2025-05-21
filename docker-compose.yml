@@ -1,0 +1,6 @@
+services:
+  tana.api:
+    image: ${DOCKER_REGISTRY-}tanaapi
+    build:
+      context: .
+      dockerfile: TANA.API/Dockerfile
