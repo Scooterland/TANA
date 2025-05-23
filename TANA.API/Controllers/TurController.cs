@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TANA.Application.DTOs;
-using TANA.Application.Interfaces;
+using TANA.Application.Interface;
 
 namespace TANA.API.Web.Controllers
 {

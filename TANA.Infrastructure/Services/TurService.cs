@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TANA.Application.DTOs;
-using TANA.Application.Interfaces;
+using TANA.Application.Interface;
 using TANA.Domain.Entities;
 using TANA.Domain.Interface;
 

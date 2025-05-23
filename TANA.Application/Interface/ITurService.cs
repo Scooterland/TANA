@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TANA.Application.DTOs;
 
-namespace TANA.Application.Interfaces
+namespace TANA.Application.Interface
 {
     public interface ITurService
     {

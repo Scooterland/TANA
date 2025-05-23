@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using TANA.Application.Interfaces;
+using TANA.Application.Interface;
 using TANA.Application.Services;
 using TANA.Domain.Interface;
+using TANA.Infrastructure.Repositories;
 using TANA.Infrastructure.Services;
 using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
@@ -21,6 +22,7 @@ builder.Services.AddScoped<IBrugerRepository, BrugerRepository>();
 builder.Services.AddScoped<IKundeRepository, KundeRepository>();
 builder.Services.AddScoped<IRejseRepository, RejseRepository>();
 builder.Services.AddScoped<ITurRepository, TurRepository>();
+builder.Services.AddScoped<ITemplateRepository, TemplateRepository>();
 
 builder.Services.AddScoped<IBrugerService, BrugerService>();
 builder.Services.AddScoped<ITurService, TurService>();
@@ -30,7 +32,6 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
 builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
 builder.Services.AddScoped<TemplateStateService>();
-builder.Services.AddScoped<ITemplateRepository, TemplateRepository>();
 builder.Services.AddScoped<TemplateLibraryService>();
 
 builder.Services.AddHttpClient("TanaApi", client =>

@@ -1,21 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TANA.Domain.Entities;
+﻿using TANA.Persistence.Data;
 using TANA.Domain.Interface;
-using TANA.Persistence.Data;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
-namespace TANA.Persistence.Repositories
+
+namespace TANA.Infrastructure.Repositories
 {
     public class TemplateRepository : ITemplateRepository
-    {
-        private readonly AppDbContext _context;
+	{
+        private readonly AppDbContext db;
 
-        public TemplateRepository(AppDbContext context)
-        {
-            _context = context;
-        }
+        public TemplateRepository(AppDbContext context) => db = context;
 
         public async Task SaveTemplateAsync(TemplateEntity template)
         {
@@ -23,19 +17,19 @@ namespace TANA.Persistence.Repositories
             {
                 template.CreatedDate = DateTime.UtcNow;
                 template.LastModifiedDate = DateTime.UtcNow;
-                _context.Templates.Add(template);
+                db.Templates.Add(template);
             }
             else
             {
                 await UpdateTemplateAsync(template);
             }
 
-            await _context.SaveChangesAsync();
+            await db.SaveChangesAsync();
         }
 
         public async Task UpdateTemplateAsync(TemplateEntity template)
         {
-            var existingTemplate = await _context.Templates
+            var existingTemplate = await db.Templates
                                                  .Include(t => t.Items)
                                                  .FirstOrDefaultAsync(t => t.Id == template.Id);
 
@@ -51,7 +45,7 @@ namespace TANA.Persistence.Repositories
                 existingTemplate.HeaderBgColor = template.HeaderBgColor;
                 existingTemplate.FooterBgColor = template.FooterBgColor;
 
-                _context.TemplateItems.RemoveRange(existingTemplate.Items);
+                db.TemplateItems.RemoveRange(existingTemplate.Items);
 
                 foreach (var item in template.Items)
                 {
@@ -68,31 +62,31 @@ namespace TANA.Persistence.Repositories
                     });
                 }
 
-                _context.Templates.Update(existingTemplate);
+                db.Templates.Update(existingTemplate);
             }
 
-            await _context.SaveChangesAsync();
+            await db.SaveChangesAsync();
         }
 
 
         public async Task<List<TemplateEntity>> GetAllTemplatesAsync()
         {
-            return await _context.Templates.Include(t => t.Items).ToListAsync();
+            return await db.Templates.Include(t => t.Items).ToListAsync();
         }
 
         public async Task<TemplateEntity?> GetTemplateByIdAsync(int id)
         {
-            return await _context.Templates.Include(t => t.Items).FirstOrDefaultAsync(t => t.Id == id);
+            return await db.Templates.Include(t => t.Items).FirstOrDefaultAsync(t => t.Id == id);
         }
 
         public async Task DeleteTemplateAsync(int id)
         {
-            var template = await _context.Templates.Include(t => t.Items).FirstOrDefaultAsync(t => t.Id == id);
+            var template = await db.Templates.Include(t => t.Items).FirstOrDefaultAsync(t => t.Id == id);
             if (template != null)
             {
-                _context.TemplateItems.RemoveRange(template.Items);
-                _context.Templates.Remove(template);
-                await _context.SaveChangesAsync();
+				db.TemplateItems.RemoveRange(template.Items);
+				db.Templates.Remove(template);
+                await db.SaveChangesAsync();
 
                 DeleteTemplateFile(template.TemplateName);
             }
@@ -115,8 +109,5 @@ namespace TANA.Persistence.Repositories
                 }
             }
         }
-
-
-
     }
 }
