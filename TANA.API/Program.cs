@@ -1,15 +1,10 @@
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.InteropServices;
 using TANA.Application.Interfaces;
 using TANA.Application.Services;
 using TANA.Domain.Interface;
-using TANA.Domain.Repositories;
 using TANA.Infrastructure.Services;
 using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
-using TANA.Web.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
