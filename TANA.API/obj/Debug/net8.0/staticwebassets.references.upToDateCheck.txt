@@ -4,3 +4,5 @@ C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build
 C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\rene3\source\repos\TANA\TANA.Web\obj\Debug\net8.0\staticwebassets.build.json

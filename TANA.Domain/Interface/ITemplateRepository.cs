@@ -1,7 +1,4 @@
-﻿using TANA.Domain.Entities;
-using System.Threading.Tasks;
-
-namespace TANA.Domain.Interface
+﻿namespace TANA.Domain.Interface
 {
     public interface ITemplateRepository
     {
@@ -10,7 +7,5 @@ namespace TANA.Domain.Interface
         Task<TemplateEntity?> GetTemplateByIdAsync(int id);
         Task DeleteTemplateAsync(int id);
         Task UpdateTemplateAsync(TemplateEntity template);
-
-
     }
 }

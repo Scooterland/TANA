@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TANA.Application.DTOs;
 using TANA.Application.Interfaces;
-using TANA.Infrastructure.Services;
-using TANA.Persistence.Repositories;
-using TANA.Domain.Repositories;
-using TANA.Application.Services;
 
 namespace TANA.API.Web.Controllers
 {

@@ -10,13 +10,13 @@ namespace TANA.Application.Services
 {
     public class KundeService : IKundeService
     {
-        private readonly IKundeRepository _repo;
-        public KundeService(IKundeRepository repo) => _repo = repo;
+        private readonly IKundeRepository db;
+        public KundeService(IKundeRepository repo) => db = repo;
 
-        public Task<IEnumerable<Kunde>> GetAllAsync() => _repo.GetAllAsync();
-        public Task<Kunde?> GetByIdAsync(Guid id) => _repo.GetByIdAsync(id);
-        public Task AddAsync(Kunde kunde) => _repo.AddAsync(kunde);
-        public Task UpdateAsync(Kunde kunde) => _repo.UpdateAsync(kunde);
-        public Task DeleteAsync(Guid id) => _repo.DeleteAsync(id);
+        public Task<IEnumerable<Kunde>> GetAllAsync() => db.GetAllAsync();
+        public Task<Kunde?> GetByIdAsync(Guid id) => db.GetByIdAsync(id);
+        public Task AddAsync(Kunde kunde) => db.AddAsync(kunde);
+        public Task UpdateAsync(Kunde kunde) => db.UpdateAsync(kunde);
+        public Task DeleteAsync(int id) => db.DeleteAsync(id);
     }
 }

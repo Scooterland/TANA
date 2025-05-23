@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TANA.Domain.Entities;
+﻿using TANA.Domain.Entities;
 
 namespace TANA.Domain.Interface
 {
@@ -13,6 +8,6 @@ namespace TANA.Domain.Interface
         Task<Kunde?> GetByIdAsync(Guid id);
         Task AddAsync(Kunde kunde);
         Task UpdateAsync(Kunde kunde);
-        Task DeleteAsync(Guid id);
+        Task DeleteAsync(int id);
     }
 }

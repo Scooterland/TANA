@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TANA.Application.DTOs;
 using TANA.Application.Interfaces;
 using TANA.Domain.Entities;
-using TANA.Domain.Repositories;
+using TANA.Domain.Interface;
 
 namespace TANA.Infrastructure.Services
 {

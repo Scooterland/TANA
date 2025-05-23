@@ -10,7 +10,6 @@ using TANA.Persistence.Repositories;
 using TANA.Web.Authentication;
 using TANA.Web.Components;
 using TANA.Application.Interfaces;
-using TANA.Domain.Repositories;
 
 
 var builder = WebApplication.CreateBuilder(args);

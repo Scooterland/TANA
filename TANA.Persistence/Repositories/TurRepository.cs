@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TANA.Domain.Entities;
-using TANA.Domain.Repositories;
+using TANA.Domain.Interface;
 using TANA.Persistence.Data;
 
 namespace TANA.Persistence.Repositories

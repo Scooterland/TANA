@@ -30,7 +30,7 @@ namespace TANA.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(int id)
         {
             var entity = await _context.Kunder.FindAsync(id);
             if (entity is null) return;

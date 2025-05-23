@@ -1,11 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TANA.Domain.Entities;
-using TANA.Domain.Repositories;
 using TANA.Persistence.Data;
 using TANA.Domain.Interface;
 
@@ -14,41 +8,37 @@ namespace TANA.Persistence.Repositories
 {
     public class RejseRepository : IRejseRepository
     {
-        private readonly AppDbContext _context;
+        private readonly AppDbContext db;
 
-        public RejseRepository(AppDbContext context)
-        {
-            _context = context;
-        }
+		public RejseRepository(AppDbContext context) => db = context;
 
         public async Task<IEnumerable<Rejse>> GetAllAsync()
         {
-            return await _context.Rejser.Include(r => r.RejseTurer).ThenInclude(rt => rt.Tur).ToListAsync();
+            return await db.Rejser.Include(r => r.RejseTurer).ThenInclude(rt => rt.Tur).ToListAsync();
         }
 
         public async Task<Rejse?> GetByIdAsync(int id)
         {
-            return await _context.Rejser.Include(r => r.RejseTurer).ThenInclude(rt => rt.Tur).FirstOrDefaultAsync(r => r.Id == id);
+            return await db.Rejser.Include(r => r.RejseTurer).ThenInclude(rt => rt.Tur).FirstOrDefaultAsync(r => r.Id == id);
         }
-
 
         public async Task AddAsync(Rejse rejse)
         {
-            _context.Rejser.Add(rejse);
-            await _context.SaveChangesAsync();
+            db.Rejser.Add(rejse);
+            await db.SaveChangesAsync();
         }
         public async Task UpdateAsync(Rejse rejse)
         {
-            _context.Rejser.Update(rejse);
-            await _context.SaveChangesAsync();
+            db.Rejser.Update(rejse);
+            await db.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await _context.Rejser.FindAsync(id);
+            var entity = await db.Rejser.FindAsync(id);
             if (entity is null) return;
-            _context.Rejser.Remove(entity);
-            await _context.SaveChangesAsync();
+            db.Rejser.Remove(entity);
+            await db.SaveChangesAsync();
         }
     }
 }

@@ -1,7 +1,8 @@
 ﻿@page "/rejser"
 @using TANA.Application.Services
 @using TANA.Domain.Entities
-@inject RejseService Service
+@using TANA.Domain.Interface
+@inject IRejseService Service
 @inject NavigationManager Nav
 @rendermode InteractiveServer
 <h3>Rejser</h3>
@@ -11,7 +12,7 @@
     + Ny Rejse
 </button>
 
-@if (rejser is null)
+@if (rejseList is null)
 {
     <p><em>Loading…</em></p>
 }
@@ -29,7 +30,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var r in rejser)
+            @foreach (var r in rejseList)
             {
                 <tr>
                     <td>@r.Id</td>
@@ -55,14 +56,14 @@ else
 }
 
 @code {
-    private IEnumerable<Rejse>? rejser;
+    private IEnumerable<Rejse>? rejseList;
 
     protected override async Task OnInitializedAsync() =>
-        rejser = await Service.GetAllAsync();
+        rejseList = await Service.GetAllAsync();
 
     private async Task Delete(int id)
     {
         await Service.DeleteAsync(id);
-        rejser = await Service.GetAllAsync();
+        rejseList = await Service.GetAllAsync();
     }
 }

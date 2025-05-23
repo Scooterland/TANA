@@ -13,6 +13,6 @@ namespace TANA.Domain.Interface
 		public Task<Kunde?> GetByIdAsync(Guid id);
 		public Task AddAsync(Kunde kunde);
 		public Task UpdateAsync(Kunde kunde);
-		public Task DeleteAsync(Guid id);
+		public Task DeleteAsync(int id);
 	}
 }
