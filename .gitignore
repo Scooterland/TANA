@@ -1,18 +1,38 @@
-# Ignore Visual Studio files
-.vs/
-.vscode/
-
 # Ignore build output
 bin/
 obj/
+out/
+build/
 
-# Ignore user-specific files
-*.user
-*.suo
-
-# Ignore others
+# Docker-related files
 *.log
-*.tmp
+*.pid
+*.cache
 *.db
 *.sqlite
-.env
+*.tar
+*.env
+.env.*
+
+# Visual Studio / VS Code settings
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Docker Compose intermediate files
+**/obj/Docker/
+docker-compose.override.yml
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Node modules or frontend (if any)
+node_modules/
+dist/
+
+# Ignore this user-specific solution launch config
+TANA.slnLaunch.user

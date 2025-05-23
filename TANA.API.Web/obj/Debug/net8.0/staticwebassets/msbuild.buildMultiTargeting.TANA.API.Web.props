@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\TANA.API.Web.props" />
-</Project>
