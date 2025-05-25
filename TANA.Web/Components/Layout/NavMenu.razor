@@ -65,8 +65,16 @@
             <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> login
         </NavLink>
         </div>
-    </nav>
-    </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/template-builder">
+                <span class="oi oi-dashboard" aria-hidden="true"></span> Template Builder
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/templates">
+                <span class="oi oi-list" aria-hidden="true"></span> View All Templates
+            </NavLink>
+        </div>
         <AuthorizeView Roles="Admin">
             <div class="nav-item px-3">
                 <NavLink class="nav-link" href="/admin-dashboard">
@@ -74,16 +82,7 @@
                 </NavLink>
             </div>
         </AuthorizeView>
+    </nav>
+    </div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/template-builder">
-                <span class="oi oi-dashboard" aria-hidden="true"></span> Template Builder
-            </NavLink>
-        </div>
-
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/templates">
-                <span class="oi oi-list" aria-hidden="true"></span> View All Templates
-            </NavLink>
-        </div>
+        

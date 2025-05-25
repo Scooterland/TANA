@@ -26,6 +26,11 @@ namespace TANA.Persistence.Repositories
 
         public async Task UpdateAsync(Kunde kunde)
         {
+            var existingEntity = await _context.Kunder.FindAsync(kunde.Id);
+            if (existingEntity != null)
+            {
+                _context.Entry(existingEntity).State = EntityState.Detached;
+            }
             _context.Kunder.Update(kunde);
             await _context.SaveChangesAsync();
         }
