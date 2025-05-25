@@ -9,38 +9,42 @@ namespace TANA.Persistence.Repositories
 {
     public class KundeRepository : IKundeRepository
     {
-        private readonly AppDbContext _context;
-        public KundeRepository(AppDbContext ctx) => _context = ctx;
+        private readonly AppDbContext db;
+        public KundeRepository(AppDbContext context) => db = context;
 
         public async Task<IEnumerable<Kunde>> GetAllAsync() =>
-            await _context.Kunder.AsNoTracking().ToListAsync();
+            await db.Kunder.AsNoTracking().ToListAsync();
 
         public async Task<Kunde?> GetByIdAsync(Guid id) =>
-            await _context.Kunder.FindAsync(id);
+            await db.Kunder.FindAsync(id);
 
         public async Task AddAsync(Kunde kunde)
         {
-            _context.Kunder.Add(kunde);
-            await _context.SaveChangesAsync();
+            db.Kunder.Add(kunde);
+            await db.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(Kunde kunde)
         {
-            var existingEntity = await _context.Kunder.FindAsync(kunde.Id);
+            var existingEntity = await db.Kunder.FindAsync(kunde.Id);
             if (existingEntity != null)
             {
-                _context.Entry(existingEntity).State = EntityState.Detached;
+                db.Entry(existingEntity).CurrentValues.SetValues(kunde);
             }
-            _context.Kunder.Update(kunde);
-            await _context.SaveChangesAsync();
+            else
+            {
+                db.Kunder.Attach(kunde);
+                db.Entry(kunde).State = EntityState.Modified;
+            }
+            await db.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await _context.Kunder.FindAsync(id);
+            var entity = await db.Kunder.FindAsync(id);
             if (entity is null) return;
-            _context.Kunder.Remove(entity);
-            await _context.SaveChangesAsync();
+            db.Kunder.Remove(entity);
+            await db.SaveChangesAsync();
         }
     }
 }
