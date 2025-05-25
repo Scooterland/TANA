@@ -9,10 +9,12 @@ using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
 using TANA.Web.Authentication;
 using TANA.Web.Components;
-using TANA.Application.Interface;
-using TANA.Infrastructure.Repositories;
+using TANA.Application.Interfaces;
+using TANA.Domain.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // ✅ Razor components & Blazor Server
 builder.Services.AddRazorComponents()
@@ -53,7 +55,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddHttpClient("TanaApi", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5000/"); 
+    client.BaseAddress = new Uri("http://localhost:5000/");
 });
 
 var app = builder.Build();
