@@ -11,6 +11,7 @@ using TANA.Web.Authentication;
 using TANA.Web.Components;
 using System.Globalization;
 using TANA.Application.Interface;
+using QuestPDF.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
