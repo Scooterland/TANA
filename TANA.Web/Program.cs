@@ -13,6 +13,7 @@ using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
 using TANA.Web.Authentication;
 using TANA.Web.Components;
+using System.Globalization;
 
 
 var builder = WebApplication.CreateBuilder(args);
