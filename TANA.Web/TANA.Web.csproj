@@ -31,4 +31,13 @@
     <ProjectReference Include="..\TANA.Infrastructure\TANA.Infrastructure.csproj" />
     <ProjectReference Include="..\TANA.Persistence\TANA.Persistence.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Language.da-DK.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Language.en-UK.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
