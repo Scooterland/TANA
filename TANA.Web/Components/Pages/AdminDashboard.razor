@@ -1,13 +1,16 @@
 ﻿@page "/admin-dashboard"
-@attribute [Authorize(Roles = "Admin")]
 
-@using Microsoft.AspNetCore.Authorization
+@using TANA.Domain.Entities
 @using TANA.Domain.Interface
-
-@inject NavigationManager Navigation
 @inject IBrugerService BrugerService
+@rendermode InteractiveServer
 
-<p>Omdirigerer...</p>
+<h3>Admin Dashboard</h3>
+
+<!-- Create Button -->
+<div class="mb-4 flex justify-start">
+    <button class="btn btn-success" @onclick="ShowCreateModal">Ny Bruger</button>
+</div>
 
 @if (!brugerList.Any())
 {
@@ -16,214 +19,165 @@
 else
 {
     <table class="table table-striped text-center">
-
         <thead>
             <tr>
-                <th>Id </th>
-                <th>Navn </th>
-                <th>Email </th>
-                <th>Rolle </th>
-                <th></th>
-                <th></th>
+                <th>Id</th>
+                <th>Navn</th>
+                <th>Email</th>
+                <th>Rolle</th>
+                <th>Handlinger</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var bruger in brugerList)
             {
                 <tr>
-                    <td>@bruger.Id </td>
-                    <td>@bruger.Navn </td>
-                    <td>@bruger.Email </td>
-                    <td>@bruger.Rolle </td>
+                    <td>@bruger.Id</td>
+                    <td>@bruger.Navn</td>
+                    <td>@bruger.Email</td>
+                    <td>@bruger.Rolle</td>
                     <td>
-                        <button class="btn btn-primary" @onclick="() => VisOpdaterBruger(bruger.Id)">Opdater Rejseagent</button>
-                    </td>
-                    <td>
-                        <button class="btn btn-primary" @onclick="() => VisSletBruger(bruger.Id)">Slet Rejseagent</button>
+                        <button class="btn btn-warning btn-sm mr-2" @onclick="() => ShowEditModal(bruger)">Rediger</button>
+                        <button class="btn btn-danger btn-sm" @onclick="() => ShowDeleteModal(bruger)">Slet</button>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
 }
-@if (opretBrugerPopup)
+
+<!-- Add/Edit Modal -->
+@if (showEditModal)
 {
-    <div class="modal fade show" style="display: block;" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Opret Rejseagent</h5>
-                    <button type="button" class="btn-close"
-                            @onclick="LukPopup"></button>
+    <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:5000;display:flex;align-items:center;justify-content:center;">
+        <div style="background:white;padding:2rem;min-width:320px;box-shadow:0 2px 18px #2228;border-radius:12px;">
+            <h4>@(isEditMode ? "Rediger Bruger" : "Opret Bruger")</h4>
+            <EditForm Model="modalBruger" OnValidSubmit="SaveBruger">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="mb-2">
+                    <label>Navn:</label>
+                    <InputText @bind-Value="modalBruger.Navn" class="form-control" />
                 </div>
-                <div class="modal-body">
-                <EditForm Model="newBruger" OnValidSubmit="OpretBruger">
-                    <DataAnnotationsValidator />
-                    <div>
-                        <label>Navn:</label>
-                        <InputText @bind-Value="newBruger.Navn" class="form-control" />
-                    </div>
-                    <div>
+                @if (!isEditMode)
+                {
+                    <div class="mb-2">
                         <label>Password:</label>
-                        <InputText @bind-Value="newBruger.PasswordHash" class="form-control" />
+                        <InputText @bind-Value="modalBruger.PasswordHash" class="form-control" type="password" />
                     </div>
-                    <div>
-                        <label>Email:</label>
-                        <InputText @bind-Value="newBruger.Email" class="form-control" />
-                    </div>
-                    <div>
-                        <label>Rolle:</label>
-                        <InputText @bind-Value="newBruger.Rolle" class="form-control" />
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-2 mb-2">Opret Rejseagent</button>
-                </EditForm>
+                }
+                <div class="mb-2">
+                    <label>Email:</label>
+                    <InputText @bind-Value="modalBruger.Email" class="form-control" />
                 </div>
-            </div>
-            </div>
+                <div class="mb-2">
+                    <label>Rolle:</label>
+                    <InputText @bind-Value="modalBruger.Rolle" class="form-control" />
+                </div>
+                <div class="mt-4 flex gap-2">
+                    <button type="submit" class="btn btn-success">@((isEditMode ? "Gem" : "Opret"))</button>
+                    <button type="button" class="btn btn-secondary" @onclick="CloseEditModal">Annuller</button>
+                </div>
+            </EditForm>
         </div>
-    <div class="modal-backdrop fade show"></div>
-    
+    </div>
 }
-@if (opdaterBrugerPopup)
+
+<!-- Delete Modal -->
+@if (showDeleteModal)
 {
-    <div class="modal fade show" style="display: block;" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"> Opdater bruger</h5>
-                    <button type="button" class="btn-close"
-                            @onclick="LukPopup"></button>
-                </div>
-                <div class="modal-body">
-                <EditForm Model="newBruger" OnValidSubmit="OpdaterBruger">
-                    <DataAnnotationsValidator />
-                    <div>
-                        <label>Navn:</label>
-                        <InputText @bind-Value="newBruger.Navn" class="form-control" />
-                    </div>
-                    <div>
-                        <label>Email:</label>
-                        <InputText @bind-Value="newBruger.Email" class="form-control" />
-                    </div>
-                    <div>
-                        <label>Rolle:</label>
-                        <InputText @bind-Value="newBruger.Rolle" class="form-control" />
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-2 mb-2">Opret Rejseagent</button>
-                </EditForm>
-                </div>
+    <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:5000;display:flex;align-items:center;justify-content:center;">
+        <div style="background:white;padding:2rem;min-width:320px;box-shadow:0 2px 18px #2228;border-radius:12px;">
+            <h4>Slet Bruger</h4>
+            <div>Er du sikker på, at du vil slette brugeren <b>@deleteBruger?.Navn</b>?</div>
+            <div class="mt-4 flex gap-2">
+                <button class="btn btn-danger" @onclick="ConfirmDelete">Ja, slet</button>
+                <button class="btn btn-secondary" @onclick="CloseDeleteModal">Annuller</button>
             </div>
         </div>
     </div>
-    <div class="modal-backdrop fade show"></div>
-}
-@if (sletBrugerPopup)
-{
-    <div class="modal fade show" style="display: block;" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"> Opdater bruger</h5>
-                    <button type="button" class="btn-close"
-                            @onclick="LukPopup"></button>
-                </div>
-                <div class="modal-body">
-                    <h2>Er du sikker?</h2>
-                    <button class="btn btn-warning" @onclick="SletBruger">Ja </button>
-                    <button class="btn btn-primary" @onclick="LukPopup">Nej </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal-backdrop fade show"></div>
-}
-@if (popupBesked)
-{
-    <div class="modal fade show" style="display: block;" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"> Opdater bruger</h5>
-                    <button type="button" class="btn-close"
-                            @onclick="LukPopup"></button>
-                </div>
-                <div class="modal-body">
-                    <h2>@besked</h2>
-                    <button class="btn btn-primary" @onclick="LukPopup">Ok</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal-backdrop fade show"></div>
 }
 
 @code {
-    private List<Bruger> brugerList = new List<Bruger>();
-    private Bruger newBruger = new Bruger();
-    private Bruger valgtBruger = new Bruger();
+    private List<Bruger> brugerList = new();
+    private Bruger modalBruger = new();
+    private Bruger? deleteBruger = null;
 
-    private bool opretBrugerPopup = false;
-    private bool opdaterBrugerPopup = false;
-    private bool sletBrugerPopup = false;
-    private bool popupBesked = false;
-
-    private string besked = "";
+    private bool showEditModal = false;
+    private bool showDeleteModal = false;
+    private bool isEditMode = false;
 
     protected override async Task OnInitializedAsync()
     {
-        Navigation.NavigateTo("/");
+        await ReloadBrugere();
+    }
+
+    private async Task ReloadBrugere()
+    {
         brugerList = (await BrugerService.GetAllAsync()).ToList();
+        StateHasChanged();
     }
 
-    private void VisOpretBruger()
+    private void ShowCreateModal()
     {
-        opretBrugerPopup = true;
+        modalBruger = new Bruger();
+        isEditMode = false;
+        showEditModal = true;
     }
 
-    private void VisOpdaterBruger(int id)
+    private void ShowEditModal(Bruger bruger)
     {
-        valgtBruger = brugerList.Single(b => b.Id == id);
-        opdaterBrugerPopup = true;
+        // Always use a NEW instance (never a reference!)
+        modalBruger = new Bruger
+        {
+            Id = bruger.Id,
+            Navn = bruger.Navn,
+            Email = bruger.Email,
+            Rolle = bruger.Rolle,
+            PasswordHash = bruger.PasswordHash
+        };
+        isEditMode = true;
+        showEditModal = true;
     }
 
-    private void VisSletBruger(int id)
+    private void CloseEditModal()
     {
-        valgtBruger = brugerList.Single(b => b.Id == id);
-        sletBrugerPopup = true;
+        showEditModal = false;
+        modalBruger = new Bruger();
+        isEditMode = false;
     }
 
-
-    private async Task OpretBruger()
+    private async Task SaveBruger()
     {
-        await BrugerService.AddAsync(newBruger);
-        newBruger = new Bruger();
-        VisPopupBesked("Rejseagent Oprettet!");
+        if (isEditMode)
+            await BrugerService.UpdateAsync(modalBruger);
+        else
+            await BrugerService.AddAsync(modalBruger);
+
+        showEditModal = false;
+        await ReloadBrugere();
     }
 
-    private async Task OpdaterBruger()
+    private void ShowDeleteModal(Bruger bruger)
     {
-        await BrugerService.UpdateAsync(valgtBruger);
-        VisPopupBesked("Rejseagent Opdateret!");
+        deleteBruger = bruger;
+        showDeleteModal = true;
     }
 
-    private async Task SletBruger()
+    private void CloseDeleteModal()
     {
-        await BrugerService.DeleteAsync(valgtBruger.Id);
-        VisPopupBesked("Rejseagent Slettet!");
+        showDeleteModal = false;
+        deleteBruger = null;
     }
 
-    private void VisPopupBesked(string besked)
+    private async Task ConfirmDelete()
     {
-        this.besked = besked;
-        popupBesked = true;
-    }
-
-    private void LukPopup()
-    {
-        valgtBruger = new Bruger();
-        besked = "";
-        opretBrugerPopup = false;
-        opdaterBrugerPopup = false;
-        sletBrugerPopup = false;
+        if (deleteBruger != null)
+        {
+            await BrugerService.DeleteAsync(deleteBruger.Id);
+        }
+        showDeleteModal = false;
+        deleteBruger = null;
+        await ReloadBrugere();
     }
 }

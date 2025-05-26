@@ -1,15 +1,12 @@
-﻿@using TANA.Infrastructure.Services;
+﻿@page "/modify-email"
+@using TANA.Infrastructure.Services;
 @using TANA.Domain.Interface;
 @using TANA.Application.Services;
 @using Microsoft.AspNetCore.Components.Authorization
-
-<h3>ModifyEmail</h3>
-
-@page "/modify-email"
 @inject AuthenticationStateProvider AuthStateProvider
 @inject IEmailSettingsService EmailSettingsService
 
-<h3>Modificer e-mailadresse</h3>
+<h3>Modificer E-mailadresse</h3>
 
 @if (!isAuthorized)
 {

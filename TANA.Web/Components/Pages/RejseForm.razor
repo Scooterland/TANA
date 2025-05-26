@@ -1,8 +1,10 @@
 ﻿@page "/rejser/{Mode}/{Id:int?}"
 @using TANA.Application.Services
+@using TANA.Application.Interface
 @using TANA.Domain.Entities
-@inject RejseService Service
-@inject KundeService KundeService
+@using TANA.Domain.Interface
+@inject IRejseService RejseService
+@inject IKundeService KundeService
 @inject NavigationManager Nav
 @rendermode InteractiveServer
 
@@ -22,7 +24,7 @@
     {
         if (Mode == "edit" && Id is not null)
         {
-            var existing = await Service.GetByIdAsync(Id.Value);
+            var existing = await RejseService.GetByIdAsync(Id.Value);
             if (existing is null)
             {
                 Nav.NavigateTo("/rejser");
@@ -53,9 +55,9 @@
         RecalculateDays();  
 
         if (Mode == "new")
-            await Service.AddAsync(model);
+            await RejseService.AddAsync(model);
         else
-            await Service.UpdateAsync(model);
+            await RejseService.UpdateAsync(model);
 
         Nav.NavigateTo("/rejser");
     }
@@ -66,6 +68,13 @@
 <EditForm Model="model" OnValidSubmit="HandleValidSubmit">
     <DataAnnotationsValidator />
     <ValidationSummary />
+    
+    <!-- Navn -->
+    <div class="mb-3">
+        <label class="form-label">Navn</label>
+        <InputText @bind-Value="model.Navn" class="form-control" />
+        <ValidationMessage For="@(() => model.Navn)" />
+    </div>
 
     <!-- Startdato -->
     <div class="mb-3">

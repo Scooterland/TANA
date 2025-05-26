@@ -1,0 +1,25 @@
+﻿@inject NavigationManager Navigation
+@inject IJSRuntime JS
+@rendermode InteractiveServer
+
+<div>
+    <button style="color: white; background: #0057b7; border: none; padding: 6px 16px; border-radius: 6px; font-weight: bold; margin-left: 8px; cursor: pointer;"
+            @onclick='() => ChangeCulture("en-GB")'>
+        EN
+    </button>
+    <button style="color: white; background: #e21c2a; border: none; padding: 6px 16px; border-radius: 6px; font-weight: bold; margin-left: 8px; cursor: pointer;"
+            @onclick='() => ChangeCulture("da-DK")'>
+        DA
+    </button>
+</div>
+
+@code {
+    async Task ChangeCulture(string culture)
+    {
+        await JS.InvokeVoidAsync("blazorCulture.set", culture);
+        var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
+        var baseUri = uri.GetLeftPart(UriPartial.Path);
+        var newUri = $"{baseUri}?culture={culture}";
+        Navigation.NavigateTo(newUri, forceLoad: true);
+    }
+}
