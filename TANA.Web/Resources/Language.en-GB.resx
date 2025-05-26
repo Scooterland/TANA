@@ -27,6 +27,9 @@
 <data name="Actions" xml:space="preserve">
   <value>Actions</value>
 </data>
+<data name="AreYouSure" xml:space="preserve">
+  <value>Are you sure</value>
+</data>
 <data name="AdminDashboard" xml:space="preserve">
   <value>Admin Dashboard</value>
 </data>
@@ -251,6 +254,9 @@
 </data>
 <data name="Return" xml:space="preserve">
   <value>Return</value>
+</data>
+<data name="Role" xml:space="preserve">
+  <value>Role</value>
 </data>
 <data name="Save" xml:space="preserve">
   <value>Save</value>

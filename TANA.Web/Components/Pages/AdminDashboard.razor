@@ -1,5 +1,6 @@
 ﻿@page "/admin-dashboard"
-
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 @using TANA.Domain.Entities
 @using TANA.Domain.Interface
 @inject IBrugerService BrugerService
@@ -9,12 +10,12 @@
 
 <!-- Create Button -->
 <div class="mb-4 flex justify-start">
-    <button class="btn btn-success" @onclick="ShowCreateModal">Ny Bruger</button>
+    <button class="btn btn-success" @onclick="ShowCreateModal">@L["New"] @L["Customer"]</button>
 </div>
 
 @if (!brugerList.Any())
 {
-    <p>Indlæser agenter...</p>
+    <p>@L["Loading..."]</p>
 }
 else
 {
@@ -22,10 +23,10 @@ else
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Navn</th>
-                <th>Email</th>
-                <th>Rolle</th>
-                <th>Handlinger</th>
+                <th>@L["Name"]</th>
+                <th>@L["Email"]</th>
+                <th>@L["Role"]</th>
+                <th>@L["Actions"]</th>
             </tr>
         </thead>
         <tbody>
@@ -37,8 +38,8 @@ else
                     <td>@bruger.Email</td>
                     <td>@bruger.Rolle</td>
                     <td>
-                        <button class="btn btn-warning btn-sm mr-2" @onclick="() => ShowEditModal(bruger)">Rediger</button>
-                        <button class="btn btn-danger btn-sm" @onclick="() => ShowDeleteModal(bruger)">Slet</button>
+                        <button class="btn btn-warning btn-sm mr-2" @onclick="() => ShowEditModal(bruger)">@L["Edit"]</button>
+                        <button class="btn btn-danger btn-sm" @onclick="() => ShowDeleteModal(bruger)">@L["Delete"]</button>
                     </td>
                 </tr>
             }
@@ -51,32 +52,32 @@ else
 {
     <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:5000;display:flex;align-items:center;justify-content:center;">
         <div style="background:white;padding:2rem;min-width:320px;box-shadow:0 2px 18px #2228;border-radius:12px;">
-            <h4>@(isEditMode ? "Rediger Bruger" : "Opret Bruger")</h4>
+            <h4>@(isEditMode ? @L["Edit"] +@L["User"] : @L["Create"] +@L["User"])</h4>
             <EditForm Model="modalBruger" OnValidSubmit="SaveBruger">
                 <DataAnnotationsValidator />
                 <ValidationSummary />
                 <div class="mb-2">
-                    <label>Navn:</label>
+                    <label>@L["Name"]:</label>
                     <InputText @bind-Value="modalBruger.Navn" class="form-control" />
                 </div>
                 @if (!isEditMode)
                 {
                     <div class="mb-2">
-                        <label>Password:</label>
+                        <label>@L["Password"]:</label>
                         <InputText @bind-Value="modalBruger.PasswordHash" class="form-control" type="password" />
                     </div>
                 }
                 <div class="mb-2">
-                    <label>Email:</label>
+                    <label>@L["Email"]:</label>
                     <InputText @bind-Value="modalBruger.Email" class="form-control" />
                 </div>
                 <div class="mb-2">
-                    <label>Rolle:</label>
+                    <label>@L["Role"]:</label>
                     <InputText @bind-Value="modalBruger.Rolle" class="form-control" />
                 </div>
                 <div class="mt-4 flex gap-2">
                     <button type="submit" class="btn btn-success">@((isEditMode ? "Gem" : "Opret"))</button>
-                    <button type="button" class="btn btn-secondary" @onclick="CloseEditModal">Annuller</button>
+                    <button type="button" class="btn btn-secondary" @onclick="CloseEditModal">@L["Cancel"]</button>
                 </div>
             </EditForm>
         </div>
@@ -88,11 +89,11 @@ else
 {
     <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:5000;display:flex;align-items:center;justify-content:center;">
         <div style="background:white;padding:2rem;min-width:320px;box-shadow:0 2px 18px #2228;border-radius:12px;">
-            <h4>Slet Bruger</h4>
-            <div>Er du sikker på, at du vil slette brugeren <b>@deleteBruger?.Navn</b>?</div>
+            <h4>@L["Delete"] @L["User"]</h4>
+            <div>@L["AreYouSure"]?<b>@deleteBruger?.Navn</b>?</div>
             <div class="mt-4 flex gap-2">
-                <button class="btn btn-danger" @onclick="ConfirmDelete">Ja, slet</button>
-                <button class="btn btn-secondary" @onclick="CloseDeleteModal">Annuller</button>
+                <button class="btn btn-danger" @onclick="ConfirmDelete">@L["Delete"]</button>
+                <button class="btn btn-secondary" @onclick="CloseDeleteModal">@L["Cancel"]</button>
             </div>
         </div>
     </div>
