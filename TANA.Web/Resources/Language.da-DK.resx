@@ -10,7 +10,7 @@
   </resheader>
 
 <data name="Welcome">
-	<value>Welcome to Tana!</value>
+	<value>Velkommen til Tana!</value>
 </data>
 <data name="NewTrip" xml:space="preserve">
   <value>Ny rejse</value>
@@ -25,7 +25,13 @@
   <value>Indkvartering</value>
 </data>
 <data name="Actions" xml:space="preserve">
-  <value>Rejseplan beskrivelse</value>
+  <value>Handlinger</value>
+</data>
+<data name="Airline" xml:space="preserve">
+  <value>Flyselskab</value>
+</data>
+<data name="Address" xml:space="preserve">
+  <value>Adresse</value>
 </data>
 <data name="Cancel" xml:space="preserve">
   <value>Annuller</value>
@@ -124,7 +130,7 @@
   <value>Hjem</value>
 </data>
 <data name="History" xml:space="preserve">
-  <value>History</value>
+  <value>Historie</value>
 </data>
 <data name="Hotel" xml:space="preserve">
   <value>Hotel</value>
@@ -171,7 +177,7 @@
 <data name="NewTrip" xml:space="preserve">
   <value>Ny rejse</value>
 </data>
-<data name="NodataAvailable" xml:space="preserve">
+<data name="NoDataAvailable" xml:space="preserve">
   <value>Ingen data tilgængelig</value>
 </data>
 <data name="Note" xml:space="preserve">
