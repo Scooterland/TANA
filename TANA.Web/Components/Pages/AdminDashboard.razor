@@ -1,10 +1,9 @@
 ﻿@page "/admin-dashboard"
 @using Microsoft.Extensions.Localization
-@using TANA.Application.Interface
 @inject IStringLocalizer<Language> L
 @using TANA.Domain.Entities
-@using Microsoft.AspNetCore.Authorization
-@inject NavigationManager Navigation
+@using TANA.Application.Interface
+@using TANA.Application.Services
 @inject IBrugerService BrugerService
 @rendermode InteractiveServer
 
@@ -17,12 +16,11 @@
 
 @if (!brugerList.Any())
 {
-    <p>Indlæser agenter...</p>
+    <p>@L["Loading..."]</p>
 }
 else
 {
     <table class="table table-striped text-center">
-
         <thead>
             <tr>
                 <th>Id</th>
@@ -44,45 +42,32 @@ else
                         <button class="btn btn-warning btn-sm mr-2" @onclick="() => ShowEditModal(bruger)">@L["Edit"]</button>
                         <button class="btn btn-danger btn-sm" @onclick="() => ShowDeleteModal(bruger)">@L["Delete"]</button>
                     </td>
-                    <td>
-                        <button class="btn btn-primary" @onclick="() => ShowDeleteModal(bruger)">Slet Rejseagent</button>
-                    </td>
                 </tr>
             }
         </tbody>
     </table>
 }
 
+<!-- Add/Edit Modal -->
 @if (showEditModal)
 {
     <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:5000;display:flex;align-items:center;justify-content:center;">
         <div style="background:white;padding:2rem;min-width:320px;box-shadow:0 2px 18px #2228;border-radius:12px;">
             <h4>@(isEditMode ? @L["Edit"] +@L["User"] : @L["Create"] +@L["User"])</h4>
             <EditForm Model="modalBruger" OnValidSubmit="SaveBruger">
-                    <DataAnnotationsValidator />
+                <DataAnnotationsValidator />
                 <ValidationSummary />
                 <div class="mb-2">
                     <label>@L["Name"]:</label>
                     <InputText @bind-Value="modalBruger.Navn" class="form-control" />
-                    </div>
+                </div>
                 @if (!isEditMode)
                 {
                     <div class="mb-2">
                         <label>@L["Password"]:</label>
-                        <InputText @bind-Value="modalBruger.PasswordHash" class="form-control" type="password" />
+                        <InputText @bind-Value="modalBrugerPassword" class="form-control" type="password" />
                     </div>
-                    <div>
-                        <label>Email:</label>
-                        <InputText @bind-Value="newBruger.Email" class="form-control" />
-                    </div>
-                    <div>
-                        <label>Rolle:</label>
-                        <InputText @bind-Value="newBruger.Rolle" class="form-control" />
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-2 mb-2">Opret Rejseagent</button>
-    <div class="modal-backdrop fade show"></div>
-    
-}
+                }
                 <div class="mb-2">
                     <label>@L["Email"]:</label>
                     <InputText @bind-Value="modalBruger.Email" class="form-control" />
@@ -90,52 +75,43 @@ else
                 <div class="mb-2">
                     <label>@L["Role"]:</label>
                     <InputText @bind-Value="modalBruger.Rolle" class="form-control" />
-                    </div>
-                <div class="mt-4 flex gap-2">
-                    <button type="submit" class="btn btn-success">@((isEditMode ? "Gem" : "Opret"))</button>
-                    <button type="button" class="btn btn-secondary" @onclick="CloseEditModal">@L["Cancel"]</button>
-                    </div>
-                    <div>
-                        <label>Rolle:</label>
-                        <InputText @bind-Value="newBruger.Rolle" class="form-control" />
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-2 mb-2">Opret Rejseagent</button>
-                </EditForm>
                 </div>
-            </div>
-    <div class="modal-backdrop fade show"></div>
+                <div class="mt-4 flex gap-2">
+                    <button type="submit" class="btn btn-success">@((isEditMode ? @L["Save"] : @L["Create"]))</button>
+                    <button type="button" class="btn btn-secondary" @onclick="CloseEditModal">@L["Cancel"]</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
 }
+
+<!-- Delete Modal -->
 @if (showDeleteModal)
 {
     <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:5000;display:flex;align-items:center;justify-content:center;">
         <div style="background:white;padding:2rem;min-width:320px;box-shadow:0 2px 18px #2228;border-radius:12px;">
-            <h4>@L["Delete"] @L["User"]</h4>
-            <div>@L["AreYouSure"]?<b>@deleteBruger?.Navn</b>?</div>
+            <h4>@L["Delete"] @L["User"]: <b>@deleteBruger?.Navn</b></h4>
+            <div>@L["AreYouSure"]?</div>
             <div class="mt-4 flex gap-2">
                 <button class="btn btn-danger" @onclick="ConfirmDelete">@L["Delete"]</button>
                 <button class="btn btn-secondary" @onclick="CloseDeleteModal">@L["Cancel"]</button>
             </div>
         </div>
     </div>
-    <div class="modal-backdrop fade show"></div>
 }
 
 @code {
-    private List<Bruger> brugerList = new List<Bruger>();
-    private Bruger newBruger = new Bruger();
-    private Bruger valgtBruger = new Bruger();
-
-    private bool showDeleteModal = false;
+    private List<Bruger> brugerList = new();
     private Bruger modalBruger = new();
     private Bruger? deleteBruger = null;
+    private string modalBrugerPassword = string.Empty;
 
     private bool showEditModal = false;
+    private bool showDeleteModal = false;
     private bool isEditMode = false;
 
     protected override async Task OnInitializedAsync()
     {
-        // Navigation.NavigateTo("/");
-        brugerList = (await BrugerService.GetAllAsync()).ToList();
         await ReloadBrugere();
     }
 
@@ -156,7 +132,7 @@ else
     {
         // Always use a NEW instance (never a reference!)
         modalBruger = new Bruger
-    {
+        {
             Id = bruger.Id,
             Navn = bruger.Navn,
             Email = bruger.Email,
@@ -179,11 +155,15 @@ else
         if (isEditMode)
             await BrugerService.UpdateAsync(modalBruger);
         else
-            await BrugerService.AddAsync(modalBruger);
+            await BrugerService.AddAsync(modalBruger, modalBrugerPassword);
+
+        // Clear the password after use!
+        modalBrugerPassword = string.Empty;
 
         showEditModal = false;
         await ReloadBrugere();
     }
+
 
     private void ShowDeleteModal(Bruger bruger)
     {
@@ -200,7 +180,7 @@ else
     private async Task ConfirmDelete()
     {
         if (deleteBruger != null)
-    {
+        {
             await BrugerService.DeleteAsync(deleteBruger.Id);
         }
         showDeleteModal = false;

@@ -11,7 +11,7 @@ namespace TANA.Application.Interface
     {
 		public Task<IEnumerable<Bruger>> GetAllAsync();
 		public Task<Bruger?> GetByIdAsync(int id);
-		public Task AddAsync(Bruger bruger);
+		public Task AddAsync(Bruger bruger, string plainPassword);
 		public Task UpdateAsync(Bruger bruger);
 		public Task DeleteAsync(int id);
 	}
