@@ -1,6 +1,6 @@
-﻿@page "/template-builder/{templateId:int?}"
-@using TANA.Application.Interface
+@page "/template-builder/{templateId:int?}"
 @using TANA.Domain.Entities
+@using TANA.Application.Interface
 @rendermode InteractiveServer
 @using TANA.Application.Services
 @using TANA.Infrastructure.Services
@@ -8,7 +8,7 @@
 @inject IJSRuntime JS
 @inject ITemplateRepository TemplateRepo
 @inject NavigationManager Navigation
-@inject PdfGenerationService PdfService
+@inject TemplatePdfService PdfService
 @inject TemplateLibraryService TemplateLibraryService
 
 
@@ -124,20 +124,20 @@
     </style>
 
 
-        <!-- ======= HEADER ======= -->
+    <!-- ======= HEADER ======= -->
     <div class="page-header d-flex align-items-center justify-content-between">
         <img src="https://tanzania-eksperten.dk/wp-content/uploads/2021/08/Logo_Logo-lang-dark-1.svg" class="logo" style="max-height:50px;" />
         <h2>@(Template.TemplateName ?? "Create New Template")</h2>
     </div>
 
 
-        <!-- ======= BODY ======= -->
-        <div class="page-body">
+    <!-- ======= BODY ======= -->
+    <div class="page-body">
 
-            <div class="mb-3">
-                <label>Template Name:</label>
-                <input class="form-control" @bind="newTemplate.TemplateName" placeholder="Enter template name..." />
-            </div>
+        <div class="mb-3">
+            <label>Template Name:</label>
+            <input class="form-control" @bind="newTemplate.TemplateName" placeholder="Enter template name..." />
+        </div>
 
         @if (showHeader)
         {
@@ -187,13 +187,13 @@
             </div>
         }
 
-            @if (showSummary)
-            {
-                <div class="mb-3">
-                    <label>Summary (Description of the Trip):</label>
-                    <textarea class="form-control" rows="6" @bind="newTemplate.Summary" placeholder="Enter trip summary..."></textarea>
-                </div>
-            }
+        @if (showSummary)
+        {
+            <div class="mb-3">
+                <label>Summary (Description of the Trip):</label>
+                <textarea class="form-control" rows="6" @bind="newTemplate.Summary" placeholder="Enter trip summary..."></textarea>
+            </div>
+        }
 
         @if (showDays)
         {
@@ -256,10 +256,10 @@
             </div>
         }
 
-        </div>
+    </div>
 
 
-        <!-- ======= FOOTER ======= -->
+    <!-- ======= FOOTER ======= -->
     <div class="page-footer d-flex justify-content-between align-items-center">
         <img src="https://tanzania-eksperten.dk/wp-content/uploads/2024/10/logo-3280.png.png" class="footer-logo-img" style="max-height:50px;" />
         <div>
@@ -274,14 +274,14 @@
     </div>
 
 
-        <div class="footer-buttons">
+    <div class="footer-buttons">
         <button class="btn btn-primary me-2" @onclick="SaveTemplateHandler">Save</button>
         <button class="btn btn-secondary" @onclick="HidePopup">Cancel</button>
     </div>
 }
 
 <br />
- <button class="btn btn-secondary mt-3 me-2" @onclick="GoBack">Go to Templates</button>
+<button class="btn btn-secondary mt-3 me-2" @onclick="GoBack">Go to Templates</button>
 
 
 
@@ -299,7 +299,7 @@
     {
         if (isPopupVisible && Template.Items?.Any() == true)
         {
-            await Task.Yield(); 
+            await Task.Yield();
             await JS.InvokeVoidAsync("initializeSortable", "sortableItems");
         }
     }
@@ -348,98 +348,121 @@
 
     private async Task OnImageSelected(InputFileChangeEventArgs e)
     {
-        var file = e.File;
-        if (file != null)
+        try
         {
-            var format = "image/png"; 
-            var resizedImageFile = await file.RequestImageFileAsync(format, 1024, 1024); 
+            var file = e.File;
+            if (file != null)
+            {
+                var format = "image/png";
+                var resizedImageFile = await file.RequestImageFileAsync(format, 1024, 1024);
 
-            using var stream = resizedImageFile.OpenReadStream(5 * 1024 * 1024); 
-            using var ms = new MemoryStream();
-            await stream.CopyToAsync(ms);
-            var buffer = ms.ToArray();
+                using var stream = resizedImageFile.OpenReadStream(5 * 1024 * 1024);
+                using var ms = new MemoryStream();
+                await stream.CopyToAsync(ms);
+                var buffer = ms.ToArray();
 
-            imageUrl = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
-            newTemplate.ImageUrl = imageUrl;  
+                imageUrl = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
+                newTemplate.ImageUrl = imageUrl;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading image: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Der opstod en fejl under upload af billedet.");
         }
     }
 
 
-
     private async Task SyncOrderFromUIAsync()
     {
-        var sortedIds = await JS.InvokeAsync<string[]>("getSortedIds", "sortableItems");
-        int pos = 1;
-        foreach (var id in sortedIds)
+        try
         {
-            var itm = Template.Items.First(i => i.Id == id);
-            itm.Order = pos++;
+            var sortedIds = await JS.InvokeAsync<string[]>("getSortedIds", "sortableItems");
+            int pos = 1;
+            foreach (var id in sortedIds)
+            {
+                var itm = Template.Items.First(i => i.Id == id);
+                itm.Order = pos++;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error syncing order: {ex.Message}");
         }
     }
 
     private async void SaveTemplateHandler()
     {
-        await SyncOrderFromUIAsync();
-
-        if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
+        try
         {
-            await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
-            return;
-        }
+            await SyncOrderFromUIAsync();
 
-        var items = new List<TemplateItemEntity>();
-        int order = 1;
-
-        if (showHeader)
-            items.Add(new TemplateItemEntity { Content = "Header", Title = newTemplate.HeaderTitle, Order = order++ });
-
-        if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
-            items.Add(new TemplateItemEntity { Content = "Image", Order = order++ });
-
-        if (showSummary)
-            items.Add(new TemplateItemEntity { Content = "Summary", Note = newTemplate.Summary, Order = order++ });
-
-        if (showDays)
-        {
-            foreach (var day in daySections)
+            if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
             {
-                items.Add(new TemplateItemEntity
-                    {
-                        Content = "Day Sections",
-                        Title = day.Title,
-                        Activity = day.Activity,
-                        Meals = day.Meals,
-                        Accommodation = day.Accommodation,
-                        Note = day.Note,
-                        Order = order++
-                    });
+                await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
+                return;
             }
-        }
 
-        var entity = new TemplateEntity
+            var items = new List<TemplateItemEntity>();
+            int order = 1;
+
+            if (showHeader)
+                items.Add(new TemplateItemEntity { Content = "Header", Title = newTemplate.HeaderTitle, Order = order++ });
+
+            if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
+                items.Add(new TemplateItemEntity { Content = "Image", Order = order++ });
+
+            if (showSummary)
+                items.Add(new TemplateItemEntity { Content = "Summary", Note = newTemplate.Summary, Order = order++ });
+
+            if (showDays)
             {
-                Id = newTemplate.Id,
-                TemplateName = newTemplate.TemplateName,
-                Summary = newTemplate.Summary,
-                ImageUrl = newTemplate.ImageUrl, 
-                CreatedDate = newTemplate.Id == 0 ? DateTime.UtcNow : Template.CreatedDate,
-                LastModifiedDate = DateTime.UtcNow,
-                Items = items,
-                PrimaryColor = newTemplate.PrimaryColor,
-                HeaderBgColor = newTemplate.HeaderBgColor,
-                FooterBgColor = newTemplate.FooterBgColor,
-                FontFamily = newTemplate.FontFamily
-            };
+                foreach (var day in daySections)
+                {
+                    items.Add(new TemplateItemEntity
+                        {
+                            Content = "Day Sections",
+                            Title = day.Title,
+                            Activity = day.Activity,
+                            Meals = day.Meals,
+                            Accommodation = day.Accommodation,
+                            Note = day.Note,
+                            Order = order++
+                        });
+                }
+            }
 
-        if (entity.Id == 0)
-            await TemplateRepo.SaveTemplateAsync(entity);
-        else
-            await TemplateRepo.UpdateTemplateAsync(entity);
+            var entity = new TemplateEntity
+                {
+                    Id = newTemplate.Id,
+                    TemplateName = newTemplate.TemplateName,
+                    Summary = newTemplate.Summary,
+                    ImageUrl = newTemplate.ImageUrl,
+                    CreatedDate = newTemplate.Id == 0 ? DateTime.UtcNow : Template.CreatedDate,
+                    LastModifiedDate = DateTime.UtcNow,
+                    Items = items,
+                    PrimaryColor = newTemplate.PrimaryColor,
+                    HeaderBgColor = newTemplate.HeaderBgColor,
+                    FooterBgColor = newTemplate.FooterBgColor,
+                    FontFamily = newTemplate.FontFamily
+                };
 
-        await JS.InvokeVoidAsync("alert", "Template saved successfully!");
-        HidePopup();
-        Navigation.NavigateTo("/templates", true);
+            if (entity.Id == 0)
+                await TemplateRepo.SaveTemplateAsync(entity);
+            else
+                await TemplateRepo.UpdateTemplateAsync(entity);
+
+            await JS.InvokeVoidAsync("alert", "Template saved successfully!");
+            HidePopup();
+            Navigation.NavigateTo("/templates", true);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving template: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "fejl under lagring af skabelonen..");
+        }
     }
+
 
 
 
@@ -480,14 +503,23 @@
 
     private async Task OnHeaderImageSelected(ChangeEventArgs e)
     {
-        if (e.Value is IBrowserFile file)
+        try
         {
-            using var stream = file.OpenReadStream();
-            var buffer = new byte[file.Size];
-            await stream.ReadAsync(buffer);
-            newTemplate.HeaderImageUrl = $"data:{file.ContentType};base64,{Convert.ToBase64String(buffer)}";
+            if (e.Value is IBrowserFile file)
+            {
+                using var stream = file.OpenReadStream();
+                var buffer = new byte[file.Size];
+                await stream.ReadAsync(buffer);
+                newTemplate.HeaderImageUrl = $"data:{file.ContentType};base64,{Convert.ToBase64String(buffer)}";
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading header image: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Kunne ikke indlæse headerbilledet.");
         }
     }
+
 
 
 
@@ -506,7 +538,7 @@
                 daySections[i] = new DaySection();
         }
 
-        
+
     }
 
 
@@ -520,57 +552,69 @@
         public string Note { get; set; } = string.Empty;
     }
 
-    // ======= LOAD EXISTING =======
     protected override async Task OnParametersSetAsync()
     {
         if (templateId.HasValue && templateId.Value > 0)
             Template = await MapEntityToModel(templateId.Value);
-        LoadTemplateIntoEditor();        
+        LoadTemplateIntoEditor();
 
     }
     private async Task<TemplateModel> MapEntityToModel(int id)
     {
-        var entity = await TemplateRepo.GetTemplateByIdAsync(id);
-        if (entity == null) return new TemplateModel();
+        try
+        {
+            var entity = await TemplateRepo.GetTemplateByIdAsync(id);
+            if (entity == null) return new TemplateModel();
 
-        var model = new TemplateModel
-            {
-                Id = entity.Id,
-                TemplateName = entity.TemplateName,
-                Summary = entity.Summary,
-                ImageUrl = entity.ImageUrl,
-                CreatedDate = entity.CreatedDate,
-                LastModifiedDate = entity.LastModifiedDate,
-                Items = entity.Items.Select(i => new TemplateItem
+            var model = new TemplateModel
                 {
-                    Id = i.Id.ToString(),
-                    Content = i.Content,
-                    Order = i.Order,
-                    Title = i.Title,
-                    Activity = i.Activity,
-                    Meals = i.Meals,
-                    Accommodation = i.Accommodation,
-                    Note = i.Note,
-                    IsSelected = true
-                }).ToList()
-            };
+                    Id = entity.Id,
+                    TemplateName = entity.TemplateName,
+                    Summary = entity.Summary,
+                    ImageUrl = entity.ImageUrl,
+                    CreatedDate = entity.CreatedDate,
+                    LastModifiedDate = entity.LastModifiedDate,
+                    PrimaryColor = entity.PrimaryColor,
+                    HeaderBgColor = entity.HeaderBgColor,
+                    FooterBgColor = entity.FooterBgColor,
+                    FontFamily = entity.FontFamily,
+                    Items = entity.Items.Select(i => new TemplateItem
+                    {
+                        Id = i.Id.ToString(),
+                        Content = i.Content,
+                        Order = i.Order,
+                        Title = i.Title,
+                        Activity = i.Activity,
+                        Meals = i.Meals,
+                        Accommodation = i.Accommodation,
+                        Note = i.Note,
+                        IsSelected = true
+                    }).ToList()
+                };
 
-        daySections = entity.Items
-            .Where(i => i.Content == "Day Sections")
-            .Select(i => new DaySection
-                {
-                    Title = i.Title,
-                    Activity = i.Activity,
-                    Meals = i.Meals,
-                    Accommodation = i.Accommodation,
-                    Note = i.Note
-                }).ToList();
+            daySections = entity.Items
+                .Where(i => i.Content == "Day Sections")
+                .Select(i => new DaySection
+                    {
+                        Title = i.Title,
+                        Activity = i.Activity,
+                        Meals = i.Meals,
+                        Accommodation = i.Accommodation,
+                        Note = i.Note
+                    }).ToList();
 
-        return model;
+            return model;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error mapping template: {ex.Message}");
+            return new TemplateModel();
+        }
     }
 
 
-    // ======= ITEM OPERATIONS =======
+
+
     private void AddItem(string content)
     {
         Template.Items.Add(new TemplateItem
@@ -603,88 +647,91 @@
         }
     }
 
-    // ======= SAVE / EXPORT =======
     private async Task SaveTemplate()
     {
-        await SyncOrderFromUIAsync();     
-        if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
+        try
         {
-            await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
-            return;
-        }
+            await SyncOrderFromUIAsync();
 
-        var items = new List<TemplateItemEntity>();
-        int order = 1;
+            if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
+            {
+                await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
+                return;
+            }
 
-        if (showHeader)
-        {
-            items.Add(new TemplateItemEntity
-                {
-                    Content = "Header",
-                    Title = newTemplate.HeaderTitle,
-                    Order = order++
-                });
-        }
+            var items = new List<TemplateItemEntity>();
+            int order = 1;
 
-        if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
-        {
-            items.Add(new TemplateItemEntity
-                {
-                    Content = "Image",
-                    Order = order++
-                });
-        }
-
-        if (showSummary)
-        {
-            items.Add(new TemplateItemEntity
-                {
-                    Content = "Summary",
-                    Order = order++
-                });
-        }
-
-        if (showDays)
-        {
-            foreach (var day in daySections)
+            if (showHeader)
             {
                 items.Add(new TemplateItemEntity
                     {
-                        Content = "Day Sections",
-                        Title = day.Title,
-                        Activity = day.Activity,
-                        Meals = day.Meals,
-                        Accommodation = day.Accommodation,
-                        Note = day.Note,
+                        Content = "Header",
+                        Title = newTemplate.HeaderTitle,
                         Order = order++
                     });
             }
-        }
 
-        var templateEntity = new TemplateEntity
+            if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
             {
-                Id = Template.Id,
-                TemplateName = newTemplate.TemplateName,
-                Summary = newTemplate.Summary,
-                ImageUrl = imageUrl ?? string.Empty,
-                CreatedDate = Template.CreatedDate,
-                LastModifiedDate = DateTime.UtcNow,
-                Items = items
-            };
+                items.Add(new TemplateItemEntity
+                    {
+                        Content = "Image",
+                        Order = order++
+                    });
+            }
 
-        if (templateEntity.Id == 0)
-        {
-            await TemplateRepo.SaveTemplateAsync(templateEntity);
+            if (showSummary)
+            {
+                items.Add(new TemplateItemEntity
+                    {
+                        Content = "Summary",
+                        Order = order++
+                    });
+            }
+
+            if (showDays)
+            {
+                foreach (var day in daySections)
+                {
+                    items.Add(new TemplateItemEntity
+                        {
+                            Content = "Day Sections",
+                            Title = day.Title,
+                            Activity = day.Activity,
+                            Meals = day.Meals,
+                            Accommodation = day.Accommodation,
+                            Note = day.Note,
+                            Order = order++
+                        });
+                }
+            }
+
+            var templateEntity = new TemplateEntity
+                {
+                    Id = Template.Id,
+                    TemplateName = newTemplate.TemplateName,
+                    Summary = newTemplate.Summary,
+                    ImageUrl = imageUrl ?? string.Empty,
+                    CreatedDate = Template.CreatedDate,
+                    LastModifiedDate = DateTime.UtcNow,
+                    Items = items
+                };
+
+            if (templateEntity.Id == 0)
+                await TemplateRepo.SaveTemplateAsync(templateEntity);
+            else
+                await TemplateRepo.UpdateTemplateAsync(templateEntity);
+
+            Template = await MapEntityToModel(templateEntity.Id);
+            await JS.InvokeVoidAsync("alert", "Template saved successfully!");
+            HidePopup();
         }
-        else
+        catch (Exception ex)
         {
-            await TemplateRepo.UpdateTemplateAsync(templateEntity);
+            Console.WriteLine($"Error saving template: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "fejl under lagring af skabelonen.");
         }
-
-        Template = await MapEntityToModel(templateEntity.Id);
-
-        await JS.InvokeVoidAsync("alert", "Template saved successfully!");
-        HidePopup();
     }
 
 
@@ -726,7 +773,7 @@
     }
 
 
-    
+
 
     private async Task ExportToPdf(int templateId)
     {
@@ -735,32 +782,7 @@
             var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
             if (templateEntity != null)
             {
-                string htmlContent = PdfService.GenerateHtmlFromTemplate(
-     templateEntity.TemplateName,
-     templateEntity.Items.Select(i => new TemplateItem
-         {
-             Id = i.Id.ToString(),
-             Content = i.Content,
-             Order = i.Order,
-             Title = i.Title,
-             Activity = i.Activity,
-             Meals = i.Meals,
-             Accommodation = i.Accommodation,
-             Note = i.Note,
-             IsSelected = true
-         }).ToList(),
-     templateEntity.Id,
-     templateEntity.CreatedDate,
-     templateEntity.LastModifiedDate,
-     templateEntity.PrimaryColor,
-     templateEntity.HeaderBgColor,
-     templateEntity.FooterBgColor,
-     templateEntity.FontFamily,
-     templateEntity.ImageUrl
-     );
-
-
-                byte[] pdfBytes = PdfService.GeneratePdf(htmlContent);
+                byte[] pdfBytes = PdfService.Generate(templateEntity);
 
                 if (pdfBytes.Length == 0)
                 {
@@ -769,12 +791,10 @@
                 }
 
                 string sanitizedTemplateName = templateEntity.TemplateName.Replace(" ", "_");
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "TemplateLibrary", sanitizedTemplateName);
+                string directoryPath = Path.Combine("wwwroot", "TemplateLibrary", sanitizedTemplateName);
 
                 if (!Directory.Exists(directoryPath))
-                {
                     Directory.CreateDirectory(directoryPath);
-                }
 
                 string fileName = $"{sanitizedTemplateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
                 string filePath = Path.Combine(directoryPath, fileName);
@@ -792,6 +812,7 @@
             await JS.InvokeVoidAsync("alert", "Error exporting the template to PDF.");
         }
     }
+
 
 
     private void HandleOverlayClick()
@@ -858,13 +879,12 @@
             if (itm is not null)
             {
                 Template.Items.Remove(itm);
-                // أعِد ترقيم Order
                 for (int i = 0; i < Template.Items.Count; i++)
                     Template.Items[i].Order = i + 1;
             }
         }
 
-        StateHasChanged();          
+        StateHasChanged();
     }
 
 
