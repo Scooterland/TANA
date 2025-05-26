@@ -17,7 +17,7 @@
 
 @if (!brugerList.Any())
 {
-    <p>Indlæser agenter...</p>
+    <p>@L["Loading..."]</p>
 }
 else
 {
@@ -80,9 +80,7 @@ else
                         <InputText @bind-Value="newBruger.Rolle" class="form-control" />
                     </div>
                     <button type="submit" class="btn btn-primary mt-2 mb-2">Opret Rejseagent</button>
-    <div class="modal-backdrop fade show"></div>
-    
-}
+                <div class="modal-backdrop fade show"></div>
                 <div class="mb-2">
                     <label>@L["Email"]:</label>
                     <InputText @bind-Value="modalBruger.Email" class="form-control" />
