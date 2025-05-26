@@ -12,8 +12,8 @@ using TANA.Persistence.Data;
 namespace TANA.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250522052354_admin2")]
-    partial class admin2
+    [Migration("20250526213936_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

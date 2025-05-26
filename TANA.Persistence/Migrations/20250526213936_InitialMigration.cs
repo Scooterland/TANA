@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TANA.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -28,7 +28,9 @@ namespace TANA.Persistence.Migrations
                 name: "Brugere",
                 columns: table => new
                 {
-                    BrugerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Version = table.Column<byte[]>(type: "rowversion", rowVersion: true, nullable: false),
                     Navn = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rolle = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -36,7 +38,7 @@ namespace TANA.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Brugere", x => x.BrugerId);
+                    table.PrimaryKey("PK_Brugere", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
