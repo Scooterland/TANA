@@ -1,11 +1,11 @@
 ﻿@page "/login"
 @using System.ComponentModel.DataAnnotations
+@using TANA.Application.Interface
 @inject NavigationManager NavigationManager
 @inject IBrugerService BrugerService
 @using BCrypt.Net
 @rendermode InteractiveServer
 @inject AuthenticationStateProvider AuthenticationStateProvider
-@using TANA.Domain.Interface
 @using TANA.Web.Authentication
 
 <h3>Login</h3>

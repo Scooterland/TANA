@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TANA.Domain.Interface;
-using TANA.Domain.Entities;
+﻿using TANA.Domain.Entities;
+using TANA.Application.Interface;
 
 namespace TANA.Application.Services
 {
@@ -14,7 +9,7 @@ namespace TANA.Application.Services
         public KundeService(IKundeRepository repo) => db = repo;
 
         public Task<IEnumerable<Kunde>> GetAllAsync() => db.GetAllAsync();
-        public Task<Kunde?> GetByIdAsync(Guid id) => db.GetByIdAsync(id);
+        public Task<Kunde?> GetByIdAsync(int id) => db.GetByIdAsync(id);
         public Task AddAsync(Kunde kunde) => db.AddAsync(kunde);
         public Task UpdateAsync(Kunde kunde) => db.UpdateAsync(kunde);
         public Task DeleteAsync(int id) => db.DeleteAsync(id);

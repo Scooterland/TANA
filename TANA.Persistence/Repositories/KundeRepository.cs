@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using TANA.Application.Interface;
 using TANA.Domain.Entities;
-using TANA.Domain.Interface;
 using TANA.Persistence.Data;
 
 namespace TANA.Persistence.Repositories
@@ -15,7 +13,7 @@ namespace TANA.Persistence.Repositories
         public async Task<IEnumerable<Kunde>> GetAllAsync() =>
             await db.Kunder.AsNoTracking().ToListAsync();
 
-        public async Task<Kunde?> GetByIdAsync(Guid id) =>
+        public async Task<Kunde?> GetByIdAsync(int id) =>
             await db.Kunder.FindAsync(id);
 
         public async Task AddAsync(Kunde kunde)

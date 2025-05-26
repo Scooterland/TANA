@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TANA.Application.DTOs;
-using TANA.Application.Interfaces;
+﻿using TANA.Application.DTOs;
 using TANA.Domain.Entities;
-using TANA.Domain.Repositories;
-using Microsoft.EntityFrameworkCore;
-using TANA.Domain.Interface;
 using TANA.Application.Interface;
 
 namespace TANA.Infrastructure.Services

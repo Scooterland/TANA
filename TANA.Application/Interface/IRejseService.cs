@@ -1,6 +1,6 @@
 ﻿using TANA.Domain.Entities;
 
-namespace TANA.Domain.Interface
+namespace TANA.Application.Interface
 {
 	public interface IRejseService
 	{

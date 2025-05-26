@@ -1,8 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TANA.Application.Interface;
 using TANA.Application.Services;
-using TANA.Domain.Interface;
-using TANA.Infrastructure.Repositories;
+using TANA.Domain.Entities;
 using TANA.Infrastructure.Services;
 using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
@@ -30,7 +29,7 @@ builder.Services.AddScoped<IKundeService, KundeService>();
 builder.Services.AddScoped<IRejseService, RejseService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
-builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
+builder.Services.AddScoped<TravelPlanService, TravelPlanService>();
 builder.Services.AddScoped<TemplateStateService>();
 builder.Services.AddScoped<TemplateLibraryService>();
 

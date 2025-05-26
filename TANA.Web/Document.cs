@@ -2,7 +2,7 @@
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
-using TANA.Application.Models;
+using TANA.Domain.Entities;
 
 public class InvoiceDocument : IDocument
 {

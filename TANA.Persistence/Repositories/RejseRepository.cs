@@ -1,13 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TANA.Domain.Entities;
-using TANA.Domain.Repositories;
 using TANA.Persistence.Data;
-using TANA.Domain.Interface;
+using TANA.Application.Interface;
 
 
 namespace TANA.Persistence.Repositories

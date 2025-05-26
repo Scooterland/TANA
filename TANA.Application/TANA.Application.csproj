@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CQRS\Commands\**" />
+    <Compile Remove="CQRS\Handler\**" />
+    <EmbeddedResource Remove="CQRS\Commands\**" />
+    <EmbeddedResource Remove="CQRS\Handler\**" />
+    <None Remove="CQRS\Commands\**" />
+    <None Remove="CQRS\Handler\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="MailKit" Version="4.11.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.4" />
@@ -26,11 +35,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TANA.Domain\TANA.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="CQRS\Commands\" />
-    <Folder Include="CQRS\Handler\" />
   </ItemGroup>
 
 </Project>
