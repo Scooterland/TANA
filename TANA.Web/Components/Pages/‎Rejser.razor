@@ -5,11 +5,14 @@
 @inject IRejseService Service
 @inject NavigationManager Nav
 @rendermode InteractiveServer
-<h3>Rejser</h3>
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
+
+<h3>@L["Trips"]</h3>
 
 <button class="btn btn-primary mb-3"
         @onclick="@(() => Nav.NavigateTo("/rejser/new"))">
-    + Ny Rejse
+    + @L["NewTrip"]
 </button>
 
 @if (rejseList is null)
@@ -22,10 +25,10 @@ else
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Start</th>
-                <th>Slut</th>
-                <th>Dage</th>
-                <th>Pris</th>
+                <th>@L["Startdate"]</th>
+                <th>@L["Enddate"]</th>
+                <th>@L["Days"]</th>
+                <th>@L["Price"]</th>
                 <th></th>
             </tr>
         </thead>
@@ -41,12 +44,12 @@ else
                     <td>
                         <button class="btn btn-sm btn-secondary me-1"
                                 @onclick="@(() => Nav.NavigateTo($"/rejser/edit/{r.Id}"))">
-                            Edit
+                            @L["Edit"]
                         </button>
 
                         <button class="btn btn-sm btn-danger"
                                 @onclick="@(() => Delete(r.Id))">
-                            Delete
+                            @L["Delete"]
                         </button>
                     </td>
                 </tr>

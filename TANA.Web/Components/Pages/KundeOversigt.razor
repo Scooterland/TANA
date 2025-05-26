@@ -2,19 +2,20 @@
 ﻿@using TANA.Application.Services
 @using TANA.Domain.Entities
 @using TANA.Domain.Interface
-
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 @inject IKundeService KundeService
 @inject IRejseService RejseService
 
 @rendermode InteractiveServer
 
-<h3>Kunde Oversigt</h3>
+<h3>@L["CustomerDash"]</h3>
 
 <div style="display: flex; align-items: center; width: 100%; padding: 1rem; border-radius: 8px;">
-    <button class="btn btn-success text-x1" @onclick="OpenCreateKundeModal">Ny Kunde</button>
+    <button class="btn btn-success text-x1" @onclick="OpenCreateKundeModal">@L["NewCustomer"]</button>
     <span style="flex: 1 1 auto;"></span>
     <input type="text" class="border-4 w-40 rounded p-1 h-8 border-blue-300 text-base" @bind="SøgText" />
-    <button class="btn btn-primary text-x1" @onclick="Søg" style="margin-left: 0.5rem;">Søg</button>
+    <button class="btn btn-primary text-x1" @onclick="Søg" style="margin-left: 0.5rem;">@L["Search"]</button>
 </div>
 
 
@@ -30,12 +31,12 @@ else
     <table class="table table-striped text-center">
         <thead>
             <tr>
-                <th>Navn </th>
-                <th>Email </th>
-                <th>Telefon </th>
-                <th>Adresse </th>
-                <th>Status </th>
-                <th>Handlinger</th>
+                <th>@L["Name"] </th>
+                <th>@L["Email"] </th>
+                <th>@L["PhoneNumber"] </th>
+                <th>@L["Address"] </th>
+                <th>@L["Status"] </th>
+                <th>@L["Actions"]</th>
             </tr>
         </thead>
         <tbody>
@@ -48,9 +49,9 @@ else
                     <td>@kunde.Adresse </td>
                     <td>@kunde.Status </td>
                     <td>
-                        <input type="button" value="Se historik" @onclick="() => SeHistorik(kunde.Id)" class="btn btn-info btn-sm mr-2" />
-                        <button class="btn btn-warning btn-sm mr-2" @onclick="() => OpenEditKundeModal(kunde)">Rediger</button>
-                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteKunde(kunde.Id)">Slet</button>
+                        <input type="button" value="@L["History"]" @onclick="() => SeHistorik(kunde.Id)" class="btn btn-info btn-sm mr-2" />
+                        <button class="btn btn-warning btn-sm mr-2" @onclick="() => OpenEditKundeModal(kunde)">@L["Edit"]</button>
+                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteKunde(kunde.Id)">@L["Delete"]</button>
                     </td>
                 </tr>
             }
@@ -96,7 +97,7 @@ else
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">@(editMode ? "Rediger kunde" : "Opret kunde")</h5>
+                    <h5 class="modal-title">@(editMode ? @L["Edit"] : @L["Create"])</h5>
                     <button type="button" class="btn-close" @onclick="LukKundeModal"></button>
                 </div>
                 <div class="modal-body">
@@ -104,28 +105,28 @@ else
                         <DataAnnotationsValidator />
                         <ValidationSummary />
                         <div class="mb-2">
-                            <label>Navn:</label>
+                            <label>@L["Name"]:</label>
                             <InputText @bind-Value="kundeModalModel.Navn" class="form-control" />
                         </div>
                         <div class="mb-2">
-                            <label>Email:</label>
+                            <label>@L["Email"]:</label>
                             <InputText @bind-Value="kundeModalModel.Email" class="form-control" />
                         </div>
                         <div class="mb-2">
-                            <label>Telefon:</label>
+                            <label>@L["PhoneNumber"]:</label>
                             <InputNumber @bind-Value="kundeModalModel.TelefonNr" class="form-control" />
                         </div>
                         <div class="mb-2">
-                            <label>Adresse:</label>
+                            <label>@L["Address"]:</label>
                             <InputText @bind-Value="kundeModalModel.Adresse" class="form-control" />
                         </div>
                         <div class="mb-2">
-                            <label>Status:</label>
+                            <label>@L["Status"]:</label>
                             <InputText @bind-Value="kundeModalModel.Status" class="form-control" />
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success">Gem</button>
-                            <button type="button" class="btn btn-secondary" @onclick="LukKundeModal">Annuller</button>
+                            <button type="submit" class="btn btn-success">@L["Save"]</button>
+                            <button type="button" class="btn btn-secondary" @onclick="LukKundeModal">@L["Cancel"]</button>
                         </div>
                     </EditForm>
                 </div>

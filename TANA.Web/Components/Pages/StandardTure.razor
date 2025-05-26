@@ -2,24 +2,26 @@
 @using TANA.Application.DTOs;
 @using TANA.Application.Interface
 @inject ITurService TurService
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 @rendermode InteractiveServer
 
-<h3>Opret Standardtur</h3>
+<h3>@L["CreateStandardTrip"]</h3>
 
-<input @bind="navn" placeholder="Titel" />
-<input @bind="description" placeholder="Beskrivelse" />
-<input type="number" @bind="pris" placeholder="Pris" />
-<input type="number" @bind="dage" placeholder="Antal dage" />
-<button @onclick="CreateTur">Opret</button>
+<input @bind="navn" placeholder="@L["Title"]" />
+<input @bind="description" placeholder="@L["Description"]" />
+<input type="number" @bind="pris" placeholder="@L["Price"]" />
+<input type="number" @bind="dage" placeholder="@L["NumberOfDays"]" />
+<button @onclick="CreateTur">@L["Create"]</button>
 
 @if (ture.Any())
 {
-    <h4>Eksisterende ture:</h4>
+    <h4>@L["ExistingTrips"]:</h4>
     <ul>
         @foreach (var t in ture)
         {
             <li>@t.Navn – @t.Pris kr. – @t.Dage dage</li>
-            <button @onclick="() => DeleteTurAsync(t.Id)">Slet</button>
+            <button @onclick="() => DeleteTurAsync(t.Id)">@L["Delete"]</button>
         }
     </ul>
 }

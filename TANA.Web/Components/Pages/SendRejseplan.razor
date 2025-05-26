@@ -8,30 +8,32 @@
 @using TANA.Application.Models;
 @using TANA.Infrastructure.Services;
 @inject HttpClient Http
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 
-<h3>SendRejseplan</h3>
+<h3>@L["SendTravelPlan"]</h3>
 
 <div class="form-group">
-    <label>Navn:</label>
+    <label>@L["Name"]:</label>
     <input class="form-control" @bind="navn" />
 
-    <label>Email:</label>
+    <label>@L["Email"]:</label>
     <input class="form-control" @bind="email" />
 
-    <label>Rejsedestination:</label>
+    <label>@L["TravelPlanDestination"]:</label>
     <input class="form-control" @bind="destination" />
 
-    <label>Afrejse (tidspunkt):</label>
+    <label>@L["Departure"]:</label>
     <input class="form-control" @bind="afrejse" />
 
-    <label>Hjemrejse (tidspunkt):</label>
+    <label>@L["Return"]:</label>
     <input class="form-control" @bind="hjemrejse" />
 
-    <label>Flyselskab:</label>
+    <label>@L["Airline"]:</label>
     <input class="form-control" @bind="flyselskab" />
 </div>
 
-<button class="btn btn-primary" @onclick="GeneratePdf">Create Pdf</button>
+<button class="btn btn-primary" @onclick="GeneratePdf">@L["CreatePDF"]</button>
 
 @code {
     [Inject] IJSRuntime JS { get; set; }  // Inject JSRuntime for at åbne PDF i et nyt vindue

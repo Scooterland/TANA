@@ -3,23 +3,25 @@
 @page "/opret-rejseplan"
 @inject ITurService TurService
 @inject ITravelPlanService TravelPlanService
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 @rendermode InteractiveServer
 
 <h3>Opret Rejseplan</h3>
 
-<label for="navn">Navn:</label>
+<label for="navn">@L["Name"]:</label>
 <input type="text" id="navn" @bind="navn" placeholder="Rejseplan Navn" />
 
-<label for="description">Beskrivelse:</label>
+<label for="description">@L["Description"]:</label>
 <input type="text" id="description" @bind="description" placeholder="Beskrivelse af rejseplan" />
 
-<label for="pris">Pris:</label>
+<label for="pris">@L["Price"]:</label>
 <input type="number" id="pris" @bind="pris" placeholder="Pris" />
 
-<label for="dage">Dage:</label>
+<label for="dage">@L["Days"]:</label>
 <input type="number" id="dage" @bind="dage" placeholder="Dage" />
 
-<h4>Vælg Ture:</h4>
+<h4>@L["SelectTrips"]:</h4>
 @foreach (var tur in availableTurs)
 {
     <div>
@@ -30,34 +32,34 @@
     </div>
 }
 
-<p><strong>Samlet pris:</strong> @pris kr.</p>
-<p><strong>Samlet antal dage:</strong> @dage</p>
+<p><strong>@L["TotalPrice"]:</strong> @pris kr.</p>
+<p><strong>@L["TotalDays"]:</strong> @dage</p>
 
 <button @onclick="CreateTravelPlan">Opret Rejseplan</button>
 
 <hr />
 
-<h3>Allerede oprettede rejseplaner</h3>
+<h3>@L["CreatedTravelPlans"]</h3>
 @if (rejsePlaner.Any())
 {
     <ul>
         @foreach (var plan in rejsePlaner)
         {
             <li>
-                <strong>@plan.Navn</strong><br />
-                Beskrivelse: @plan.Description<br />
-                Pris: @plan.Pris kr<br />
-                Dage: @plan.Dage<br />
-                Ture: @string.Join(", ", plan.TurNavne)
+                @L["Name"]@plan.Navn<br />
+                @L["Description"]: @plan.Description<br />
+                @L["Price"]: @plan.Pris kr<br />
+                @L["Days"]: @plan.Dage<br />
+                @L["Trips"]: @string.Join(", ", plan.TurNavne)
                 <br />
-                <button @onclick="() => DeleteRejsePlan(plan.Id)">Slet</button>
+                <button @onclick="() => DeleteRejsePlan(plan.Id)">@L["Delete"]</button>
             </li>
         }
     </ul>
 }
 else
 {
-    <p>Ingen rejseplaner er blevet oprettet endnu.</p>
+    <p>@L["NoDataAvailable"].</p>
 }
 
 @code {

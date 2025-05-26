@@ -6,6 +6,8 @@
 @inject IRejseService RejseService
 @inject IKundeService KundeService
 @inject NavigationManager Nav
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 @rendermode InteractiveServer
 
 @code {
@@ -63,7 +65,7 @@
     }
 }
 
-<h3>@(Mode == "new" ? "Ny Rejse" : $"Redigér Rejse #{Id}")</h3>
+<h3>@(Mode == "new" ? @L["NewTrip"] : string.Format(@L["EditTripId"], Id))</h3>
 
 <EditForm Model="model" OnValidSubmit="HandleValidSubmit">
     <DataAnnotationsValidator />
@@ -71,14 +73,14 @@
     
     <!-- Navn -->
     <div class="mb-3">
-        <label class="form-label">Navn</label>
+        <label class="form-label">@L["Name"]</label>
         <InputText @bind-Value="model.Navn" class="form-control" />
         <ValidationMessage For="@(() => model.Navn)" />
     </div>
 
     <!-- Startdato -->
     <div class="mb-3">
-        <label class="form-label">Startdato</label>
+        <label class="form-label">@L["Startdate"]</label>
         <InputDate @bind-Value="model.StartsDato"
                    class="form-control"
                    min="@today"
@@ -88,7 +90,7 @@
 
     <!-- Slutdato -->
     <div class="mb-3">
-        <label class="form-label">Slutdato</label>
+        <label class="form-label">@L["Enddate"]</label>
         <InputDate @bind-Value="model.SlutsDato"
                    class="form-control"
                    min="@today"
@@ -98,7 +100,7 @@
 
     <!-- Dage  -->
     <div class="mb-3">
-        <label class="form-label">Dage</label>
+        <label class="form-label">@L["Days"]</label>
         <InputNumber @bind-Value="model.Dage"
                      class="form-control"
                      readonly />
@@ -106,22 +108,22 @@
 
     <!-- Pris -->
     <div class="mb-3">
-        <label class="form-label">Pris</label>
+        <label class="form-label">@L["Price"]</label>
         <InputNumber @bind-Value="model.Pris" class="form-control" />
         <ValidationMessage For="@(() => model.Pris)" />
     </div>
 
     <!-- Kommentar -->
     <div class="mb-3">
-        <label class="form-label">Kommentar</label>
+        <label class="form-label">@L["Note"]</label>
         <InputTextArea @bind-Value="model.Kommentar" class="form-control" />
     </div>
 
     <!-- Kunde -->
     <div class="mb-3">
-        <label class="form-label">Kunde</label>
+        <label class="form-label">@L["Customer"]</label>
         <InputSelect @bind-Value="model.KundeId" class="form-select">
-            <option value="">-- vælg kunde --</option>
+            <option value="">-- @L["SelectCustomer"] --</option>
             @if (kunder is not null)
             {
                 @foreach (var k in kunder)
@@ -135,11 +137,11 @@
 
     <!-- button -->
     <button class="btn btn-success">
-        @(Mode == "new" ? "Opret" : "Gem")
+        @(Mode == "new" ? @L["Create"] : @L["Save"])
     </button>
 
     <button type="button" class="btn btn-outline-secondary ms-2"
             @onclick="@(() => Nav.NavigateTo("/rejser"))">
-        Annuller
+        @L["Cancel"]
     </button>
 </EditForm>

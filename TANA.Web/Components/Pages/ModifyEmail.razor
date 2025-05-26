@@ -5,20 +5,22 @@
 @using Microsoft.AspNetCore.Components.Authorization
 @inject AuthenticationStateProvider AuthStateProvider
 @inject IEmailSettingsService EmailSettingsService
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 
-<h3>Modificer E-mailadresse</h3>
+<h3>@L["ModifyEmail"]</h3>
 
 @if (!isAuthorized)
 {
-    <p>Du har ikke adgang til denne side.</p>
+    <p>@L["NoAccess"].</p>
 }
 else
 {
     <div>
-        <label for="email">Indtast ny e-mailadresse:</label>
+        <label for="email">@L["EnterNewEmailAddress"]:</label>
         <input type="email" id="email" @bind="emailAddress" />
 
-        <button @onclick="SaveEmailAddress">Gem e-mailadresse</button>
+        <button @onclick="SaveEmailAddress">@L["Save"]</button>
     </div>
 }
 
