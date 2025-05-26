@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\rene3\\source\\repos\\TANA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|solutionrelative:tana.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.api\\tana.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|solutionrelative:tana.api\\tana.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|solutionrelative:tana.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D834218D-4E9B-4F4C-B1A2-028155D56244}|TANA.Application\\TANA.Application.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.application\\services\\brugerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 37,
+          "SelectedChildIndex": 31,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,20 +174,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TANA.API",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.API\\TANA.API.csproj",
+              "RelativeDocumentMoniker": "TANA.API\\TANA.API.csproj",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.API\\TANA.API.csproj",
+              "RelativeToolTip": "TANA.API\\TANA.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-23T14:58:12.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Program.cs",
               "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
               "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Program.cs",
               "RelativeToolTip": "TANA.Web\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T13:55:04.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BrugerService.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Application\\Services\\BrugerService.cs",
               "RelativeDocumentMoniker": "TANA.Application\\Services\\BrugerService.cs",
@@ -196,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "KundeService.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Application\\Services\\KundeService.cs",
               "RelativeDocumentMoniker": "TANA.Application\\Services\\KundeService.cs",
@@ -209,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AuthenticatedUser.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\AuthenticatedUser.cs",
               "RelativeDocumentMoniker": "TANA.Domain\\Entities\\AuthenticatedUser.cs",
@@ -222,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "StandardTure.razor",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\StandardTure.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\StandardTure.razor",
@@ -235,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "OpretRejseplan.razor",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\OpretRejseplan.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\OpretRejseplan.razor",
@@ -248,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.API\\Program.cs",
               "RelativeDocumentMoniker": "TANA.API\\Program.cs",
@@ -261,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TANA.API.Web.AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.API.Web\\obj\\Debug\\net8.0\\TANA.API.Web.AssemblyInfo.cs",
               "RelativeDocumentMoniker": "TANA.API.Web\\obj\\Debug\\net8.0\\TANA.API.Web.AssemblyInfo.cs",
@@ -274,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "TANA.Persistence\\Data\\AppDbContext.cs",

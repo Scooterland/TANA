@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\rene3\\source\\repos\\TANA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.api\\tana.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|solutionrelative:tana.api\\tana.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.api\\tana.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|solutionrelative:tana.api\\tana.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44A35EED-01A1-4BF5-9D50-2C38DD326130}|TANA.API\\TANA.API.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -174,26 +174,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TANA.API",
+              "DocumentIndex": 1,
+              "Title": "TANA.API.csproj",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.API\\TANA.API.csproj",
               "RelativeDocumentMoniker": "TANA.API\\TANA.API.csproj",
               "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.API\\TANA.API.csproj",
               "RelativeToolTip": "TANA.API\\TANA.API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-23T14:58:12.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T14:58:12.501Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Program.cs",
               "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
               "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Program.cs",
               "RelativeToolTip": "TANA.Web\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T13:55:04.464Z",
               "EditorCaption": ""
@@ -208,8 +207,7 @@
               "RelativeToolTip": "TANA.Application\\Services\\BrugerService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAD4vwkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T13:52:01.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T13:52:01.203Z"
             },
             {
               "$type": "Document",
@@ -221,8 +219,7 @@
               "RelativeToolTip": "TANA.Application\\Services\\KundeService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAD4vwwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T13:51:59.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T13:51:59.3Z"
             },
             {
               "$type": "Document",
@@ -234,8 +231,7 @@
               "RelativeToolTip": "TANA.Domain\\Entities\\AuthenticatedUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T13:49:12.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T13:49:12.75Z"
             },
             {
               "$type": "Document",
@@ -247,8 +243,7 @@
               "RelativeToolTip": "TANA.Web\\Components\\Pages\\StandardTure.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-23T13:44:04.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T13:44:04.178Z"
             },
             {
               "$type": "Document",
@@ -260,8 +255,7 @@
               "RelativeToolTip": "TANA.Web\\Components\\Pages\\OpretRejseplan.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-23T13:43:51.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T13:43:51.707Z"
             },
             {
               "$type": "Document",
@@ -273,8 +267,7 @@
               "RelativeToolTip": "TANA.API\\Program.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAnwBwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T13:40:17.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T13:40:17.199Z"
             },
             {
               "$type": "Document",
@@ -286,8 +279,7 @@
               "RelativeToolTip": "TANA.API.Web\\obj\\Debug\\net8.0\\TANA.API.Web.AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T13:38:46.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T13:38:46.404Z"
             },
             {
               "$type": "Document",
@@ -299,8 +291,7 @@
               "RelativeToolTip": "TANA.Persistence\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T09:23:08.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T09:23:08.288Z"
             }
           ]
         },
