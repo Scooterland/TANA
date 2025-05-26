@@ -1,0 +1,169 @@
+﻿@page "/rejser/{Mode}/{Id:int?}"
+@using TANA.Application.Services
+@using TANA.Domain.Entities
+@using TANA.Domain.Interface
+@inject IRejseService Service
+@inject KundeService KundeService
+@inject NavigationManager Nav
+@rendermode InteractiveServer
+@inject IKundeService KundeService
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        @errorMessage
+    </div>
+}
+
+
+<h3>@(Mode == "new" ? "Ny Rejse" : $"Redigér Rejse #{Id}")</h3>
+
+<EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <!-- Startdato -->
+    <div class="mb-3">
+        <label class="form-label">Startdato</label>
+        <InputDate @bind-Value="model.StartsDato"
+                   class="form-control"
+                   min="@today"
+                   @onchange="RecalculateDays" />
+        <ValidationMessage For="@(() => model.StartsDato)" />
+    </div>
+
+    <!-- Slutdato -->
+    <div class="mb-3">
+        <label class="form-label">Slutdato</label>
+        <InputDate @bind-Value="model.SlutsDato"
+                   class="form-control"
+                   min="@today"
+                   @onchange="RecalculateDays" />
+        <ValidationMessage For="@(() => model.SlutsDato)" />
+    </div>
+
+    <!-- Dage  -->
+    <div class="mb-3">
+        <label class="form-label">Dage</label>
+        <InputNumber @bind-Value="model.Dage"
+                     class="form-control"
+                     readonly />
+    </div>
+
+    <!-- Pris -->
+    <div class="mb-3">
+        <label class="form-label">Pris</label>
+        <InputNumber @bind-Value="model.Pris" class="form-control" />
+        <ValidationMessage For="@(() => model.Pris)" />
+    </div>
+
+    <!-- Kommentar -->
+    <div class="mb-3">
+        <label class="form-label">Kommentar</label>
+        <InputTextArea @bind-Value="model.Kommentar" class="form-control" />
+    </div>
+
+    <!-- Kunde -->
+    <div class="mb-3">
+        <label class="form-label">Kunde</label>
+        <InputSelect @bind-Value="model.KundeId" class="form-select">
+            <option value="">-- vælg kunde --</option>
+            @if (kunder is not null)
+            {
+                @foreach (var k in kunder)
+                {
+                    <option value="@k.Id">@k.Navn</option>
+                }
+            }
+        </InputSelect>
+        <ValidationMessage For="@(() => model.KundeId)" />
+    </div>
+
+    <!-- button -->
+    <button class="btn btn-success">
+        @(Mode == "new" ? "Opret" : "Gem")
+    </button>
+
+    <button type="button" class="btn btn-outline-secondary ms-2"
+            @onclick="@(() => Nav.NavigateTo("/rejser"))">
+        Annuller
+    </button>
+</EditForm>
+
+@code {
+    [Parameter] public string Mode { get; set; } = "new";
+    [Parameter] public int? Id { get; set; }
+
+    private Rejse model = new();
+    private IEnumerable<Kunde>? kunder;
+    private string? errorMessage;
+
+    private readonly string today = DateOnly.FromDateTime(DateTime.Today).ToString("yyyy-MM-dd");
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            if (Mode == "edit" && Id is not null)
+            {
+                var existing = await Service.GetByIdAsync(Id.Value);
+                if (existing is null)
+                {
+                    Nav.NavigateTo("/rejser");
+                    return;
+                }
+                model = existing;
+            }
+
+            kunder = await KundeService.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Fejl ved indlæsning af data: {ex.Message}");
+            errorMessage = "Noget gik galt ved indlæsning af data.";
+        }
+    }
+
+    private void RecalculateDays()
+    {
+        if (model.StartsDato is not null && model.SlutsDato is not null)
+        {
+            model.Dage =
+                (model.SlutsDato.Value.ToDateTime(TimeOnly.MinValue) -
+                 model.StartsDato.Value.ToDateTime(TimeOnly.MinValue)).Days;
+        }
+        else
+        {
+            model.Dage = 0;
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            RecalculateDays(); //Genberegner antallet af dage mellem startdatoen og slutdatoen
+
+            // Kontroller, at slutdatoen er efter startdatoen.
+            if (model.StartsDato != null && model.SlutsDato != null &&
+                model.SlutsDato <= model.StartsDato)
+            {
+                errorMessage = "Slutdato skal være efter startdato.";
+                return;
+            }
+
+            if (Mode == "new")
+                await Service.AddAsync(model);
+            else
+                await Service.UpdateAsync(model);
+
+            Nav.NavigateTo("/rejser");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Fejl ved gemning af rejse: {ex.Message}");
+            errorMessage = "Kunne ikke gemme rejse. Prøv igen.";
+        }
+    }
+
+}

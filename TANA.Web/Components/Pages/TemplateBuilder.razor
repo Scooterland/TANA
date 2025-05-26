@@ -1,0 +1,894 @@
+﻿@page "/template-builder/{templateId:int?}"
+@using TANA.Domain.Entities
+@using TANA.Domain.Interface
+@rendermode InteractiveServer
+@using TANA.Application.Services
+@using TANA.Infrastructure.Services
+@inject TemplateStateService TemplateState
+@inject IJSRuntime JS
+@inject ITemplateRepository TemplateRepo
+@inject NavigationManager Navigation
+@inject TemplatePdfService PdfService
+@inject TemplateLibraryService TemplateLibraryService
+
+
+<h3>Template Builder</h3>
+
+<button class="btn btn-primary mb-3" @onclick="ShowPopup">New Template (A4)</button>
+
+@if (isPopupVisible)
+{
+    <div class="popup-overlay" @onclick="HandleOverlayClick">
+        <div class="popup-content-a4" @onclick:stopPropagation>
+            <h4>Add new section:</h4>
+
+            <div class="section-control">
+                <label>
+                    <input type="checkbox"
+                           checked="@showHeader"
+                           @onchange="OnHeaderChanged" />
+                    Header
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           checked="@showImage"
+                           @onchange="OnImageChanged" />
+                    Image
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           checked="@showSummary"
+                           @onchange="OnSummaryChanged" />
+                    Summary
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           checked="@showDays"
+                           @onchange="OnDaysChanged" />
+                    Day Sections
+                </label>
+            </div>
+
+            <div class="mb-3">
+                <h4>Customize Template:</h4>
+                <div class="form-group">
+                    <label>Primary Color</label>
+                    <input type="color" class="form-control form-control-color" @bind="newTemplate.PrimaryColor" />
+                </div>
+                <div class="form-group">
+                    <label>Header Background Color</label>
+                    <input type="color" class="form-control form-control-color" @bind="newTemplate.HeaderBgColor" />
+                </div>
+                <div class="form-group">
+                    <label>Footer Background Color</label>
+                    <input type="color" class="form-control form-control-color" @bind="newTemplate.FooterBgColor" />
+                </div>
+                <div class="form-group">
+                    <label>Font Family</label>
+                    <select class="form-control" @bind="newTemplate.FontFamily">
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                    </select>
+                </div>
+            </div>
+
+
+            @if (Template.Items?.Any() == true)
+            {
+                <div class="template-preview mt-3">
+                    <h5>Sortering af sektioner (træk for at ændre rækkefølgen)</h5>
+                    <ul id="sortableItems" class="list-group">
+                        @foreach (var itm in Template.Items.OrderBy(i => i.Order))
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center"
+                                data-id="@itm.Id">
+                                @itm.Content
+                                <button class="btn btn-sm btn-danger"
+                                        @onclick="() => RemoveItem(itm.Id)">
+                                    ✖
+                                </button>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+
+
+        </div>
+    </div>
+
+    <style>
+        .page-header {
+            background-color: @newTemplate.HeaderBgColor !important;
+            color: white;
+        }
+
+        .page-footer {
+            background-color: @newTemplate.FooterBgColor !important;
+            color: white;
+        }
+
+        .day-section h3, .page-body h3, .page-body h2 {
+            color: @newTemplate.PrimaryColor !important;
+        }
+
+        body, .page-body {
+            font-family: '@newTemplate.FontFamily', sans-serif !important;
+        }
+    </style>
+
+
+        <!-- ======= HEADER ======= -->
+    <div class="page-header d-flex align-items-center justify-content-between">
+        <img src="https://tanzania-eksperten.dk/wp-content/uploads/2021/08/Logo_Logo-lang-dark-1.svg" class="logo" style="max-height:50px;" />
+        <h2>@(Template.TemplateName ?? "Create New Template")</h2>
+    </div>
+
+
+        <!-- ======= BODY ======= -->
+        <div class="page-body">
+
+            <div class="mb-3">
+                <label>Template Name:</label>
+                <input class="form-control" @bind="newTemplate.TemplateName" placeholder="Enter template name..." />
+            </div>
+
+        @if (showHeader)
+        {
+            <div class="mb-3">
+                <label>Header:</label>
+                <div class="section">
+                    <h3>Header Content</h3>
+
+                    <div class="mb-2">
+                        <label>Title:</label>
+                        <input type="text" class="form-control mb-1" @bind="newTemplate.HeaderTitle" placeholder="Enter header title..." />
+                    </div>
+
+                    <div class="mb-2">
+                        <label>Date:</label>
+                        <input type="date" class="form-control mb-1" @bind="newTemplate.HeaderDate" />
+                    </div>
+
+                    <div class="mb-2">
+                        <label>Header Image (Optional):</label>
+                        <input type="file" class="form-control mb-1" @onchange="OnHeaderImageSelected" />
+                        @if (!string.IsNullOrEmpty(newTemplate.HeaderImageUrl))
+                        {
+                            <div class="image-preview">
+                                <img src="@newTemplate.HeaderImageUrl" alt="Header Image" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+
+        @if (showImage)
+        {
+            <div class="mb-3">
+                <label>Image:</label>
+                <InputFile OnChange="OnImageSelected" class="form-control mb-2" />
+                <input type="text" class="form-control mb-2" @bind="imageUrl" placeholder="Or paste image URL..." />
+
+                @if (!string.IsNullOrEmpty(imageUrl))
+                {
+                    <div class="image-preview">
+                        <img src="@imageUrl" alt="Image Preview" style="max-width:100%; height:auto;" />
+                    </div>
+                }
+            </div>
+        }
+
+            @if (showSummary)
+            {
+                <div class="mb-3">
+                    <label>Summary (Description of the Trip):</label>
+                    <textarea class="form-control" rows="6" @bind="newTemplate.Summary" placeholder="Enter trip summary..."></textarea>
+                </div>
+            }
+
+        @if (showDays)
+        {
+            <div class="mb-3">
+                <label>Number of Days:</label>
+                <input type="number"
+                       class="form-control mb-2"
+                       min="1" max="30"
+                       @bind="NumberOfDays" />
+
+                <div class="days-sections">
+                    @for (int i = 0; i < numberOfDays; i++)
+                    {
+                        var index = i;
+
+                        <div class="section" @key="daySections[index]">
+                            <h3>Dag @(index + 1)</h3>
+
+                            <div class="mb-2">
+                                <label>Title:</label>
+                                <input type="text"
+                                       class="form-control mb-1"
+                                       @bind="daySections[index].Title" />
+                            </div>
+
+                            <div class="mb-2">
+                                <label>Aktivitet:</label>
+                                <textarea class="form-control mb-1"
+                                          rows="3"
+                                          @bind="daySections[index].Activity"
+                                          placeholder="Enter activity..."></textarea>
+                            </div>
+
+                            <div class="mb-2">
+                                <label>Måltider inkluderet:</label>
+                                <input type="text"
+                                       class="form-control mb-1"
+                                       @bind="daySections[index].Meals"
+                                       placeholder="Enter meals..." />
+                            </div>
+
+                            <div class="mb-2">
+                                <label>Overnatning:</label>
+                                <input type="text"
+                                       class="form-control mb-1"
+                                       @bind="daySections[index].Accommodation"
+                                       placeholder="Enter accommodation..." />
+                            </div>
+
+                            <div class="mb-2">
+                                <label>Notat:</label>
+                                <textarea class="form-control"
+                                          rows="2"
+                                          @bind="daySections[index].Note"
+                                          placeholder="Enter note..."></textarea>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+
+        </div>
+
+
+        <!-- ======= FOOTER ======= -->
+    <div class="page-footer d-flex justify-content-between align-items-center">
+        <img src="https://tanzania-eksperten.dk/wp-content/uploads/2024/10/logo-3280.png.png" class="footer-logo-img" style="max-height:50px;" />
+        <div>
+            <strong>Tanzania Eksperten Aps</strong><br />
+            CVR. Nr.: 41239425
+        </div>
+        <div>
+            <strong>Mobile:</strong> +45 42 73 10 45<br />
+            <strong>Email:</strong> kontakt@tanzania-eksperten.dk<br />
+            <a href="https://tanzania-eksperten.dk" target="_blank">www.tanzania-eksperten.dk</a>
+        </div>
+    </div>
+
+
+        <div class="footer-buttons">
+        <button class="btn btn-primary me-2" @onclick="SaveTemplateHandler">Save</button>
+        <button class="btn btn-secondary" @onclick="HidePopup">Cancel</button>
+    </div>
+}
+
+<br />
+ <button class="btn btn-secondary mt-3 me-2" @onclick="GoBack">Go to Templates</button>
+
+
+
+
+
+@code {
+    [Parameter] public int? templateId { get; set; }
+    private bool showHeader = false;
+    private bool showImage = false;
+    private bool showSummary = false;
+    private bool showDays = false;
+    private int numberOfDays = 1;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (isPopupVisible && Template.Items?.Any() == true)
+        {
+            await Task.Yield(); 
+            await JS.InvokeVoidAsync("initializeSortable", "sortableItems");
+        }
+    }
+
+    private int NumberOfDays
+    {
+        get => numberOfDays;
+        set
+        {
+            numberOfDays = value;
+
+            if (numberOfDays < 1)
+                numberOfDays = 1;
+
+            InitializeDaySections();
+        }
+    }
+
+    // ======= STATE =======
+    private bool isPopupVisible = false;
+    private TemplateModel newTemplate = new();
+    private TemplateModel Template = new() { CreatedDate = DateTime.UtcNow, LastModifiedDate = DateTime.UtcNow };
+    private string? imageUrl;
+    private int nextId = 1;
+    private List<DaySection> daySections = new List<DaySection>();
+
+    // ======= POPUP HANDLERS =======
+    private void ShowPopup()
+    {
+        isPopupVisible = true;
+        newTemplate = new TemplateModel
+            {
+                TemplateName = string.Empty,
+                CreatedDate = DateTime.UtcNow,
+                LastModifiedDate = DateTime.UtcNow
+            };
+        imageUrl = null;
+    }
+
+    private void HidePopup()
+    {
+        isPopupVisible = false;
+        newTemplate = new();
+        imageUrl = null;
+    }
+
+    private async Task OnImageSelected(InputFileChangeEventArgs e)
+    {
+        try
+        {
+            var file = e.File;
+            if (file != null)
+            {
+                var format = "image/png";
+                var resizedImageFile = await file.RequestImageFileAsync(format, 1024, 1024);
+
+                using var stream = resizedImageFile.OpenReadStream(5 * 1024 * 1024);
+                using var ms = new MemoryStream();
+                await stream.CopyToAsync(ms);
+                var buffer = ms.ToArray();
+
+                imageUrl = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
+                newTemplate.ImageUrl = imageUrl;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading image: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Der opstod en fejl under upload af billedet.");
+        }
+    }
+
+
+    private async Task SyncOrderFromUIAsync()
+    {
+        try
+        {
+            var sortedIds = await JS.InvokeAsync<string[]>("getSortedIds", "sortableItems");
+            int pos = 1;
+            foreach (var id in sortedIds)
+            {
+                var itm = Template.Items.First(i => i.Id == id);
+                itm.Order = pos++;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error syncing order: {ex.Message}");
+        }
+    }
+
+    private async void SaveTemplateHandler()
+    {
+        try
+        {
+            await SyncOrderFromUIAsync();
+
+            if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
+            {
+                await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
+                return;
+            }
+
+            var items = new List<TemplateItemEntity>();
+            int order = 1;
+
+            if (showHeader)
+                items.Add(new TemplateItemEntity { Content = "Header", Title = newTemplate.HeaderTitle, Order = order++ });
+
+            if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
+                items.Add(new TemplateItemEntity { Content = "Image", Order = order++ });
+
+            if (showSummary)
+                items.Add(new TemplateItemEntity { Content = "Summary", Note = newTemplate.Summary, Order = order++ });
+
+            if (showDays)
+            {
+                foreach (var day in daySections)
+                {
+                    items.Add(new TemplateItemEntity
+                        {
+                            Content = "Day Sections",
+                            Title = day.Title,
+                            Activity = day.Activity,
+                            Meals = day.Meals,
+                            Accommodation = day.Accommodation,
+                            Note = day.Note,
+                            Order = order++
+                        });
+                }
+            }
+
+            var entity = new TemplateEntity
+                {
+                    Id = newTemplate.Id,
+                    TemplateName = newTemplate.TemplateName,
+                    Summary = newTemplate.Summary,
+                    ImageUrl = newTemplate.ImageUrl,
+                    CreatedDate = newTemplate.Id == 0 ? DateTime.UtcNow : Template.CreatedDate,
+                    LastModifiedDate = DateTime.UtcNow,
+                    Items = items,
+                    PrimaryColor = newTemplate.PrimaryColor,
+                    HeaderBgColor = newTemplate.HeaderBgColor,
+                    FooterBgColor = newTemplate.FooterBgColor,
+                    FontFamily = newTemplate.FontFamily
+                };
+
+            if (entity.Id == 0)
+                await TemplateRepo.SaveTemplateAsync(entity);
+            else
+                await TemplateRepo.UpdateTemplateAsync(entity);
+
+            await JS.InvokeVoidAsync("alert", "Template saved successfully!");
+            HidePopup();
+            Navigation.NavigateTo("/templates", true);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving template: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "fejl under lagring af skabelonen..");
+        }
+    }
+
+
+
+
+    private List<TemplateItemEntity> BuildTemplateItems()
+    {
+        var items = new List<TemplateItemEntity>();
+        int order = 1;
+
+        if (showHeader)
+            items.Add(new TemplateItemEntity { Content = "Header", Title = newTemplate.HeaderTitle, Order = order++ });
+
+        if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
+            items.Add(new TemplateItemEntity { Content = "Image", Order = order++ });
+
+        if (showSummary)
+            items.Add(new TemplateItemEntity { Content = "Summary", Order = order++ });
+
+        if (showDays)
+        {
+            foreach (var day in daySections)
+            {
+                items.Add(new TemplateItemEntity
+                    {
+                        Content = "Day Sections",
+                        Title = day.Title,
+                        Activity = day.Activity,
+                        Meals = day.Meals,
+                        Accommodation = day.Accommodation,
+                        Note = day.Note,
+                        Order = order++
+                    });
+            }
+        }
+
+        return items;
+    }
+
+
+    private async Task OnHeaderImageSelected(ChangeEventArgs e)
+    {
+        try
+        {
+            if (e.Value is IBrowserFile file)
+            {
+                using var stream = file.OpenReadStream();
+                var buffer = new byte[file.Size];
+                await stream.ReadAsync(buffer);
+                newTemplate.HeaderImageUrl = $"data:{file.ContentType};base64,{Convert.ToBase64String(buffer)}";
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading header image: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Kunne ikke indlæse headerbilledet.");
+        }
+    }
+
+
+
+
+    protected override void OnParametersSet()
+    {
+        InitializeDaySections();
+    }
+
+    private void InitializeDaySections()
+    {
+        for (int i = 0; i < numberOfDays; i++)
+        {
+            if (i >= daySections.Count)
+                daySections.Add(new DaySection());
+            else if (daySections[i] is null)
+                daySections[i] = new DaySection();
+        }
+
+        
+    }
+
+
+
+    public class DaySection
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Activity { get; set; } = string.Empty;
+        public string Meals { get; set; } = string.Empty;
+        public string Accommodation { get; set; } = string.Empty;
+        public string Note { get; set; } = string.Empty;
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (templateId.HasValue && templateId.Value > 0)
+            Template = await MapEntityToModel(templateId.Value);
+        LoadTemplateIntoEditor();        
+
+    }
+    private async Task<TemplateModel> MapEntityToModel(int id)
+    {
+        try
+        {
+            var entity = await TemplateRepo.GetTemplateByIdAsync(id);
+            if (entity == null) return new TemplateModel();
+
+            var model = new TemplateModel
+                {
+                    Id = entity.Id,
+                    TemplateName = entity.TemplateName,
+                    Summary = entity.Summary,
+                    ImageUrl = entity.ImageUrl,
+                    CreatedDate = entity.CreatedDate,
+                    LastModifiedDate = entity.LastModifiedDate,
+                    PrimaryColor = entity.PrimaryColor,
+                    HeaderBgColor = entity.HeaderBgColor,
+                    FooterBgColor = entity.FooterBgColor,
+                    FontFamily = entity.FontFamily,
+                    Items = entity.Items.Select(i => new TemplateItem
+                    {
+                        Id = i.Id.ToString(),
+                        Content = i.Content,
+                        Order = i.Order,
+                        Title = i.Title,
+                        Activity = i.Activity,
+                        Meals = i.Meals,
+                        Accommodation = i.Accommodation,
+                        Note = i.Note,
+                        IsSelected = true
+                    }).ToList()
+                };
+
+            daySections = entity.Items
+                .Where(i => i.Content == "Day Sections")
+                .Select(i => new DaySection
+                    {
+                        Title = i.Title,
+                        Activity = i.Activity,
+                        Meals = i.Meals,
+                        Accommodation = i.Accommodation,
+                        Note = i.Note
+                    }).ToList();
+
+            return model;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error mapping template: {ex.Message}");
+            return new TemplateModel();
+        }
+    }
+
+
+
+
+    private void AddItem(string content)
+    {
+        Template.Items.Add(new TemplateItem
+            {
+                Id = nextId.ToString(),
+                Content = content,
+                Order = Template.Items.Count + 1,
+                IsSelected = true
+            });
+        nextId++;
+    }
+
+
+    private void RemoveItem(string id)
+    {
+        var item = Template.Items.FirstOrDefault(i => i.Id == id);
+        if (item == null) return;
+
+        Template.Items.Remove(item);
+        for (int i = 0; i < Template.Items.Count; i++)
+            Template.Items[i].Order = i + 1;
+    }
+
+    private async Task ClearTemplate()
+    {
+        if (await JS.InvokeAsync<bool>("confirm", "Are you sure you want to clear the template?"))
+        {
+            Template.Items.Clear();
+            nextId = 1;
+        }
+    }
+
+    private async Task SaveTemplate()
+    {
+        try
+        {
+            await SyncOrderFromUIAsync();
+
+            if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
+            {
+                await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
+                return;
+            }
+
+            var items = new List<TemplateItemEntity>();
+            int order = 1;
+
+            if (showHeader)
+            {
+                items.Add(new TemplateItemEntity
+                    {
+                        Content = "Header",
+                        Title = newTemplate.HeaderTitle,
+                        Order = order++
+                    });
+            }
+
+            if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
+            {
+                items.Add(new TemplateItemEntity
+                    {
+                        Content = "Image",
+                        Order = order++
+                    });
+            }
+
+            if (showSummary)
+            {
+                items.Add(new TemplateItemEntity
+                    {
+                        Content = "Summary",
+                        Order = order++
+                    });
+            }
+
+            if (showDays)
+            {
+                foreach (var day in daySections)
+                {
+                    items.Add(new TemplateItemEntity
+                        {
+                            Content = "Day Sections",
+                            Title = day.Title,
+                            Activity = day.Activity,
+                            Meals = day.Meals,
+                            Accommodation = day.Accommodation,
+                            Note = day.Note,
+                            Order = order++
+                        });
+                }
+            }
+
+            var templateEntity = new TemplateEntity
+                {
+                    Id = Template.Id,
+                    TemplateName = newTemplate.TemplateName,
+                    Summary = newTemplate.Summary,
+                    ImageUrl = imageUrl ?? string.Empty,
+                    CreatedDate = Template.CreatedDate,
+                    LastModifiedDate = DateTime.UtcNow,
+                    Items = items
+                };
+
+            if (templateEntity.Id == 0)
+                await TemplateRepo.SaveTemplateAsync(templateEntity);
+            else
+                await TemplateRepo.UpdateTemplateAsync(templateEntity);
+
+            Template = await MapEntityToModel(templateEntity.Id);
+            await JS.InvokeVoidAsync("alert", "Template saved successfully!");
+            HidePopup();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving template: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "fejl under lagring af skabelonen.");
+        }
+    }
+
+
+    private void LoadTemplateIntoEditor()
+    {
+        newTemplate = new TemplateModel
+            {
+                Id = Template.Id,
+                TemplateName = Template.TemplateName,
+                Summary = Template.Summary,
+                ImageUrl = Template.ImageUrl,
+                HeaderTitle = Template.Items.FirstOrDefault(i => i.Content == "Header")?.Title ?? string.Empty,
+                CreatedDate = Template.CreatedDate,
+                LastModifiedDate = Template.LastModifiedDate
+            };
+
+        imageUrl = Template.ImageUrl;
+
+        showHeader = Template.Items.Any(i => i.Content == "Header");
+        showImage = Template.Items.Any(i => i.Content == "Image");
+        showSummary = Template.Items.Any(i => i.Content == "Summary");
+        showDays = Template.Items.Any(i => i.Content == "Day Sections");
+
+        daySections = Template.Items
+            .Where(i => i.Content == "Day Sections")
+            .OrderBy(i => i.Order)
+            .Select(i => new DaySection
+                {
+                    Title = i.Title,
+                    Activity = i.Activity,
+                    Meals = i.Meals,
+                    Accommodation = i.Accommodation,
+                    Note = i.Note
+                }).ToList();
+
+        numberOfDays = daySections.Count == 0 ? 1 : daySections.Count;
+
+        isPopupVisible = true;
+    }
+
+
+
+
+    private async Task ExportToPdf(int templateId)
+    {
+        try
+        {
+            var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
+            if (templateEntity != null)
+            {
+                byte[] pdfBytes = PdfService.Generate(templateEntity);
+
+                if (pdfBytes.Length == 0)
+                {
+                    await JS.InvokeVoidAsync("alert", "Error generating the PDF.");
+                    return;
+                }
+
+                string sanitizedTemplateName = templateEntity.TemplateName.Replace(" ", "_");
+                string directoryPath = Path.Combine("wwwroot", "TemplateLibrary", sanitizedTemplateName);
+
+                if (!Directory.Exists(directoryPath))
+                    Directory.CreateDirectory(directoryPath);
+
+                string fileName = $"{sanitizedTemplateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
+                string filePath = Path.Combine(directoryPath, fileName);
+
+                await File.WriteAllBytesAsync(filePath, pdfBytes);
+
+                Console.WriteLine($"PDF saved at: {filePath}");
+
+                await JS.InvokeVoidAsync("alert", $"PDF exported successfully at {filePath}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error exporting to PDF: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Error exporting the template to PDF.");
+        }
+    }
+
+
+
+    private void HandleOverlayClick()
+    {
+        HidePopup();
+    }
+
+
+    private async Task GoToPDF()
+    {
+        if (Template.Id > 0)
+        {
+            await ExportToPdf(Template.Id);
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("alert", "Please save the template before exporting to PDF.");
+        }
+    }
+
+    private void GoBack() => Navigation.NavigateTo("/templates");
+
+    private void EnsureDaySectionExists(int index)
+    {
+        if (index >= 0 && index < daySections.Count)
+        {
+            if (daySections[index] == null)
+            {
+                daySections[index] = new DaySection();
+            }
+        }
+    }
+
+    private void OnHeaderChanged(ChangeEventArgs e) => ToggleSection("Header", (bool)e.Value);
+    private void OnImageChanged(ChangeEventArgs e) => ToggleSection("Image", (bool)e.Value);
+    private void OnSummaryChanged(ChangeEventArgs e) => ToggleSection("Summary", (bool)e.Value);
+    private void OnDaysChanged(ChangeEventArgs e) => ToggleSection("Day Sections", (bool)e.Value);
+    private void ToggleSection(string name, bool isChecked)
+    {
+        showHeader = name == "Header" ? isChecked : showHeader;
+        showImage = name == "Image" ? isChecked : showImage;
+        showSummary = name == "Summary" ? isChecked : showSummary;
+        showDays = name == "Day Sections" ? isChecked : showDays;
+
+        if (isChecked)
+        {
+            if (name == "Day Sections" && daySections.Count == 0)
+                daySections.Add(new DaySection());
+
+            if (!Template.Items.Any(i => i.Content == name))
+            {
+                Template.Items.Add(new TemplateItem
+                    {
+                        Id = (++nextId).ToString(),
+                        Content = name,
+                        Order = Template.Items.Count + 1,
+                        IsSelected = true
+                    });
+            }
+        }
+        else
+        {
+            var itm = Template.Items.FirstOrDefault(i => i.Content == name);
+            if (itm is not null)
+            {
+                Template.Items.Remove(itm);
+                for (int i = 0; i < Template.Items.Count; i++)
+                    Template.Items[i].Order = i + 1;
+            }
+        }
+
+        StateHasChanged();          
+    }
+
+
+
+
+
+}

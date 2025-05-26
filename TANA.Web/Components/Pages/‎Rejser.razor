@@ -1,0 +1,89 @@
+﻿@page "/rejser"
+@using TANA.Application.Services
+@using TANA.Domain.Entities
+@using TANA.Domain.Interface
+@inject IRejseService Service
+@inject NavigationManager Nav
+@rendermode InteractiveServer
+@inject IKundeService KundeService
+
+<h3>Rejser</h3>
+
+<button class="btn btn-primary mb-3"
+        @onclick="@(() => Nav.NavigateTo("/rejser/new"))">
+    + Ny Rejse
+</button>
+
+@if (rejser is null)
+{
+    <p><em>Loading…</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Start</th>
+                <th>Slut</th>
+                <th>Dage</th>
+                <th>Pris</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var r in rejser)
+            {
+                <tr>
+                    <td>@r.Id</td>
+                    <td>@r.StartsDato</td>
+                    <td>@r.SlutsDato</td>
+                    <td>@r.Dage</td>
+                    <td>@r.Pris.ToString("N0")</td>
+                    <td>
+                        <button class="btn btn-sm btn-secondary me-1"
+                                @onclick="@(() => Nav.NavigateTo($"/rejser/edit/{r.Id}"))">
+                            Edit
+                        </button>
+
+                        <button class="btn btn-sm btn-danger"
+                                @onclick="@(() => Delete(r.Id))">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<Rejse>? rejser;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            rejser = await Service.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Kunne ikke hente rejser: {ex.Message}");
+            rejser = Enumerable.Empty<Rejse>();
+        }
+    }
+
+    private async Task Delete(int id)
+    {
+        try
+        {
+            await Service.DeleteAsync(id);
+            rejser = await Service.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Fejl ved sletning: {ex.Message}");
+        }
+    }
+
+}
