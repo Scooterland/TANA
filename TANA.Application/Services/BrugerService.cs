@@ -15,7 +15,11 @@ namespace TANA.Application.Services
 
         public Task<IEnumerable<Bruger>> GetAllAsync() => _repo.GetAllAsync();
         public Task<Bruger?> GetByIdAsync(int id) => _repo.GetByIdAsync(id);
-        public Task AddAsync(Bruger bruger) => _repo.AddAsync(bruger);
+        public async Task AddAsync(Bruger bruger, string plainPassword)
+        {
+            bruger.PasswordHash = BCrypt.Net.BCrypt.HashPassword(plainPassword);
+            await _repo.AddAsync(bruger);
+        }
         public Task UpdateAsync(Bruger bruger) => _repo.UpdateAsync(bruger);
         public Task DeleteAsync(int id) => _repo.DeleteAsync(id);
     }

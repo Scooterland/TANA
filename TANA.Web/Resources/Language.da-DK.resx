@@ -10,7 +10,10 @@
   </resheader>
 
 <data name="Welcome">
-	<value>Velkommen til Tana!</value>
+  <value>Velkommen til Tana!</value>
+</data>
+<data name="WrongCredentials"> xml:space="preserve">
+  <value>Forkert email og/eller adgangskode</value>
 </data>
 <data name="NewTrip" xml:space="preserve">
   <value>Ny rejse</value>
@@ -30,6 +33,12 @@
 <data name="Airline" xml:space="preserve">
   <value>Flyselskab</value>
 </data>
+<data name="AreYouSure" xml:space="preserve">
+  <value>Er du sikker</value>
+</data>
+<data name="AdminDashboard" xml:space="preserve">
+  <value>Admin Panel</value>
+</data>
 <data name="Address" xml:space="preserve">
   <value>Adresse</value>
 </data>
@@ -48,6 +57,9 @@
 <data name="CreatedTravelPlans" xml:space="preserve">
   <value>Oprettede rejseplaner</value>
 </data>
+<data name="CreateTravelPlan" xml:space="preserve">
+  <value>Opret rejseplan</value>
+</data>
 <data name="CreatedDate" xml:space="preserve">
   <value>Oprettelsesdato</value>
 </data>
@@ -55,7 +67,7 @@
   <value>Kunde</value>
 </data>
 <data name="CustomerDash" xml:space="preserve">
-  <value>Kunde Dashboard</value>
+  <value>Kunde Panel</value>
 </data>
 <data name="CustomizeTemplate:" xml:space="preserve">
   <value>Tilpas skabelon:</value>
@@ -144,6 +156,12 @@
 <data name="Language" xml:space="preserve">
   <value>Sprog</value>
 </data>
+<data name="Login" xml:space="preserve">
+  <value>Log ind</value>
+</data>
+<data name="Logout" xml:space="preserve">
+  <value>Log ud</value>
+</data>
 <data name="Layout" xml:space="preserve">
   <value>Layout</value>
 </data>
@@ -194,6 +212,9 @@
 </data>
 <data name="Phone" xml:space="preserve">
   <value>Telefon</value>
+</data>
+<data name="Password" xml:space="preserve">
+  <value>Adgangskode</value>
 </data>
 <data name="Plan" xml:space="preserve">
   <value>Plan</value>
@@ -267,11 +288,20 @@
 <data name="Startdate" xml:space="preserve">
   <value>Startdato</value>
 </data>
-<data name="Enddate" xml:space="preserve">
-  <value>Slutdato</value>
+<data name="Startdate" xml:space="preserve">
+  <value>Startdato</value>
+</data>
+<data name="StandardTrips" xml:space="preserve">
+  <value>Standard ture</value>
 </data>
 <data name="Template" xml:space="preserve">
   <value>Skabelon</value>
+</data>
+<data name="Templates" xml:space="preserve">
+  <value>Skabeloner</value>
+</data>
+<data name="TemplateBuilder" xml:space="preserve">
+  <value>Opret skabelon</value>
 </data>
 <data name="Test" xml:space="preserve">
   <value>Test</value>

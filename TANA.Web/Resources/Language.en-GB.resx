@@ -9,8 +9,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
   </resheader>
 
-<data name="Welcome">
-	<value>Welcome to Tana!</value>
+<data name="Welcome"> xml:space="preserve">
+  <value>Welcome to Tana!</value>
+</data>
+<data name="WrongCredentials"> xml:space="preserve">
+  <value>Wrong email and/or password</value>
 </data>
 <data name="NewTrip" xml:space="preserve">
   <value>New Trip</value>
@@ -71,6 +74,9 @@
 </data>
 <data name="CreatedTravelPlans" xml:space="preserve">
   <value>Created travel plans</value>
+</data>
+<data name="CreateTravelPlan" xml:space="preserve">
+  <value>Create travel plan</value>
 </data>
 <data name="CreatedDate" xml:space="preserve">
   <value>Created Date</value>
@@ -168,6 +174,12 @@
 <data name="Itinerary" xml:space="preserve">
   <value>Itinerary</value>
 </data>
+<data name="Login" xml:space="preserve">
+  <value>Login</value>
+</data>
+<data name="Logout" xml:space="preserve">
+  <value>Logout</value>
+</data>
 <data name="Language" xml:space="preserve">
   <value>Language</value>
 </data>
@@ -218,6 +230,9 @@
 </data>
 <data name="NumberOfDays" xml:space="preserve">
   <value>Number of days</value>
+</data>
+<data name="Password" xml:space="preserve">
+  <value>Password</value>
 </data>
 <data name="Pdf" xml:space="preserve">
   <value>Pdf</value>
@@ -297,11 +312,20 @@
 <data name="Startdate" xml:space="preserve">
   <value>Startdate</value>
 </data>
+<data name="StandardTrips" xml:space="preserve">
+  <value>Standard trips</value>
+</data>
 <data name="Enddate" xml:space="preserve">
   <value>Enddate</value>
 </data>
 <data name="Template" xml:space="preserve">
   <value>Template</value>
+</data>
+<data name="Templates" xml:space="preserve">
+  <value>Templates</value>
+</data>
+<data name="TemplateBuilder" xml:space="preserve">
+  <value>Create template</value>
 </data>
 <data name="Test" xml:space="preserve">
   <value>Test</value>

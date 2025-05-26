@@ -64,7 +64,7 @@ else
                 {
                     <div class="mb-2">
                         <label>@L["Password"]:</label>
-                        <InputText @bind-Value="modalBruger.PasswordHash" class="form-control" type="password" />
+                        <InputText @bind-Value="modalBrugerPassword" class="form-control" type="password" />
                     </div>
                 }
                 <div class="mb-2">
@@ -89,8 +89,8 @@ else
 {
     <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:5000;display:flex;align-items:center;justify-content:center;">
         <div style="background:white;padding:2rem;min-width:320px;box-shadow:0 2px 18px #2228;border-radius:12px;">
-            <h4>@L["Delete"] @L["User"]</h4>
-            <div>@L["AreYouSure"]?<b>@deleteBruger?.Navn</b>?</div>
+            <h4>@L["Delete"] @L["User"]: <b>@deleteBruger?.Navn</b></h4>
+            <div>@L["AreYouSure"]?</div>
             <div class="mt-4 flex gap-2">
                 <button class="btn btn-danger" @onclick="ConfirmDelete">@L["Delete"]</button>
                 <button class="btn btn-secondary" @onclick="CloseDeleteModal">@L["Cancel"]</button>
@@ -103,6 +103,7 @@ else
     private List<Bruger> brugerList = new();
     private Bruger modalBruger = new();
     private Bruger? deleteBruger = null;
+    private string modalBrugerPassword = string.Empty;
 
     private bool showEditModal = false;
     private bool showDeleteModal = false;
@@ -153,11 +154,15 @@ else
         if (isEditMode)
             await BrugerService.UpdateAsync(modalBruger);
         else
-            await BrugerService.AddAsync(modalBruger);
+            await BrugerService.AddAsync(modalBruger, modalBrugerPassword);
+
+        // Clear the password after use!
+        modalBrugerPassword = string.Empty;
 
         showEditModal = false;
         await ReloadBrugere();
     }
+
 
     private void ShowDeleteModal(Bruger bruger)
     {

@@ -1,5 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
 @inject AuthenticationStateProvider AuthProvider
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 
 @code {
     private AuthenticationState? authState;
@@ -28,56 +30,56 @@
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> @L["Home"]
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="kundeoversigt">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Kunde Oversigt
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @L["CustomerDash"]
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="modify-email">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Modify Email
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @L["ModifyEmail"]
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="SendRejseplan">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Send Rejseplan
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @L["SendTravelPlan"]
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="opret-rejseplan">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Opret Rejseplan
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @L["CreateTravelPlan"]
             </NavLink>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="rejser">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Rejser
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @L["Trips"]
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="standardture">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Standard ture
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @L["StandardTrips"]
             </NavLink>
         </div>
         <NavLink class="nav-link" href="login">
-            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> login
+            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @L["Login"]
         </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="/template-builder">
-                <span class="oi oi-dashboard" aria-hidden="true"></span> Template Builder
+                <span class="oi oi-dashboard" aria-hidden="true"></span> @L["TemplateBuilder"]
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="/templates">
-                <span class="oi oi-list" aria-hidden="true"></span> View All Templates
+                <span class="oi oi-list" aria-hidden="true"></span> @L["Templates"]
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="/admin-dashboard">
-                    <span class="oi oi-dashboard" aria-hidden="true"></span> Admin Dashboard
+                    <span class="oi oi-dashboard" aria-hidden="true"></span> @L["AdminDashboard"]
             </NavLink>
         </div>
     </nav>

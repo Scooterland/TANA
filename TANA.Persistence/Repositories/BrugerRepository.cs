@@ -12,7 +12,12 @@ namespace TANA.Persistence.Repositories
 
         public async Task<IEnumerable<Bruger>> GetAllAsync() => await db.Brugere.ToListAsync();
         public async Task<Bruger?> GetByIdAsync(int id) => await db.Brugere.FindAsync(id);
-        public async Task AddAsync(Bruger bruger) { db.Brugere.Add(bruger); await db.SaveChangesAsync(); }
+        public async Task AddAsync(Bruger bruger)
+        {
+            db.Brugere.Add(bruger);
+            await db.SaveChangesAsync();
+        }
+
         public async Task UpdateAsync(Bruger bruger)
         {
             var tracked = await db.Brugere.FindAsync(bruger.Id);

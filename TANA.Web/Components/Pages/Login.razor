@@ -7,8 +7,10 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @using TANA.Domain.Interface
 @using TANA.Web.Authentication
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 
-<h3>Login</h3>
+<h3>@L["Login"]</h3>
 
 @if (!string.IsNullOrEmpty(ErrorMessage))
 {
@@ -20,16 +22,16 @@
     <ValidationSummary />
 
     <div class="mb-3">
-        <label>Email</label>
+        <label>@L["Email"]</label>
         <InputText @bind-Value="loginModel.Email" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label>Password</label>
+        <label>@L["Password"]</label>
         <InputText @bind-Value="loginModel.Password" type="password" class="form-control" />
     </div>
 
-    <button class="btn btn-primary">Login</button>
+    <button class="btn btn-primary">@L["Login"]</button>
 </EditForm>
 
 @code {
@@ -41,7 +43,7 @@
         var allUsers = await BrugerService.GetAllAsync();
         var bruger = allUsers.FirstOrDefault(u =>
             u.Email == loginModel.Email &&
-            BCrypt.Verify(loginModel.Password, u.PasswordHash));
+            (BCrypt.Verify(loginModel.Password, u.PasswordHash)));
 
         if (bruger is not null)
         {
@@ -53,7 +55,7 @@
         }
         else
         {
-            ErrorMessage = "Forkert email eller adgangskode.";
+            ErrorMessage = @L["WrongCredentials"];
         }
     }
 
