@@ -1,369 +1,453 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
-  <resheader name="version"><value>2.0</value></resheader>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
-<data name="Welcome"> xml:space="preserve">
-  <value>Welcome to Tana!</value>
-</data>
-<data name="WrongCredentials"> xml:space="preserve">
-  <value>Wrong email and/or password</value>
-</data>
-<data name="NewTrip" xml:space="preserve">
-  <value>New Trip</value>
-</data>
-<data name="NewCustomer" xml:space="preserve">
-  <value>New customer</value>
-</data>
-<data name="SelectCustomer" xml:space="preserve">
-  <value>select customer</value>
-</data>
-<data name="Accommodation" xml:space="preserve">
-  <value>Accommodation</value>
-</data>
-<data name="Actions" xml:space="preserve">
-  <value>Actions</value>
-</data>
-<data name="AreYouSure" xml:space="preserve">
-  <value>Are you sure</value>
-</data>
-<data name="AdminDashboard" xml:space="preserve">
-  <value>Admin Dashboard</value>
-</data>
-<data name="Address" xml:space="preserve">
-  <value>Address</value>
-</data>
-<data name="Activity" xml:space="preserve">
-  <value>Activity</value>
-</data>
-<data name="AlreadyCreatedTravelPlans" xml:space="preserve">
-  <value>Already created travel plans</value>
-</data>
-<data name="Airline" xml:space="preserve">
-  <value>Airline</value>
-</data>
-<data name="Cancel" xml:space="preserve">
-  <value>Cancel</value>
-</data>
-<data name="Number of days" xml:space="preserve">
-  <value>Number of days</value>
-</data>
-<data name="Description" xml:space="preserve">
-  <value>Description</value>
-</data>
-<data name="Travel plan description" xml:space="preserve">
-  <value>Travel plan description</value>
-</data>
-<data name="Cancel" xml:space="preserve">
-  <value>Cancel</value>
-</data>
-<data name="CreatePDF" xml:space="preserve">
-  <value>Create PDF</value>
-</data>
-<data name="Create" xml:space="preserve">
-  <value>Create</value>
-</data>
-<data name="CreateStandardTrip" xml:space="preserve">
-  <value>Create standard trip</value>
-</data>
-<data name="CreatedTravelPlans" xml:space="preserve">
-  <value>Created travel plans</value>
-</data>
-<data name="CreateTravelPlan" xml:space="preserve">
-  <value>Create travel plan</value>
-</data>
-<data name="CreatedDate" xml:space="preserve">
-  <value>Created Date</value>
-</data>
-<data name="Customer" xml:space="preserve">
-  <value>Customer</value>
-</data>
-<data name="CustomerDash" xml:space="preserve">
-  <value>Customer Dashboard</value>
-</data>
-<data name="CustomizeTemplate:" xml:space="preserve">
-  <value>Customize Template:</value>
-</data>
-<data name="DA" xml:space="preserve">
-  <value>DA</value>
-</data>
-<data name="Days" xml:space="preserve">
-  <value>Days</value>
-</data>
-<data name="Date" xml:space="preserve">
-  <value>Date</value>
-</data>
-<data name="Day Sections" xml:space="preserve">
-  <value>Day Sections</value>
-</data>
-<data name="Delete" xml:space="preserve">
-  <value>Delete</value>
-</data>
-<data name="Description" xml:space="preserve">
-  <value>Description</value>
-</data>
-<data name="Departure" xml:space="preserve">
-  <value>Departure</value>
-</data>
-<data name="Download" xml:space="preserve">
-  <value>Download</value>
-</data>
-<data name="E-mail" xml:space="preserve">
-  <value>E-mail</value>
-</data>
-<data name="Edit" xml:space="preserve">
-  <value>Edit</value>
-</data>
-<data name="EditPlan" xml:space="preserve">
-  <value>Edit Plan</value>
-</data>
-<data name="EditTrip" xml:space="preserve">
-  <value>Edit Trip</value>
-</data>
-<data name="EditTripId" xml:space="preserve">
-  <value>Edit Trip #{0}</value>
-</data>
-<data name="Email" xml:space="preserve">
-  <value>Email</value>
-</data>
-<data name="EmailAddress" xml:space="preserve">
-  <value>Email address</value>
-</data>
-<data name="EnterNewEmailAddress" xml:space="preserve">
-  <value>Enter new email address</value>
-</data>
-<data name="English" xml:space="preserve">
-  <value>English</value>
-</data>
-<data name="Export" xml:space="preserve">
-  <value>Export</value>
-</data>
-<data name="ExistingTrips" xml:space="preserve">
-  <value>Existing trips</value>
-</data>
-<data name="Font" xml:space="preserve">
-  <value>Font</value>
-</data>
-<data name="Footer" xml:space="preserve">
-  <value>Footer</value>
-</data>
-<data name="GoToAdmin" xml:space="preserve">
-  <value>Go to admin</value>
-</data>
-<data name="Header" xml:space="preserve">
-  <value>Header</value>
-</data>
-<data name="Home" xml:space="preserve">
-  <value>Home</value>
-</data>
-<data name="History" xml:space="preserve">
-  <value>History</value>
-</data>
-<data name="Hotel" xml:space="preserve">
-  <value>Hotel</value>
-</data>
-<data name="Hotels" xml:space="preserve">
-  <value>Hotels</value>
-</data>
-<data name="Itinerary" xml:space="preserve">
-  <value>Itinerary</value>
-</data>
-<data name="Login" xml:space="preserve">
-  <value>Login</value>
-</data>
-<data name="Logout" xml:space="preserve">
-  <value>Logout</value>
-</data>
-<data name="Language" xml:space="preserve">
-  <value>Language</value>
-</data>
-<data name="Layout" xml:space="preserve">
-  <value>Layout</value>
-</data>
-<data name="List" xml:space="preserve">
-  <value>List</value>
-</data>
-<data name="Load" xml:space="preserve">
-  <value>Load</value>
-</data>
-<data name="Loading..." xml:space="preserve">
-  <value>Loading...</value>
-</data>
-<data name="Logout" xml:space="preserve">
-  <value>Logout</value>
-</data>
-<data name="Login" xml:space="preserve">
-  <value>Login</value>
-</data>
-<data name="Main" xml:space="preserve">
-  <value>Main</value>
-</data>
-<data name="ModifyEmail" xml:space="preserve">
-  <value>Modify Emailaddress</value>
-</data>
-<data name="Name" xml:space="preserve">
-  <value>Name</value>
-</data>
-<data name="New" xml:space="preserve">
-  <value>New</value>
-</data>
-<data name="NewPlan" xml:space="preserve">
-  <value>New Plan</value>
-</data>
-<data name="NewTrip" xml:space="preserve">
-  <value>New Trip</value>
-</data>
-<data name="NodataAvailable" xml:space="preserve">
-  <value>No data available</value>
-</data>
-<data name="Note" xml:space="preserve">
-  <value>Note</value>
-</data>
-<data name="NoAccess" xml:space="preserve">
-  <value>No Access</value>
-</data>
-<data name="NumberOfDays" xml:space="preserve">
-  <value>Number of days</value>
-</data>
-<data name="Password" xml:space="preserve">
-  <value>Password</value>
-</data>
-<data name="Pdf" xml:space="preserve">
-  <value>Pdf</value>
-</data>
-<data name="Phone" xml:space="preserve">
-  <value>Phone</value>
-</data>
-<data name="Plan" xml:space="preserve">
-  <value>Plan</value>
-</data>
-<data name="PlanName" xml:space="preserve">
-  <value>Plan name</value>
-</data>
-<data name="Preview" xml:space="preserve">
-  <value>Preview</value>
-</data>
-<data name="Print" xml:space="preserve">
-  <value>Print</value>
-</data>
-<data name="Price" xml:space="preserve">
-  <value>Price</value>
-</data>
-<data name="Reload" xml:space="preserve">
-  <value>Reload</value>
-</data>
-<data name="Remove" xml:space="preserve">
-  <value>Remove</value>
-</data>
-<data name="Resend" xml:space="preserve">
-  <value>Resend</value>
-</data>
-<data name="Reset" xml:space="preserve">
-  <value>Reset</value>
-</data>
-<data name="Return" xml:space="preserve">
-  <value>Return</value>
-</data>
-<data name="Role" xml:space="preserve">
-  <value>Role</value>
-</data>
-<data name="Save" xml:space="preserve">
-  <value>Save</value>
-</data>
-<data name="Search" xml:space="preserve">
-  <value>Search</value>
-</data>
-<data name="SaveChanges" xml:space="preserve">
-  <value>Save changes</value>
-</data>
-<data name="Select" xml:space="preserve">
-  <value>Select</value>
-</data>
-<data name="SelectCustomer" xml:space="preserve">
-  <value>Select customer</value>
-</data>
-<data name="SelectTrips" xml:space="preserve">
-  <value>Selected trips</value>
-</data>
-<data name="Send" xml:space="preserve">
-  <value>Send</value>
-</data>
-<data name="SendPlan" xml:space="preserve">
-  <value>Send Plan</value>
-</data>
-<data name="SendTravelPlan" xml:space="preserve">
-  <value>Send travelplan</value>
-</data>
-<data name="Show" xml:space="preserve">
-  <value>Show</value>
-</data>
-<data name="Status" xml:space="preserve">
-  <value>Status</value>
-</data>
-<data name="Submit" xml:space="preserve">
-  <value>Submit</value>
-</data>
-<data name="Startdate" xml:space="preserve">
-  <value>Startdate</value>
-</data>
-<data name="StandardTrips" xml:space="preserve">
-  <value>Standard trips</value>
-</data>
-<data name="Enddate" xml:space="preserve">
-  <value>Enddate</value>
-</data>
-<data name="Template" xml:space="preserve">
-  <value>Template</value>
-</data>
-<data name="Templates" xml:space="preserve">
-  <value>Templates</value>
-</data>
-<data name="TemplateBuilder" xml:space="preserve">
-  <value>Create template</value>
-</data>
-<data name="Test" xml:space="preserve">
-  <value>Test</value>
-</data>
-<data name="PhoneNumber" xml:space="preserve">
-  <value>Phone number</value>
-</data>
-<data name="TravelPlanName" xml:space="preserve">
-  <value>Travel plan name</value>
-</data>
-<data name="TravelPlanDestination" xml:space="preserve">
-  <value>Travel plan destination</value>
-</data>
-<data name="Trip" xml:space="preserve">
-  <value>Trip</value>
-</data>
-<data name="Trips" xml:space="preserve">
-  <value>Trips</value>
-</data>
-<data name="Type" xml:space="preserve">
-  <value>Type</value>
-</data>
-<data name="Title" xml:space="preserve">
-  <value>Title</value>
-</data>
-<data name="TotalPrice" xml:space="preserve">
-  <value>Total price</value>
-</data>
-<data name="TotalDays" xml:space="preserve">
-  <value>Total days</value>
-</data>
-<data name="Update" xml:space="preserve">
-  <value>Update</value>
-</data>
-<data name="User" xml:space="preserve">
-  <value>User</value>
-</data>
-<data name="View" xml:space="preserve">
-  <value>View</value>
-</data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome to Tana!</value>
+  </data>
+  <data name="WrongCredentials" xml:space="preserve">
+    <value>Wrong email and/or password</value>
+  </data>
+  <data name="NewTrip" xml:space="preserve">
+    <value>New Trip</value>
+  </data>
+  <data name="NewCustomer" xml:space="preserve">
+    <value>New customer</value>
+  </data>
+  <data name="SelectCustomer" xml:space="preserve">
+    <value>Select customer</value>
+  </data>
+  <data name="Accommodation" xml:space="preserve">
+    <value>Accommodation</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Airline" xml:space="preserve">
+    <value>Airline</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are you sure</value>
+  </data>
+  <data name="AdminDashboard" xml:space="preserve">
+    <value>Admin Dashboard</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CreatePDF" xml:space="preserve">
+    <value>Create PDF</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateStandardTrip" xml:space="preserve">
+    <value>Create standard trip</value>
+  </data>
+  <data name="CreatedTravelPlans" xml:space="preserve">
+    <value>Created travel plans</value>
+  </data>
+  <data name="CreateTravelPlan" xml:space="preserve">
+    <value>Create travel plan</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="CustomerDash" xml:space="preserve">
+    <value>Customer Dashboard</value>
+  </data>
+  <data name="CustomizeTemplate:" xml:space="preserve">
+    <value>Customize Template:</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Day Sections" xml:space="preserve">
+    <value>Day Sections</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Departure" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="E-mail" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditPlan" xml:space="preserve">
+    <value>Edit Plan</value>
+  </data>
+  <data name="EditTrip" xml:space="preserve">
+    <value>Edit Trip</value>
+  </data>
+  <data name="EditTripId" xml:space="preserve">
+    <value>Edit Trip #{0}</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Email address</value>
+  </data>
+  <data name="EnterNewEmailAddress" xml:space="preserve">
+    <value>Enter new email address</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExistingTrips" xml:space="preserve">
+    <value>Existing trips</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Footer</value>
+  </data>
+  <data name="GoToAdmin" xml:space="preserve">
+    <value>Go to admin</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="Hotels" xml:space="preserve">
+    <value>Hotels</value>
+  </data>
+  <data name="Itinerary" xml:space="preserve">
+    <value>Itinerary</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Loading..." xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="ModifyEmail" xml:space="preserve">
+    <value>Modify Emailaddress</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NewPlan" xml:space="preserve">
+    <value>New Plan</value>
+  </data>
+  <data name="NoDataAvailable" xml:space="preserve">
+    <value>No data available</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="NoAccess" xml:space="preserve">
+    <value>No Access</value>
+  </data>
+  <data name="NumberOfDays" xml:space="preserve">
+    <value>Number of days</value>
+  </data>
+  <data name="Pdf" xml:space="preserve">
+    <value>Pdf</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>Plan</value>
+  </data>
+  <data name="PlanName" xml:space="preserve">
+    <value>Plan name</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Reload" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Resend" xml:space="preserve">
+    <value>Resend</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Save changes</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectTrips" xml:space="preserve">
+    <value>Selected trips</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SendPlan" xml:space="preserve">
+    <value>Send Plan</value>
+  </data>
+  <data name="SendTravelPlan" xml:space="preserve">
+    <value>Send travelplan</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Startdate" xml:space="preserve">
+    <value>Startdate</value>
+  </data>
+  <data name="StandardTrips" xml:space="preserve">
+    <value>Standard trips</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Templates</value>
+  </data>
+  <data name="TemplateBuilder" xml:space="preserve">
+    <value>Create template</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="TravelPlanName" xml:space="preserve">
+    <value>Travel plan name</value>
+  </data>
+  <data name="TravelPlanDestination" xml:space="preserve">
+    <value>Travel plan destination</value>
+  </data>
+  <data name="Trip" xml:space="preserve">
+    <value>Trip</value>
+  </data>
+  <data name="Trips" xml:space="preserve">
+    <value>Trips</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TotalPrice" xml:space="preserve">
+    <value>Total price</value>
+  </data>
+  <data name="TotalDays" xml:space="preserve">
+    <value>Total days</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Activity" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="AlreadyCreatedTravelPlans" xml:space="preserve">
+    <value>Already created travel plans</value>
+  </data>
+  <data name="Travel plan description" xml:space="preserve">
+    <value>Travel plan description</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="Enddate" xml:space="preserve">
+    <value>Enddate</value>
+  </data>
 </root>
