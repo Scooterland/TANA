@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TANA.Domain.Entities;
 using TANA.Persistence.Data;
-using TANA.Domain.Interface;
+using TANA.Application.Interface;
 
 
 namespace TANA.Persistence.Repositories
@@ -21,6 +21,7 @@ namespace TANA.Persistence.Repositories
         {
             return await db.Rejser.Include(r => r.RejseTurer).ThenInclude(rt => rt.Tur).FirstOrDefaultAsync(r => r.Id == id);
         }
+
 
         public async Task AddAsync(Rejse rejse)
         {

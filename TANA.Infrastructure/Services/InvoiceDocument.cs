@@ -7,7 +7,7 @@ using QuestPDF.Fluent;
 using QuestPDF.Infrastructure;
 using QuestPDF.Helpers;
 using QuestPDF.Drawing;
-using TANA.Application.Models;
+using TANA.Domain.Entities;
 
 namespace TANA.Infrastructure.Services
 {

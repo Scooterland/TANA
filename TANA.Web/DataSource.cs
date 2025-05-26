@@ -1,6 +1,6 @@
 ﻿using QuestPDF.Helpers;
 using QuestPDF.Fluent;
-using TANA.Application.Models;
+using TANA.Domain.Entities;
 
 public static class InvoiceDocumentDataSource
 {

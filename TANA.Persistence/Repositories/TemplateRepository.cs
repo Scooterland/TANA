@@ -1,9 +1,9 @@
 ﻿using TANA.Persistence.Data;
-using TANA.Domain.Interface;
 using Microsoft.EntityFrameworkCore;
+using TANA.Application.Interface;
 
 
-namespace TANA.Infrastructure.Repositories
+namespace TANA.Persistence.Repositories
 {
     public class TemplateRepository : ITemplateRepository
 	{

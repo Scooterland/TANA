@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TANA.Application.Models
+namespace TANA.Domain.Entities
 {
     public class Address
     {

@@ -1,6 +1,8 @@
-﻿using TANA.Domain.Entities;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using TANA.Domain.Entities;
 
-namespace TANA.Domain.Interface
+namespace TANA.Application.Interface
 {
     public interface IRejseRepository
     {

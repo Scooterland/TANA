@@ -1,5 +1,5 @@
-﻿using TANA.Domain.Entities;
-using TANA.Domain.Interface;
+﻿using TANA.Application.Interface;
+using TANA.Domain.Entities;
 
 namespace TANA.Application.Services
 {

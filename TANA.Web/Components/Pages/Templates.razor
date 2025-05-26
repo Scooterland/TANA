@@ -1,6 +1,6 @@
 ﻿@page "/templates"
+@using TANA.Application.Interface
 @using TANA.Domain.Entities
-@using TANA.Domain.Interface
 @using TANA.Infrastructure.Services
 @inject TemplateLibraryService TemplateLibraryService
 @inject ITemplateRepository TemplateRepo
@@ -135,7 +135,6 @@ else if (showTemplates && templates != null)
     private bool isFileSelected;
     private string? message;
     private bool showTemplates = false;
-    private string? previewFile;
 
 
 

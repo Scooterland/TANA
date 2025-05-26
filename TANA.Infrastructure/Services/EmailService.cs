@@ -1,11 +1,6 @@
 ﻿using MimeKit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TANA.Domain.Interface;
 using MailKit.Net.Smtp;
+using TANA.Application.Interface;
 
 namespace TANA.Infrastructure.Services
 {

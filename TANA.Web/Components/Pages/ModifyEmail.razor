@@ -1,8 +1,8 @@
 ﻿@page "/modify-email"
-@using TANA.Infrastructure.Services;
-@using TANA.Domain.Interface;
-@using TANA.Application.Services;
 @using Microsoft.AspNetCore.Components.Authorization
+@using TANA.Application.Interface
+@using TANA.Application.Services;
+@using TANA.Infrastructure.Services;
 @inject AuthenticationStateProvider AuthStateProvider
 @inject IEmailSettingsService EmailSettingsService
 @using Microsoft.Extensions.Localization

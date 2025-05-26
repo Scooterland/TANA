@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TANA.Domain.Entities;
-using TANA.Domain.Interface;
 using TANA.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
+using TANA.Application.Interface;
 
 namespace TANA.Infrastructure.Services
 {

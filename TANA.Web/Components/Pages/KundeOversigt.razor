@@ -1,8 +1,8 @@
 ﻿@page "/kundeoversigt"
-﻿@using TANA.Application.Services
+﻿@using Microsoft.Extensions.Localization
+@using TANA.Application.Interface
+@using TANA.Application.Services
 @using TANA.Domain.Entities
-@using TANA.Domain.Interface
-@using Microsoft.Extensions.Localization
 @inject IStringLocalizer<Language> L
 @inject IKundeService KundeService
 @inject IRejseService RejseService

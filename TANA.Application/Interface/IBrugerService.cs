@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TANA.Domain.Entities;
 
-namespace TANA.Domain.Interface
+namespace TANA.Application.Interface
 {
     public interface IBrugerService
     {
