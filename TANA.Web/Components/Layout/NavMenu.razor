@@ -1,5 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
+@using TANA.Web.Authentication
 @inject AuthenticationStateProvider AuthProvider
+@rendermode InteractiveServer
 
 @code {
     private AuthenticationState? authState;
@@ -15,6 +17,7 @@
         }
     }
 }
+<CascadingAuthenticationState>
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
@@ -31,56 +34,83 @@
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
             </NavLink>
         </div>
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="kundeoversigt">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Kunde Oversigt
             </NavLink>
         </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="weather">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+            </NavLink>
+        </div>
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="modify-email">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Modify Email
             </NavLink>
         </div>
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="SendRejseplan">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Send Rejseplan
             </NavLink>
         </div>
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="opret-rejseplan">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Opret Rejseplan
             </NavLink>
+        </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="rejser">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Rejser
             </NavLink>
         </div>
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="standardture">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Standard ture
             </NavLink>
         </div>
-        <NavLink class="nav-link" href="login">
-            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> login
-        </NavLink>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="login">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> login
+            </NavLink>
         </div>
+
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="/template-builder">
                 <span class="oi oi-dashboard" aria-hidden="true"></span> Template Builder
             </NavLink>
         </div>
+
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="/templates">
                 <span class="oi oi-list" aria-hidden="true"></span> View All Templates
             </NavLink>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/admin-dashboard">
-                    <span class="oi oi-dashboard" aria-hidden="true"></span> Admin Dashboard
-            </NavLink>
-        </div>
+
+        <AuthorizeView Roles="Admin">
+            <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/admin-dashboard">
+                        <span class="oi oi-dashboard" aria-hidden="true"></span> Admin Dashboard
+                    </NavLink>
+
+                </div>
+            </Authorized>
+        </AuthorizeView>
+       
+
     </nav>
     </div>
+</CascadingAuthenticationState>
 
-        
+       

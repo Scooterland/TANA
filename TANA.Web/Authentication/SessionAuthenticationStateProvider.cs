@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using System.Security.Claims;
 using TANA.Domain.Entities;
+using TANA.Domain.DTOs;
 
 namespace TANA.Web.Authentication
 {
