@@ -76,6 +76,7 @@ builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
 builder.Services.AddScoped<TemplateStateService>();
 builder.Services.AddScoped<ITemplateRepository, TemplateRepository>();
 builder.Services.AddScoped<TemplateLibraryService>();
+builder.Services.AddScoped<TemplatePdfService>();
 
 // ✅ Database Context
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -85,6 +86,7 @@ builder.Services.AddHttpClient("TanaApi", client =>
 {
     client.BaseAddress = new Uri("http://localhost:5000/");
 });
+QuestPDF.Settings.License = LicenseType.Community;
 
 var app = builder.Build();
 
