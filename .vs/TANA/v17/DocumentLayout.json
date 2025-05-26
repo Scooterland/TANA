@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\rene3\\source\\repos\\TANA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\components\\pages\\admindashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\admindashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D57B8FFE-D4A4-48E5-BFD2-26DFD8523BDB}|TANA.Domain\\TANA.Domain.csproj|solutionrelative:tana.domain\\entities\\bruger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\components\\pages\\admindashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\pages\\admindashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|solutionrelative:tana.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58C35CB0-06C5-425A-B985-FD56B26E5B02}|TANA.Web\\TANA.Web.csproj|c:\\users\\rene3\\source\\repos\\tana\\tana.web\\authentication\\sessionauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -280,7 +280,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 31,
+          "SelectedChildIndex": 33,
           "Children": [
             {
               "$type": "Bookmark",
@@ -404,33 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TemplateBuilder.razor",
-              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\TemplateBuilder.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\TemplateBuilder.razor",
-              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\TemplateBuilder.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\Pages\\TemplateBuilder.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T10:39:26.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Program.cs",
-              "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Program.cs",
-              "RelativeToolTip": "TANA.Web\\Program.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAkwFUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T10:39:27.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TemplatePdfService.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Infrastructure\\Services\\TemplatePdfService.cs",
               "RelativeDocumentMoniker": "TANA.Infrastructure\\Services\\TemplatePdfService.cs",
@@ -438,12 +412,11 @@
               "RelativeToolTip": "TANA.Infrastructure\\Services\\TemplatePdfService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T22:16:09.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T22:16:09.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Templates.razor",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\Templates.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\Templates.razor",
@@ -451,12 +424,62 @@
               "RelativeToolTip": "TANA.Web\\Components\\Pages\\Templates.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T10:39:25.488Z",
+              "WhenOpened": "2025-05-26T10:39:25.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T17:38:05.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "AdminDashboard.razor",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\AdminDashboard.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\AdminDashboard.razor",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\AdminDashboard.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Pages\\AdminDashboard.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T10:37:44.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Program.cs",
+              "RelativeDocumentMoniker": "TANA.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Program.cs",
+              "RelativeToolTip": "TANA.Web\\Program.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwEcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:39:27.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TemplateBuilder.razor",
+              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\TemplateBuilder.razor",
+              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\TemplateBuilder.razor",
+              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\TemplateBuilder.razor",
+              "RelativeToolTip": "TANA.Web\\Components\\Pages\\TemplateBuilder.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T10:39:26.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "StandardTure.razor",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\StandardTure.razor",
               "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\StandardTure.razor",
@@ -464,24 +487,11 @@
               "RelativeToolTip": "TANA.Web\\Components\\Pages\\StandardTure.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-08T07:45:33.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T07:45:33.147Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminDashboard.razor",
-              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\AdminDashboard.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\Pages\\AdminDashboard.razor",
-              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Pages\\AdminDashboard.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\Pages\\AdminDashboard.razor",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T10:37:44.638Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "TANA.Persistence\\Data\\AppDbContext.cs",
@@ -493,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "BrugerRepository.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Persistence\\Repositories\\BrugerRepository.cs",
               "RelativeDocumentMoniker": "TANA.Persistence\\Repositories\\BrugerRepository.cs",
@@ -505,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Bruger.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Bruger.cs",
               "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Bruger.cs",
@@ -517,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Domain\\Entities\\Admin.cs",
               "RelativeDocumentMoniker": "TANA.Domain\\Entities\\Admin.cs",
@@ -526,18 +536,6 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T09:25:56.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\rene3\\source\\repos\\TANA\\TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "TANA.Web\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAgwF4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T17:38:05.305Z"
             },
             {
               "$type": "Document",

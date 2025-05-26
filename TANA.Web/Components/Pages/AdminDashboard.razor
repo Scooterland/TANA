@@ -1,9 +1,10 @@
 ﻿@page "/admin-dashboard"
 @using Microsoft.Extensions.Localization
-@inject IStringLocalizer<Language> L
 @using TANA.Domain.Entities
 @using TANA.Application.Interface
 @using TANA.Application.Services
+
+@inject IStringLocalizer<Language> L
 @inject IBrugerService BrugerService
 @rendermode InteractiveServer
 
