@@ -1,12 +1,12 @@
-﻿@page "/templates"
-@using TANA.Application.Interface
+@page "/templates"
 @using TANA.Domain.Entities
+@using TANA.Application.Interface
 @using TANA.Infrastructure.Services
 @inject TemplateLibraryService TemplateLibraryService
 @inject ITemplateRepository TemplateRepo
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
-@inject PdfGenerationService PdfService
+@inject TemplatePdfService PdfService
 @rendermode InteractiveServer
 
 
@@ -68,11 +68,6 @@
                                     @onclick="() => DeleteTemplate(template.Id)">
                                 Delete
                             </button>
-
-                            <button class="btn btn-secondary btn-sm"
-                                    @onclick="() => ShowPreview(template.Id, template.TemplateName)">
-                                Preview
-                            </button>
                         </td>
                     </tr>
                 }
@@ -82,13 +77,6 @@
 }
 
 
-@if (!string.IsNullOrEmpty(previewHtml))
-{
-    <div class="mt-4">
-        <h5>Preview:</h5>
-        <iframe srcdoc="@previewHtml" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
-    </div>
-}
 
 else if (showTemplates && templates != null)
 {
@@ -202,7 +190,7 @@ else if (showTemplates && templates != null)
                     TemplateName = templateName,
                     CreatedDate = DateTime.UtcNow,
                     LastModifiedDate = DateTime.UtcNow,
-                    Items = new List<TemplateItemEntity>() 
+                    Items = new List<TemplateItemEntity>()
                 };
 
             await TemplateRepo.SaveTemplateAsync(newTemplate);
@@ -227,34 +215,9 @@ else if (showTemplates && templates != null)
         try
         {
             var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
-
             if (templateEntity != null)
             {
-                string htmlContent = PdfService.GenerateHtmlFromTemplate(
-                 templateEntity.TemplateName,
-                 templateEntity.Items.Select(i => new TemplateItem
-                     {
-                         Id = i.Id.ToString(),
-                         Content = i.Content,
-                         Order = i.Order,
-                         Title = i.Title,
-                         Activity = i.Activity,
-                         Meals = i.Meals,
-                         Accommodation = i.Accommodation,
-                         Note = i.Note,
-                         IsSelected = true
-                     }).ToList(),
-                 templateEntity.Id,
-                 templateEntity.CreatedDate,
-                 templateEntity.LastModifiedDate,
-                 templateEntity.PrimaryColor,
-                 templateEntity.HeaderBgColor,
-                 templateEntity.FooterBgColor,
-                 templateEntity.FontFamily,
-                 templateEntity.ImageUrl
-             );
-
-                byte[] pdfBytes = PdfService.GeneratePdf(htmlContent);
+                byte[] pdfBytes = PdfService.Generate(templateEntity);
 
                 if (pdfBytes.Length == 0)
                 {
@@ -263,25 +226,11 @@ else if (showTemplates && templates != null)
                 }
 
                 string sanitizedTemplateName = templateEntity.TemplateName.Replace(" ", "_");
-
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "TemplateLibrary", sanitizedTemplateName);
-
-                if (!Directory.Exists(directoryPath))
-                {
-                    Directory.CreateDirectory(directoryPath);
-                }
-
                 string fileName = $"{sanitizedTemplateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
 
-                await TemplateLibraryService.SaveTemplateFileAsync(
-                    new MemoryStream(pdfBytes),
-                    sanitizedTemplateName,
-                    fileName
-                );
+                var base64 = Convert.ToBase64String(pdfBytes);
 
-                Console.WriteLine($"PDF saved at: {Path.Combine(directoryPath, fileName)}");
-
-                await JS.InvokeVoidAsync("alert", $"PDF exported successfully as {fileName}");
+                await JS.InvokeVoidAsync("downloadFile", fileName, base64);
             }
         }
         catch (Exception ex)
@@ -292,32 +241,28 @@ else if (showTemplates && templates != null)
     }
 
 
-
-
-
-
     private void EditTemplate(int id) =>
         Navigation.NavigateTo($"/template-builder/{id}");
 
 
     private async Task DeleteTemplate(int id)
     {
-        bool confirmed = await JS.InvokeAsync<bool>("confirm", "Are you sure you want to delete this template?");
-        if (confirmed)
+        try
         {
-            await TemplateRepo.DeleteTemplateAsync(id);
-
-            templates = templates?.Where(t => t.Id != id).ToList();
-
-            if (!string.IsNullOrEmpty(previewHtml))
+            bool confirmed = await JS.InvokeAsync<bool>("confirm", "Are you sure you want to delete this template?");
+            if (confirmed)
             {
-                previewHtml = null;
+                await TemplateRepo.DeleteTemplateAsync(id);
+                templates = templates?.Where(t => t.Id != id).ToList();
+                StateHasChanged();
             }
-
-            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting template: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Error deleting the template.");
         }
     }
-
 
     private async Task ToggleTemplates()
     {
@@ -331,39 +276,6 @@ else if (showTemplates && templates != null)
         StateHasChanged();
     }
 
-    private string? previewHtml;
-
-    private async Task ShowPreview(int templateId, string templateName)
-    {
-        var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
-        if (templateEntity != null)
-        {
-            previewHtml = PdfService.GenerateHtmlFromTemplate(
-                templateEntity.TemplateName,
-                templateEntity.Items.Select(i => new TemplateItem
-                    {
-                        Id = i.Id.ToString(),
-                        Content = i.Content,
-                        Order = i.Order,
-                        Title = i.Title,
-                        Activity = i.Activity,
-                        Meals = i.Meals,
-                        Accommodation = i.Accommodation,
-                        Note = i.Note,
-                        IsSelected = true
-                    }).ToList(),
-                templateEntity.Id,
-                templateEntity.CreatedDate,
-                templateEntity.LastModifiedDate,
-                templateEntity.PrimaryColor,
-                templateEntity.HeaderBgColor,
-                templateEntity.FooterBgColor,
-                templateEntity.FontFamily,
-                templateEntity.ImageUrl);
-
-            StateHasChanged();
-        }
-    }
 
 
 }
