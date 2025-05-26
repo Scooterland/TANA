@@ -71,6 +71,7 @@ builder.Services.AddScoped<IKundeService, KundeService>();
 builder.Services.AddScoped<IRejseService, RejseService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
+builder.Services.AddScoped<TemplatePdfService>();
 builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
 builder.Services.AddScoped<TemplateStateService>();
 builder.Services.AddScoped<ITemplateRepository, TemplateRepository>();
