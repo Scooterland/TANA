@@ -363,8 +363,8 @@
   <data name="SendPlan" xml:space="preserve">
     <value>Send plan</value>
   </data>
-  <data name="SendTravelPlan" xml:space="preserve">
-    <value>Send rejseplan</value>
+  <data name="SendItinerary" xml:space="preserve">
+    <value>Send Rejseplan</value>
   </data>
   <data name="Show" xml:space="preserve">
     <value>Vis</value>
@@ -506,5 +506,8 @@
   </data>
   <data name="Activities" xml:space="preserve">
     <value>Aktiviteter</value>
+  </data>
+  <data name="TravelAgent" xml:space="preserve">
+    <value>Rejseagent</value>
   </data>
 </root>
