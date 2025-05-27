@@ -183,9 +183,6 @@
   <data name="Date" xml:space="preserve">
     <value>Dato</value>
   </data>
-  <data name="Day Sections" xml:space="preserve">
-    <value>Dag Sektioner</value>
-  </data>
   <data name="Delete" xml:space="preserve">
     <value>Slet</value>
   </data>
@@ -295,7 +292,7 @@
     <value>Ingen data tilgængelig</value>
   </data>
   <data name="Note" xml:space="preserve">
-    <value>Note</value>
+    <value>Notat</value>
   </data>
   <data name="NoAccess" xml:space="preserve">
     <value>Ingen adgang</value>
@@ -484,7 +481,7 @@
     <value>Sortering af sektioner (træk for at ændre rækkefølgen)</value>
   </data>
   <data name="Notes" xml:space="preserve">
-    <value>Notat</value>
+    <value>Notater</value>
   </data>
   <data name="Meals" xml:space="preserve">
     <value>Måltider</value>
@@ -500,5 +497,14 @@
   </data>
   <data name="Details" xml:space="preserve">
     <value>Detaljer</value>
+  </data>
+  <data name="DaySections" xml:space="preserve">
+    <value>Dag Sektioner</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Dag</value>
+  </data>
+  <data name="Activities" xml:space="preserve">
+    <value>Aktiviteter</value>
   </data>
 </root>

@@ -29,7 +29,7 @@
                     <input type="checkbox"
                            checked="@showHeader"
                            @onchange="OnHeaderChanged" />
-                    @L["Header"]"
+                    @L["Header"]
                 </label>
 
                 <label>
@@ -43,7 +43,7 @@
                     <input type="checkbox"
                            checked="@showSummary"
                            @onchange="OnSummaryChanged" />
-                    @L["Summary"]"
+                    @L["Summary"]
                 </label>
 
                 <label>
@@ -84,7 +84,7 @@
             @if (Template.Items?.Any() == true)
             {
                 <div class="template-preview mt-3">
-                    <h5>@L["SortTemplatebuilder"]</h5>
+                    <h5>@L["SortTemplateBuilder"]</h5>
                     <ul id="sortableItems" class="list-group">
                         @foreach (var itm in Template.Items.OrderBy(i => i.Order))
                         {

@@ -183,9 +183,6 @@
   <data name="Date" xml:space="preserve">
     <value>Date</value>
   </data>
-  <data name="Day Sections" xml:space="preserve">
-    <value>Day Sections</value>
-  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
@@ -500,5 +497,14 @@
   </data>
   <data name="Details" xml:space="preserve">
     <value>Details</value>
+  </data>
+  <data name="DaySections" xml:space="preserve">
+    <value>Day Sections</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="Activities" xml:space="preserve">
+    <value>Activities</value>
   </data>
 </root>
