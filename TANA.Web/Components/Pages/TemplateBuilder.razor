@@ -10,11 +10,13 @@
 @inject NavigationManager Navigation
 @inject TemplatePdfService PdfService
 @inject TemplateLibraryService TemplateLibraryService
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 
 
-<h3>Template Builder</h3>
+<h3>@L["TemplateBuilder"]</h3>
 
-<button class="btn btn-primary mb-3" @onclick="ShowPopup">New Template (A4)</button>
+<button class="btn btn-primary mb-3" @onclick="ShowPopup">@L["New"] @L["Template"] (A4)</button>
 
 @if (isPopupVisible)
 {
@@ -27,47 +29,47 @@
                     <input type="checkbox"
                            checked="@showHeader"
                            @onchange="OnHeaderChanged" />
-                    Header
+                    @L["Header"]
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showImage"
                            @onchange="OnImageChanged" />
-                    Image
+                    @L["Image"]
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showSummary"
                            @onchange="OnSummaryChanged" />
-                    Summary
+                    @L["Summary"]
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showDays"
                            @onchange="OnDaysChanged" />
-                    Day Sections
+                    @L["DaySections"]
                 </label>
             </div>
 
             <div class="mb-3">
-                <h4>Customize Template:</h4>
+                <h4>@L["CustomizeTemplate"]:</h4>
                 <div class="form-group">
-                    <label>Primary Color</label>
+                    <label>@L["PrimaryColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.PrimaryColor" />
                 </div>
                 <div class="form-group">
-                    <label>Header Background Color</label>
+                    <label>@L["Header"] @L["BackgroundColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.HeaderBgColor" />
                 </div>
                 <div class="form-group">
-                    <label>Footer Background Color</label>
+                    <label>@L["Footer"] @L["BackgroundColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.FooterBgColor" />
                 </div>
                 <div class="form-group">
-                    <label>Font Family</label>
+                    <label>@L["Font"]</label>
                     <select class="form-control" @bind="newTemplate.FontFamily">
                         <option value="Arial">Arial</option>
                         <option value="Verdana">Verdana</option>
@@ -82,7 +84,7 @@
             @if (Template.Items?.Any() == true)
             {
                 <div class="template-preview mt-3">
-                    <h5>Sortering af sektioner (træk for at ændre rækkefølgen)</h5>
+                    <h5>@L["SortTemplateBuilder"]</h5>
                     <ul id="sortableItems" class="list-group">
                         @foreach (var itm in Template.Items.OrderBy(i => i.Order))
                         {
@@ -135,29 +137,29 @@
     <div class="page-body">
 
         <div class="mb-3">
-            <label>Template Name:</label>
-            <input class="form-control" @bind="newTemplate.TemplateName" placeholder="Enter template name..." />
+            <label>@L["Template"] @L["Name"]:</label>
+            <input class="form-control" @bind="newTemplate.TemplateName" />
         </div>
 
         @if (showHeader)
         {
             <div class="mb-3">
-                <label>Header:</label>
+                <label>@L["Header"]:</label>
                 <div class="section">
-                    <h3>Header Content</h3>
+                    <h3>@L["Header"] @L["Content"]</h3>
 
                     <div class="mb-2">
-                        <label>Title:</label>
-                        <input type="text" class="form-control mb-1" @bind="newTemplate.HeaderTitle" placeholder="Enter header title..." />
+                        <label>@L["Title"]:</label>
+                        <input type="text" class="form-control mb-1" @bind="newTemplate.HeaderTitle" />
                     </div>
 
                     <div class="mb-2">
-                        <label>Date:</label>
+                        <label>@L["Date"]:</label>
                         <input type="date" class="form-control mb-1" @bind="newTemplate.HeaderDate" />
                     </div>
 
                     <div class="mb-2">
-                        <label>Header Image (Optional):</label>
+                        <label>@L["Header"] @L["Image"] (@L["Optional"]):</label>
                         <input type="file" class="form-control mb-1" @onchange="OnHeaderImageSelected" />
                         @if (!string.IsNullOrEmpty(newTemplate.HeaderImageUrl))
                         {
@@ -174,9 +176,9 @@
         @if (showImage)
         {
             <div class="mb-3">
-                <label>Image:</label>
+                <label>@L["Image"]:</label>
                 <InputFile OnChange="OnImageSelected" class="form-control mb-2" />
-                <input type="text" class="form-control mb-2" @bind="imageUrl" placeholder="Or paste image URL..." />
+                <input type="text" class="form-control mb-2" @bind="imageUrl" />
 
                 @if (!string.IsNullOrEmpty(imageUrl))
                 {
@@ -190,15 +192,15 @@
         @if (showSummary)
         {
             <div class="mb-3">
-                <label>Summary (Description of the Trip):</label>
-                <textarea class="form-control" rows="6" @bind="newTemplate.Summary" placeholder="Enter trip summary..."></textarea>
+                <label>@L["Summary"]:</label>
+                <textarea class="form-control" rows="6" @bind="newTemplate.Summary" ></textarea>
             </div>
         }
 
         @if (showDays)
         {
             <div class="mb-3">
-                <label>Number of Days:</label>
+                <label>@L["NumberOfDays"]:</label>
                 <input type="number"
                        class="form-control mb-2"
                        min="1" max="30"
@@ -210,45 +212,45 @@
                         var index = i;
 
                         <div class="section" @key="daySections[index]">
-                            <h3>Dag @(index + 1)</h3>
+                            <h3>@L["Day"] @(index + 1)</h3>
 
                             <div class="mb-2">
-                                <label>Title:</label>
+                                <label>@L["title"]:</label>
                                 <input type="text"
                                        class="form-control mb-1"
                                        @bind="daySections[index].Title" />
                             </div>
 
                             <div class="mb-2">
-                                <label>Aktivitet:</label>
+                                <label>@L["Activities"]:</label>
                                 <textarea class="form-control mb-1"
                                           rows="3"
                                           @bind="daySections[index].Activity"
-                                          placeholder="Enter activity..."></textarea>
+                                          ></textarea>
                             </div>
 
                             <div class="mb-2">
-                                <label>Måltider inkluderet:</label>
+                                <label>@L["Meals"]:</label>
                                 <input type="text"
                                        class="form-control mb-1"
                                        @bind="daySections[index].Meals"
-                                       placeholder="Enter meals..." />
+                                       />
                             </div>
 
                             <div class="mb-2">
-                                <label>Overnatning:</label>
+                                <label>@L["Accommodation"]:</label>
                                 <input type="text"
                                        class="form-control mb-1"
                                        @bind="daySections[index].Accommodation"
-                                       placeholder="Enter accommodation..." />
+                                       />
                             </div>
 
                             <div class="mb-2">
-                                <label>Notat:</label>
+                                <label>@L["Notes"]:</label>
                                 <textarea class="form-control"
                                           rows="2"
                                           @bind="daySections[index].Note"
-                                          placeholder="Enter note..."></textarea>
+                                          ></textarea>
                             </div>
                         </div>
                     }
@@ -267,7 +269,7 @@
             CVR. Nr.: 41239425
         </div>
         <div>
-            <strong>Mobile:</strong> +45 42 73 10 45<br />
+            <strong>Mobil:</strong> +45 42 73 10 45<br />
             <strong>Email:</strong> kontakt@tanzania-eksperten.dk<br />
             <a href="https://tanzania-eksperten.dk" target="_blank">www.tanzania-eksperten.dk</a>
         </div>
@@ -275,13 +277,13 @@
 
 
     <div class="footer-buttons">
-        <button class="btn btn-primary me-2" @onclick="SaveTemplateHandler">Save</button>
-        <button class="btn btn-secondary" @onclick="HidePopup">Cancel</button>
+        <button class="btn btn-primary me-2" @onclick="SaveTemplateHandler">@L["Save"]</button>
+        <button class="btn btn-secondary" @onclick="HidePopup">@L["Cancel"]</button>
     </div>
 }
 
 <br />
-<button class="btn btn-secondary mt-3 me-2" @onclick="GoBack">Go to Templates</button>
+<button class="btn btn-secondary mt-3 me-2" @onclick="GoBack">@L["GoToTemplates"]</button>
 
 
 

@@ -7,19 +7,19 @@
 @inject IStringLocalizer<Language> L
 @rendermode InteractiveServer
 
-<h3>Opret Rejseplan</h3>
+<h3>@L["Create"] @L["Itinerary"]</h3>
 
-<label for="navn">@L["Name"]:</label>
-<input type="text" id="navn" @bind="navn" placeholder="Rejseplan Navn" />
+<label for="navn">@L["Title"]:</label>
+<input type="text" id="navn" @bind="navn" />
 
 <label for="description">@L["Description"]:</label>
-<input type="text" id="description" @bind="description" placeholder="Beskrivelse af rejseplan" />
+<input type="text" id="description" @bind="description" />
 
 <label for="pris">@L["Price"]:</label>
-<input type="number" id="pris" @bind="pris" placeholder="Pris" />
+<input type="number" id="pris" @bind="pris" />
 
 <label for="dage">@L["Days"]:</label>
-<input type="number" id="dage" @bind="dage" placeholder="Dage" />
+<input type="number" id="dage" @bind="dage" />
 
 <h4>@L["SelectTrips"]:</h4>
 @foreach (var tur in availableTurs)
