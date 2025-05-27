@@ -165,9 +165,6 @@
   <data name="CreatedTravelPlans" xml:space="preserve">
     <value>Oprettede rejseplaner</value>
   </data>
-  <data name="CreateTravelPlan" xml:space="preserve">
-    <value>Opret rejseplan</value>
-  </data>
   <data name="CreatedDate" xml:space="preserve">
     <value>Oprettelsesdato</value>
   </data>
@@ -178,7 +175,7 @@
     <value>Kunde Panel</value>
   </data>
   <data name="CustomizeTemplate:" xml:space="preserve">
-    <value>Tilpas skabelon:</value>
+    <value>Tilpas Skabelon</value>
   </data>
   <data name="Days" xml:space="preserve">
     <value>Dage</value>
@@ -187,7 +184,7 @@
     <value>Dato</value>
   </data>
   <data name="Day Sections" xml:space="preserve">
-    <value>Dag sektioner</value>
+    <value>Dag Sektioner</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Slet</value>
@@ -217,7 +214,7 @@
     <value>Redigér Rejse #{0}</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>E-mail</value>
+    <value>Email</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
     <value>Emailadresse</value>
@@ -235,13 +232,13 @@
     <value>Oprettede Rejser</value>
   </data>
   <data name="Font" xml:space="preserve">
-    <value>Font</value>
+    <value>Typografi</value>
   </data>
   <data name="Footer" xml:space="preserve">
     <value>Sidefod</value>
   </data>
   <data name="GoToAdmin" xml:space="preserve">
-    <value>Gå til admin</value>
+    <value>Gå til Admin</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Overskrift</value>
@@ -385,7 +382,7 @@
     <value>Startdato</value>
   </data>
   <data name="StandardTrips" xml:space="preserve">
-    <value>Standard ture</value>
+    <value>Standard Ture</value>
   </data>
   <data name="Template" xml:space="preserve">
     <value>Skabelon</value>
@@ -394,7 +391,7 @@
     <value>Skabeloner</value>
   </data>
   <data name="TemplateBuilder" xml:space="preserve">
-    <value>Opret skabelon</value>
+    <value>Opret Skabelon</value>
   </data>
   <data name="Test" xml:space="preserve">
     <value>Test</value>
@@ -449,5 +446,38 @@
   </data>
   <data name="Enddate" xml:space="preserve">
     <value>Slutdato</value>
+  </data>
+  <data name="CreateItinerary" xml:space="preserve">
+    <value>Opret Rejseplan</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Billede</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="PrimaryColor" xml:space="preserve">
+    <value>Primær Farve</value>
+  </data>
+  <data name="BackgroundColor" xml:space="preserve">
+    <value>Baggrundsfarve</value>
+  </data>
+  <data name="GoToTemplates" xml:space="preserve">
+    <value>Gå til Skabeloner</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="Library" xml:space="preserve">
+    <value>Bibliotek</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="NoFileSelected" xml:space="preserve">
+    <value>Ingen fil valgt</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Skjul</value>
   </data>
 </root>

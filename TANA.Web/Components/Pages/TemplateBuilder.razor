@@ -10,11 +10,13 @@
 @inject NavigationManager Navigation
 @inject TemplatePdfService PdfService
 @inject TemplateLibraryService TemplateLibraryService
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 
 
-<h3>Template Builder</h3>
+<h3>@L["TemplateBuilder"]</h3>
 
-<button class="btn btn-primary mb-3" @onclick="ShowPopup">New Template (A4)</button>
+<button class="btn btn-primary mb-3" @onclick="ShowPopup">@L["New"] @L["Template"] (A4)</button>
 
 @if (isPopupVisible)
 {
@@ -27,47 +29,47 @@
                     <input type="checkbox"
                            checked="@showHeader"
                            @onchange="OnHeaderChanged" />
-                    Header
+                    @L["Header"]"
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showImage"
                            @onchange="OnImageChanged" />
-                    Image
+                    @L["Image"]
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showSummary"
                            @onchange="OnSummaryChanged" />
-                    Summary
+                    @L["Summary"]"
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showDays"
                            @onchange="OnDaysChanged" />
-                    Day Sections
+                    @L["DaySections"]
                 </label>
             </div>
 
             <div class="mb-3">
-                <h4>Customize Template:</h4>
+                <h4>@L["CustomizeTemplate"]:</h4>
                 <div class="form-group">
-                    <label>Primary Color</label>
+                    <label>@L["PrimaryColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.PrimaryColor" />
                 </div>
                 <div class="form-group">
-                    <label>Header Background Color</label>
+                    <label>@L["Header"] @L["BackgroundColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.HeaderBgColor" />
                 </div>
                 <div class="form-group">
-                    <label>Footer Background Color</label>
+                    <label>@L["Footer"] @L["BackgroundColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.FooterBgColor" />
                 </div>
                 <div class="form-group">
-                    <label>Font Family</label>
+                    <label>@L["Font"]</label>
                     <select class="form-control" @bind="newTemplate.FontFamily">
                         <option value="Arial">Arial</option>
                         <option value="Verdana">Verdana</option>

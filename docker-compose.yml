@@ -1,10 +1,25 @@
+version: '3.9'
 services:
   tana-api:
     build:
       context: .
       dockerfile: TANA.API/Dockerfile
-
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=host.docker.internal,1433;Database=RejseplanDB;User Id=tanauser;Password=1234;Encrypt=True;TrustServerCertificate=True;
+ 
+      
   tana-web:
     build:
       context: .
       dockerfile: TANA.Web/Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - ASPNETCORE_URLS=http://+:8081
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - tana-api

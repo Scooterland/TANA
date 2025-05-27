@@ -7,21 +7,23 @@
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
 @inject TemplatePdfService PdfService
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 @rendermode InteractiveServer
 
 
 
-<h3>Templates Library</h3>
+<h3>@L["Templates"] @L["Library"]</h3>
 
 <button class="btn btn-secondary mb-3" @onclick="ToggleTemplates">
-    @(showTemplates ? "Hide Templates" : "Show Templates")
+    @(showTemplates ? @L["Hide"]+ @L["Templates"] : @L["Show"]+ @L["Templates"])
 </button>
 
 <div class="mb-4 p-3 border rounded">
-    <h4>Upload New Template</h4>
+    <h4>@L["Upload"] @L["New"] @L["Template"]</h4>
     <InputFile OnChange="HandleFileSelected" />
     <button class="btn btn-primary mt-2" @onclick="SaveFile" disabled="@( !isFileSelected )">
-        Save Template
+        @L["Save"] @L["Template"]
     </button>
 
     @if (!string.IsNullOrEmpty(message))

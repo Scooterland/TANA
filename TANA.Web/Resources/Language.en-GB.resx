@@ -165,9 +165,6 @@
   <data name="CreatedTravelPlans" xml:space="preserve">
     <value>Created travel plans</value>
   </data>
-  <data name="CreateTravelPlan" xml:space="preserve">
-    <value>Create travel plan</value>
-  </data>
   <data name="CreatedDate" xml:space="preserve">
     <value>Created Date</value>
   </data>
@@ -178,7 +175,7 @@
     <value>Customer Dashboard</value>
   </data>
   <data name="CustomizeTemplate:" xml:space="preserve">
-    <value>Customize Template:</value>
+    <value>Customize Template</value>
   </data>
   <data name="Days" xml:space="preserve">
     <value>Days</value>
@@ -241,7 +238,7 @@
     <value>Footer</value>
   </data>
   <data name="GoToAdmin" xml:space="preserve">
-    <value>Go to admin</value>
+    <value>Go to Admin</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Header</value>
@@ -385,7 +382,7 @@
     <value>Startdate</value>
   </data>
   <data name="StandardTrips" xml:space="preserve">
-    <value>Standard trips</value>
+    <value>Standard Trips</value>
   </data>
   <data name="Template" xml:space="preserve">
     <value>Template</value>
@@ -394,7 +391,7 @@
     <value>Templates</value>
   </data>
   <data name="TemplateBuilder" xml:space="preserve">
-    <value>Create template</value>
+    <value>Create Template</value>
   </data>
   <data name="Test" xml:space="preserve">
     <value>Test</value>
@@ -449,5 +446,38 @@
   </data>
   <data name="Enddate" xml:space="preserve">
     <value>Enddate</value>
+  </data>
+  <data name="CreateItinerary" xml:space="preserve">
+    <value>Create Itinerary</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="PrimaryColor" xml:space="preserve">
+    <value>Primary Color</value>
+  </data>
+  <data name="BackgroundColor" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="GoToTemplates" xml:space="preserve">
+    <value>Go to Templates</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="Library" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="NoFileSelected" xml:space="preserve">
+    <value>No file selected</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Hide</value>
   </data>
 </root>
