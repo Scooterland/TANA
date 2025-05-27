@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TANA.Application.Interface;
 using TANA.Application.Services;
-using TANA.Domain.Entities;
 using TANA.Infrastructure.Services;
 using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;

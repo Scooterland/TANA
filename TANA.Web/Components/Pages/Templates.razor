@@ -70,6 +70,9 @@
                                     @onclick="() => DeleteTemplate(template.Id)">
                                 Delete
                             </button>
+                            <button class="btn btn-secondary btn-sm" @onclick="() => ShowPdfPreview(template.Id)">
+                                Preview PDF
+                            </button>
                         </td>
                     </tr>
                 }
@@ -125,6 +128,7 @@ else if (showTemplates && templates != null)
     private bool isFileSelected;
     private string? message;
     private bool showTemplates = false;
+    private string? previewFile;
 
 
 
@@ -188,12 +192,12 @@ else if (showTemplates && templates != null)
             await TemplateLibraryService.SaveTemplateFileAsync(fs, templateName, fileName);
 
             var newTemplate = new TemplateEntity
-                {
-                    TemplateName = templateName,
-                    CreatedDate = DateTime.UtcNow,
-                    LastModifiedDate = DateTime.UtcNow,
-                    Items = new List<TemplateItemEntity>()
-                };
+            {
+                TemplateName = templateName,
+                CreatedDate = DateTime.UtcNow,
+                LastModifiedDate = DateTime.UtcNow,
+                Items = new List<TemplateItemEntity>()
+            };
 
             await TemplateRepo.SaveTemplateAsync(newTemplate);
 
@@ -228,11 +232,19 @@ else if (showTemplates && templates != null)
                 }
 
                 string sanitizedTemplateName = templateEntity.TemplateName.Replace(" ", "_");
+                string directoryPath = Path.Combine("wwwroot", "TemplateLibrary", sanitizedTemplateName);
+
+                if (!Directory.Exists(directoryPath))
+                    Directory.CreateDirectory(directoryPath);
+
                 string fileName = $"{sanitizedTemplateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
+                string filePath = Path.Combine(directoryPath, fileName);
 
-                var base64 = Convert.ToBase64String(pdfBytes);
+                await File.WriteAllBytesAsync(filePath, pdfBytes);
 
-                await JS.InvokeVoidAsync("downloadFile", fileName, base64);
+                Console.WriteLine($"PDF saved at: {filePath}");
+
+                await JS.InvokeVoidAsync("alert", $"PDF exported successfully at {filePath}");
             }
         }
         catch (Exception ex)
@@ -241,6 +253,8 @@ else if (showTemplates && templates != null)
             await JS.InvokeVoidAsync("alert", "Error exporting the template to PDF.");
         }
     }
+
+
 
 
     private void EditTemplate(int id) =>
@@ -266,6 +280,7 @@ else if (showTemplates && templates != null)
         }
     }
 
+
     private async Task ToggleTemplates()
     {
         showTemplates = !showTemplates;
@@ -277,6 +292,35 @@ else if (showTemplates && templates != null)
 
         StateHasChanged();
     }
+
+    private async Task ShowPdfPreview(int templateId)
+    {
+        try
+        {
+            var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
+            if (templateEntity != null)
+            {
+                byte[] pdfBytes = PdfService.Generate(templateEntity);
+
+                if (pdfBytes.Length > 0)
+                {
+                    var base64 = Convert.ToBase64String(pdfBytes);
+                    var pdfDataUrl = $"data:application/pdf;base64,{base64}";
+                    await JS.InvokeVoidAsync("open", pdfDataUrl, "_blank");
+                }
+                else
+                {
+                    await JS.InvokeVoidAsync("alert", "PDF generation failed.");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error previewing PDF: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Error showing PDF preview.");
+        }
+    }
+
 
 
 

@@ -333,11 +333,11 @@
     {
         isPopupVisible = true;
         newTemplate = new TemplateModel
-            {
-                TemplateName = string.Empty,
-                CreatedDate = DateTime.UtcNow,
-                LastModifiedDate = DateTime.UtcNow
-            };
+        {
+            TemplateName = string.Empty,
+            CreatedDate = DateTime.UtcNow,
+            LastModifiedDate = DateTime.UtcNow
+        };
         imageUrl = null;
     }
 
@@ -422,32 +422,32 @@
                 foreach (var day in daySections)
                 {
                     items.Add(new TemplateItemEntity
-                        {
-                            Content = "Day Sections",
-                            Title = day.Title,
-                            Activity = day.Activity,
-                            Meals = day.Meals,
-                            Accommodation = day.Accommodation,
-                            Note = day.Note,
-                            Order = order++
-                        });
+                    {
+                        Content = "Day Sections",
+                        Title = day.Title,
+                        Activity = day.Activity,
+                        Meals = day.Meals,
+                        Accommodation = day.Accommodation,
+                        Note = day.Note,
+                        Order = order++
+                    });
                 }
             }
 
             var entity = new TemplateEntity
-                {
-                    Id = newTemplate.Id,
-                    TemplateName = newTemplate.TemplateName,
-                    Summary = newTemplate.Summary,
-                    ImageUrl = newTemplate.ImageUrl,
-                    CreatedDate = newTemplate.Id == 0 ? DateTime.UtcNow : Template.CreatedDate,
-                    LastModifiedDate = DateTime.UtcNow,
-                    Items = items,
-                    PrimaryColor = newTemplate.PrimaryColor,
-                    HeaderBgColor = newTemplate.HeaderBgColor,
-                    FooterBgColor = newTemplate.FooterBgColor,
-                    FontFamily = newTemplate.FontFamily
-                };
+            {
+                Id = newTemplate.Id,
+                TemplateName = newTemplate.TemplateName,
+                Summary = newTemplate.Summary,
+                ImageUrl = newTemplate.ImageUrl,
+                CreatedDate = newTemplate.Id == 0 ? DateTime.UtcNow : Template.CreatedDate,
+                LastModifiedDate = DateTime.UtcNow,
+                Items = items,
+                PrimaryColor = newTemplate.PrimaryColor,
+                HeaderBgColor = newTemplate.HeaderBgColor,
+                FooterBgColor = newTemplate.FooterBgColor,
+                FontFamily = newTemplate.FontFamily
+            };
 
             if (entity.Id == 0)
                 await TemplateRepo.SaveTemplateAsync(entity);
@@ -487,15 +487,15 @@
             foreach (var day in daySections)
             {
                 items.Add(new TemplateItemEntity
-                    {
-                        Content = "Day Sections",
-                        Title = day.Title,
-                        Activity = day.Activity,
-                        Meals = day.Meals,
-                        Accommodation = day.Accommodation,
-                        Note = day.Note,
-                        Order = order++
-                    });
+                {
+                    Content = "Day Sections",
+                    Title = day.Title,
+                    Activity = day.Activity,
+                    Meals = day.Meals,
+                    Accommodation = day.Accommodation,
+                    Note = day.Note,
+                    Order = order++
+                });
             }
         }
 
@@ -569,41 +569,41 @@
             if (entity == null) return new TemplateModel();
 
             var model = new TemplateModel
+            {
+                Id = entity.Id,
+                TemplateName = entity.TemplateName,
+                Summary = entity.Summary,
+                ImageUrl = entity.ImageUrl,
+                CreatedDate = entity.CreatedDate,
+                LastModifiedDate = entity.LastModifiedDate,
+                PrimaryColor = entity.PrimaryColor,
+                HeaderBgColor = entity.HeaderBgColor,
+                FooterBgColor = entity.FooterBgColor,
+                FontFamily = entity.FontFamily,
+                Items = entity.Items.Select(i => new TemplateItem
                 {
-                    Id = entity.Id,
-                    TemplateName = entity.TemplateName,
-                    Summary = entity.Summary,
-                    ImageUrl = entity.ImageUrl,
-                    CreatedDate = entity.CreatedDate,
-                    LastModifiedDate = entity.LastModifiedDate,
-                    PrimaryColor = entity.PrimaryColor,
-                    HeaderBgColor = entity.HeaderBgColor,
-                    FooterBgColor = entity.FooterBgColor,
-                    FontFamily = entity.FontFamily,
-                    Items = entity.Items.Select(i => new TemplateItem
-                    {
-                        Id = i.Id.ToString(),
-                        Content = i.Content,
-                        Order = i.Order,
-                        Title = i.Title,
-                        Activity = i.Activity,
-                        Meals = i.Meals,
-                        Accommodation = i.Accommodation,
-                        Note = i.Note,
-                        IsSelected = true
-                    }).ToList()
-                };
+                    Id = i.Id.ToString(),
+                    Content = i.Content,
+                    Order = i.Order,
+                    Title = i.Title,
+                    Activity = i.Activity,
+                    Meals = i.Meals,
+                    Accommodation = i.Accommodation,
+                    Note = i.Note,
+                    IsSelected = true
+                }).ToList()
+            };
 
             daySections = entity.Items
                 .Where(i => i.Content == "Day Sections")
                 .Select(i => new DaySection
-                    {
-                        Title = i.Title,
-                        Activity = i.Activity,
-                        Meals = i.Meals,
-                        Accommodation = i.Accommodation,
-                        Note = i.Note
-                    }).ToList();
+                {
+                    Title = i.Title,
+                    Activity = i.Activity,
+                    Meals = i.Meals,
+                    Accommodation = i.Accommodation,
+                    Note = i.Note
+                }).ToList();
 
             return model;
         }
@@ -620,12 +620,12 @@
     private void AddItem(string content)
     {
         Template.Items.Add(new TemplateItem
-            {
-                Id = nextId.ToString(),
-                Content = content,
-                Order = Template.Items.Count + 1,
-                IsSelected = true
-            });
+        {
+            Id = nextId.ToString(),
+            Content = content,
+            Order = Template.Items.Count + 1,
+            IsSelected = true
+        });
         nextId++;
     }
 
@@ -667,29 +667,29 @@
             if (showHeader)
             {
                 items.Add(new TemplateItemEntity
-                    {
-                        Content = "Header",
-                        Title = newTemplate.HeaderTitle,
-                        Order = order++
-                    });
+                {
+                    Content = "Header",
+                    Title = newTemplate.HeaderTitle,
+                    Order = order++
+                });
             }
 
             if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
             {
                 items.Add(new TemplateItemEntity
-                    {
-                        Content = "Image",
-                        Order = order++
-                    });
+                {
+                    Content = "Image",
+                    Order = order++
+                });
             }
 
             if (showSummary)
             {
                 items.Add(new TemplateItemEntity
-                    {
-                        Content = "Summary",
-                        Order = order++
-                    });
+                {
+                    Content = "Summary",
+                    Order = order++
+                });
             }
 
             if (showDays)
@@ -697,28 +697,28 @@
                 foreach (var day in daySections)
                 {
                     items.Add(new TemplateItemEntity
-                        {
-                            Content = "Day Sections",
-                            Title = day.Title,
-                            Activity = day.Activity,
-                            Meals = day.Meals,
-                            Accommodation = day.Accommodation,
-                            Note = day.Note,
-                            Order = order++
-                        });
+                    {
+                        Content = "Day Sections",
+                        Title = day.Title,
+                        Activity = day.Activity,
+                        Meals = day.Meals,
+                        Accommodation = day.Accommodation,
+                        Note = day.Note,
+                        Order = order++
+                    });
                 }
             }
 
             var templateEntity = new TemplateEntity
-                {
-                    Id = Template.Id,
-                    TemplateName = newTemplate.TemplateName,
-                    Summary = newTemplate.Summary,
-                    ImageUrl = imageUrl ?? string.Empty,
-                    CreatedDate = Template.CreatedDate,
-                    LastModifiedDate = DateTime.UtcNow,
-                    Items = items
-                };
+            {
+                Id = Template.Id,
+                TemplateName = newTemplate.TemplateName,
+                Summary = newTemplate.Summary,
+                ImageUrl = imageUrl ?? string.Empty,
+                CreatedDate = Template.CreatedDate,
+                LastModifiedDate = DateTime.UtcNow,
+                Items = items
+            };
 
             if (templateEntity.Id == 0)
                 await TemplateRepo.SaveTemplateAsync(templateEntity);
@@ -740,15 +740,15 @@
     private void LoadTemplateIntoEditor()
     {
         newTemplate = new TemplateModel
-            {
-                Id = Template.Id,
-                TemplateName = Template.TemplateName,
-                Summary = Template.Summary,
-                ImageUrl = Template.ImageUrl,
-                HeaderTitle = Template.Items.FirstOrDefault(i => i.Content == "Header")?.Title ?? string.Empty,
-                CreatedDate = Template.CreatedDate,
-                LastModifiedDate = Template.LastModifiedDate
-            };
+        {
+            Id = Template.Id,
+            TemplateName = Template.TemplateName,
+            Summary = Template.Summary,
+            ImageUrl = Template.ImageUrl,
+            HeaderTitle = Template.Items.FirstOrDefault(i => i.Content == "Header")?.Title ?? string.Empty,
+            CreatedDate = Template.CreatedDate,
+            LastModifiedDate = Template.LastModifiedDate
+        };
 
         imageUrl = Template.ImageUrl;
 
@@ -761,13 +761,13 @@
             .Where(i => i.Content == "Day Sections")
             .OrderBy(i => i.Order)
             .Select(i => new DaySection
-                {
-                    Title = i.Title,
-                    Activity = i.Activity,
-                    Meals = i.Meals,
-                    Accommodation = i.Accommodation,
-                    Note = i.Note
-                }).ToList();
+            {
+                Title = i.Title,
+                Activity = i.Activity,
+                Meals = i.Meals,
+                Accommodation = i.Accommodation,
+                Note = i.Note
+            }).ToList();
 
         numberOfDays = daySections.Count == 0 ? 1 : daySections.Count;
 
@@ -867,12 +867,12 @@
             if (!Template.Items.Any(i => i.Content == name))
             {
                 Template.Items.Add(new TemplateItem
-                    {
-                        Id = (++nextId).ToString(),
-                        Content = name,
-                        Order = Template.Items.Count + 1,
-                        IsSelected = true
-                    });
+                {
+                    Id = (++nextId).ToString(),
+                    Content = name,
+                    Order = Template.Items.Count + 1,
+                    IsSelected = true
+                });
             }
         }
         else
