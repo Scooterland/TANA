@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TANA.Application.Interface;
 using TANA.Application.Services;
-using TANA.Domain.Entities;
 using TANA.Infrastructure.Services;
 using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
@@ -35,7 +34,7 @@ builder.Services.AddScoped<TemplateLibraryService>();
 
 builder.Services.AddHttpClient("TanaApi", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5000/");
+    client.BaseAddress = new Uri("http://tana-api:8080/");
 });
 
 var app = builder.Build();
@@ -46,7 +45,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+if (!IsRunningInDocker())
+{
+    app.UseHttpsRedirection();
+}
+
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+static bool IsRunningInDocker()
+{
+    return Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true";
+}

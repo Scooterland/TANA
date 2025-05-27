@@ -11,6 +11,7 @@ using TANA.Web.Authentication;
 using TANA.Web.Components;
 using System.Globalization;
 using TANA.Application.Interface;
+using QuestPDF.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -71,10 +72,12 @@ builder.Services.AddScoped<IKundeService, KundeService>();
 builder.Services.AddScoped<IRejseService, RejseService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IEmailSettingsService, EmailSettingsService>();
+builder.Services.AddScoped<TemplatePdfService>();
 builder.Services.AddScoped<ITravelPlanService, TravelPlanService>();
 builder.Services.AddScoped<TemplateStateService>();
 builder.Services.AddScoped<ITemplateRepository, TemplateRepository>();
 builder.Services.AddScoped<TemplateLibraryService>();
+builder.Services.AddScoped<TemplatePdfService>();
 
 // ✅ Database Context
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -82,8 +85,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddHttpClient("TanaApi", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5000/");
+    client.BaseAddress = new Uri("http://tana-api:8080/");
 });
+QuestPDF.Settings.License = LicenseType.Community;
 
 var app = builder.Build();
 
@@ -100,7 +104,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+if (!IsRunningInDocker())
+{
+    app.UseHttpsRedirection();
+}
+
 app.UseStaticFiles();
 app.UseAntiforgery();
 
@@ -108,3 +116,7 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+static bool IsRunningInDocker()
+{
+    return Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true";
+}

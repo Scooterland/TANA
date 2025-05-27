@@ -1,27 +1,29 @@
-﻿@page "/templates"
-@using TANA.Application.Interface
+@page "/templates"
 @using TANA.Domain.Entities
+@using TANA.Application.Interface
 @using TANA.Infrastructure.Services
 @inject TemplateLibraryService TemplateLibraryService
 @inject ITemplateRepository TemplateRepo
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
-@inject PdfGenerationService PdfService
+@inject TemplatePdfService PdfService
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 @rendermode InteractiveServer
 
 
 
-<h3>Templates Library</h3>
+<h3>@L["Template"] @L["Library"]</h3>
 
 <button class="btn btn-secondary mb-3" @onclick="ToggleTemplates">
-    @(showTemplates ? "Hide Templates" : "Show Templates")
+    @(showTemplates ? @L["Hide"] + " " + @L["Templates"] : @L["Show"]+ " " + @L["Templates"])
 </button>
 
 <div class="mb-4 p-3 border rounded">
-    <h4>Upload New Template</h4>
+    <h4>@L["Upload"] @L["New"] @L["Template"]</h4>
     <InputFile OnChange="HandleFileSelected" />
     <button class="btn btn-primary mt-2" @onclick="SaveFile" disabled="@( !isFileSelected )">
-        Save Template
+        @L["Save"] @L["Template"]
     </button>
 
     @if (!string.IsNullOrEmpty(message))
@@ -34,15 +36,15 @@
 @if (showTemplates && templates != null)
 {
     <div class="mt-4">
-        <h5>Template Actions</h5>
+        <h5>@L["Templates"]:</h5>
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Template Name</th>
-                    <th>Created Date</th>
-                    <th>Last Modified</th>
-                    <th>Actions</th>
+                    <th>@L["Template"] @L["Name"]</th>
+                    <th>@L["CreatedDate"] </th>
+                    <th>@L["LastModified"]</th>
+                    <th>@L["Actions"]</th>
                 </tr>
             </thead>
             <tbody>
@@ -56,22 +58,20 @@
                         <td>
                             <button class="btn btn-primary btn-sm me-2"
                                     @onclick="() => ExportToPdf(template.Id)">
-                                Export PDF
+                                @L["Export"] PDF
                             </button>
 
                             <button class="btn btn-success btn-sm me-2"
                                     @onclick="() => EditTemplate(template.Id)">
-                                Edit
+                                @L["Edit"]"
                             </button>
 
                             <button class="btn btn-danger btn-sm me-2"
                                     @onclick="() => DeleteTemplate(template.Id)">
-                                Delete
+                                @L["Delete"]"
                             </button>
-
-                            <button class="btn btn-secondary btn-sm"
-                                    @onclick="() => ShowPreview(template.Id, template.TemplateName)">
-                                Preview
+                            <button class="btn btn-secondary btn-sm" @onclick="() => ShowPdfPreview(template.Id)">
+                                @L["Preview"] PDF
                             </button>
                         </td>
                     </tr>
@@ -82,37 +82,30 @@
 }
 
 
-@if (!string.IsNullOrEmpty(previewHtml))
-{
-    <div class="mt-4">
-        <h5>Preview:</h5>
-        <iframe srcdoc="@previewHtml" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
-    </div>
-}
 
 else if (showTemplates && templates != null)
 {
     <div class="mt-4">
-        <h5>Template Details</h5>
+        <h5>@L["Template"] @L["Details"]</h5>
         @foreach (var template in templates)
         {
             <div class="border p-3 mb-2">
                 <h5>@template.TemplateName</h5>
-                <p>Created Date: @template.CreatedDate</p>
-                <p>Last Modified: @template.LastModifiedDate</p>
+                <p>@L["CreatedDate"]: @template.CreatedDate</p>
+                <p>@L["LastModified"]: @template.LastModifiedDate</p>
 
                 @if (template.Items.Any(i => i.Content == "Day Sections"))
                 {
-                    <h6>Day Sections:</h6>
+                    <h6>@L["DaySections"]</h6>
                     <ul>
                         @foreach (var item in template.Items.Where(i => i.Content == "Day Sections"))
                         {
                             <li>
-                                <strong>Title:</strong> @item.Title <br />
-                                <strong>Activity:</strong> @item.Activity <br />
-                                <strong>Meals:</strong> @item.Meals <br />
-                                <strong>Accommodation:</strong> @item.Accommodation <br />
-                                <strong>Note:</strong> @item.Note <br />
+                                <strong>@L["Title"]:</strong> @item.Title <br />
+                                <strong>@L["Activity"]:</strong> @item.Activity <br />
+                                <strong>@L["Meals"]:</strong> @item.Meals <br />
+                                <strong>@L["Accommodation"]:</strong> @item.Accommodation <br />
+                                <strong>@L["Note"]:</strong> @item.Note <br />
                             </li>
                         }
                     </ul>
@@ -135,6 +128,7 @@ else if (showTemplates && templates != null)
     private bool isFileSelected;
     private string? message;
     private bool showTemplates = false;
+    private string? previewFile;
 
 
 
@@ -198,12 +192,12 @@ else if (showTemplates && templates != null)
             await TemplateLibraryService.SaveTemplateFileAsync(fs, templateName, fileName);
 
             var newTemplate = new TemplateEntity
-                {
-                    TemplateName = templateName,
-                    CreatedDate = DateTime.UtcNow,
-                    LastModifiedDate = DateTime.UtcNow,
-                    Items = new List<TemplateItemEntity>() 
-                };
+            {
+                TemplateName = templateName,
+                CreatedDate = DateTime.UtcNow,
+                LastModifiedDate = DateTime.UtcNow,
+                Items = new List<TemplateItemEntity>()
+            };
 
             await TemplateRepo.SaveTemplateAsync(newTemplate);
 
@@ -227,34 +221,9 @@ else if (showTemplates && templates != null)
         try
         {
             var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
-
             if (templateEntity != null)
             {
-                string htmlContent = PdfService.GenerateHtmlFromTemplate(
-                 templateEntity.TemplateName,
-                 templateEntity.Items.Select(i => new TemplateItem
-                     {
-                         Id = i.Id.ToString(),
-                         Content = i.Content,
-                         Order = i.Order,
-                         Title = i.Title,
-                         Activity = i.Activity,
-                         Meals = i.Meals,
-                         Accommodation = i.Accommodation,
-                         Note = i.Note,
-                         IsSelected = true
-                     }).ToList(),
-                 templateEntity.Id,
-                 templateEntity.CreatedDate,
-                 templateEntity.LastModifiedDate,
-                 templateEntity.PrimaryColor,
-                 templateEntity.HeaderBgColor,
-                 templateEntity.FooterBgColor,
-                 templateEntity.FontFamily,
-                 templateEntity.ImageUrl
-             );
-
-                byte[] pdfBytes = PdfService.GeneratePdf(htmlContent);
+                byte[] pdfBytes = PdfService.Generate(templateEntity);
 
                 if (pdfBytes.Length == 0)
                 {
@@ -263,25 +232,19 @@ else if (showTemplates && templates != null)
                 }
 
                 string sanitizedTemplateName = templateEntity.TemplateName.Replace(" ", "_");
-
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "TemplateLibrary", sanitizedTemplateName);
+                string directoryPath = Path.Combine("wwwroot", "TemplateLibrary", sanitizedTemplateName);
 
                 if (!Directory.Exists(directoryPath))
-                {
                     Directory.CreateDirectory(directoryPath);
-                }
 
                 string fileName = $"{sanitizedTemplateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
+                string filePath = Path.Combine(directoryPath, fileName);
 
-                await TemplateLibraryService.SaveTemplateFileAsync(
-                    new MemoryStream(pdfBytes),
-                    sanitizedTemplateName,
-                    fileName
-                );
+                await File.WriteAllBytesAsync(filePath, pdfBytes);
 
-                Console.WriteLine($"PDF saved at: {Path.Combine(directoryPath, fileName)}");
+                Console.WriteLine($"PDF saved at: {filePath}");
 
-                await JS.InvokeVoidAsync("alert", $"PDF exported successfully as {fileName}");
+                await JS.InvokeVoidAsync("alert", $"PDF exported successfully at {filePath}");
             }
         }
         catch (Exception ex)
@@ -294,27 +257,26 @@ else if (showTemplates && templates != null)
 
 
 
-
-
     private void EditTemplate(int id) =>
         Navigation.NavigateTo($"/template-builder/{id}");
 
 
     private async Task DeleteTemplate(int id)
     {
-        bool confirmed = await JS.InvokeAsync<bool>("confirm", "Are you sure you want to delete this template?");
-        if (confirmed)
+        try
         {
-            await TemplateRepo.DeleteTemplateAsync(id);
-
-            templates = templates?.Where(t => t.Id != id).ToList();
-
-            if (!string.IsNullOrEmpty(previewHtml))
+            bool confirmed = await JS.InvokeAsync<bool>("confirm", "Are you sure you want to delete this template?");
+            if (confirmed)
             {
-                previewHtml = null;
+                await TemplateRepo.DeleteTemplateAsync(id);
+                templates = templates?.Where(t => t.Id != id).ToList();
+                StateHasChanged();
             }
-
-            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting template: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Error deleting the template.");
         }
     }
 
@@ -331,39 +293,35 @@ else if (showTemplates && templates != null)
         StateHasChanged();
     }
 
-    private string? previewHtml;
-
-    private async Task ShowPreview(int templateId, string templateName)
+    private async Task ShowPdfPreview(int templateId)
     {
-        var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
-        if (templateEntity != null)
+        try
         {
-            previewHtml = PdfService.GenerateHtmlFromTemplate(
-                templateEntity.TemplateName,
-                templateEntity.Items.Select(i => new TemplateItem
-                    {
-                        Id = i.Id.ToString(),
-                        Content = i.Content,
-                        Order = i.Order,
-                        Title = i.Title,
-                        Activity = i.Activity,
-                        Meals = i.Meals,
-                        Accommodation = i.Accommodation,
-                        Note = i.Note,
-                        IsSelected = true
-                    }).ToList(),
-                templateEntity.Id,
-                templateEntity.CreatedDate,
-                templateEntity.LastModifiedDate,
-                templateEntity.PrimaryColor,
-                templateEntity.HeaderBgColor,
-                templateEntity.FooterBgColor,
-                templateEntity.FontFamily,
-                templateEntity.ImageUrl);
+            var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
+            if (templateEntity != null)
+            {
+                byte[] pdfBytes = PdfService.Generate(templateEntity);
 
-            StateHasChanged();
+                if (pdfBytes.Length > 0)
+                {
+                    var base64 = Convert.ToBase64String(pdfBytes);
+                    var pdfDataUrl = $"data:application/pdf;base64,{base64}";
+                    await JS.InvokeVoidAsync("open", pdfDataUrl, "_blank");
+                }
+                else
+                {
+                    await JS.InvokeVoidAsync("alert", "PDF generation failed.");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error previewing PDF: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Error showing PDF preview.");
         }
     }
+
+
 
 
 }

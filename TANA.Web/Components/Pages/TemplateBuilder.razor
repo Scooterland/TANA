@@ -1,6 +1,6 @@
-﻿@page "/template-builder/{templateId:int?}"
-@using TANA.Application.Interface
+@page "/template-builder/{templateId:int?}"
 @using TANA.Domain.Entities
+@using TANA.Application.Interface
 @rendermode InteractiveServer
 @using TANA.Application.Services
 @using TANA.Infrastructure.Services
@@ -8,13 +8,15 @@
 @inject IJSRuntime JS
 @inject ITemplateRepository TemplateRepo
 @inject NavigationManager Navigation
-@inject PdfGenerationService PdfService
+@inject TemplatePdfService PdfService
 @inject TemplateLibraryService TemplateLibraryService
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Language> L
 
 
-<h3>Template Builder</h3>
+<h3>@L["TemplateBuilder"]</h3>
 
-<button class="btn btn-primary mb-3" @onclick="ShowPopup">New Template (A4)</button>
+<button class="btn btn-primary mb-3" @onclick="ShowPopup">@L["New"] @L["Template"] (A4)</button>
 
 @if (isPopupVisible)
 {
@@ -27,47 +29,47 @@
                     <input type="checkbox"
                            checked="@showHeader"
                            @onchange="OnHeaderChanged" />
-                    Header
+                    @L["Header"]
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showImage"
                            @onchange="OnImageChanged" />
-                    Image
+                    @L["Image"]
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showSummary"
                            @onchange="OnSummaryChanged" />
-                    Summary
+                    @L["Summary"]
                 </label>
 
                 <label>
                     <input type="checkbox"
                            checked="@showDays"
                            @onchange="OnDaysChanged" />
-                    Day Sections
+                    @L["DaySections"]
                 </label>
             </div>
 
             <div class="mb-3">
-                <h4>Customize Template:</h4>
+                <h4>@L["CustomizeTemplate"]:</h4>
                 <div class="form-group">
-                    <label>Primary Color</label>
+                    <label>@L["PrimaryColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.PrimaryColor" />
                 </div>
                 <div class="form-group">
-                    <label>Header Background Color</label>
+                    <label>@L["Header"] @L["BackgroundColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.HeaderBgColor" />
                 </div>
                 <div class="form-group">
-                    <label>Footer Background Color</label>
+                    <label>@L["Footer"] @L["BackgroundColor"]</label>
                     <input type="color" class="form-control form-control-color" @bind="newTemplate.FooterBgColor" />
                 </div>
                 <div class="form-group">
-                    <label>Font Family</label>
+                    <label>@L["Font"]</label>
                     <select class="form-control" @bind="newTemplate.FontFamily">
                         <option value="Arial">Arial</option>
                         <option value="Verdana">Verdana</option>
@@ -82,7 +84,7 @@
             @if (Template.Items?.Any() == true)
             {
                 <div class="template-preview mt-3">
-                    <h5>Sortering af sektioner (træk for at ændre rækkefølgen)</h5>
+                    <h5>@L["SortTemplateBuilder"]</h5>
                     <ul id="sortableItems" class="list-group">
                         @foreach (var itm in Template.Items.OrderBy(i => i.Order))
                         {
@@ -124,40 +126,40 @@
     </style>
 
 
-        <!-- ======= HEADER ======= -->
+    <!-- ======= HEADER ======= -->
     <div class="page-header d-flex align-items-center justify-content-between">
         <img src="https://tanzania-eksperten.dk/wp-content/uploads/2021/08/Logo_Logo-lang-dark-1.svg" class="logo" style="max-height:50px;" />
         <h2>@(Template.TemplateName ?? "Create New Template")</h2>
     </div>
 
 
-        <!-- ======= BODY ======= -->
-        <div class="page-body">
+    <!-- ======= BODY ======= -->
+    <div class="page-body">
 
-            <div class="mb-3">
-                <label>Template Name:</label>
-                <input class="form-control" @bind="newTemplate.TemplateName" placeholder="Enter template name..." />
-            </div>
+        <div class="mb-3">
+            <label>@L["Template"] @L["Name"]:</label>
+            <input class="form-control" @bind="newTemplate.TemplateName" />
+        </div>
 
         @if (showHeader)
         {
             <div class="mb-3">
-                <label>Header:</label>
+                <label>@L["Header"]:</label>
                 <div class="section">
-                    <h3>Header Content</h3>
+                    <h3>@L["Header"] @L["Content"]</h3>
 
                     <div class="mb-2">
-                        <label>Title:</label>
-                        <input type="text" class="form-control mb-1" @bind="newTemplate.HeaderTitle" placeholder="Enter header title..." />
+                        <label>@L["Title"]:</label>
+                        <input type="text" class="form-control mb-1" @bind="newTemplate.HeaderTitle" />
                     </div>
 
                     <div class="mb-2">
-                        <label>Date:</label>
+                        <label>@L["Date"]:</label>
                         <input type="date" class="form-control mb-1" @bind="newTemplate.HeaderDate" />
                     </div>
 
                     <div class="mb-2">
-                        <label>Header Image (Optional):</label>
+                        <label>@L["Header"] @L["Image"] (@L["Optional"]):</label>
                         <input type="file" class="form-control mb-1" @onchange="OnHeaderImageSelected" />
                         @if (!string.IsNullOrEmpty(newTemplate.HeaderImageUrl))
                         {
@@ -174,9 +176,9 @@
         @if (showImage)
         {
             <div class="mb-3">
-                <label>Image:</label>
+                <label>@L["Image"]:</label>
                 <InputFile OnChange="OnImageSelected" class="form-control mb-2" />
-                <input type="text" class="form-control mb-2" @bind="imageUrl" placeholder="Or paste image URL..." />
+                <input type="text" class="form-control mb-2" @bind="imageUrl" />
 
                 @if (!string.IsNullOrEmpty(imageUrl))
                 {
@@ -187,18 +189,18 @@
             </div>
         }
 
-            @if (showSummary)
-            {
-                <div class="mb-3">
-                    <label>Summary (Description of the Trip):</label>
-                    <textarea class="form-control" rows="6" @bind="newTemplate.Summary" placeholder="Enter trip summary..."></textarea>
-                </div>
-            }
+        @if (showSummary)
+        {
+            <div class="mb-3">
+                <label>@L["Summary"]:</label>
+                <textarea class="form-control" rows="6" @bind="newTemplate.Summary" ></textarea>
+            </div>
+        }
 
         @if (showDays)
         {
             <div class="mb-3">
-                <label>Number of Days:</label>
+                <label>@L["NumberOfDays"]:</label>
                 <input type="number"
                        class="form-control mb-2"
                        min="1" max="30"
@@ -210,45 +212,45 @@
                         var index = i;
 
                         <div class="section" @key="daySections[index]">
-                            <h3>Dag @(index + 1)</h3>
+                            <h3>@L["Day"] @(index + 1)</h3>
 
                             <div class="mb-2">
-                                <label>Title:</label>
+                                <label>@L["title"]:</label>
                                 <input type="text"
                                        class="form-control mb-1"
                                        @bind="daySections[index].Title" />
                             </div>
 
                             <div class="mb-2">
-                                <label>Aktivitet:</label>
+                                <label>@L["Activities"]:</label>
                                 <textarea class="form-control mb-1"
                                           rows="3"
                                           @bind="daySections[index].Activity"
-                                          placeholder="Enter activity..."></textarea>
+                                          ></textarea>
                             </div>
 
                             <div class="mb-2">
-                                <label>Måltider inkluderet:</label>
+                                <label>@L["Meals"]:</label>
                                 <input type="text"
                                        class="form-control mb-1"
                                        @bind="daySections[index].Meals"
-                                       placeholder="Enter meals..." />
+                                       />
                             </div>
 
                             <div class="mb-2">
-                                <label>Overnatning:</label>
+                                <label>@L["Accommodation"]:</label>
                                 <input type="text"
                                        class="form-control mb-1"
                                        @bind="daySections[index].Accommodation"
-                                       placeholder="Enter accommodation..." />
+                                       />
                             </div>
 
                             <div class="mb-2">
-                                <label>Notat:</label>
+                                <label>@L["Notes"]:</label>
                                 <textarea class="form-control"
                                           rows="2"
                                           @bind="daySections[index].Note"
-                                          placeholder="Enter note..."></textarea>
+                                          ></textarea>
                             </div>
                         </div>
                     }
@@ -256,10 +258,10 @@
             </div>
         }
 
-        </div>
+    </div>
 
 
-        <!-- ======= FOOTER ======= -->
+    <!-- ======= FOOTER ======= -->
     <div class="page-footer d-flex justify-content-between align-items-center">
         <img src="https://tanzania-eksperten.dk/wp-content/uploads/2024/10/logo-3280.png.png" class="footer-logo-img" style="max-height:50px;" />
         <div>
@@ -267,21 +269,21 @@
             CVR. Nr.: 41239425
         </div>
         <div>
-            <strong>Mobile:</strong> +45 42 73 10 45<br />
+            <strong>Mobil:</strong> +45 42 73 10 45<br />
             <strong>Email:</strong> kontakt@tanzania-eksperten.dk<br />
             <a href="https://tanzania-eksperten.dk" target="_blank">www.tanzania-eksperten.dk</a>
         </div>
     </div>
 
 
-        <div class="footer-buttons">
-        <button class="btn btn-primary me-2" @onclick="SaveTemplateHandler">Save</button>
-        <button class="btn btn-secondary" @onclick="HidePopup">Cancel</button>
+    <div class="footer-buttons">
+        <button class="btn btn-primary me-2" @onclick="SaveTemplateHandler">@L["Save"]</button>
+        <button class="btn btn-secondary" @onclick="HidePopup">@L["Cancel"]</button>
     </div>
 }
 
 <br />
- <button class="btn btn-secondary mt-3 me-2" @onclick="GoBack">Go to Templates</button>
+<button class="btn btn-secondary mt-3 me-2" @onclick="GoBack">@L["GoToTemplates"]</button>
 
 
 
@@ -299,7 +301,7 @@
     {
         if (isPopupVisible && Template.Items?.Any() == true)
         {
-            await Task.Yield(); 
+            await Task.Yield();
             await JS.InvokeVoidAsync("initializeSortable", "sortableItems");
         }
     }
@@ -331,11 +333,11 @@
     {
         isPopupVisible = true;
         newTemplate = new TemplateModel
-            {
-                TemplateName = string.Empty,
-                CreatedDate = DateTime.UtcNow,
-                LastModifiedDate = DateTime.UtcNow
-            };
+        {
+            TemplateName = string.Empty,
+            CreatedDate = DateTime.UtcNow,
+            LastModifiedDate = DateTime.UtcNow
+        };
         imageUrl = null;
     }
 
@@ -348,62 +350,78 @@
 
     private async Task OnImageSelected(InputFileChangeEventArgs e)
     {
-        var file = e.File;
-        if (file != null)
+        try
         {
-            var format = "image/png"; 
-            var resizedImageFile = await file.RequestImageFileAsync(format, 1024, 1024); 
+            var file = e.File;
+            if (file != null)
+            {
+                var format = "image/png";
+                var resizedImageFile = await file.RequestImageFileAsync(format, 1024, 1024);
 
-            using var stream = resizedImageFile.OpenReadStream(5 * 1024 * 1024); 
-            using var ms = new MemoryStream();
-            await stream.CopyToAsync(ms);
-            var buffer = ms.ToArray();
+                using var stream = resizedImageFile.OpenReadStream(5 * 1024 * 1024);
+                using var ms = new MemoryStream();
+                await stream.CopyToAsync(ms);
+                var buffer = ms.ToArray();
 
-            imageUrl = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
-            newTemplate.ImageUrl = imageUrl;  
+                imageUrl = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
+                newTemplate.ImageUrl = imageUrl;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading image: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Der opstod en fejl under upload af billedet.");
         }
     }
 
 
-
     private async Task SyncOrderFromUIAsync()
     {
-        var sortedIds = await JS.InvokeAsync<string[]>("getSortedIds", "sortableItems");
-        int pos = 1;
-        foreach (var id in sortedIds)
+        try
         {
-            var itm = Template.Items.First(i => i.Id == id);
-            itm.Order = pos++;
+            var sortedIds = await JS.InvokeAsync<string[]>("getSortedIds", "sortableItems");
+            int pos = 1;
+            foreach (var id in sortedIds)
+            {
+                var itm = Template.Items.First(i => i.Id == id);
+                itm.Order = pos++;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error syncing order: {ex.Message}");
         }
     }
 
     private async void SaveTemplateHandler()
     {
-        await SyncOrderFromUIAsync();
-
-        if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
+        try
         {
-            await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
-            return;
-        }
+            await SyncOrderFromUIAsync();
 
-        var items = new List<TemplateItemEntity>();
-        int order = 1;
-
-        if (showHeader)
-            items.Add(new TemplateItemEntity { Content = "Header", Title = newTemplate.HeaderTitle, Order = order++ });
-
-        if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
-            items.Add(new TemplateItemEntity { Content = "Image", Order = order++ });
-
-        if (showSummary)
-            items.Add(new TemplateItemEntity { Content = "Summary", Note = newTemplate.Summary, Order = order++ });
-
-        if (showDays)
-        {
-            foreach (var day in daySections)
+            if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
             {
-                items.Add(new TemplateItemEntity
+                await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
+                return;
+            }
+
+            var items = new List<TemplateItemEntity>();
+            int order = 1;
+
+            if (showHeader)
+                items.Add(new TemplateItemEntity { Content = "Header", Title = newTemplate.HeaderTitle, Order = order++ });
+
+            if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
+                items.Add(new TemplateItemEntity { Content = "Image", Order = order++ });
+
+            if (showSummary)
+                items.Add(new TemplateItemEntity { Content = "Summary", Note = newTemplate.Summary, Order = order++ });
+
+            if (showDays)
+            {
+                foreach (var day in daySections)
+                {
+                    items.Add(new TemplateItemEntity
                     {
                         Content = "Day Sections",
                         Title = day.Title,
@@ -413,15 +431,15 @@
                         Note = day.Note,
                         Order = order++
                     });
+                }
             }
-        }
 
-        var entity = new TemplateEntity
+            var entity = new TemplateEntity
             {
                 Id = newTemplate.Id,
                 TemplateName = newTemplate.TemplateName,
                 Summary = newTemplate.Summary,
-                ImageUrl = newTemplate.ImageUrl, 
+                ImageUrl = newTemplate.ImageUrl,
                 CreatedDate = newTemplate.Id == 0 ? DateTime.UtcNow : Template.CreatedDate,
                 LastModifiedDate = DateTime.UtcNow,
                 Items = items,
@@ -431,15 +449,22 @@
                 FontFamily = newTemplate.FontFamily
             };
 
-        if (entity.Id == 0)
-            await TemplateRepo.SaveTemplateAsync(entity);
-        else
-            await TemplateRepo.UpdateTemplateAsync(entity);
+            if (entity.Id == 0)
+                await TemplateRepo.SaveTemplateAsync(entity);
+            else
+                await TemplateRepo.UpdateTemplateAsync(entity);
 
-        await JS.InvokeVoidAsync("alert", "Template saved successfully!");
-        HidePopup();
-        Navigation.NavigateTo("/templates", true);
+            await JS.InvokeVoidAsync("alert", "Template saved successfully!");
+            HidePopup();
+            Navigation.NavigateTo("/templates", true);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving template: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "fejl under lagring af skabelonen..");
+        }
     }
+
 
 
 
@@ -462,15 +487,15 @@
             foreach (var day in daySections)
             {
                 items.Add(new TemplateItemEntity
-                    {
-                        Content = "Day Sections",
-                        Title = day.Title,
-                        Activity = day.Activity,
-                        Meals = day.Meals,
-                        Accommodation = day.Accommodation,
-                        Note = day.Note,
-                        Order = order++
-                    });
+                {
+                    Content = "Day Sections",
+                    Title = day.Title,
+                    Activity = day.Activity,
+                    Meals = day.Meals,
+                    Accommodation = day.Accommodation,
+                    Note = day.Note,
+                    Order = order++
+                });
             }
         }
 
@@ -480,14 +505,23 @@
 
     private async Task OnHeaderImageSelected(ChangeEventArgs e)
     {
-        if (e.Value is IBrowserFile file)
+        try
         {
-            using var stream = file.OpenReadStream();
-            var buffer = new byte[file.Size];
-            await stream.ReadAsync(buffer);
-            newTemplate.HeaderImageUrl = $"data:{file.ContentType};base64,{Convert.ToBase64String(buffer)}";
+            if (e.Value is IBrowserFile file)
+            {
+                using var stream = file.OpenReadStream();
+                var buffer = new byte[file.Size];
+                await stream.ReadAsync(buffer);
+                newTemplate.HeaderImageUrl = $"data:{file.ContentType};base64,{Convert.ToBase64String(buffer)}";
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading header image: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Kunne ikke indlæse headerbilledet.");
         }
     }
+
 
 
 
@@ -506,7 +540,7 @@
                 daySections[i] = new DaySection();
         }
 
-        
+
     }
 
 
@@ -520,20 +554,21 @@
         public string Note { get; set; } = string.Empty;
     }
 
-    // ======= LOAD EXISTING =======
     protected override async Task OnParametersSetAsync()
     {
         if (templateId.HasValue && templateId.Value > 0)
             Template = await MapEntityToModel(templateId.Value);
-        LoadTemplateIntoEditor();        
+        LoadTemplateIntoEditor();
 
     }
     private async Task<TemplateModel> MapEntityToModel(int id)
     {
-        var entity = await TemplateRepo.GetTemplateByIdAsync(id);
-        if (entity == null) return new TemplateModel();
+        try
+        {
+            var entity = await TemplateRepo.GetTemplateByIdAsync(id);
+            if (entity == null) return new TemplateModel();
 
-        var model = new TemplateModel
+            var model = new TemplateModel
             {
                 Id = entity.Id,
                 TemplateName = entity.TemplateName,
@@ -541,6 +576,10 @@
                 ImageUrl = entity.ImageUrl,
                 CreatedDate = entity.CreatedDate,
                 LastModifiedDate = entity.LastModifiedDate,
+                PrimaryColor = entity.PrimaryColor,
+                HeaderBgColor = entity.HeaderBgColor,
+                FooterBgColor = entity.FooterBgColor,
+                FontFamily = entity.FontFamily,
                 Items = entity.Items.Select(i => new TemplateItem
                 {
                     Id = i.Id.ToString(),
@@ -555,9 +594,9 @@
                 }).ToList()
             };
 
-        daySections = entity.Items
-            .Where(i => i.Content == "Day Sections")
-            .Select(i => new DaySection
+            daySections = entity.Items
+                .Where(i => i.Content == "Day Sections")
+                .Select(i => new DaySection
                 {
                     Title = i.Title,
                     Activity = i.Activity,
@@ -566,20 +605,27 @@
                     Note = i.Note
                 }).ToList();
 
-        return model;
+            return model;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error mapping template: {ex.Message}");
+            return new TemplateModel();
+        }
     }
 
 
-    // ======= ITEM OPERATIONS =======
+
+
     private void AddItem(string content)
     {
         Template.Items.Add(new TemplateItem
-            {
-                Id = nextId.ToString(),
-                Content = content,
-                Order = Template.Items.Count + 1,
-                IsSelected = true
-            });
+        {
+            Id = nextId.ToString(),
+            Content = content,
+            Order = Template.Items.Count + 1,
+            IsSelected = true
+        });
         nextId++;
     }
 
@@ -603,52 +649,54 @@
         }
     }
 
-    // ======= SAVE / EXPORT =======
     private async Task SaveTemplate()
     {
-        await SyncOrderFromUIAsync();     
-        if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
+        try
         {
-            await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
-            return;
-        }
+            await SyncOrderFromUIAsync();
 
-        var items = new List<TemplateItemEntity>();
-        int order = 1;
+            if (string.IsNullOrWhiteSpace(newTemplate.TemplateName))
+            {
+                await JS.InvokeVoidAsync("alert", "Template name cannot be empty!");
+                return;
+            }
 
-        if (showHeader)
-        {
-            items.Add(new TemplateItemEntity
+            var items = new List<TemplateItemEntity>();
+            int order = 1;
+
+            if (showHeader)
+            {
+                items.Add(new TemplateItemEntity
                 {
                     Content = "Header",
                     Title = newTemplate.HeaderTitle,
                     Order = order++
                 });
-        }
+            }
 
-        if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
-        {
-            items.Add(new TemplateItemEntity
+            if (showImage && !string.IsNullOrWhiteSpace(imageUrl))
+            {
+                items.Add(new TemplateItemEntity
                 {
                     Content = "Image",
                     Order = order++
                 });
-        }
+            }
 
-        if (showSummary)
-        {
-            items.Add(new TemplateItemEntity
+            if (showSummary)
+            {
+                items.Add(new TemplateItemEntity
                 {
                     Content = "Summary",
                     Order = order++
                 });
-        }
+            }
 
-        if (showDays)
-        {
-            foreach (var day in daySections)
+            if (showDays)
             {
-                items.Add(new TemplateItemEntity
+                foreach (var day in daySections)
+                {
+                    items.Add(new TemplateItemEntity
                     {
                         Content = "Day Sections",
                         Title = day.Title,
@@ -658,10 +706,10 @@
                         Note = day.Note,
                         Order = order++
                     });
+                }
             }
-        }
 
-        var templateEntity = new TemplateEntity
+            var templateEntity = new TemplateEntity
             {
                 Id = Template.Id,
                 TemplateName = newTemplate.TemplateName,
@@ -672,34 +720,35 @@
                 Items = items
             };
 
-        if (templateEntity.Id == 0)
-        {
-            await TemplateRepo.SaveTemplateAsync(templateEntity);
-        }
-        else
-        {
-            await TemplateRepo.UpdateTemplateAsync(templateEntity);
-        }
+            if (templateEntity.Id == 0)
+                await TemplateRepo.SaveTemplateAsync(templateEntity);
+            else
+                await TemplateRepo.UpdateTemplateAsync(templateEntity);
 
-        Template = await MapEntityToModel(templateEntity.Id);
-
-        await JS.InvokeVoidAsync("alert", "Template saved successfully!");
-        HidePopup();
+            Template = await MapEntityToModel(templateEntity.Id);
+            await JS.InvokeVoidAsync("alert", "Template saved successfully!");
+            HidePopup();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving template: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "fejl under lagring af skabelonen.");
+        }
     }
 
 
     private void LoadTemplateIntoEditor()
     {
         newTemplate = new TemplateModel
-            {
-                Id = Template.Id,
-                TemplateName = Template.TemplateName,
-                Summary = Template.Summary,
-                ImageUrl = Template.ImageUrl,
-                HeaderTitle = Template.Items.FirstOrDefault(i => i.Content == "Header")?.Title ?? string.Empty,
-                CreatedDate = Template.CreatedDate,
-                LastModifiedDate = Template.LastModifiedDate
-            };
+        {
+            Id = Template.Id,
+            TemplateName = Template.TemplateName,
+            Summary = Template.Summary,
+            ImageUrl = Template.ImageUrl,
+            HeaderTitle = Template.Items.FirstOrDefault(i => i.Content == "Header")?.Title ?? string.Empty,
+            CreatedDate = Template.CreatedDate,
+            LastModifiedDate = Template.LastModifiedDate
+        };
 
         imageUrl = Template.ImageUrl;
 
@@ -712,13 +761,13 @@
             .Where(i => i.Content == "Day Sections")
             .OrderBy(i => i.Order)
             .Select(i => new DaySection
-                {
-                    Title = i.Title,
-                    Activity = i.Activity,
-                    Meals = i.Meals,
-                    Accommodation = i.Accommodation,
-                    Note = i.Note
-                }).ToList();
+            {
+                Title = i.Title,
+                Activity = i.Activity,
+                Meals = i.Meals,
+                Accommodation = i.Accommodation,
+                Note = i.Note
+            }).ToList();
 
         numberOfDays = daySections.Count == 0 ? 1 : daySections.Count;
 
@@ -726,7 +775,7 @@
     }
 
 
-    
+
 
     private async Task ExportToPdf(int templateId)
     {
@@ -735,32 +784,7 @@
             var templateEntity = await TemplateRepo.GetTemplateByIdAsync(templateId);
             if (templateEntity != null)
             {
-                string htmlContent = PdfService.GenerateHtmlFromTemplate(
-     templateEntity.TemplateName,
-     templateEntity.Items.Select(i => new TemplateItem
-         {
-             Id = i.Id.ToString(),
-             Content = i.Content,
-             Order = i.Order,
-             Title = i.Title,
-             Activity = i.Activity,
-             Meals = i.Meals,
-             Accommodation = i.Accommodation,
-             Note = i.Note,
-             IsSelected = true
-         }).ToList(),
-     templateEntity.Id,
-     templateEntity.CreatedDate,
-     templateEntity.LastModifiedDate,
-     templateEntity.PrimaryColor,
-     templateEntity.HeaderBgColor,
-     templateEntity.FooterBgColor,
-     templateEntity.FontFamily,
-     templateEntity.ImageUrl
-     );
-
-
-                byte[] pdfBytes = PdfService.GeneratePdf(htmlContent);
+                byte[] pdfBytes = PdfService.Generate(templateEntity);
 
                 if (pdfBytes.Length == 0)
                 {
@@ -769,12 +793,10 @@
                 }
 
                 string sanitizedTemplateName = templateEntity.TemplateName.Replace(" ", "_");
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "TemplateLibrary", sanitizedTemplateName);
+                string directoryPath = Path.Combine("wwwroot", "TemplateLibrary", sanitizedTemplateName);
 
                 if (!Directory.Exists(directoryPath))
-                {
                     Directory.CreateDirectory(directoryPath);
-                }
 
                 string fileName = $"{sanitizedTemplateName}_{DateTime.UtcNow:yyyyMMdd_HHmmss}.pdf";
                 string filePath = Path.Combine(directoryPath, fileName);
@@ -792,6 +814,7 @@
             await JS.InvokeVoidAsync("alert", "Error exporting the template to PDF.");
         }
     }
+
 
 
     private void HandleOverlayClick()
@@ -844,12 +867,12 @@
             if (!Template.Items.Any(i => i.Content == name))
             {
                 Template.Items.Add(new TemplateItem
-                    {
-                        Id = (++nextId).ToString(),
-                        Content = name,
-                        Order = Template.Items.Count + 1,
-                        IsSelected = true
-                    });
+                {
+                    Id = (++nextId).ToString(),
+                    Content = name,
+                    Order = Template.Items.Count + 1,
+                    IsSelected = true
+                });
             }
         }
         else
@@ -858,13 +881,12 @@
             if (itm is not null)
             {
                 Template.Items.Remove(itm);
-                // أعِد ترقيم Order
                 for (int i = 0; i < Template.Items.Count; i++)
                     Template.Items[i].Order = i + 1;
             }
         }
 
-        StateHasChanged();          
+        StateHasChanged();
     }
 
 
