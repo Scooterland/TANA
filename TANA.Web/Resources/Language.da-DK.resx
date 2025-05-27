@@ -319,7 +319,7 @@
     <value>Plan navn</value>
   </data>
   <data name="Preview" xml:space="preserve">
-    <value>Forhåndsvisning</value>
+    <value>Forhåndsvis</value>
   </data>
   <data name="Print" xml:space="preserve">
     <value>Udskriv</value>
@@ -479,5 +479,26 @@
   </data>
   <data name="Hide" xml:space="preserve">
     <value>Skjul</value>
+  </data>
+  <data name="SortTemplateBuilder" xml:space="preserve">
+    <value>Sortering af sektioner (træk for at ændre rækkefølgen)</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notat</value>
+  </data>
+  <data name="Meals" xml:space="preserve">
+    <value>Måltider</value>
+  </data>
+  <data name="Optional" xml:space="preserve">
+    <value>Valgfri</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Indhold</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>Sidst Ændret</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detaljer</value>
   </data>
 </root>

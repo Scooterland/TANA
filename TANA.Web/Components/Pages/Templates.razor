@@ -36,15 +36,15 @@
 @if (showTemplates && templates != null)
 {
     <div class="mt-4">
-        <h5>Template Actions</h5>
+        <h5>@L["Templates"]:</h5>
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Template Name</th>
-                    <th>Created Date</th>
-                    <th>Last Modified</th>
-                    <th>Actions</th>
+                    <th>@L["Template"] @L["Name"]</th>
+                    <th>@L["CreatedDate"] </th>
+                    <th>@L["LastModified"]</th>
+                    <th>@L["Actions"]</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,20 +58,20 @@
                         <td>
                             <button class="btn btn-primary btn-sm me-2"
                                     @onclick="() => ExportToPdf(template.Id)">
-                                Export PDF
+                                @L["Export"] PDF
                             </button>
 
                             <button class="btn btn-success btn-sm me-2"
                                     @onclick="() => EditTemplate(template.Id)">
-                                Edit
+                                @L["Edit"]"
                             </button>
 
                             <button class="btn btn-danger btn-sm me-2"
                                     @onclick="() => DeleteTemplate(template.Id)">
-                                Delete
+                                @L["Delete"]"
                             </button>
                             <button class="btn btn-secondary btn-sm" @onclick="() => ShowPdfPreview(template.Id)">
-                                Preview PDF
+                                @L["Preview"] PDF
                             </button>
                         </td>
                     </tr>
@@ -86,26 +86,26 @@
 else if (showTemplates && templates != null)
 {
     <div class="mt-4">
-        <h5>Template Details</h5>
+        <h5>@L["Template"] @L["Details"]</h5>
         @foreach (var template in templates)
         {
             <div class="border p-3 mb-2">
                 <h5>@template.TemplateName</h5>
-                <p>Created Date: @template.CreatedDate</p>
-                <p>Last Modified: @template.LastModifiedDate</p>
+                <p>@L["CreatedDate"]: @template.CreatedDate</p>
+                <p>@L["LastModified"]: @template.LastModifiedDate</p>
 
                 @if (template.Items.Any(i => i.Content == "Day Sections"))
                 {
-                    <h6>Day Sections:</h6>
+                    <h6>@L["DaySections"]</h6>
                     <ul>
                         @foreach (var item in template.Items.Where(i => i.Content == "Day Sections"))
                         {
                             <li>
-                                <strong>Title:</strong> @item.Title <br />
-                                <strong>Activity:</strong> @item.Activity <br />
-                                <strong>Meals:</strong> @item.Meals <br />
-                                <strong>Accommodation:</strong> @item.Accommodation <br />
-                                <strong>Note:</strong> @item.Note <br />
+                                <strong>@L["Title"]:</strong> @item.Title <br />
+                                <strong>@L["Activity"]:</strong> @item.Activity <br />
+                                <strong>@L["Meals"]:</strong> @item.Meals <br />
+                                <strong>@L["Accommodation"]:</strong> @item.Accommodation <br />
+                                <strong>@L["Note"]:</strong> @item.Note <br />
                             </li>
                         }
                     </ul>
