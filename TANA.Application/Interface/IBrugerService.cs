@@ -14,5 +14,6 @@ namespace TANA.Application.Interface
 		public Task AddAsync(Bruger bruger, string plainPassword);
 		public Task UpdateAsync(Bruger bruger);
 		public Task DeleteAsync(int id);
-	}
+        public Task EnsureAdminExistsAsync();
+    }
 }

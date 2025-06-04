@@ -50,6 +50,29 @@ if (!IsRunningInDocker())
     app.UseHttpsRedirection();
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    // resolve DbContext (for checking DbSet<Bruger>) and BrugerService
+    var context = services.GetRequiredService<AppDbContext>();
+    var brugerService = services.GetRequiredService<IBrugerService>();
+
+    // Make sure the database is up-to-date (migrations, etc.),
+    // optionally uncomment if you use Migrations at runtime:
+    // await context.Database.MigrateAsync();
+
+    // Check & create admin if missing
+    if (!await context.Brugere
+                      .AsNoTracking()
+                      .AnyAsync(u => u.Email == "admin@admin.dk"))
+    {
+        // If you prefer you can just call brugerService.EnsureAdminExistsAsync();
+        // but we already know there’s no “admin@admin.dk”, so just call directly:
+        await brugerService.EnsureAdminExistsAsync();
+    }
+}
+
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
