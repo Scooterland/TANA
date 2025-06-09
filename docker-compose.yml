@@ -1,4 +1,9 @@
 version: '3.9'
+
+volumes:
+  dataprotection-keys:
+    driver: local
+
 services:
   tana-api:
     build:
@@ -10,6 +15,8 @@ services:
       - ASPNETCORE_URLS=http://+:8080
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Server=host.docker.internal,1433;Database=RejseplanDB;User Id=tanauser;Password=1234;Encrypt=True;TrustServerCertificate=True;
+    volumes:
+      - dataprotection-keys:/root/.aspnet/DataProtection-Keys
  
       
   tana-web:
@@ -23,3 +30,5 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
       - tana-api
+    volumes:
+      - dataprotection-keys:/root/.aspnet/DataProtection-Keys
