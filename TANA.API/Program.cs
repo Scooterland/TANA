@@ -4,9 +4,11 @@ using TANA.Application.Services;
 using TANA.Infrastructure.Services;
 using TANA.Persistence.Data;
 using TANA.Persistence.Repositories;
+using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+QuestPDF.Settings.License = LicenseType.Community;
 
 // Add services
 builder.Services.AddControllers();

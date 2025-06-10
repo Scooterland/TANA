@@ -14,29 +14,40 @@ namespace TANA.API.Controllers
 {
     [ApiController]
     [Route("api/pdf/rejseplan")]
+    [IgnoreAntiforgeryToken]
     public class PdfController : Controller
     {
             private static byte[] _lastGeneratedPdf;
 
-            [HttpPost]
-            public IActionResult Generate([FromBody] RejseplanModel request)
+        [HttpPost]
+        public IActionResult Generate([FromBody] RejseplanModel request)
+        {
+            var model = new RejseplanModel
             {
-                var model = new RejseplanModel
-                {
-                    Navn = request.Navn,
-                    Email = request.Email,
-                    Destination = request.Destination,
-                    Afrejse = request.Afrejse,
-                    Hjemrejse = request.Hjemrejse,
-                    Flyselskab = request.Flyselskab
-                };
-
-                var document = new RejseplanDocument(model);  // Opret en ny dokumentklasse for Rejseplan
-                _lastGeneratedPdf = document.GeneratePdf();
-                return Ok();
+                Navn = request.Navn,
+                Email = request.Email,
+                Destination = request.Destination,
+                Afrejse = request.Afrejse,
+                Hjemrejse = request.Hjemrejse,
+                Flyselskab = request.Flyselskab
+            };
+            try 
+            { 
+            var document = new RejseplanDocument(request);  // Opret en ny dokumentklasse for Rejseplan
+            var pdfBytes = document.GeneratePdf();
+            _lastGeneratedPdf = pdfBytes;  // Behold hvis du stadig vil kunne se via /view
+            return File(pdfBytes, "application/pdf", "rejseplan.pdf");
+        
             }
+            catch (Exception ex)
+        {
+        // Log evt. også til fil!
+        return BadRequest($"PDF-fejl: {ex.Message} {ex.StackTrace}");
+        }
+}
 
-            [HttpGet("view")]
+
+[HttpGet("view")]
             public IActionResult ViewPdf()
             {
                 if (_lastGeneratedPdf == null)

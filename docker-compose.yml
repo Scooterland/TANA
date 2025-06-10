@@ -1,4 +1,5 @@
 version: '3.9'
+
 services:
   tana-api:
     build:
@@ -10,7 +11,6 @@ services:
       - ASPNETCORE_URLS=http://+:8080
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Server=host.docker.internal,1433;Database=RejseplanDB;User Id=tanauser;Password=1234;Encrypt=True;TrustServerCertificate=True;
- 
       
   tana-web:
     build:
